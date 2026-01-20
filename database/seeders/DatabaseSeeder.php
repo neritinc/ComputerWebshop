@@ -2,30 +2,31 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+use Database\Seeders\UserSeeder;
+use Database\Seeders\CompanySeeder;
+use Database\Seeders\CategorySeeder;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
+        Schema::disableForeignKeyConstraints();
 
-        //Mielőtt seedelünk, minden táblát töröljünk le.
-        DB::statement('DELETE FROM users');
+        // truncate ha szükséges
+        // \DB::table('users')->truncate();
+        // \DB::table('companies')->truncate();
+        // \DB::table('categories')->truncate();
 
+        Schema::enableForeignKeyConstraints();
 
-
-        //Ami Seeder osztály itt fel van sorolva, annak lefut a run() metódusa
+        // Seeder sorrend
         $this->call([
+            CompanySeeder::class,
+            CategorySeeder::class,
             UserSeeder::class,
+            UnitSeeder::class,
         ]);
     }
 }

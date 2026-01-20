@@ -2,35 +2,40 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        //
-        User::factory()->create([
-            'name' => 'Admin',
-            'email' => 'admin@example.com',
-            'password' => '123',
-            'role' => 1
-        ]);
-        User::factory()->create([
-            'name' => 'Raktáros',
-            'email' => 'raktaros@example.com',
-            'password' => '123',
-            'role' => 2
-        ]);
-        User::factory()->create([
-            'name' => 'Vásárló 1',
-            'email' => 'vasarlo1@example.com',
-            'password' => '123',
-            'role' => 3
+        DB::table('users')->insert([
+            [
+                'name' => 'Admin User',
+                'email' => 'admin@teszt.hu',
+                'password' => 'admin123', // ✅ SIMA SZÖVEG
+                'role' => 1,
+                'phone' => '06301234567',
+                'city' => 'Budapest',
+                'street' => 'Fő utca',
+                'house_number' => '1',
+                'zip_code' => '1000',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Test User',
+                'email' => 'user@teszt.hu',
+                'password' => 'user123', // ✅ SIMA SZÖVEG
+                'role' => 0,
+                'phone' => '06309876543',
+                'city' => 'Debrecen',
+                'street' => 'Petőfi utca',
+                'house_number' => '5',
+                'zip_code' => '4020',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
         ]);
     }
 }
