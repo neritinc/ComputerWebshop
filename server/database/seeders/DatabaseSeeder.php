@@ -32,12 +32,18 @@ class DatabaseSeeder extends Seeder
 
         // Seeder sorrend
         $this->call([
-            CompanySeeder::class,
-            CategorySeeder::class,
             UserSeeder::class,
             UnitSeeder::class,
+            CompanySeeder::class,
+            CartSeeder::class,
+            CategorySeeder::class,
             ParameterSeeder::class,
             ProductSeeder::class,
+            CommentSeeder::class,
+            ProductParameterSeeder::class,
+            PicSeeder::class,
+            CartItemSeeder::class,
+            
         ]);
     }
 }
