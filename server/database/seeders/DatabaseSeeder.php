@@ -16,17 +16,17 @@ class DatabaseSeeder extends Seeder
         Schema::disableForeignKeyConstraints();
 
         // truncate ha szükséges
-        DB::table('product_parameter');
-        DB::table('cart_items');
-        DB::table('comments');
-        DB::table('carts');
-        DB::table('users');
-        DB::table('parameters');
-        DB::table('pics');
-        DB::table('products');
-        DB::table('companies');
-        DB::table( 'categories');
-        DB::table('units');
+        DB::statement('DELETE FROM product_parameter');
+        DB::statement('DELETE FROM cart_items');
+        DB::statement('DELETE FROM comments');
+        DB::statement('DELETE FROM carts');
+        DB::statement('DELETE FROM users');
+        DB::statement('DELETE FROM parameters');
+        DB::statement('DELETE FROM pics');
+        DB::statement('DELETE FROM products');
+        DB::statement('DELETE FROM companies');
+        DB::statement('DELETE FROM  categories');
+        DB::statement('DELETE FROM units');
        
         Schema::enableForeignKeyConstraints();
 
@@ -35,14 +35,14 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             UnitSeeder::class,
             CompanySeeder::class,
-            CartSeeder::class,
-            CategorySeeder::class,
-            ParameterSeeder::class,
-            ProductSeeder::class,
-            CommentSeeder::class,
-            ProductParameterSeeder::class,
-            PicSeeder::class,
-            CartItemSeeder::class,
+            // CartSeeder::class,
+            // CategorySeeder::class,
+            // ParameterSeeder::class,
+            // ProductSeeder::class,
+            // CommentSeeder::class,
+            // ProductParameterSeeder::class,
+            // PicSeeder::class,
+            // CartItemSeeder::class,
             
         ]);
     }

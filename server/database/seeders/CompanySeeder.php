@@ -2,21 +2,18 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
+use App\Helpers\CsvReader;
 use App\Models\Company;
+use Illuminate\Database\Seeder;
+use App\Models\Unit; // FONTOS: a modell importálása
 
 class CompanySeeder extends Seeder
 {
     public function run(): void
     {
-        $companies = [
-            'Acme Kft.',
-            'Teszt Solutions Zrt.',
-            'Demo Soft Bt.',
-        ];
-
-        foreach ($companies as $company) {
-            Company::firstOrCreate(['company_name' => $company]);
-        }
+        $fileName = 'csv/companynames.csv';
+        $delimeter = ';';
+        $data = CsvReader::csvToArray($fileName, $delimeter);
+        Company::factory()->createMany($data);        
     }
 }
