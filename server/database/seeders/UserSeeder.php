@@ -9,11 +9,12 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        DB::table('users')->insert([
+        // Admin felhasználó beszúrása vagy frissítése
+        DB::table('users')->updateOrInsert(
+            ['email' => 'admin@teszt.hu'], // keresés email alapján
             [
                 'name' => 'Admin User',
-                'email' => 'admin@teszt.hu',
-                'password' => 'admin123', // ✅ SIMA SZÖVEG
+                'password' => 'admin123', // nem titkosított jelszó
                 'role' => 1,
                 'phone' => '06301234567',
                 'city' => 'Budapest',
@@ -22,11 +23,15 @@ class UserSeeder extends Seeder
                 'zip_code' => '1000',
                 'created_at' => now(),
                 'updated_at' => now(),
-            ],
+            ]
+        );
+
+        // Teszt felhasználó beszúrása vagy frissítése
+        DB::table('users')->updateOrInsert(
+            ['email' => 'user@teszt.hu'],
             [
                 'name' => 'Test User',
-                'email' => 'user@teszt.hu',
-                'password' => 'user123', // ✅ SIMA SZÖVEG
+                'password' => 'user123', // nem titkosított jelszó
                 'role' => 0,
                 'phone' => '06309876543',
                 'city' => 'Debrecen',
@@ -36,6 +41,6 @@ class UserSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ]
-        ]);
+        );
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
 use Database\Seeders\UserSeeder;
 use Database\Seeders\CompanySeeder;
+use Illuminate\Support\Facades\DB;
 use Database\Seeders\CategorySeeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,10 +16,18 @@ class DatabaseSeeder extends Seeder
         Schema::disableForeignKeyConstraints();
 
         // truncate ha szükséges
-        // \DB::table('users')->truncate();
-        // \DB::table('companies')->truncate();
-        // \DB::table('categories')->truncate();
-
+        DB::table('product_parameter');
+        DB::table('cart_items');
+        DB::table('comments');
+        DB::table('carts');
+        DB::table('users');
+        DB::table('parameters');
+        DB::table('pics');
+        DB::table('products');
+        DB::table('companies');
+        DB::table( 'categories');
+        DB::table('units');
+       
         Schema::enableForeignKeyConstraints();
 
         // Seeder sorrend
@@ -27,6 +36,8 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             UserSeeder::class,
             UnitSeeder::class,
+            ParameterSeeder::class,
+            ProductSeeder::class,
         ]);
     }
 }
