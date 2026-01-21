@@ -17,7 +17,7 @@ class ParameterSeeder extends Seeder
         }
 
         // név -> id map
-        $cat  = Category::pluck('id', 'category_name');
+        $cat = Category::pluck('id', 'category_name');
         $unit = Unit::pluck('id', 'unit_name');
 
         $resolveCategoryId = function (string $categoryName) use ($cat) {
@@ -29,7 +29,7 @@ class ParameterSeeder extends Seeder
         };
 
         $resolveUnitId = function (?string $unitName) use ($unit) {
-            $unitName = trim((string)$unitName);
+            $unitName = trim((string) $unitName);
 
             // nálad kötelező unit_id -> ha üres, legyen N/A
             if ($unitName === '') {
@@ -46,48 +46,55 @@ class ParameterSeeder extends Seeder
         $parameters = [
             // Processor
             ['parameter_name' => 'Clock Speed', 'category_name' => 'Processor', 'unit_name' => 'GHz'],
-            ['parameter_name' => 'Core Count',  'category_name' => 'Processor', 'unit_name' => 'N/A'],
-            ['parameter_name' => 'Cache Size',  'category_name' => 'Processor', 'unit_name' => 'MB'],
+            ['parameter_name' => 'Core Count', 'category_name' => 'Processor', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Cache Size', 'category_name' => 'Processor', 'unit_name' => 'MB'],
             ['parameter_name' => 'Thermal Design Power (TDP)', 'category_name' => 'Processor', 'unit_name' => 'W'],
-            ['parameter_name' => 'Architecture','category_name' => 'Processor', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Architecture', 'category_name' => 'Processor', 'unit_name' => 'N/A'],
 
             // Memory Module
             ['parameter_name' => 'Memory Capacity', 'category_name' => 'Memory Module', 'unit_name' => 'GB'],
-            ['parameter_name' => 'Memory Type',     'category_name' => 'Memory Module', 'unit_name' => 'DDR4'],
-            ['parameter_name' => 'Bus Speed',       'category_name' => 'Memory Module', 'unit_name' => 'MHz'],
-            ['parameter_name' => 'Latency',         'category_name' => 'Memory Module', 'unit_name' => 'ns'],
-            ['parameter_name' => 'Bandwidth',       'category_name' => 'Memory Module', 'unit_name' => 'GB/s'],
+            ['parameter_name' => 'Memory Type', 'category_name' => 'Memory Module', 'unit_name' => 'DDR4'],
+            ['parameter_name' => 'Bus Speed', 'category_name' => 'Memory Module', 'unit_name' => 'MHz'],
+            ['parameter_name' => 'Latency', 'category_name' => 'Memory Module', 'unit_name' => 'ns'],
+            ['parameter_name' => 'Bandwidth', 'category_name' => 'Memory Module', 'unit_name' => 'GB/s'],
 
             // Graphics Card
-            ['parameter_name' => 'VRAM',         'category_name' => 'Graphics Card', 'unit_name' => 'GB'],
-            ['parameter_name' => 'Core Clock',   'category_name' => 'Graphics Card', 'unit_name' => 'MHz'],
+            ['parameter_name' => 'VRAM', 'category_name' => 'Graphics Card', 'unit_name' => 'GB'],
+            ['parameter_name' => 'Core Clock', 'category_name' => 'Graphics Card', 'unit_name' => 'MHz'],
             ['parameter_name' => 'Memory Clock', 'category_name' => 'Graphics Card', 'unit_name' => 'MHz'],
-            ['parameter_name' => 'CUDA Cores',   'category_name' => 'Graphics Card', 'unit_name' => 'Cores'],
+            ['parameter_name' => 'CUDA Cores', 'category_name' => 'Graphics Card', 'unit_name' => 'Cores'],
             ['parameter_name' => 'DirectX Version', 'category_name' => 'Graphics Card', 'unit_name' => 'Version'],
 
             // Storage
             ['parameter_name' => 'Storage Capacity', 'category_name' => 'Storage', 'unit_name' => 'GB'],
-            ['parameter_name' => 'Read Speed',       'category_name' => 'Storage', 'unit_name' => 'MB/s'],
-            ['parameter_name' => 'Write Speed',      'category_name' => 'Storage', 'unit_name' => 'MB/s'],
-            ['parameter_name' => 'Form Factor',      'category_name' => 'Storage', 'unit_name' => 'Type'],
+            ['parameter_name' => 'Read Speed', 'category_name' => 'Storage', 'unit_name' => 'MB/s'],
+            ['parameter_name' => 'Write Speed', 'category_name' => 'Storage', 'unit_name' => 'MB/s'],
+            ['parameter_name' => 'Form Factor', 'category_name' => 'Storage', 'unit_name' => 'Type'],
 
             // Power Supply
-            ['parameter_name' => 'Wattage',            'category_name' => 'Power Supply', 'unit_name' => 'W'],
-            ['parameter_name' => 'Efficiency Rating',  'category_name' => 'Power Supply', 'unit_name' => '80+'],
-            ['parameter_name' => 'Modular',            'category_name' => 'Power Supply', 'unit_name' => 'Yes/No'],
+            ['parameter_name' => 'Wattage', 'category_name' => 'Power Supply', 'unit_name' => 'W'],
+            ['parameter_name' => 'Efficiency Rating', 'category_name' => 'Power Supply', 'unit_name' => '80+'],
+            ['parameter_name' => 'Modular', 'category_name' => 'Power Supply', 'unit_name' => 'Yes/No'],
 
             // Cooling
-            ['parameter_name' => 'Fan Size',    'category_name' => 'Cooling', 'unit_name' => 'mm'],
-            ['parameter_name' => 'Airflow',     'category_name' => 'Cooling', 'unit_name' => 'CFM'],
+            ['parameter_name' => 'Fan Size', 'category_name' => 'Cooling', 'unit_name' => 'mm'],
+            ['parameter_name' => 'Airflow', 'category_name' => 'Cooling', 'unit_name' => 'CFM'],
             ['parameter_name' => 'Noise Level', 'category_name' => 'Cooling', 'unit_name' => 'dB'],
-            ['parameter_name' => 'Type',        'category_name' => 'Cooling', 'unit_name' => 'Air/Water'],
+            ['parameter_name' => 'Type', 'category_name' => 'Cooling', 'unit_name' => 'Air/Water'],
+
+                // Mouse
+            ['parameter_name' => 'DPI', 'category_name' => 'Mouse', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Wireless', 'category_name' => 'Mouse', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Battery Life', 'category_name' => 'Mouse', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Weight', 'category_name' => 'Mouse', 'unit_name' => 'N/A'],
+
         ];
 
         foreach ($parameters as $p) {
             Parameter::create([
                 'parameter_name' => $p['parameter_name'],
-                'category_id'    => $resolveCategoryId($p['category_name']),
-                'unit_id'        => $resolveUnitId($p['unit_name']),
+                'category_id' => $resolveCategoryId($p['category_name']),
+                'unit_id' => $resolveUnitId($p['unit_name']),
             ]);
         }
 

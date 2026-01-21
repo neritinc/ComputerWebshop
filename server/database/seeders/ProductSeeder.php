@@ -4,10 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Product;
-use App\Models\Parameter;
 use App\Models\Category;
 use App\Models\Company;
-use Illuminate\Support\Facades\DB;
 
 class ProductSeeder extends Seeder
 {
@@ -16,17 +14,9 @@ class ProductSeeder extends Seeder
         // N/A company biztosítása
         $naCompany = Company::firstOrCreate(['company_name' => 'N/A']);
 
-        // Mapek (FRISSEN, miután N/A létrejött)
-        $param = Parameter::pluck('id', 'parameter_name');
+        // Mapek
         $cat = Category::pluck('id', 'category_name');
         $comp = Company::pluck('id', 'company_name');
-
-        $pid = function (string $name) use ($param) {
-            if (!isset($param[$name])) {
-                throw new \Exception("Hiányzó parameter a parameters táblában: '{$name}'");
-            }
-            return $param[$name];
-        };
 
         $cid = function (string $name) use ($cat) {
             if (!isset($cat[$name])) {
@@ -35,13 +25,12 @@ class ProductSeeder extends Seeder
             return $cat[$name];
         };
 
-        // company fallback: ha nincs ilyen, menjen N/A-ra
         $companyIdOrNa = function (string $name) use ($comp, $naCompany) {
             return $comp[$name] ?? $naCompany->id;
         };
 
-        // ===== RAM (Kingston) =====
-        $ram = Product::updateOrCreate(
+        // ===== RAM =====
+        Product::updateOrCreate(
             ['name' => 'Kingston Fury Beast 16GB DDR5'],
             [
                 'price' => 32990,
@@ -52,15 +41,8 @@ class ProductSeeder extends Seeder
             ]
         );
 
-        DB::table('product_parameter')->where('product_id', $ram->id)->delete();
-        DB::table('product_parameter')->insert([
-            ['product_id' => $ram->id, 'parameter_id' => $pid('Memory Capacity'), 'value' => '16'],
-            ['product_id' => $ram->id, 'parameter_id' => $pid('Memory Type'), 'value' => 'DDR5'],
-            ['product_id' => $ram->id, 'parameter_id' => $pid('Bus Speed'), 'value' => '5600'],
-        ]);
-
-        // ===== CPU (AMD) =====
-        $cpu = Product::updateOrCreate(
+        // ===== CPU =====
+        Product::updateOrCreate(
             ['name' => 'AMD Ryzen 7 7700X'],
             [
                 'price' => 129990,
@@ -71,14 +53,8 @@ class ProductSeeder extends Seeder
             ]
         );
 
-        DB::table('product_parameter')->where('product_id', $cpu->id)->delete();
-        DB::table('product_parameter')->insert([
-            ['product_id' => $cpu->id, 'parameter_id' => $pid('Clock Speed'), 'value' => '4.5'],
-            ['product_id' => $cpu->id, 'parameter_id' => $pid('Core Count'), 'value' => '8'],
-            ['product_id' => $cpu->id, 'parameter_id' => $pid('Thermal Design Power (TDP)'), 'value' => '105'],
-            ['product_id' => $cpu->id, 'parameter_id' => $pid('Architecture'), 'value' => 'Zen 4'],
-        ]);
-        $mb = Product::updateOrCreate(
+        // ===== Motherboard =====
+        Product::updateOrCreate(
             ['name' => 'ASUS TUF B650-PLUS'],
             [
                 'price' => 89990,
@@ -88,7 +64,32 @@ class ProductSeeder extends Seeder
                 'description' => 'AM5 ATX motherboard',
             ]
         );
-        $gpu = Product::updateOrCreate(
+
+        // ===== GPU =====
+        Product::updateOrCreate(
+            ['name' => 'NVIDIA GeForce RTX 4070'],
+            [
+                'price' => 269990,
+                'pcs' => 3,
+                'category_id' => $cid('Graphics Card'),
+                'company_id' => $companyIdOrNa('NVIDIA'),
+                'description' => 'High-end gaming GPU',
+            ]
+        );
+        // ===== GPU (AMD) =====
+        Product::updateOrCreate(
+            ['name' => 'AMD Radeon RX 7800 XT'],
+            [
+                'price' => 219990,
+                'pcs' => 4,
+                'category_id' => $cid('Graphics Card'),
+                'company_id' => $companyIdOrNa('AMD'),
+                'description' => '1440p gaming GPU',
+            ]
+        );
+
+        // ===== GPU (NVIDIA) =====
+        Product::updateOrCreate(
             ['name' => 'NVIDIA GeForce RTX 4070'],
             [
                 'price' => 269990,
@@ -99,9 +100,20 @@ class ProductSeeder extends Seeder
             ]
         );
 
+        // ===== Wireless mouse =====
+        Product::updateOrCreate(
+            ['name' => 'Logitech MX Master 3S (Wireless)'],
+            [
+                'price' => 38990,
+                'pcs' => 10,
+                'category_id' => $cid('Mouse'),
+                'company_id' => $companyIdOrNa('Logitech'),
+                'description' => 'Wireless ergonomic mouse',
+            ]
+        );
 
 
 
-        $this->command->info('Példa termékek hozzáadva/frissítve! (hiányzó gyártó -> N/A)');
+        $this->command->info('Termékek hozzáadva/frissítve! (paraméterek CSV-ből jönnek)');
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace Database\Seeders;
 
 use App\Models\Category;
@@ -9,18 +10,30 @@ class CategorySeeder extends Seeder
 {
     public function run(): void
     {
-        // CSV fájl és elválasztó karakter beállítása
         $fileName = 'csv/categories.csv';
-        $delimiter = ';';  // Elválasztó karakter
+        $delimiter = ';';
 
-        // CSV fájl beolvasása
         $data = CsvReader::csvToArray($fileName, $delimiter);
 
-        // Minden kategória adatának beszúrása a `categories` táblába
-        foreach ($data as $category) {
-            Category::create([
-                'category_name' => $category['category_name'],  // CSV oszlopneve
-            ]);
+        foreach ($data as $row) {
+            $name = trim((string)($row['category_name'] ?? ''));
+            if ($name === '') {
+                continue;
+            }
+
+            // Ha van id oszlop a CSV-ben, tartsuk meg (opcionális)
+            $id = isset($row['id']) && is_numeric($row['id']) ? (int)$row['id'] : null;
+
+            if ($id) {
+                Category::updateOrCreate(
+                    ['id' => $id],
+                    ['category_name' => $name]
+                );
+            } else {
+                Category::firstOrCreate(
+                    ['category_name' => $name]
+                );
+            }
         }
     }
 }

@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
             ParameterSeeder::class,
             ProductSeeder::class,
             CommentSeeder::class,
-            // ProductParameterSeeder::class,
+            ProductParameterSeeder::class,
             // PicSeeder::class,
             // CartItemSeeder::class,
             
