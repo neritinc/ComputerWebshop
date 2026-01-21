@@ -1,74 +1,85 @@
+---
+
+# 💻 Számítástechnikai Webshop
+
+Ez a projekt egy **számítástechnikai webshop**, ahol a felhasználók különböző hardvereket és perifériákat böngészhetnek, véleményezhetnek és megrendelhetnek.
+
+A webshop célja, hogy egy átlátható, könnyen használható felületen tegye elérhetővé a legfontosabb számítógépes alkatrészeket és kiegészítőket.
 
 ---
 
-# Számítógépes Webshop – Online Értékesítő Webalkalmazás
+## 🛒 Elérhető termékkategóriák
 
-Ez a projekt egy **számítógépes alkatrészeket és kiegészítőket forgalmazó webshop** számára készült webalkalmazás, amely lehetővé teszi a vásárlók számára az online termékböngészést és rendelést, valamint külön adminisztrációs felületet biztosít az üzlet üzemeltetőinek a termékek, rendelések és felhasználók kezelésére.
+A webshop az alábbi termékekkel foglalkozik:
 
-A rendszer **Laravel (backend API)** és **Vue.js (frontend)** technológiákra épül.
+### 🔧 Számítógép alkatrészek
+* CPU (processzorok)
+* GPU (videókártyák)
+* RAM (memória)
+* Alaplapok
+* Tápegységek
+* HDD és SSD meghajtók
+* Gépházak
+
+### 🖥️ Perifériák
+* Monitorok
+* Billentyűzetek
+* Egerek
 
 ---
 
 ## Fő funkciók
 
-### Vásárló (User) funkciók
-
-* Regisztráció és bejelentkezés
-* Termékek böngészése kategóriák szerint
-* Termékek keresése és szűrése (ár, kategória, gyártó)
-* Termék részleteinek megtekintése (leírás, ár, készlet)
-* Termékek kosárba helyezése
-* Kosár tartalmának módosítása (mennyiség, törlés)
-* Online rendelés leadása
-* Termékértékelés leadása vásárlás után (szöveges vélemény)
+### 🔍 Termékek böngészése
+* A felhasználók kategóriák szerint böngészhetik a termékeket
+* Minden termékhez tartozik:
+  * név
+  * ár
+  * leírás
+  * technikai specifikációk
 
 ---
 
-### Admin funkciók
-
-* Admin felület bejelentkezés után
-* Új termékek létrehozása
-* Termékek szerkesztése és törlése
-* Termékkategóriák kezelése
-* Készletkezelés
-* Felhasználók kezelése
----
-
-## Rendelési folyamat működése
-
-* A felhasználó termékeket ad a kosárhoz
-* A rendszer ellenőrzi a készlet elérhetőségét
-* A rendelés leadásakor a rendszer:
-
-  * elmenti a rendelés adatait
-  * csökkenti a készlet mennyiségét
-* Egy termék csak elérhető készlet esetén rendelhető
+### 💬 Kommentelés / Vélemények
+* A felhasználók **kommenteket írhatnak a termékek alá**
+* A kommentek segítik más vásárlókat a döntésben
+* Egy komment tartalmazhat:
+  * szöveges értékelést
+  * dátumot
+  * felhasználó nevét
 
 ---
 
----
-
-## Értékelési rendszer
-
-* Az értékelések a termék adatlapján jelennek meg
-* Az értékelések tartalmazzák:
-  * szöveges véleményt
-
----
-
-## Technológia
-
-* **Backend:** Laravel (REST API)
-* **Frontend:** Vue.js
-* **Adatbázis:** MySQL
-* **Hitelesítés:** Laravel Auth / Sanctum
-* **Időzített feladatok:** Laravel Scheduler
-* **Email küldés:** Laravel Mail
+### 🛍️ Rendelés leadása
+* A kiválasztott termékek kosárba helyezhetők
+* A kosárban:
+  * módosítható a mennyiség
+  * eltávolítható termék
+* A rendelés véglegesítése után:
+  * a rendszer rögzíti a rendelést
+  * a felhasználó visszajelzést kap a sikeres vásárlásról
 
 ---
 
-## Projekt célja
+### 👤 Felhasználói élmény
+* Átlátható, felhasználóbarát felület
+* Egyszerű navigáció a kategóriák között
+* Gyors termékkeresés és vásárlás
 
-A projekt célja egy **modern, átlátható és könnyen használható számítógépes webshop** létrehozása, amely lehetővé teszi a gyors online vásárlást, egyszerűsíti a rendeléskezelést, és hatékony eszközt biztosít az üzlet adminisztrátorai számára a mindennapi működéshez.
+---
+
+## ⚙️ Tervezett / opcionális funkciók
+* Felhasználói fiók (regisztráció, bejelentkezés)
+* Rendelési előzmények megtekintése
+* Admin felület termékek kezelésére
+* Termékértékelés csillagokkal
+
+---
+
+## 🚀 A projekt célja
+A projekt célja egy modern, jól strukturált webshop létrehozása, amely:
+* valós vásárlási folyamatot modellez
+* alkalmas tanulási és portfólió célokra
+* könnyen továbbfejleszthető új funkciókkal
 
 ---
