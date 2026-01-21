@@ -5,15 +5,23 @@ namespace Database\Seeders;
 use App\Helpers\CsvReader;
 use App\Models\Company;
 use Illuminate\Database\Seeder;
-use App\Models\Unit; // FONTOS: a modell importálása
 
 class CompanySeeder extends Seeder
 {
     public function run(): void
     {
+        // A CSV fájl elérési útja és elválasztó karakter
         $fileName = 'csv/companynames.csv';
-        $delimeter = ';';
-        $data = CsvReader::csvToArray($fileName, $delimeter);
-        Company::factory()->createMany($data);        
+        $delimiter = ';';  // A CSV fájlban használt elválasztó
+
+        // Beolvassuk a CSV fájlt
+        $data = CsvReader::csvToArray($fileName, $delimiter);
+
+        // Az adatok beszúrása a Company táblába
+        foreach ($data as $company) {
+            Company::create([
+                'company_name' => $company['company_name'], // A CSV fájlban lévő oszlop neve
+            ]);
+        }
     }
 }

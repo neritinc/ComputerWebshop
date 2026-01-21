@@ -1,18 +1,27 @@
 <?php
-
 namespace Database\Seeders;
 
-use App\Helpers\CsvReader;
+use App\Models\Unit;
 use Illuminate\Database\Seeder;
-use App\Models\Unit; // FONTOS: a modell importálása
+use App\Helpers\CsvReader;
 
 class UnitSeeder extends Seeder
 {
     public function run(): void
     {
+        // CSV fájl és elválasztó karakter beállítása
         $fileName = 'csv/units.csv';
-        $delimeter = ';';
-        $data = CsvReader::csvToArray($fileName, $delimeter);
-        Unit::factory()->createMany($data);        
+        $delimiter = ';';  // Elválasztó karakter
+
+        // CSV fájl beolvasása
+        $data = CsvReader::csvToArray($fileName, $delimiter);
+
+        // Minden kategória adatának beszúrása a `categories` táblába
+        foreach ($data as $unit) {
+            Unit::create([
+                'unit_name' => $unit['unit_name'],
+            ]);
+        }
+
     }
 }

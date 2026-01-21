@@ -1,5 +1,7 @@
 <?php
 
+// app/Models/Company.php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,5 +11,6 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['category_name'];
+    protected $fillable = ['category_name']; // Engedélyezd a company_name mezőt
 }
+
