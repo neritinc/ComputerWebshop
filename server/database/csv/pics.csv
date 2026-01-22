@@ -1,13 +1,10 @@
-product_name;image_path
-AMD Ryzen 7 7700X;images/products/amd_7700x_1.jpg
-AMD Ryzen 7 7700X;images/products/amd_7700x_2.jpg
-
-Kingston Fury Beast 16GB DDR5;images/products/kingston_ddr5_1.jpg
-Kingston Fury Beast 16GB DDR5;images/products/kingston_ddr5_2.jpg
-Kingston Fury Beast 16GB DDR5;images/products/kingston_ddr5_3.jpg
-
-ASUS TUF B650-PLUS;images/products/asus_b650_1.jpg
-ASUS TUF B650-PLUS;images/products/asus_b650_2.jpg
-
-NVIDIA GeForce RTX 4070;images/products/rtx4070_1.jpg
-NVIDIA GeForce RTX 4070;images/products/rtx4070_2.jpg
+product_id;image_path
+1;amd_7700x_1.jpg
+1;amd_7700x_2.jpg
+2;kingston_ddr5_1.jpg
+2;kingston_ddr5_2.jpg
+2;kingston_ddr5_3.jpg
+3;asus_b650_1.jpg
+3;asus_b650_2.jpg
+4;rtx4070_1.jpg
+4;rtx4070_2.jpg

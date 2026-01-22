@@ -35,13 +35,13 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             UnitSeeder::class,
             CompanySeeder::class,
-            CartSeeder::class,
             CategorySeeder::class,
             ParameterSeeder::class,
             ProductSeeder::class,
-            CommentSeeder::class,
             ProductParameterSeeder::class,
             PicsSeeder::class,
+            CommentSeeder::class,
+            CartSeeder::class,
             CartItemSeeder::class,
             
         ]);

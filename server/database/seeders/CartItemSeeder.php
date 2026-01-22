@@ -12,16 +12,17 @@ class CartItemSeeder extends Seeder
 {
     public function run(): void
     {
-        if (User::count() === 0 || Product::count() === 0) {
-            $this->command->warn('Nincs user vagy product, cart_items seeding kihagyva.');
+        // csak faker altal keszitett vasarlok (role=2) kapnak termekeket
+        $users = User::where('role', 2)->get();
+        $products = Product::pluck('id'); // csak id-k
+
+        if ($users->isEmpty() || $products->isEmpty()) {
+            $this->command->warn('Nincs role=2 user vagy product, cart_items seeding kihagyva.');
             return;
         }
 
-        // Kosár tételek ürítése (idempotens futás)
+        // cart_items uritese (idempotens futas)
         DB::table('cart_items')->delete();
-
-        $users = User::all();
-        $products = Product::pluck('id'); // csak id-k
 
         foreach ($users as $user) {
             // 1) legyen a usernek kosara (ha van CartSeedered, ez akkor is ok)
@@ -30,11 +31,11 @@ class CartItemSeeder extends Seeder
                 ['date' => now()->toDateString()]
             );
 
-            // 2) 1-3 különböző termék a kosárba
+            // 2) 1-3 kulonbozo termek a kosarba
             $count = random_int(1, 3);
             $picked = $products->random(min($count, $products->count()));
 
-            // ha csak 1 elemet ad vissza, alakítsuk collectionné
+            // ha csak 1 elemet ad vissza, alakitsuk collectionne
             $pickedIds = collect($picked)->values();
 
             $rows = [];
@@ -51,6 +52,6 @@ class CartItemSeeder extends Seeder
             DB::table('cart_items')->insert($rows);
         }
 
-        $this->command->info('Cart itemek sikeresen hozzáadva!');
+        $this->command->info('Cart itemek sikeresen hozzaadva!');
     }
 }
