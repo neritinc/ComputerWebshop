@@ -12,6 +12,96 @@ AMD Ryzen 7 7700X;L3 Cache Size;32
 AMD Ryzen 7 7700X;Thermal Design Power (TDP);105
 AMD Ryzen 7 7700X;Architecture;Zen 4
 
+AMD Ryzen 9 7950X;Clock Speed;4500
+AMD Ryzen 9 7950X;Turbo Clock Speed;5700
+AMD Ryzen 9 7950X;Core Count;16
+AMD Ryzen 9 7950X;Thread Count;32
+AMD Ryzen 9 7950X;L2 Cache Size;16
+AMD Ryzen 9 7950X;L3 Cache Size;64
+AMD Ryzen 9 7950X;Thermal Design Power (TDP);170
+AMD Ryzen 9 7950X;Architecture;Zen 4
+
+AMD Ryzen 9 7900X;Clock Speed;4700
+AMD Ryzen 9 7900X;Turbo Clock Speed;5600
+AMD Ryzen 9 7900X;Core Count;12
+AMD Ryzen 9 7900X;Thread Count;24
+AMD Ryzen 9 7900X;L2 Cache Size;12
+AMD Ryzen 9 7900X;L3 Cache Size;64
+AMD Ryzen 9 7900X;Thermal Design Power (TDP);170
+AMD Ryzen 9 7900X;Architecture;Zen 4
+
+AMD Ryzen 5 7600X;Clock Speed;4700
+AMD Ryzen 5 7600X;Turbo Clock Speed;5300
+AMD Ryzen 5 7600X;Core Count;6
+AMD Ryzen 5 7600X;Thread Count;12
+AMD Ryzen 5 7600X;L2 Cache Size;6
+AMD Ryzen 5 7600X;L3 Cache Size;32
+AMD Ryzen 5 7600X;Thermal Design Power (TDP);105
+AMD Ryzen 5 7600X;Architecture;Zen 4
+
+AMD Ryzen 7 5800X3D;Clock Speed;3400
+AMD Ryzen 7 5800X3D;Turbo Clock Speed;4500
+AMD Ryzen 7 5800X3D;Core Count;8
+AMD Ryzen 7 5800X3D;Thread Count;16
+AMD Ryzen 7 5800X3D;L2 Cache Size;8
+AMD Ryzen 7 5800X3D;L3 Cache Size;96
+AMD Ryzen 7 5800X3D;Thermal Design Power (TDP);105
+AMD Ryzen 7 5800X3D;Architecture;Zen 3
+
+Intel Core i9-13900K;Clock Speed;3000
+Intel Core i9-13900K;Turbo Clock Speed;5800
+Intel Core i9-13900K;Core Count;24
+Intel Core i9-13900K;Thread Count;32
+Intel Core i9-13900K;L2 Cache Size;32
+Intel Core i9-13900K;L3 Cache Size;36
+Intel Core i9-13900K;Thermal Design Power (TDP);125
+Intel Core i9-13900K;Architecture;Raptor Lake
+
+Intel Core i7-13700K;Clock Speed;3400
+Intel Core i7-13700K;Turbo Clock Speed;5400
+Intel Core i7-13700K;Core Count;16
+Intel Core i7-13700K;Thread Count;24
+Intel Core i7-13700K;L2 Cache Size;24
+Intel Core i7-13700K;L3 Cache Size;30
+Intel Core i7-13700K;Thermal Design Power (TDP);125
+Intel Core i7-13700K;Architecture;Raptor Lake
+
+Intel Core i5-13600K;Clock Speed;3500
+Intel Core i5-13600K;Turbo Clock Speed;5100
+Intel Core i5-13600K;Core Count;14
+Intel Core i5-13600K;Thread Count;20
+Intel Core i5-13600K;L2 Cache Size;20
+Intel Core i5-13600K;L3 Cache Size;24
+Intel Core i5-13600K;Thermal Design Power (TDP);125
+Intel Core i5-13600K;Architecture;Raptor Lake
+
+AMD Ryzen 5 5600;Clock Speed;3500
+AMD Ryzen 5 5600;Turbo Clock Speed;4400
+AMD Ryzen 5 5600;Core Count;6
+AMD Ryzen 5 5600;Thread Count;12
+AMD Ryzen 5 5600;L2 Cache Size;6
+AMD Ryzen 5 5600;L3 Cache Size;32
+AMD Ryzen 5 5600;Thermal Design Power (TDP);65
+AMD Ryzen 5 5600;Architecture;Zen 3
+
+AMD Ryzen 9 3950X;Clock Speed;3500
+AMD Ryzen 9 3950X;Turbo Clock Speed;4700
+AMD Ryzen 9 3950X;Core Count;16
+AMD Ryzen 9 3950X;Thread Count;32
+AMD Ryzen 9 3950X;L2 Cache Size;16
+AMD Ryzen 9 3950X;L3 Cache Size;64
+AMD Ryzen 9 3950X;Thermal Design Power (TDP);105
+AMD Ryzen 9 3950X;Architecture;Zen 2
+
+Intel Core i5-12400F;Clock Speed;2500
+Intel Core i5-12400F;Turbo Clock Speed;4400
+Intel Core i5-12400F;Core Count;6
+Intel Core i5-12400F;Thread Count;12
+Intel Core i5-12400F;L2 Cache Size;7.5
+Intel Core i5-12400F;L3 Cache Size;18
+Intel Core i5-12400F;Thermal Design Power (TDP);65
+Intel Core i5-12400F;Architecture;Alder Lake
+
 
 AMD Radeon RX 7800 XT;VRAM;16
 AMD Radeon RX 7800 XT;Core Clock;2124
