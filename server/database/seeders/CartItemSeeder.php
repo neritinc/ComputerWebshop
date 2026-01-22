@@ -22,7 +22,6 @@ class CartItemSeeder extends Seeder
         }
 
         // cart_items uritese (idempotens futas)
-        DB::table('cart_items')->delete();
 
         foreach ($users as $user) {
             // 1) legyen a usernek kosara (ha van CartSeedered, ez akkor is ok)
@@ -41,15 +40,22 @@ class CartItemSeeder extends Seeder
             $rows = [];
             foreach ($pickedIds as $productId) {
                 $rows[] = [
-                    'cart_id'    => $cart->id,
+                    'cart_id' => $cart->id,
                     'product_id' => $productId,
-                    'pcs'        => random_int(1, 3),
+                    'pcs' => random_int(1, 10),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ];
             }
 
-            DB::table('cart_items')->insert($rows);
+            // DB::table('cart_items')->insert($rows);
+
+            DB::table('cart_items')->upsert(
+                $rows,
+                ['cart_id', 'product_id'],      // unique kulcs
+                ['pcs', 'updated_at']           // update-eld ezeket ütközésnél
+            );
+
         }
 
         $this->command->info('Cart itemek sikeresen hozzaadva!');

@@ -45,17 +45,23 @@ class ParameterSeeder extends Seeder
 
         $parameters = [
             // Processor
-            ['parameter_name' => 'Clock Speed', 'category_name' => 'Processor', 'unit_name' => 'GHz'],
-            ['parameter_name' => 'Core Count', 'category_name' => 'Processor', 'unit_name' => 'N/A'],
-            ['parameter_name' => 'Cache Size', 'category_name' => 'Processor', 'unit_name' => 'MB'],
+            ['parameter_name' => 'Clock Speed', 'category_name' => 'Processor', 'unit_name' => 'MHz'],
+            ['parameter_name' => 'Turbo Clock Speed', 'category_name' => 'Processor', 'unit_name' => 'MHz'],
+
+            ['parameter_name' => 'Core Count', 'category_name' => 'Processor', 'unit_name' => 'Pcs'],
+            ['parameter_name' => 'Thread Count', 'category_name' => 'Processor', 'unit_name' => 'Pcs'],
+
+            ['parameter_name' => 'L2 Cache Size', 'category_name' => 'Processor', 'unit_name' => 'MB'],
+            ['parameter_name' => 'L3 Cache Size', 'category_name' => 'Processor', 'unit_name' => 'MB'],
+
             ['parameter_name' => 'Thermal Design Power (TDP)', 'category_name' => 'Processor', 'unit_name' => 'W'],
-            ['parameter_name' => 'Architecture', 'category_name' => 'Processor', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Architecture', 'category_name' => 'Processor', 'unit_name' => 'nm'],
 
             // Memory Module
             ['parameter_name' => 'Memory Capacity', 'category_name' => 'Memory Module', 'unit_name' => 'GB'],
             ['parameter_name' => 'Memory Type', 'category_name' => 'Memory Module', 'unit_name' => 'DDR4'],
             ['parameter_name' => 'Bus Speed', 'category_name' => 'Memory Module', 'unit_name' => 'MHz'],
-            ['parameter_name' => 'Latency', 'category_name' => 'Memory Module', 'unit_name' => 'ns'],
+            ['parameter_name' => 'Latency', 'category_name' => 'Memory Module', 'unit_name' => 'CL'],
             ['parameter_name' => 'Bandwidth', 'category_name' => 'Memory Module', 'unit_name' => 'GB/s'],
 
             // Graphics Card
@@ -83,10 +89,10 @@ class ParameterSeeder extends Seeder
             ['parameter_name' => 'Type', 'category_name' => 'Cooling', 'unit_name' => 'Air/Water'],
 
                 // Mouse
-            ['parameter_name' => 'DPI', 'category_name' => 'Mouse', 'unit_name' => 'N/A'],
-            ['parameter_name' => 'Wireless', 'category_name' => 'Mouse', 'unit_name' => 'N/A'],
-            ['parameter_name' => 'Battery Life', 'category_name' => 'Mouse', 'unit_name' => 'N/A'],
-            ['parameter_name' => 'Weight', 'category_name' => 'Mouse', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'DPI', 'category_name' => 'Mouse', 'unit_name' => 'DPI'],
+            ['parameter_name' => 'Wireless', 'category_name' => 'Mouse', 'unit_name' => 'Yes/No'],
+            ['parameter_name' => 'Battery Life', 'category_name' => 'Mouse', 'unit_name' => 'Hour'],
+            ['parameter_name' => 'Weight', 'category_name' => 'Mouse', 'unit_name' => 'g'],
 
         ];
 

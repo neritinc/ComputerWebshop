@@ -3,10 +3,15 @@ Kingston Fury Beast 16GB DDR5;Memory Capacity;16
 Kingston Fury Beast 16GB DDR5;Memory Type;DDR5
 Kingston Fury Beast 16GB DDR5;Bus Speed;5600
 
-AMD Ryzen 7 7700X;Clock Speed;4.5
+AMD Ryzen 7 7700X;Clock Speed;4500
+AMD Ryzen 7 7700X;Turbo Clock Speed;5400
 AMD Ryzen 7 7700X;Core Count;8
+AMD Ryzen 7 7700X;Thread Count;16
+AMD Ryzen 7 7700X;L2 Cache Size;8
+AMD Ryzen 7 7700X;L3 Cache Size;32
 AMD Ryzen 7 7700X;Thermal Design Power (TDP);105
 AMD Ryzen 7 7700X;Architecture;Zen 4
+
 
 AMD Radeon RX 7800 XT;VRAM;16
 AMD Radeon RX 7800 XT;Core Clock;2124
