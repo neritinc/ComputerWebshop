@@ -2,16 +2,55 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use App\Models\User;
+use App\Models\Product;
+use App\Models\Cart;
 
 class CartItemSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        //
+        if (User::count() === 0 || Product::count() === 0) {
+            $this->command->warn('Nincs user vagy product, cart_items seeding kihagyva.');
+            return;
+        }
+
+        // Kosár tételek ürítése (idempotens futás)
+        DB::table('cart_items')->delete();
+
+        $users = User::all();
+        $products = Product::pluck('id'); // csak id-k
+
+        foreach ($users as $user) {
+            // 1) legyen a usernek kosara (ha van CartSeedered, ez akkor is ok)
+            $cart = Cart::firstOrCreate(
+                ['user_id' => $user->id],
+                ['date' => now()->toDateString()]
+            );
+
+            // 2) 1-3 különböző termék a kosárba
+            $count = random_int(1, 3);
+            $picked = $products->random(min($count, $products->count()));
+
+            // ha csak 1 elemet ad vissza, alakítsuk collectionné
+            $pickedIds = collect($picked)->values();
+
+            $rows = [];
+            foreach ($pickedIds as $productId) {
+                $rows[] = [
+                    'cart_id'    => $cart->id,
+                    'product_id' => $productId,
+                    'pcs'        => random_int(1, 3),
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ];
+            }
+
+            DB::table('cart_items')->insert($rows);
+        }
+
+        $this->command->info('Cart itemek sikeresen hozzáadva!');
     }
 }

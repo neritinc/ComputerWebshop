@@ -13,6 +13,8 @@ class ProductSeeder extends Seeder
     {
         // N/A company biztosítása
         $naCompany = Company::firstOrCreate(['company_name' => 'N/A']);
+        $products = Product::with('pics')->get();
+
 
         // Mapek
         $cat = Category::pluck('id', 'category_name');

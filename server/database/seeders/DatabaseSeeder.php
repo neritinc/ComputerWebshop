@@ -41,8 +41,8 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             CommentSeeder::class,
             ProductParameterSeeder::class,
-            // PicSeeder::class,
-            // CartItemSeeder::class,
+            PicsSeeder::class,
+            CartItemSeeder::class,
             
         ]);
     }
