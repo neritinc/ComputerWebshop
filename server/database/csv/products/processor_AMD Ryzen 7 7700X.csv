@@ -1,0 +1,17 @@
+name;Ryzen;
+pcs;555;
+price;545445;
+description;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet mi ac libero tincidunt fringilla in non nisi. Fusce ac nulla id erat mattis mollis. Quisque nec gravida magna, eu blandit dolor. Phasellus sem mauris, interdum vel leo sit amet, ullamcorper mollis dui. Donec tellus augue, pharetra et nulla sed, malesuada tincidunt libero. Nunc rutrum lorem quis ligula ullamcorper, vitae fermentum elit bibendum. Morbi sed nunc ac arcu bibendum suscipit eget in est. Cras imperdiet diam nulla, ut hendrerit tortor rhoncus sit amet. Sed pretium est quis tellus dignissim finibus.;
+company_name;intel;
+pics;3;
+category_name;processor;
+parameter_name;value;unit
+p1;1;m1
+p2;33;m2
+p3;4;m3
+p4;1000;m4
+p5;343;m5
+p6;555;m6
+p7;5;m7
+p8;66;m8
+p9;7;m9
