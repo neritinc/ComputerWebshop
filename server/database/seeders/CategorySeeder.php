@@ -15,25 +15,19 @@ class CategorySeeder extends Seeder
 
         $data = CsvReader::csvToArray($fileName, $delimiter);
 
+        $unique = [];
         foreach ($data as $row) {
             $name = trim((string)($row['category_name'] ?? ''));
-            if ($name === '') {
+            if ($name === '' || isset($unique[$name])) {
                 continue;
             }
+            $unique[$name] = true;
 
-            // Ha van id oszlop a CSV-ben, tartsuk meg (opcionális)
-            $id = isset($row['id']) && is_numeric($row['id']) ? (int)$row['id'] : null;
-
-            if ($id) {
-                Category::updateOrCreate(
-                    ['id' => $id],
-                    ['category_name' => $name]
-                );
-            } else {
-                Category::firstOrCreate(
-                    ['category_name' => $name]
-                );
-            }
+            // Mindig csak a category_name alapján dolgozzunk, ne id alapján!
+            Category::updateOrCreate(
+                ['category_name' => $name],
+                ['category_name' => $name]
+            );
         }
     }
 }

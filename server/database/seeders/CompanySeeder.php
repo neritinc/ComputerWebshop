@@ -18,10 +18,17 @@ class CompanySeeder extends Seeder
         $data = CsvReader::csvToArray($fileName, $delimiter);
 
         // Az adatok beszúrása a Company táblába
+        $unique = [];
         foreach ($data as $company) {
-            Company::create([
-                'company_name' => $company['company_name'], // A CSV fájlban lévő oszlop neve
-            ]);
+            $name = trim((string)($company['company_name'] ?? ''));
+            if ($name === '' || isset($unique[$name])) {
+                continue;
+            }
+            $unique[$name] = true;
+            Company::updateOrCreate(
+                ['company_name' => $name],
+                ['company_name' => $name]
+            );
         }
     }
 }

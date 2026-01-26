@@ -13,7 +13,8 @@ class UnitController extends Controller
      */
     public function index()
     {
-        //
+        $units = Unit::all();
+        return response()->json($units);
     }
 
     /**
@@ -21,7 +22,9 @@ class UnitController extends Controller
      */
     public function store(StoreUnitRequest $request)
     {
-        //
+        $validated = $request->validated();
+        $unit = Unit::create($validated);
+        return response()->json($unit, 201);
     }
 
     /**
@@ -29,7 +32,7 @@ class UnitController extends Controller
      */
     public function show(Unit $unit)
     {
-        //
+        return response()->json($unit);
     }
 
     /**
@@ -37,7 +40,9 @@ class UnitController extends Controller
      */
     public function update(UpdateUnitRequest $request, Unit $unit)
     {
-        //
+        $validated = $request->validated();
+        $unit->update($validated);
+        return response()->json($unit);
     }
 
     /**
@@ -45,6 +50,7 @@ class UnitController extends Controller
      */
     public function destroy(Unit $unit)
     {
-        //
+        $unit->delete();
+        return response()->json(['message' => 'Deleted successfully']);
     }
 }

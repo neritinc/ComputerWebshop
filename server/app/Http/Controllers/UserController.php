@@ -6,384 +6,232 @@ use App\Http\Requests\LoginUserRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Http\Requests\UpdateUserSelfRequest;
+use App\Http\Requests\UpdateUserPasswordRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\PersonalAccessToken;
 use Carbon\Carbon;
 use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\UpdateUserPasswordRequest;
 
 class UserController extends Controller
 {
     use AuthorizesRequests;
 
+    /**
+     * Bejelentkezés és Token generálás
+     */
     public function login(LoginUserRequest $request)
     {
-        //Eltároljuk az adatokat változókba
-        $email = $request->input(('email'));
-        $password = $request->input(('password'));
+        $email = $request->input('email');
+        $password = $request->input('password');
 
-        //Az email alapján megkeressük a usert
         $user = User::where('email', $email)->first();
 
-        //Stimmel-e az email és a jelszó?
-        if (!$user || !Hash::check($password, $password ? $user->password : '')) {
+        if (!$user || !Hash::check($password, $user->password)) {
             return response()->json([
-                'message' => 'invalid email or password'
+                'message' => 'Invalid email or password'
             ], 401);
         }
 
-        //Jó az email és a jelszó
-        //Kitöröljük az esetleges tokenjeit
-        //$user->tokens()->delete();
-
-        //itt adjuk az új tokent időkorlát nélkül
-        //$user->token = $user->createToken('access')->plainTextToken;
-
-        //Lejárati idővel
-        // $expirationTime = Carbon::now()->addSeconds(20);
-        // $name = "20sec";
-        // $expirationTime = Carbon::now()->addMinutes(30);
-        // $name ="30min";
-        // $expirationTime = Carbon::now()->addHours(4);;
-        // $name ="4hours";
-
-
         $expirationTime = Carbon::now()->addDays(1);
-        $role = $user->role;
+        $role = (int)$user->role; 
         $name = "1day-role:$role";
+
+        // JOGOSULTSÁGOK (Abilities) BEÁLLÍTÁSA
+        // Fontos: Az api.php 'ability:admin' middleware-je keresi az 'admin' stringet!
         switch ($role) {
             case 1:
-                //Admin
-                $abilities = ['*'];
+                // Admin - Minden jogot megkap, plusz az 'admin' címkét
+                $abilities = ['admin', '*'];
                 break;
             case 2:
-                //Raktáros
+                // Raktáros - Specifikus termék és raktár műveletek
                 $abilities = [
-                    'usersme:delete',
-                    'usersme:patch',
-                    'usersme:updatePassword',
-                    'usersme:get',
+                    'admin', // Ha az admin útvonalakat is elérheti
                     'products:create',
-                    'products:delete',
                     'products:update',
+                    'products:delete',
+                    'usersme:get',
+                    'usersme:patch',
+                    'usersme:updatePassword'
                 ];
                 break;
             default:
-                //Vásárló
+                // Vásárló - Csak saját profil kezelése
                 $abilities = [
-                    'usersme:delete',
+                    'usersme:get',
                     'usersme:patch',
                     'usersme:updatePassword',
-                    'usersme:get',
+                    'usersme:delete'
                 ];
                 break;
         }
 
+        // Token létrehozása
+        $token = $user->createToken($name, $abilities, $expirationTime)->plainTextToken;
+        
+        // A tokent közvetlenül a user objektumhoz fűzzük a válaszhoz
+        $user->token = $token;
 
-        $user->token = $user->createToken(
-            $name,
-            $abilities,
-            $expirationTime
-        )->plainTextToken;
-
-
-
-        //visszaadjuk a usert, ami a tokent is tartalmazni fogja
-        $data = [
+        return response()->json([
             'message' => 'ok',
             'data' => $user
-        ];
-        $status = 200;
-
-        //visszaadjuk a usert, ami a tokent is tartalmazni fogja
-        return response()->json($data, $status, options: JSON_UNESCAPED_UNICODE);
+        ], 200, [], JSON_UNESCAPED_UNICODE);
     }
 
+    /**
+     * Kijelentkezés (Aktuális token törlése)
+     */
     public function logout(Request $request)
     {
-        // Minden tokent töröl (en nem jó, mert egy másik bejelntkezést is kivégez)
-        //---------------------
-        // // Az $request->user() segítségével hozzáférünk a bejelentkezett felhasználóhoz
-        // $user = $request->user();
-
-        // // Töröljük a felhasználó összes tokenjét
-        // $user->tokens()->delete();
-
-        // return response()->json(['message' => 'Successfully logged out']);
-
-
-        //Egy mási módszer
-        // Megkeresi a tokent és törli ---------------------
-        $token = $request->bearerToken(); // Kivonjuk a bearer tokent a kérésből
-
-        // Megkeressük a token modellt
+        $token = $request->bearerToken();
         $personalAccessToken = PersonalAccessToken::findToken($token);
 
         if ($personalAccessToken) {
             $personalAccessToken->delete();
-            $data = [
-                'message' => 'ok',
-                'data' => []
-            ];
+            $data = ['message' => 'ok', 'data' => []];
         } else {
-            $data = [
-                'message' => 'Token not found',
-                'data' => []
-            ];
+            $data = ['message' => 'Token not found', 'data' => []];
         }
-        return response()->json($data, options: JSON_UNESCAPED_UNICODE);
+
+        return response()->json($data, 200, [], JSON_UNESCAPED_UNICODE);
     }
 
-
     /**
-     * Display a listing of the resource.
+     * Összes felhasználó listázása (Csak Admin)
      */
     public function index()
     {
         try {
-            //code...
             $rows = User::all();
-            // $sql ="SELECT * FROM products";
-            // $rows = DB::select($sql);
-            $status = 200;
-            $data = [
+            return response()->json([
                 'message' => 'OK',
                 'data' => $rows
-            ];
+            ], 200, [], JSON_UNESCAPED_UNICODE);
         } catch (\Exception $e) {
-            //throw $th;
-            $status = 500;
-            $data = [
-                'message' => "Server error {$e->getCode()}",
-                'data' => $rows
-            ];
+            return response()->json([
+                'message' => "Server error: {$e->getMessage()}",
+                'data' => null
+            ], 500);
         }
-
-        return response()->json($data, $status, options: JSON_UNESCAPED_UNICODE);
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
+     * Új felhasználó létrehozása (Regisztráció)
      */
     public function store(StoreUserRequest $request)
     {
         try {
-            $row = User::create($request->all());
+            $data = $request->all();
+            $data['password'] = Hash::make($request->password);
+            $row = User::create($data);
 
-            $data = [
+            return response()->json([
                 'message' => 'ok',
                 'data' => $row
-            ];
-            // Sikeres válasz: 201 Created kód ajánlott új erőforrás létrehozásakor
-            return response()->json($data, 201, options: JSON_UNESCAPED_UNICODE);
+            ], 201, [], JSON_UNESCAPED_UNICODE);
         } catch (QueryException $e) {
-            // Ellenőrizzük, hogy ez egy "Duplicate entry for key" hiba-e (MySQL hibakód: 23000 vagy 1062)
-            if ($e->getCode() == 23000 || str_contains($e->getMessage(), 'Duplicate entry')) {
-                $data = [
-                    'message' => 'Insert error: The given name already exists, please choose another one',
-                    'data' => [
-                        'name' => $request->input('name') // Visszaküldhetjük, mi volt a hibás
-                    ]
-                ];
-                // Kliens hiba, ami jelzi a kérés érvénytelenségét
-                return response()->json($data, 409, options: JSON_UNESCAPED_UNICODE); // 409 Conflict ajánlott
+            if ($e->getCode() == 23000) {
+                return response()->json([
+                    'message' => 'The email or name already exists.',
+                    'data' => null
+                ], 409);
             }
-            // Ha nem ez a hiba volt, dobjuk tovább az eredeti kivételt, vagy kezeljük másképp
             throw $e;
         }
     }
 
     /**
-     * Display the specified resource.
+     * Egy felhasználó megtekintése ID alapján
      */
     public function show(int $id)
     {
         $row = User::find($id);
         if ($row) {
-            # code...
-            $status = 200;
-            $data = [
-                'message' => 'OK',
-                'data' => $row
-            ];
-        } else {
-            # code...
-            $status = 404;
-            $data = [
-                'message' => "Not found id: $id",
-                'data' => null
-            ];
+            return response()->json(['message' => 'OK', 'data' => $row], 200);
         }
-        return response()->json($data, $status, options: JSON_UNESCAPED_UNICODE);
+        return response()->json(['message' => "Not found id: $id", 'data' => null], 404);
     }
 
     /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(User $user)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
+     * Felhasználó módosítása (Admin által)
      */
     public function update(UpdateUserRequest $request, int $id)
     {
         $row = User::find($id);
-
-        if ($row) {
-            # code...
-            $status = 200;
-            //Szabd-e ezt nekem?
-            $userToUpdate = $row;
-            $this->authorize('updateAdmin', $userToUpdate);
-
-            $row->update($request->all());
-
-            $data = [
-                'message' => 'OK',
-                'data' => [
-                    'data' => $row
-                ]
-            ];
-        } else {
-            # code...
-            $status = 404;
-            $data = [
-                'message' => "Patch error. Not found id: $id",
-                'data' => $id
-            ];
+        if (!$row) {
+            return response()->json(['message' => "Not found id: $id"], 404);
         }
-        return response()->json($data, $status, options: JSON_UNESCAPED_UNICODE);
+
+        $this->authorize('updateAdmin', $row);
+        $row->update($request->all());
+
+        return response()->json(['message' => 'OK', 'data' => $row], 200);
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Felhasználó törlése (Admin által)
      */
     public function destroy(int $id)
     {
         $row = User::find($id);
-        if ($row) {
-            # code...
-            $status = 200;
-            $userToDestroy = $row;
-            $this->authorize('deleteAdmin', $userToDestroy);
-            $row->delete();
-
-            $data = [
-                'message' => 'OK',
-                'data' => [
-                    'id' => $id
-                ]
-            ];
-        } else {
-            # code...
-            $status = 404;
-            $data = [
-                'message' => "Delete error. Not found id: $id",
-                'data' => null
-            ];
+        if (!$row) {
+            return response()->json(['message' => "Not found id: $id"], 404);
         }
-        return response()->json($data, $status, options: JSON_UNESCAPED_UNICODE);
+
+        $this->authorize('deleteAdmin', $row);
+        $row->delete();
+
+        return response()->json(['message' => 'OK', 'data' => ['id' => $id]], 200);
     }
 
-    //Önmagam törlése
-    public function destroySelf(Request $request)
-    {
-        //Kivesszük a törlendő user-t
-        $userToDestroy = $request->user();
-        // A Policy-t használjuk: 
-        $this->authorize('delete', $userToDestroy);
-        // ... törlés logika
-        //A user tokenjeinek törlése
-        $userToDestroy->tokens()->delete();
-        //A user törlése
-        $userToDestroy->delete();
-
-        $status = 404;
-        $data = [
-            'message' => "Sikeresen törölted a fiókodat",
-            'data' => null
-        ];
-        return response()->json($data, $status, options: JSON_UNESCAPED_UNICODE);
-    }
-
-
-    //Önmagam módosítása
-    public function updateSelf(UpdateUserSelfRequest $request)
-    {
-
-        //Kivesszük a módosítandó user-t
-        $userToUpdate = $request->user();
-        // A Policy-t használjuk: 
-        $this->authorize('update', $userToUpdate);
-
-        $status = 200;
-        // $userToUpdate->update($request->all());
-        $userToUpdate->update($request->validated());
-
-        $data = [
-            'message' => 'OK',
-            'data' => [
-                'data' => $userToUpdate
-            ]
-        ];
-
-        return response()->json($data, $status, options: JSON_UNESCAPED_UNICODE);
-    }
-
-    //Önmagam jelszavának módosítása
-    public function updatePassword(UpdateUserPasswordRequest $request)
-    {
-        /** @var \App\Models\User $user */
-        $user = $request->user();
-
-        // Frissítjük a jelszót (a Laravel 10+ automatikusan hasheli, 
-        // ha a model-ben a 'password' mező 'hashed' cast-ot kapott)
-        $user->update([
-            'password' => Hash::make($request->newpassword)
-        ]);
-
-        $data = [
-            'message' => 'Jelszó sikeresen módosítva.',
-            'data' => [
-                'user' => $user
-            ]
-        ];
-        $status = 200;
-
-        return response()->json($data, $status, options: JSON_UNESCAPED_UNICODE);
-    }
-
-
-
-    //Önmagam megnézése
+    /**
+     * Saját profil megtekintése
+     */
     public function indexSelf(Request $request)
     {
-        //Kivesszük a megmutatandó usert
-        $userToGet = $request->user();
-        // A Policy-t használjuk: 
-        $this->authorize('view', $userToGet);
-        $status = 200;
-        $data = [
-            'message' => 'OK',
-            'data' => [
-                'data' => $userToGet
-            ]
-        ];
-        return response()->json($data, $status, options: JSON_UNESCAPED_UNICODE);
+        $user = $request->user();
+        $this->authorize('view', $user);
+        return response()->json(['message' => 'OK', 'data' => $user], 200);
+    }
+
+    /**
+     * Saját profil módosítása
+     */
+    public function updateSelf(UpdateUserSelfRequest $request)
+    {
+        $user = $request->user();
+        $this->authorize('update', $user);
+        $user->update($request->validated());
+
+        return response()->json(['message' => 'OK', 'data' => $user], 200);
+    }
+
+    /**
+     * Saját jelszó módosítása
+     */
+    public function updatePassword(UpdateUserPasswordRequest $request)
+    {
+        $user = $request->user();
+        $user->update(['password' => Hash::make($request->newpassword)]);
+
+        return response()->json(['message' => 'Jelszó sikeresen módosítva.'], 200);
+    }
+
+    /**
+     * Saját fiók törlése
+     */
+    public function destroySelf(Request $request)
+    {
+        $user = $request->user();
+        $this->authorize('delete', $user);
+        
+        $user->tokens()->delete();
+        $user->delete();
+
+        return response()->json(['message' => "Sikeresen törölted a fiókodat"], 200);
     }
 }

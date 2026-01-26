@@ -16,17 +16,17 @@ class DatabaseSeeder extends Seeder
         Schema::disableForeignKeyConstraints();
 
         // truncate ha szükséges
-        DB::statement('DELETE FROM product_parameter');
-        DB::statement('DELETE FROM cart_items');
-        DB::statement('DELETE FROM comments');
-        DB::statement('DELETE FROM carts');
-        DB::statement('DELETE FROM users');
-        DB::statement('DELETE FROM parameters');
-        DB::statement('DELETE FROM pics');
-        DB::statement('DELETE FROM products');
-        DB::statement('DELETE FROM companies');
-        DB::statement('DELETE FROM  categories');
-        DB::statement('DELETE FROM units');
+        DB::statement('TRUNCATE TABLE product_parameter');
+        DB::statement('TRUNCATE TABLE cart_items');
+        DB::statement('TRUNCATE TABLE comments');
+        DB::statement('TRUNCATE TABLE carts');
+        DB::statement('TRUNCATE TABLE users');
+        DB::statement('TRUNCATE TABLE parameters');
+        DB::statement('TRUNCATE TABLE pics');
+        DB::statement('TRUNCATE TABLE products');
+        DB::statement('TRUNCATE TABLE companies');
+        DB::statement('TRUNCATE TABLE categories');
+        DB::statement('TRUNCATE TABLE units');
        
         Schema::enableForeignKeyConstraints();
 
@@ -36,15 +36,15 @@ class DatabaseSeeder extends Seeder
             UnitSeeder::class,
             ProductCsvSeeder::class, // Új központi seeder
             // A többi seeder csak akkor kell, ha más adatforrásból is töltesz
-            // CategorySeeder::class,
-            // CompanySeeder::class,
-            // ParameterSeeder::class,
-            // ProductSeeder::class,
-            // ProductParameterSeeder::class,
-            // PicsSeeder::class,
-            // CommentSeeder::class,
-            // CartSeeder::class,
-            // CartItemSeeder::class,
+            CategorySeeder::class,
+            CompanySeeder::class,
+            ParameterSeeder::class,
+            ProductSeeder::class,
+            ProductParameterSeeder::class,
+            PicsSeeder::class,
+            CommentSeeder::class,
+            CartSeeder::class,
+            CartItemSeeder::class,
         ]);
     }
 }

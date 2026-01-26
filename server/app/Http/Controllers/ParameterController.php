@@ -13,7 +13,8 @@ class ParameterController extends Controller
      */
     public function index()
     {
-        //
+        $parameters = Parameter::all();
+        return response()->json($parameters);
     }
 
     /**
@@ -21,7 +22,9 @@ class ParameterController extends Controller
      */
     public function store(StoreParameterRequest $request)
     {
-        //
+        $validated = $request->validated();
+        $parameter = Parameter::create($validated);
+        return response()->json($parameter, 201);
     }
 
     /**
@@ -29,7 +32,7 @@ class ParameterController extends Controller
      */
     public function show(Parameter $parameter)
     {
-        //
+        return response()->json($parameter);
     }
 
     /**
@@ -37,7 +40,9 @@ class ParameterController extends Controller
      */
     public function update(UpdateParameterRequest $request, Parameter $parameter)
     {
-        //
+        $validated = $request->validated();
+        $parameter->update($validated);
+        return response()->json($parameter);
     }
 
     /**
@@ -45,6 +50,7 @@ class ParameterController extends Controller
      */
     public function destroy(Parameter $parameter)
     {
-        //
+        $parameter->delete();
+        return response()->json(['message' => 'Deleted successfully']);
     }
 }
