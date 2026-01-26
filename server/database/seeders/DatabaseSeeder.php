@@ -34,16 +34,17 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             UnitSeeder::class,
-            CategorySeeder::class,
-            CompanySeeder::class,
-            ParameterSeeder::class,
-            ProductSeeder::class,
-            ProductParameterSeeder::class,
-            PicsSeeder::class,
-            CommentSeeder::class,
-            CartSeeder::class,
-            CartItemSeeder::class,
-            
+            ProductCsvSeeder::class, // Új központi seeder
+            // A többi seeder csak akkor kell, ha más adatforrásból is töltesz
+            // CategorySeeder::class,
+            // CompanySeeder::class,
+            // ParameterSeeder::class,
+            // ProductSeeder::class,
+            // ProductParameterSeeder::class,
+            // PicsSeeder::class,
+            // CommentSeeder::class,
+            // CartSeeder::class,
+            // CartItemSeeder::class,
         ]);
     }
 }

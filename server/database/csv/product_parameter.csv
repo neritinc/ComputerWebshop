@@ -117,3 +117,40 @@ Logitech MX Master 3S (Wireless);DPI;8000
 Logitech MX Master 3S (Wireless);Wireless;Yes
 Logitech MX Master 3S (Wireless);Battery Life;70
 Logitech MX Master 3S (Wireless);Weight;141
+
+ASUS TUF B650-PLUS;Socket;AM5
+ASUS TUF B650-PLUS;Chipset;B650
+ASUS TUF B650-PLUS;Form Factor;ATX
+ASUS TUF B650-PLUS;Memory Slots;4
+ASUS TUF B650-PLUS;Max Memory;128
+ASUS TUF B650-PLUS;PCIe Slots;3
+
+MSI PRO B650-P WIFI;Socket;AM5
+MSI PRO B650-P WIFI;Chipset;B650
+MSI PRO B650-P WIFI;Form Factor;ATX
+MSI PRO B650-P WIFI;Memory Slots;4
+MSI PRO B650-P WIFI;Max Memory;128
+MSI PRO B650-P WIFI;PCIe Slots;2
+
+Gigabyte B760M DS3H DDR4;Socket;LGA1700
+Gigabyte B760M DS3H DDR4;Chipset;B760
+Gigabyte B760M DS3H DDR4;Form Factor;mATX
+Gigabyte B760M DS3H DDR4;Memory Slots;4
+Gigabyte B760M DS3H DDR4;Max Memory;128
+Gigabyte B760M DS3H DDR4;PCIe Slots;2
+
+Dell UltraSharp U2723QE;Screen Size;27
+Dell UltraSharp U2723QE;Resolution;3840x2160
+Dell UltraSharp U2723QE;Refresh Rate;60
+Dell UltraSharp U2723QE;Panel Type;IPS
+Dell UltraSharp U2723QE;Brightness;400
+Dell UltraSharp U2723QE;Response Time;5
+Dell UltraSharp U2723QE;Contrast Ratio;2000:1
+
+Samsung Odyssey G5;Screen Size;32
+Samsung Odyssey G5;Resolution;2560x1440
+Samsung Odyssey G5;Refresh Rate;165
+Samsung Odyssey G5;Panel Type;VA
+Samsung Odyssey G5;Brightness;300
+Samsung Odyssey G5;Response Time;1
+Samsung Odyssey G5;Contrast Ratio;2500:1

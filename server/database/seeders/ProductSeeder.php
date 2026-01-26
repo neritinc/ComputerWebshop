@@ -10,27 +10,44 @@ use App\Helpers\CsvReader;
 
 class ProductSeeder extends Seeder
 {
-
-    public function run()
+    public function run(): void
     {
-        $file = fopen(storage_path('app/import/products_main.csv'), 'r');
-        fgetcsv($file, 0, ';');
-        while (($row = fgetcsv($file, 0, ';')) !== FALSE) {
-            // Megkeressük a kategóriát és céget név alapján
-            $cat = \App\Models\Category::where('category_name', $row[4])->first();
-            $comp = \App\Models\Company::where('company_name', $row[5])->first();
+        // N/A company biztosítása
+        $naCompany = Company::firstOrCreate(['company_name' => 'N/A']);
 
-            \App\Models\Product::updateOrCreate(
-                ['name' => $row[0]],
+        // Kategóriák és cégek mapjei
+        $categories = Category::pluck('id', 'category_name');
+        $companies = Company::pluck('id', 'company_name');
+
+        // CSV fájl olvasása
+        $products = CsvReader::csvToArray('csv/products.csv');
+
+        // Minden termék feldolgozása
+        foreach ($products as $productData) {
+            // Kategória ID lekérése
+            $categoryId = $categories[$productData['category_name']] ?? null;
+
+            if (!$categoryId) {
+                $this->command->warn("Hiányzó kategória: '{$productData['category_name']}' - termék: {$productData['name']}");
+                continue;
+            }
+
+            // Cég ID lekérése (ha nincs, N/A-t használunk)
+            $companyId = $companies[$productData['company_name']] ?? $naCompany->id;
+
+            // Termék létrehozása vagy frissítése
+            Product::updateOrCreate(
+                ['name' => $productData['name']],
                 [
-                    'price' => $row[2],
-                    'pcs' => $row[1],
-                    // Itt elmentjük a HTML-es leírást
-                    'description' => $row[3],
-                    'category_id' => $cat->id,
-                    'company_id' => $comp->id
+                    'price' => (int) $productData['price'],
+                    'pcs' => (int) $productData['pcs'],
+                    'category_id' => $categoryId,
+                    'company_id' => $companyId,
+                    'description' => $productData['description'] ?? '',
                 ]
             );
         }
+
+        $this->command->info('Termékek hozzáadva/frissítve a CSV fájlból!');
     }
 }

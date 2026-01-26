@@ -6,28 +6,41 @@ use Illuminate\Database\Seeder;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Company;
+use App\Models\Parameter;
+use App\Models\ProductParameter;
+use App\Helpers\CsvReader;
  
 class ProductParameterSeeder extends Seeder
 {
-    public function run() {
-    $file = fopen(storage_path('app/import/products_main.csv'), 'r');
-    fgetcsv($file, 0, ';'); 
-    while (($row = fgetcsv($file, 0, ';')) !== FALSE) {
-        // Megkeressük a kategóriát és céget név alapján
-        $cat = \App\Models\Category::where('category_name', $row[4])->first();
-        $comp = \App\Models\Company::where('company_name', $row[5])->first();
+    public function run(): void
+    {
+        $rows = CsvReader::csvToArray('csv/product_parameter.csv');
+        $categories = \App\Models\Category::pluck('id', 'category_name');
+        $units = \App\Models\Unit::pluck('id', 'unit_name');
 
-        \App\Models\Product::updateOrCreate(
-            ['name' => $row[0]],
-            [
-                'price' => $row[2],
-                'pcs' => $row[1],
-                // Itt elmentjük a HTML-es leírást
-                'description' => $row[3],
-                'category_id' => $cat->id,
-                'company_id' => $comp->id
-            ]
-        );
+        foreach ($rows as $row) {
+            $product = Product::where('name', $row['product_name'])->first();
+            if (!$product) {
+                // Ha nincs ilyen termék, ne csináljunk semmit (csak a products.csv-ben lévőkkel dolgozzon)
+                continue;
+            }
+            $categoryId = $product->category_id;
+            $parameter = Parameter::where('parameter_name', $row['parameter_name'])
+                ->where('category_id', $categoryId)
+                ->first();
+            if (!$parameter) {
+                // Ha nincs ilyen paraméter, ne csináljunk semmit (csak a ParameterSeeder által beszúrt paraméterekkel dolgozzon)
+                continue;
+            }
+            ProductParameter::updateOrCreate(
+                [
+                    'product_id' => $product->id,
+                    'parameter_id' => $parameter->id,
+                ],
+                [
+                    'value' => $row['value'],
+                ]
+            );
+        }
     }
-}
 }
