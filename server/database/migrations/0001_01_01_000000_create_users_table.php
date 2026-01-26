@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('password');
             
             // Kép alapján hozzáadott mezők angolul
-            $table->integer('role'); 
             $table->string('phone');
             $table->string('city');
             $table->string('street');

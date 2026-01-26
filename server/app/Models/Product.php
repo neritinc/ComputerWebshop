@@ -33,7 +33,7 @@ class Product extends Model
     // Kapcsolat a paraméterekkel (pivot tábla)
     public function parameters()
     {
-        return $this->belongsToMany(Parameter::class, 'product_parameter')  // A pivot tábla
+        return $this->belongsToMany(Parameter::class, 'product_parameters')  // A pivot tábla
                     ->withPivot('value') // Tároljuk az értékeket a pivot táblában
                     ->withTimestamps();  // Timestamps hozzáadása
     }

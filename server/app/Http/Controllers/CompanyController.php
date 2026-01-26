@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Company;
 use App\Http\Requests\StoreCompanyRequest;
 use App\Http\Requests\UpdateCompanyRequest;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class CompanyController extends Controller
 {
+    use AuthorizesRequests;
+
     /**
      * Display a listing of the resource.
      */
@@ -22,6 +25,8 @@ class CompanyController extends Controller
      */
     public function store(StoreCompanyRequest $request)
     {
+        $this->authorize('create', Company::class);
+        
         $validated = $request->validated();
         $company = Company::create($validated);
         return response()->json($company, 201);
@@ -40,6 +45,8 @@ class CompanyController extends Controller
      */
     public function update(UpdateCompanyRequest $request, Company $company)
     {
+        $this->authorize('update', $company);
+        
         $validated = $request->validated();
         $company->update($validated);
         return response()->json($company);
@@ -50,6 +57,8 @@ class CompanyController extends Controller
      */
     public function destroy(Company $company)
     {
+        $this->authorize('delete', $company);
+        
         $company->delete();
         return response()->json(['message' => 'Deleted successfully']);
     }

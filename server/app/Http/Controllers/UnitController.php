@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Unit;
 use App\Http\Requests\StoreUnitRequest;
 use App\Http\Requests\UpdateUnitRequest;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class UnitController extends Controller
 {
+    use AuthorizesRequests;
+
     /**
      * Display a listing of the resource.
      */
@@ -22,6 +25,8 @@ class UnitController extends Controller
      */
     public function store(StoreUnitRequest $request)
     {
+        $this->authorize('create', Unit::class);
+        
         $validated = $request->validated();
         $unit = Unit::create($validated);
         return response()->json($unit, 201);
@@ -40,6 +45,8 @@ class UnitController extends Controller
      */
     public function update(UpdateUnitRequest $request, Unit $unit)
     {
+        $this->authorize('update', $unit);
+        
         $validated = $request->validated();
         $unit->update($validated);
         return response()->json($unit);
@@ -50,6 +57,8 @@ class UnitController extends Controller
      */
     public function destroy(Unit $unit)
     {
+        $this->authorize('delete', $unit);
+        
         $unit->delete();
         return response()->json(['message' => 'Deleted successfully']);
     }

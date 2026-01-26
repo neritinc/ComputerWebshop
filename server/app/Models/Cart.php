@@ -9,4 +9,19 @@ class Cart extends Model
 {
     /** @use HasFactory<\Database\Factories\CartFactory> */
     use HasFactory;
-}
+
+    protected $fillable = [
+        'user_id',
+    ];
+
+    // Kapcsolat a felhasználóval
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    // Kapcsolat a kosár tételekkel
+    public function items()
+    {
+        return $this->hasMany(Cart_item::class);
+    }}

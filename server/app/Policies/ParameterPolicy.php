@@ -13,7 +13,8 @@ class ParameterPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        // Mindenki megtekintheti a paramétereket
+        return true;
     }
 
     /**
@@ -21,7 +22,8 @@ class ParameterPolicy
      */
     public function view(User $user, Parameter $parameter): bool
     {
-        return false;
+        // Mindenki megtekintheti az egyes paramétereket
+        return true;
     }
 
     /**
@@ -29,7 +31,8 @@ class ParameterPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        // Csak adminok hozhatnak létre paramétereket
+        return $user->role === 1;
     }
 
     /**
@@ -37,7 +40,8 @@ class ParameterPolicy
      */
     public function update(User $user, Parameter $parameter): bool
     {
-        return false;
+        // Csak adminok módosíthatnak paramétereket
+        return $user->role === 1;
     }
 
     /**
@@ -45,7 +49,8 @@ class ParameterPolicy
      */
     public function delete(User $user, Parameter $parameter): bool
     {
-        return false;
+        // Csak adminok törölhetnek paramétereket
+        return $user->role === 1;
     }
 
     /**

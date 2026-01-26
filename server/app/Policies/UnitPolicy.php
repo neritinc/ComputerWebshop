@@ -13,7 +13,8 @@ class UnitPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        // Mindenki megtekintheti az egységeket
+        return true;
     }
 
     /**
@@ -21,7 +22,8 @@ class UnitPolicy
      */
     public function view(User $user, Unit $unit): bool
     {
-        return false;
+        // Mindenki megtekintheti az egyes egységeket
+        return true;
     }
 
     /**
@@ -29,7 +31,8 @@ class UnitPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        // Csak adminok hozhatnak létre egységeket
+        return $user->role === 1;
     }
 
     /**
@@ -37,7 +40,8 @@ class UnitPolicy
      */
     public function update(User $user, Unit $unit): bool
     {
-        return false;
+        // Csak adminok módosíthatnak egységeket
+        return $user->role === 1;
     }
 
     /**
@@ -45,7 +49,8 @@ class UnitPolicy
      */
     public function delete(User $user, Unit $unit): bool
     {
-        return false;
+        // Csak adminok törölhetnek egységeket
+        return $user->role === 1;
     }
 
     /**

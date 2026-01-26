@@ -13,7 +13,8 @@ class PicPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        // Mindenki megtekintheti a képeket
+        return true;
     }
 
     /**
@@ -21,7 +22,8 @@ class PicPolicy
      */
     public function view(User $user, Pic $pic): bool
     {
-        return false;
+        // Mindenki megtekintheti az egyes képeket
+        return true;
     }
 
     /**
@@ -29,7 +31,8 @@ class PicPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        // Csak adminok hozhatnak létre képeket
+        return $user->role === 1;
     }
 
     /**
@@ -37,7 +40,8 @@ class PicPolicy
      */
     public function update(User $user, Pic $pic): bool
     {
-        return false;
+        // Csak adminok módosíthatnak képeket
+        return $user->role === 1;
     }
 
     /**
@@ -45,7 +49,8 @@ class PicPolicy
      */
     public function delete(User $user, Pic $pic): bool
     {
-        return false;
+        // Csak adminok törölhetnek képeket
+        return $user->role === 1;
     }
 
     /**

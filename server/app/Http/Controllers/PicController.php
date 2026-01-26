@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Pic;
 use App\Http\Requests\StorePicRequest;
 use App\Http\Requests\UpdatePicRequest;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class PicController extends Controller
 {
+    use AuthorizesRequests;
+
     /**
      * Display a listing of the resource.
      */
@@ -22,6 +25,8 @@ class PicController extends Controller
      */
     public function store(StorePicRequest $request)
     {
+        $this->authorize('create', Pic::class);
+        
         $validated = $request->validated();
         $pic = Pic::create($validated);
         return response()->json($pic, 201);
@@ -40,6 +45,8 @@ class PicController extends Controller
      */
     public function update(UpdatePicRequest $request, Pic $pic)
     {
+        $this->authorize('update', $pic);
+        
         $validated = $request->validated();
         $pic->update($validated);
         return response()->json($pic);
@@ -50,6 +57,8 @@ class PicController extends Controller
      */
     public function destroy(Pic $pic)
     {
+        $this->authorize('delete', $pic);
+        
         $pic->delete();
         return response()->json(['message' => 'Deleted successfully']);
     }

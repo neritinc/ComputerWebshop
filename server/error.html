@@ -1,5 +1,375 @@
-<pre class='xdebug-var-dump' dir='ltr'>
-<small>D:\Dropbox\Public\Iskola\Tanmenetek\2025-2026\13d\Laravel\LaravelAPI\laravel-rest-api\app\Http\Controllers\UserController.php:243:</small>
-<b>array</b> <i>(size=1)</i>
-  'role' <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
-</pre>
+{
+    "message": "SQLSTATE[HY000]: General error: 1364 Field 'role' doesn't have a default value (Connection: mysql, SQL: insert into `users` (`name`, `email`, `password`, `phone`, `city`, `street`, `house_number`, `zip_code`, `updated_at`, `created_at`) values (Test User, testuser@example.com, $2y$12$vb9l0IE0JZY4vHdAkD3V2OcfEtycadPakHps.AYspiZuDRNBAM0z., 06201234567, Budapest, F\u0151 utca, 10, 1011, 2026-01-26 12:24:18, 2026-01-26 12:24:18))",
+    "exception": "Illuminate\\Database\\QueryException",
+    "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+    "line": 824,
+    "trace": [
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php",
+            "line": 778,
+            "function": "runQueryCallback",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\MySqlConnection.php",
+            "line": 42,
+            "function": "run",
+            "class": "Illuminate\\Database\\Connection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\MySqlProcessor.php",
+            "line": 35,
+            "function": "insert",
+            "class": "Illuminate\\Database\\MySqlConnection",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php",
+            "line": 3853,
+            "function": "processInsertGetId",
+            "class": "Illuminate\\Database\\Query\\Processors\\MySqlProcessor",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
+            "line": 2235,
+            "function": "insertGetId",
+            "class": "Illuminate\\Database\\Query\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php",
+            "line": 1436,
+            "function": "__call",
+            "class": "Illuminate\\Database\\Eloquent\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php",
+            "line": 1401,
+            "function": "insertAndSetId",
+            "class": "Illuminate\\Database\\Eloquent\\Model",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php",
+            "line": 1240,
+            "function": "performInsert",
+            "class": "Illuminate\\Database\\Eloquent\\Model",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
+            "line": 1219,
+            "function": "save",
+            "class": "Illuminate\\Database\\Eloquent\\Model",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php",
+            "line": 390,
+            "function": "Illuminate\\Database\\Eloquent\\{closure}",
+            "class": "Illuminate\\Database\\Eloquent\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php",
+            "line": 1218,
+            "function": "tap"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php",
+            "line": 23,
+            "function": "create",
+            "class": "Illuminate\\Database\\Eloquent\\Builder",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php",
+            "line": 2540,
+            "function": "forwardCallTo",
+            "class": "Illuminate\\Database\\Eloquent\\Model",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php",
+            "line": 2556,
+            "function": "__call",
+            "class": "Illuminate\\Database\\Eloquent\\Model",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\app\\Http\\Controllers\\UserController.php",
+            "line": 113,
+            "function": "__callStatic",
+            "class": "Illuminate\\Database\\Eloquent\\Model",
+            "type": "::"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+            "line": 46,
+            "function": "store",
+            "class": "App\\Http\\Controllers\\UserController",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 265,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\ControllerDispatcher",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 211,
+            "function": "runController",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 822,
+            "function": "run",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 180,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 50,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 137,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 821,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 800,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 764,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 753,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 200,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 180,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
+            "line": 31,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
+            "line": 51,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+            "line": 109,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php",
+            "line": 61,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\HandleCors",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
+            "line": 58,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php",
+            "line": 22,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php",
+            "line": 26,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 219,
+            "function": "handle",
+            "class": "Illuminate\\Http\\Middleware\\ValidatePathEncoding",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 137,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 175,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 144,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php",
+            "line": 1220,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\public\\index.php",
+            "line": 20,
+            "function": "handleRequest",
+            "class": "Illuminate\\Foundation\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\Tanul\u00f3k\\2025-2026\\Balogh b\u00e1lint\\vizsgaremek\\ComputerWebshop\\server\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php",
+            "line": 23,
+            "function": "require_once"
+        }
+    ]
+}

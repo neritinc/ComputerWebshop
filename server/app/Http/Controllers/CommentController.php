@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Comment;
 use App\Http\Requests\StoreCommentRequest;
 use App\Http\Requests\UpdateCommentRequest;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class CommentController extends Controller
 {
+    use AuthorizesRequests;
+
     /**
      * Display a listing of the resource.
      */
@@ -22,6 +25,8 @@ class CommentController extends Controller
      */
     public function store(StoreCommentRequest $request)
     {
+        $this->authorize('create', Comment::class);
+        
         $validated = $request->validated();
         $comment = Comment::create($validated);
         return response()->json($comment, 201);
@@ -40,6 +45,8 @@ class CommentController extends Controller
      */
     public function update(UpdateCommentRequest $request, Comment $comment)
     {
+        $this->authorize('update', $comment);
+        
         $validated = $request->validated();
         $comment->update($validated);
         return response()->json($comment);
@@ -50,6 +57,8 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
+        $this->authorize('delete', $comment);
+        
         $comment->delete();
         return response()->json(['message' => 'Deleted successfully']);
     }

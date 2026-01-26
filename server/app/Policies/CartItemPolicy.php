@@ -21,7 +21,8 @@ class CartItemPolicy
      */
     public function view(User $user, Cart_item $cartItem): bool
     {
-        return false;
+        // Admin vagy a kosár tulajdonosa tekintheti meg
+        return $user->role === 1 || ($cartItem->cart && $user->id === $cartItem->cart->user_id);
     }
 
     /**
@@ -29,7 +30,8 @@ class CartItemPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        // Vásárlók tételt adhatnak a kosárhoz
+        return true;
     }
 
     /**
@@ -37,7 +39,8 @@ class CartItemPolicy
      */
     public function update(User $user, Cart_item $cartItem): bool
     {
-        return false;
+        // Admin vagy a kosár tulajdonosa módosíthatja
+        return $user->role === 1 || ($cartItem->cart && $user->id === $cartItem->cart->user_id);
     }
 
     /**
@@ -45,7 +48,8 @@ class CartItemPolicy
      */
     public function delete(User $user, Cart_item $cartItem): bool
     {
-        return false;
+        // Admin vagy a kosár tulajdonosa törölheti
+        return $user->role === 1 || ($cartItem->cart && $user->id === $cartItem->cart->user_id);
     }
 
     /**

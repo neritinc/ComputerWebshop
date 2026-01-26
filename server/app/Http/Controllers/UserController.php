@@ -44,29 +44,12 @@ class UserController extends Controller
         // Fontos: Az api.php 'ability:admin' middleware-je keresi az 'admin' stringet!
         switch ($role) {
             case 1:
-                // Admin - Minden jogot megkap, plusz az 'admin' címkét
-                $abilities = ['admin', '*'];
-                break;
-            case 2:
-                // Raktáros - Specifikus termék és raktár műveletek
-                $abilities = [
-                    'admin', // Ha az admin útvonalakat is elérheti
-                    'products:create',
-                    'products:update',
-                    'products:delete',
-                    'usersme:get',
-                    'usersme:patch',
-                    'usersme:updatePassword'
-                ];
+                // Admin - Minden jogot megkap
+                $abilities = ['admin', 'customer'];
                 break;
             default:
-                // Vásárló - Csak saját profil kezelése
-                $abilities = [
-                    'usersme:get',
-                    'usersme:patch',
-                    'usersme:updatePassword',
-                    'usersme:delete'
-                ];
+                // Vásárló (role 2 vagy más) - Saját profil és vásárlás
+                $abilities = ['customer'];
                 break;
         }
 

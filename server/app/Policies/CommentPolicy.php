@@ -29,7 +29,8 @@ class CommentPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        // Vásárlók kommentelhetenek
+        return true;
     }
 
     /**
@@ -37,7 +38,8 @@ class CommentPolicy
      */
     public function update(User $user, Comment $comment): bool
     {
-        return false;
+        // Admin vagy a komment szerzője szerkesztheti
+        return $user->role === 1 || $user->id === $comment->user_id;
     }
 
     /**
@@ -45,7 +47,8 @@ class CommentPolicy
      */
     public function delete(User $user, Comment $comment): bool
     {
-        return false;
+        // Admin vagy a komment szerzője törölheti
+        return $user->role === 1 || $user->id === $comment->user_id;
     }
 
     /**

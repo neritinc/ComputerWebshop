@@ -1,21 +1,491 @@
-### 1. LOGIN
-# @name login
-POST http://localhost:8000/api/users/login
+@baseUrl = http://localhost:8000/api
+@adminToken = 
+@customerToken = 
+
+### ============================================
+### NYILVÁNOS ENDPOINTS
+### ============================================
+
+### Teszt endpoint
+GET {{baseUrl}}/x
+
+### ============================================
+### AUTHENTIKÁCIÓ
+### ============================================
+
+### 1. Admin bejelentkezés
+# Előbb ezt futtatod, majd másold az "data.token" mezőt az @adminToken-hoz
+POST {{baseUrl}}/users/login
 Content-Type: application/json
 
 {
-    "email": "admin@example.com",
-    "password": "123"
+  "email": "admin@example.com",
+  "password": "123"
 }
 
-### 2. VÁLTOZÓ (Figyelj a pontos elérési útra!)
-@token = {{login.response.body.data.token}}
-
-### 3. MODOSÍTÁS
-PATCH http://localhost:8000/api/products/1
-Authorization: Bearer {{token}}
+### 2. Vásárló bejelentkezés
+# Előbb ezt futtatod, majd másold az "data.token" mezőt az @customerToken-hoz
+POST {{baseUrl}}/users/login
 Content-Type: application/json
 
 {
-    "price": 120000
+  "email": "vasarlo1@example.com",
+  "password": "ronaldo"
 }
+
+### 3. Regisztráció (új felhasználó)
+POST {{baseUrl}}/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Test User",
+  "email": "testuser@example.com",
+  "password": "password123",
+  "phone": "06201234567",
+  "city": "Budapest",
+  "street": "Fő utca",
+  "house_number": "10",
+  "zip_code": "1011"
+}
+
+### ============================================
+### TERMÉKEK (Nyilvános olvasás)
+### ============================================
+
+### Összes termék
+GET {{baseUrl}}/products
+
+### Egy termék
+GET {{baseUrl}}/products/1
+
+### ============================================
+### KOMMENTEK (Nyilvános olvasás)
+### ============================================
+
+### Összes komment
+GET {{baseUrl}}/comments
+
+### ============================================
+### ADMIN ENDPOINTS
+### ============================================
+
+### Kijelentkezés (Admin)
+POST {{baseUrl}}/users/logout
+Authorization: Bearer {{adminToken}}
+
+### ---- FELHASZNÁLÓ KEZELÉS ----
+
+### Összes felhasználó listája
+GET {{baseUrl}}/users
+Authorization: Bearer {{adminToken}}
+
+### Egy felhasználó megtekintése
+GET {{baseUrl}}/users/1
+Authorization: Bearer {{adminToken}}
+
+### Felhasználó módosítása (Admin által)
+PATCH {{baseUrl}}/users/2
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "name": "Modified User",
+  "city": "Debrecen"
+}
+
+### Felhasználó törlése (Admin által)
+DELETE {{baseUrl}}/users/3
+Authorization: Bearer {{adminToken}}
+
+### ---- TERMÉK KEZELÉS ----
+
+### Termék létrehozás (Admin)
+POST {{baseUrl}}/products
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "name": "Új termék",
+  "category_id": 1,
+  "company_id": 1,
+  "pcs": 50,
+  "price": 29999,
+  "description": "Ez egy új termék"
+}
+
+### Termék módosítása (Admin)
+PATCH {{baseUrl}}/products/1
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "name": "Módosított termék",
+  "price": 39999,
+  "pcs": 100
+}
+
+### Termék törlése (Admin)
+DELETE {{baseUrl}}/products/1
+Authorization: Bearer {{adminToken}}
+
+### ---- KATEGÓRIA KEZELÉS ----
+
+### Kategóriák listája
+GET {{baseUrl}}/categories
+Authorization: Bearer {{adminToken}}
+
+### Egy kategória
+GET {{baseUrl}}/categories/1
+Authorization: Bearer {{adminToken}}
+
+### Kategória létrehozás (Admin)
+POST {{baseUrl}}/categories
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "name": "Processzor",
+  "description": "CPU kategória"
+}
+
+### Kategória módosítása (Admin)
+PATCH {{baseUrl}}/categories/1
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "name": "Processzor (módosított)",
+  "description": "Intel és AMD processzor"
+}
+
+### Kategória törlése (Admin)
+DELETE {{baseUrl}}/categories/1
+Authorization: Bearer {{adminToken}}
+
+### ---- CÉG KEZELÉS ----
+
+### Cégek listája
+GET {{baseUrl}}/companies
+Authorization: Bearer {{adminToken}}
+
+### Egy cég
+GET {{baseUrl}}/companies/1
+Authorization: Bearer {{adminToken}}
+
+### Cég létrehozás (Admin)
+POST {{baseUrl}}/companies
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "name": "Intel"
+}
+
+### Cég módosítása (Admin)
+PATCH {{baseUrl}}/companies/1
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "name": "Intel Corporation"
+}
+
+### Cég törlése (Admin)
+DELETE {{baseUrl}}/companies/1
+Authorization: Bearer {{adminToken}}
+
+### ---- PARAMÉTER KEZELÉS ----
+
+### Paraméterek listája
+GET {{baseUrl}}/parameters
+Authorization: Bearer {{adminToken}}
+
+### Egy paraméter
+GET {{baseUrl}}/parameters/1
+Authorization: Bearer {{adminToken}}
+
+### Paraméter létrehozás (Admin)
+POST {{baseUrl}}/parameters
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "name": "Magok száma",
+  "unit_id": 1
+}
+
+### Paraméter módosítása (Admin)
+PATCH {{baseUrl}}/parameters/1
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "name": "Processzor magok",
+  "unit_id": 1
+}
+
+### Paraméter törlése (Admin)
+DELETE {{baseUrl}}/parameters/1
+Authorization: Bearer {{adminToken}}
+
+### ---- KÉP KEZELÉS ----
+
+### Képek listája
+GET {{baseUrl}}/pics
+Authorization: Bearer {{adminToken}}
+
+### Egy kép
+GET {{baseUrl}}/pics/1
+Authorization: Bearer {{adminToken}}
+
+### Kép létrehozás (Admin)
+POST {{baseUrl}}/pics
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "product_id": 1,
+  "path": "/images/products/processor-1.jpg"
+}
+
+### Kép módosítása (Admin)
+PATCH {{baseUrl}}/pics/1
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "path": "/images/products/processor-updated.jpg"
+}
+
+### Kép törlése (Admin)
+DELETE {{baseUrl}}/pics/1
+Authorization: Bearer {{adminToken}}
+
+### ---- EGYSÉG KEZELÉS ----
+
+### Egységek listája
+GET {{baseUrl}}/units
+Authorization: Bearer {{adminToken}}
+
+### Egy egység
+GET {{baseUrl}}/units/1
+Authorization: Bearer {{adminToken}}
+
+### Egység létrehozás (Admin)
+POST {{baseUrl}}/units
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "name": "darab",
+  "abbreviation": "db"
+}
+
+### Egység módosítása (Admin)
+PATCH {{baseUrl}}/units/1
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "name": "darab módosított",
+  "abbreviation": "d"
+}
+
+### Egység törlése (Admin)
+DELETE {{baseUrl}}/units/1
+Authorization: Bearer {{adminToken}}
+
+### ---- TERMÉK PARAMÉTER KEZELÉS ----
+
+### Termék paraméterek listája
+GET {{baseUrl}}/product-parameters
+Authorization: Bearer {{adminToken}}
+
+### Egy termék paraméter
+GET {{baseUrl}}/product-parameters/1
+Authorization: Bearer {{adminToken}}
+
+### Termék paraméter létrehozás (Admin)
+POST {{baseUrl}}/product-parameters
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "product_id": 1,
+  "parameter_id": 1,
+  "value": "8"
+}
+
+### Termék paraméter módosítása (Admin)
+PATCH {{baseUrl}}/product-parameters/1
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "value": "16"
+}
+
+### Termék paraméter törlése (Admin)
+DELETE {{baseUrl}}/product-parameters/1
+Authorization: Bearer {{adminToken}}
+
+### ---- KOMMENT KEZELÉS (Admin) ----
+
+### Komment megtekintése (Admin)
+GET {{baseUrl}}/comments/1
+Authorization: Bearer {{adminToken}}
+
+### Komment módosítása (Admin)
+PATCH {{baseUrl}}/comments/1
+Authorization: Bearer {{adminToken}}
+Content-Type: application/json
+
+{
+  "comment": "Jó termék, módosított komment"
+}
+
+### Komment törlése (Admin)
+DELETE {{baseUrl}}/comments/1
+Authorization: Bearer {{adminToken}}
+
+### ============================================
+### VÁSÁRLÓ ENDPOINTS
+### ============================================
+
+### Kijelentkezés (Vásárló)
+POST {{baseUrl}}/users/logout
+Authorization: Bearer {{customerToken}}
+
+### ---- PROFIL KEZELÉS ----
+
+### Saját profil megtekintése
+GET {{baseUrl}}/usersme
+Authorization: Bearer {{customerToken}}
+
+### Saját profil módosítása
+PATCH {{baseUrl}}/usersme
+Authorization: Bearer {{customerToken}}
+Content-Type: application/json
+
+{
+  "name": "Módosított név",
+  "phone": "06209876543"
+}
+
+### Jelszó módosítása
+PATCH {{baseUrl}}/usersmeupdatepassword
+Authorization: Bearer {{customerToken}}
+Content-Type: application/json
+
+{
+  "newpassword": "ujjelszava123"
+}
+
+### Fiók törlése
+DELETE {{baseUrl}}/usersme
+Authorization: Bearer {{customerToken}}
+
+### ---- KOSÁR KEZELÉS ----
+
+### Kosarak listája
+GET {{baseUrl}}/carts
+Authorization: Bearer {{customerToken}}
+
+### Kosár létrehozás
+POST {{baseUrl}}/carts
+Authorization: Bearer {{customerToken}}
+Content-Type: application/json
+
+{
+  "user_id": 2
+}
+
+### Egy kosár megtekintése
+GET {{baseUrl}}/carts/1
+Authorization: Bearer {{customerToken}}
+
+### Kosár módosítása
+PATCH {{baseUrl}}/carts/1
+Authorization: Bearer {{customerToken}}
+Content-Type: application/json
+
+{
+  "status": "active"
+}
+
+### Kosár törlése
+DELETE {{baseUrl}}/carts/1
+Authorization: Bearer {{customerToken}}
+
+### ---- KOSÁR TÉTELEK KEZELÉSE ----
+
+### Kosár tételek listája
+GET {{baseUrl}}/cart-items
+Authorization: Bearer {{customerToken}}
+
+### Termék hozzáadása kosárhoz
+POST {{baseUrl}}/cart-items
+Authorization: Bearer {{customerToken}}
+Content-Type: application/json
+
+{
+  "cart_id": 1,
+  "product_id": 1,
+  "quantity": 2
+}
+
+### Egy kosár tétel megtekintése
+GET {{baseUrl}}/cart-items/1
+Authorization: Bearer {{customerToken}}
+
+### Kosár tétel módosítása (mennyiség)
+PATCH {{baseUrl}}/cart-items/1
+Authorization: Bearer {{customerToken}}
+Content-Type: application/json
+
+{
+  "quantity": 5
+}
+
+### Kosár tétel eltávolítása
+DELETE {{baseUrl}}/cart-items/1
+Authorization: Bearer {{customerToken}}
+
+### ---- KOMMENT KEZELÉS (Vásárló) ----
+
+### Komment írása termékhez
+POST {{baseUrl}}/comments
+Authorization: Bearer {{customerToken}}
+Content-Type: application/json
+
+{
+  "user_id": 2,
+  "product_id": 1,
+  "comment": "Nagyon jó termék, ajánlom!"
+}
+
+### ============================================
+### HIBALEHETŐSÉGEK TESZTEZÉSE
+### ============================================
+
+### 401 - Nincs token (protected endpoint)
+GET {{baseUrl}}/usersme
+
+### 403 - Vásárló próbál admin funkciót használni
+POST {{baseUrl}}/products
+Authorization: Bearer {{customerToken}}
+Content-Type: application/json
+
+{
+  "name": "Test",
+  "category_id": 1,
+  "company_id": 1,
+  "pcs": 10,
+  "price": 5000,
+  "description": "Test"
+}
+
+### 404 - Nem létező erőforrás
+GET {{baseUrl}}/products/99999
+Authorization: Bearer {{customerToken}}

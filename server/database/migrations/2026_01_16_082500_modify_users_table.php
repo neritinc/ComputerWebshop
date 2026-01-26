@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            // role mező hozzáadása: integer, alapértelmezett értéke 3
+            $table->integer('role')->default(2)->after('email');
         });
     }
 

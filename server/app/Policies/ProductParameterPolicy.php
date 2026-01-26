@@ -2,7 +2,7 @@
 
 namespace App\Policies;
 
-use App\Models\Product_parameter;
+use App\Models\ProductParameter;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
@@ -13,15 +13,17 @@ class ProductParameterPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        // Mindenki megtekintheti a termék paramétereket
+        return true;
     }
 
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Product_parameter $productParameter): bool
+    public function view(User $user, ProductParameter $productParameter): bool
     {
-        return false;
+        // Mindenki megtekintheti az egyes termék paramétereket
+        return true;
     }
 
     /**
@@ -29,29 +31,32 @@ class ProductParameterPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        // Csak adminok hozhatnak létre termék paramétereket
+        return $user->role === 1;
     }
 
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Product_parameter $productParameter): bool
+    public function update(User $user, ProductParameter $productParameter): bool
     {
-        return false;
+        // Csak adminok módosíthatnak termék paramétereket
+        return $user->role === 1;
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Product_parameter $productParameter): bool
+    public function delete(User $user, ProductParameter $productParameter): bool
     {
-        return false;
+        // Csak adminok törölhetnek termék paramétereket
+        return $user->role === 1;
     }
 
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Product_parameter $productParameter): bool
+    public function restore(User $user, ProductParameter $productParameter): bool
     {
         return false;
     }
@@ -59,7 +64,7 @@ class ProductParameterPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Product_parameter $productParameter): bool
+    public function forceDelete(User $user, ProductParameter $productParameter): bool
     {
         return false;
     }

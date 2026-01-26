@@ -13,7 +13,8 @@ class ProductPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        // Mindenki megtekintheti a termékeket
+        return true;
     }
 
     /**
@@ -21,7 +22,8 @@ class ProductPolicy
      */
     public function view(User $user, Product $product): bool
     {
-        return false;
+        // Mindenki megtekintheti az egyes termékeket
+        return true;
     }
 
     /**
@@ -29,7 +31,8 @@ class ProductPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        // Csak adminok hozhatnak létre termékeket
+        return $user->role === 1;
     }
 
     /**
@@ -37,7 +40,8 @@ class ProductPolicy
      */
     public function update(User $user, Product $product): bool
     {
-        return false;
+        // Csak adminok módosíthatnak termékeket
+        return $user->role === 1;
     }
 
     /**
@@ -45,7 +49,8 @@ class ProductPolicy
      */
     public function delete(User $user, Product $product): bool
     {
-        return false;
+        // Csak adminok törölhetnek termékeket
+        return $user->role === 1;
     }
 
     /**

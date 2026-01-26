@@ -7,9 +7,12 @@ use App\Models\ProductParameter; // Ezt be kell importálni!
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class ProductController extends Controller
 {
+    use AuthorizesRequests;
+
     public function index()
     {
         // Betöltjük a kategóriát és a paramétereket is, hogy lássuk a frontenden
@@ -19,6 +22,8 @@ class ProductController extends Controller
 
     public function store(StoreProductRequest $request)
     {
+        $this->authorize('create', Product::class);
+        
         $validated = $request->validated();
         $product = Product::create($validated);
         return response()->json($product, 201);
@@ -37,6 +42,7 @@ class ProductController extends Controller
     public function update(UpdateProductRequest $request, $id)
     {
         $product = Product::findOrFail($id);
+        $this->authorize('update', $product);
         
         // 1. Alapadatok frissítése (név, ár, leírás, stb.)
         $product->update($request->validated());
@@ -65,6 +71,8 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::findOrFail($id);
+        $this->authorize('delete', $product);
+        
         $product->delete();
         return response()->json(['message' => 'Deleted successfully']);
     }

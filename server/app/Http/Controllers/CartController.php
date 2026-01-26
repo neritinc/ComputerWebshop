@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Http\Requests\StoreCartRequest;
 use App\Http\Requests\UpdateCartRequest;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class CartController extends Controller
 {
+    use AuthorizesRequests;
+
     /**
      * Display a listing of the resource.
      */
@@ -22,6 +25,8 @@ class CartController extends Controller
      */
     public function store(StoreCartRequest $request)
     {
+        $this->authorize('create', Cart::class);
+        
         $validated = $request->validated();
         $cart = Cart::create($validated);
         return response()->json($cart, 201);
@@ -32,6 +37,8 @@ class CartController extends Controller
      */
     public function show(Cart $cart)
     {
+        $this->authorize('view', $cart);
+        
         return response()->json($cart);
     }
 
@@ -40,6 +47,8 @@ class CartController extends Controller
      */
     public function update(UpdateCartRequest $request, Cart $cart)
     {
+        $this->authorize('update', $cart);
+        
         $validated = $request->validated();
         $cart->update($validated);
         return response()->json($cart);
@@ -50,6 +59,8 @@ class CartController extends Controller
      */
     public function destroy(Cart $cart)
     {
+        $this->authorize('delete', $cart);
+        
         $cart->delete();
         return response()->json(['message' => 'Deleted successfully']);
     }

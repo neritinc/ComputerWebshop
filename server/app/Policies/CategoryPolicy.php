@@ -13,7 +13,8 @@ class CategoryPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        // Mindenki megtekintheti a kategóriákat
+        return true;
     }
 
     /**
@@ -21,7 +22,8 @@ class CategoryPolicy
      */
     public function view(User $user, Category $category): bool
     {
-        return false;
+        // Mindenki megtekintheti az egyes kategóriákat
+        return true;
     }
 
     /**
@@ -29,7 +31,8 @@ class CategoryPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        // Csak adminok hozhatnak létre kategóriákat
+        return $user->role === 1;
     }
 
     /**
@@ -37,7 +40,8 @@ class CategoryPolicy
      */
     public function update(User $user, Category $category): bool
     {
-        return false;
+        // Csak adminok módosíthatnak kategóriákat
+        return $user->role === 1;
     }
 
     /**
@@ -45,7 +49,8 @@ class CategoryPolicy
      */
     public function delete(User $user, Category $category): bool
     {
-        return false;
+        // Csak adminok törölhetnek kategóriákat
+        return $user->role === 1;
     }
 
     /**

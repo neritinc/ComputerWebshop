@@ -14,5 +14,16 @@ class Comment extends Model
         'product_id',
         'comment',
     ];
-}
 
+    // Kapcsolat a felhasználóval
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    // Kapcsolat a termékkel
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
+}
