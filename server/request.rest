@@ -297,13 +297,12 @@ Content-Type: application/json
 }
 
 ### Kép URL módosítása
-POST {{host}}/api/pics/1
+PATCH {{host}}/api/pics/1
 Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-    "_method": "PATCH",
-    "url": "http://example.com/new-image.jpg"
+    "image_path": "uj_processzor_kep_2026.jpg"
 }
 
 ### Admin töröl egy trágár kommentet
@@ -311,7 +310,7 @@ DELETE {{host}}/api/comments/5
 Authorization: Bearer {{token}}
 
 ### Admin módosít egy kommentet (pl. kimoderálja a reklámot)
-POST {{host}}/api/comments/5
+POST {{host}}/api/comments/6
 Authorization: Bearer {{token}}
 Content-Type: application/json
 

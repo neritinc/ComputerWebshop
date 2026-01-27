@@ -8,6 +8,14 @@ use Illuminate\Auth\Access\Response;
 
 class PicPolicy
 {
+
+    public function before(User $user, string $ability): bool|null
+    {
+        if ($user->tokenCan('admin')) {
+            return true;
+        }
+        return null; // Ha nem admin, megy tovább a sima metódusokra
+    }
     /**
      * Determine whether the user can view any models.
      */
@@ -41,7 +49,7 @@ class PicPolicy
     public function update(User $user, Pic $pic): bool
     {
         // Csak adminok módosíthatnak képeket
-        return $user->role === 1;
+        return $user->tokenCan('admin');
     }
 
     /**

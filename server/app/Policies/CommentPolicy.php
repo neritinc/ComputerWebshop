@@ -39,7 +39,7 @@ class CommentPolicy
     public function update(User $user, Comment $comment): bool
     {
         // Admin vagy a komment szerzője szerkesztheti
-        return $user->role === 1 || $user->id === $comment->user_id;
+        return $user->tokenCan('admin');
     }
 
     /**
