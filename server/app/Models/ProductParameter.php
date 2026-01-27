@@ -6,13 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductParameter extends Model
 {
-    protected $table = 'product_parameter';
+    protected $table = 'product_parameter'; // pontos név
 
-    protected $fillable = [
-        'product_id',
-        'parameter_id',
-        'value',
-    ];
+    protected $fillable = ['product_id', 'parameter_id', 'value'];
 
-    public $timestamps = false; // ha nincs created_at / updated_at
+    public $timestamps = false;
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
+
+    public function parameter()
+    {
+        return $this->belongsTo(Parameter::class);
+    }
 }
+

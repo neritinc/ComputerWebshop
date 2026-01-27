@@ -3,32 +3,33 @@
 namespace App\Http\Controllers;
 
 use App\Models\ProductParameter;
-use App\Http\Requests\StoreProduct_parameterRequest;
-use App\Http\Requests\UpdateProduct_parameterRequest;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Http\Request;
 
 class ProductParameterController extends Controller
 {
-    use AuthorizesRequests;
-
     /**
      * Display a listing of the resource.
+     * Lekéri az összes product_parameter-t a kapcsolódó termékkel és paraméterrel.
      */
     public function index()
     {
-        $params = ProductParameter::all();
+        $params = ProductParameter::with(['product', 'parameter'])->get();
         return response()->json($params);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreProduct_parameterRequest $request)
+    public function store(Request $request)
     {
-        $this->authorize('create', ProductParameter::class);
-        
-        $validated = $request->validated();
+        $validated = $request->validate([
+            'product_id' => 'required|exists:products,id',
+            'parameter_id' => 'required|exists:parameters,id',
+            'value' => 'required|string|max:191',
+        ]);
+
         $param = ProductParameter::create($validated);
+
         return response()->json($param, 201);
     }
 
@@ -37,18 +38,23 @@ class ProductParameterController extends Controller
      */
     public function show(ProductParameter $product_parameter)
     {
+        $product_parameter->load(['product', 'parameter']); // Kapcsolatok betöltése
         return response()->json($product_parameter);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateProduct_parameterRequest $request, ProductParameter $product_parameter)
+    public function update(Request $request, ProductParameter $product_parameter)
     {
-        $this->authorize('update', $product_parameter);
-        
-        $validated = $request->validated();
+        $validated = $request->validate([
+            'product_id' => 'sometimes|required|exists:products,id',
+            'parameter_id' => 'sometimes|required|exists:parameters,id',
+            'value' => 'sometimes|required|string|max:191',
+        ]);
+
         $product_parameter->update($validated);
+
         return response()->json($product_parameter);
     }
 
@@ -57,8 +63,6 @@ class ProductParameterController extends Controller
      */
     public function destroy(ProductParameter $product_parameter)
     {
-        $this->authorize('delete', $product_parameter);
-        
         $product_parameter->delete();
         return response()->json(['message' => 'Deleted successfully']);
     }

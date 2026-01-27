@@ -9,32 +9,31 @@ class Product extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
     protected $fillable = [
-        'name', 
-        'category_id', 
-        'company_id', 
-        'pcs', 
-        'price', 
+        'name',
+        'category_id',
+        'company_id',
+        'pcs',
+        'price',
         'description',
     ];
 
-    // Kapcsolat a kategóriával
     public function category()
     {
         return $this->belongsTo(Category::class);
     }
 
-    // Kapcsolat a céggel
     public function company()
     {
         return $this->belongsTo(Company::class);
     }
 
-    // Kapcsolat a paraméterekkel (pivot tábla)
+    // Helyes pivot tábla név
     public function parameters()
     {
-        return $this->belongsToMany(Parameter::class, 'product_parameters')  // A pivot tábla
-                    ->withPivot('value') // Tároljuk az értékeket a pivot táblában
-                    ->withTimestamps();  // Timestamps hozzáadása
+        return $this->belongsToMany(Parameter::class, 'product_parameter')
+            ->withPivot('value')
+            ->withTimestamps();
     }
 }

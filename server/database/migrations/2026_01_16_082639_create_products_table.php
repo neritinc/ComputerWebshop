@@ -8,15 +8,15 @@ return new class extends Migration {
     public function up(): void {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id');
-            $table->string('name',150);
-            $table->integer('pcs');
-            $table->decimal('price', 15, 2);
-            $table->text('description');
-            $table->unsignedBigInteger('company_id');
-            $table->timestamps();
-            $table->foreign('category_id')->references('id')->on('categories');
-            $table->foreign('company_id')->references('id')->on('companies');
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->string('name',150)->nullable();
+            $table->integer('pcs')->nullable();
+            $table->decimal('price', 15, 2)->nullable();
+            $table->text('description')->nullable();
+            $table->unsignedBigInteger('company_id')->nullable();
+            // $table->timestamps();
+            $table->foreign('category_id')->references('id')->on('categories')->nullable();
+            $table->foreign('company_id')->references('id')->on('companies')->nullable();
         });
     }
 

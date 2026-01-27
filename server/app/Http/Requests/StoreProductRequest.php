@@ -11,7 +11,7 @@ class StoreProductRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,12 @@ class StoreProductRequest extends FormRequest
     {
         return [
             //
+            'name' => 'required|string|max:150',
+            'category_id' => 'required|exists:categories,id', // Ellenőrzi, hogy létezik-e a kategória
+            'company_id' => 'required|exists:companies,id',  // Ellenőrzi, hogy létezik-e a cég
+            'pcs' => 'required|integer|min:1',
+            'price' => 'required|numeric|min:0',
+            'description' => 'required|string',
         ];
     }
 }

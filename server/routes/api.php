@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 // Alap teszt endpoint
-Route::get('/x', function(){
+Route::get('/x', function () {
     return 'API';
 });
 
@@ -28,7 +28,7 @@ Route::get('comments', [CommentController::class, 'index']);
 
 // --- REGION: AUTHENTICATED (Bejelentkezett felhasználók) ---
 Route::middleware('auth:sanctum')->group(function () {
-    
+
     // Kijelentkezés minden bejelentkezettnek
     Route::post('users/logout', [UserController::class, 'logout']);
 
@@ -54,6 +54,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('companies', [CompanyController::class, 'store']);
         Route::patch('companies/{company}', [CompanyController::class, 'update']);
         Route::delete('companies/{company}', [CompanyController::class, 'destroy']);
+        Route::get('companies', [CompanyController::class, 'index']);
+        Route::get('companies/{company}', [CompanyController::class, 'show']);
 
         // Paraméter kezelés
         Route::post('parameters', [ParameterController::class, 'store']);
@@ -71,9 +73,12 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::delete('units/{unit}', [UnitController::class, 'destroy']);
 
         // Termék paraméter kezelés
-        Route::post('product-parameters', [ProductParameterController::class, 'store']);
-        Route::patch('product-parameters/{product_parameter}', [ProductParameterController::class, 'update']);
-        Route::delete('product-parameters/{product_parameter}', [ProductParameterController::class, 'destroy']);
+        Route::get('product_parameters', [ProductParameterController::class, 'index']);
+        Route::get('product_parameters/{product_parameter}', [ProductParameterController::class, 'show']);
+        Route::post('product_parameters', [ProductParameterController::class, 'store']);
+        Route::patch('product_parameters/{product_parameter}', [ProductParameterController::class, 'update']);
+        Route::delete('product_parameters/{product_parameter}', [ProductParameterController::class, 'destroy']);
+
 
         // Komment kezelés (Admin is kezelhet)
         Route::get('comments/{comment}', [CommentController::class, 'show']);
@@ -113,7 +118,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::patch('usersme', [UserController::class, 'updateSelf']);
         Route::patch('usersmeupdatepassword', [UserController::class, 'updatePassword']);
         Route::delete('usersme', [UserController::class, 'destroySelf']);
-        
+
         // Kosár kezelés
         Route::get('carts', [CartController::class, 'index']);
         Route::post('carts', [CartController::class, 'store']);
