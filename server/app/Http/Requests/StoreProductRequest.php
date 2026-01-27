@@ -22,13 +22,19 @@ class StoreProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
-            'name' => 'required|string|max:150',
-            'category_id' => 'required|exists:categories,id', // Ellenőrzi, hogy létezik-e a kategória
-            'company_id' => 'required|exists:companies,id',  // Ellenőrzi, hogy létezik-e a cég
+            // A 'unique:products,name' azt jelenti: nézd meg a products tábla name oszlopát
+            'name' => 'required|string|max:150|unique:products,name',
+            'category_id' => 'required|exists:categories,id',
+            'company_id' => 'required|exists:companies,id',
             'pcs' => 'required|integer|min:1',
             'price' => 'required|numeric|min:0',
             'description' => 'required|string',
+        ];
+    }
+    public function messages(): array
+    {
+        return [
+            'name.unique' => 'This product name already exists in our database.',
         ];
     }
 }

@@ -20,12 +20,26 @@ class CommentFactory extends Factory
     public function definition(): array
     {
         $comments = [
-            'Nagyon jó ár-érték arány.',
-            'Gyors szállítás, elégedett vagyok.',
-            'A termék megfelel a leírásnak.',
-            'Kicsit drága, de minőségi.',
-            'Újra megvenném.',
-
+            'Great value for money.',
+            'Fast shipping, I am satisfied with the service.',
+            'The product matches the description perfectly.',
+            'I would definitely buy it again.',
+            'Exceeded my expectations after a week of use.',
+            'Easy to install, worked immediately out of the box.',
+            'Very stable performance even under heavy load.',
+            'The best choice in this price range, highly recommended.',
+            'A bit pricey, but the quality is top-notch.',
+            'Decent performance, but loud fans under stress.',
+            'The hardware is great, but the packaging was slightly damaged.',
+            'It does the job, but the software interface feels outdated.',
+            'Good product, but the delivery took much longer than expected.',
+            'Solid build quality, though it runs a bit hotter than I liked.',
+            'Incompatible with older setups  check specs before buying!',
+            'The manual is very basic and doesn\'t help with troubleshooting.',
+            'Disappointing experience, the product failed after two weeks.',
+            'Not worth the extra cost compared to the previous model.',
+            'Overheats quickly during gaming sessions.',
+            'Customer support was slow to respond to my compatibility issues.'
         ];
         $randomComment = $this->faker->randomElement($comments);
         do {

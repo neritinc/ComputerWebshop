@@ -5,35 +5,30 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    use AuthorizesRequests;
-
     /**
-     * Display a listing of the resource.
+     * Összes kategória listázása.
      */
     public function index()
     {
-        $categories = Category::all();
-        return response()->json($categories);
+        return response()->json(Category::all());
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Új kategória mentése.
+     * A jogosultságot és validációt a StoreCategoryRequest kezeli.
      */
     public function store(StoreCategoryRequest $request)
     {
-        $this->authorize('create', Category::class);
-        
-        $validated = $request->validated();
-        $category = Category::create($validated);
+        $category = Category::create($request->validated());
         return response()->json($category, 201);
     }
 
     /**
-     * Display the specified resource.
+     * Egy konkrét kategória megjelenítése.
      */
     public function show(Category $category)
     {
@@ -41,24 +36,25 @@ class CategoryController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Kategória frissítése.
+     * A jogosultságot és validációt az UpdateCategoryRequest kezeli.
      */
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        $this->authorize('update', $category);
-        
-        $validated = $request->validated();
-        $category->update($validated);
+        $category->update($request->validated());
         return response()->json($category);
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Kategória törlése.
      */
     public function destroy(Category $category)
     {
-        $this->authorize('delete', $category);
-        
+        // Mivel itt nincs külön FormRequest, kézzel ellenőrizzük az admint
+        if (auth()->user()->role !== 1) {
+            return response()->json(['message' => 'Unauthorized. Admin role required.'], 403);
+        }
+
         $category->delete();
         return response()->json(['message' => 'Deleted successfully']);
     }

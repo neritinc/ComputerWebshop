@@ -1,15 +1,18 @@
-@baseUrl = http://localhost:8000/api
-
+### Változók
+@protocol = http://
+@hostname = localhost
+@port = 8000
+@host = {{protocol}}{{hostname}}:{{port}}
 
 ### ============================================
 ### NYILVÁNOS ENDPOINTS
 ### ============================================
 
 ### Teszt endpoint
-GET {{baseUrl}}/x
+GET {{host}}/api/x
 ### 1. Admin bejelentkezés
 # @name login
-POST {{baseUrl}}/users/login
+POST {{host}}/api/users/login
 Content-Type: application/json
 
 {
@@ -20,13 +23,13 @@ Content-Type: application/json
 @token = {{login.response.body.data.token}}
 
 ### logout user
-POST  {{baseUrl}}/users/logout
+POST  {{host}}/api/users/logout
 Accept: application/json
 Authorization: Bearer {{token}}
 
 ### 2. Vásárló bejelentkezés
 # Előbb ezt futtatod, majd másold az "data.token" mezőt az @customerToken-hoz
-POST {{baseUrl}}/users/login
+POST {{host}}/api/users/login
 Content-Type: application/json
 
 {
@@ -35,7 +38,7 @@ Content-Type: application/json
 }
 
 ### 3. Regisztráció (új felhasználó)
-POST {{baseUrl}}/users
+POST {{host}}/api/users
 Content-Type: application/json
 Accept: application/json
 
@@ -51,30 +54,31 @@ Accept: application/json
 }
 
 ### --- companies
-GET {{baseUrl}}/companies
+GET {{host}}/api/companies
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {{token}}
 
 ### --- categories
-GET {{baseUrl}}/categories
+GET {{host}}/api/categories
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {{token}}
 
 ### --- units
-GET {{baseUrl}}/units
+GET {{host}}/api/units
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {{token}}
 
 ### --- products
-GET {{baseUrl}}/products
+GET {{host}}/api/products
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {{token}}
-###- Post new product
-POST {{baseUrl}}/products
+
+### POST new product (Admin)
+POST {{host}}/api/products
 Authorization: Bearer {{token}}
 Accept: application/json
 Content-Type: application/json
@@ -88,52 +92,261 @@ Content-Type: application/json
   "description": "DDR5 RAM module"
 }
 
-### 
-
-PATCH {{baseUrl}}/products/1
+### Product price update (Admin)
+PATCH {{host}}/api/products/1
 Authorization: Bearer {{token}}
 Content-Type: application/json
 Accept: application/json
 
 {
-  "price": "31990.00",
+  "price": "310990.00",
   "pcs": 15
 }
 
+### Delete product (Admin)
+DELETE {{host}}/api/products/1
+Authorization: Bearer {{token}}
 
 ### --- product_parameter
-GET {{baseUrl}}/product_parameters
+GET {{host}}/api/product_parameters
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {{token}}
 
 ### --- pics
-GET {{baseUrl}}/pics
+GET {{host}}/api/pics
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {{token}}
 
 ### --- comments
-GET {{baseUrl}}/comments
+GET {{host}}/api/comments
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {{token}}
 
-
-### --- comments
-GET {{baseUrl}}/carts
+### --- carts
+GET {{host}}/api/carts
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {{token}}
 
 ### --- cart items
-GET {{baseUrl}}/carts
+GET {{host}}/api/cart-items
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {{token}}
 
+### --- admin permissions - Product management (Admin Only)
+### Admin creates a new product
+POST {{host}}/api/products
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "New Product",
+  "category_id": 2,
+  "company_id": 3,
+  "pcs": 20,
+  "price": "14999.00",
+  "description": "New exciting product"
+}
+
+### Admin updates a product (patch)
+PATCH {{host}}/api/products/2
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "price": "15999.00",
+  "pcs": 2
+}
+
+### Admin deletes a product
+DELETE {{host}}/api/products/3
+Authorization: Bearer {{token}}
+
+### --- Admin manages users
+GET {{host}}/api/users
+Accept: application/json
+Authorization: Bearer {{token}}
+
+POST {{host}}/api/users
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Test Admin",
+  "email": "admin2@example.com",
+  "password": "admin123",
+  "phone": "06201234567",
+  "city": "Budapest",
+  "street": "Kossuth utca",
+  "house_number": "5",
+  "zip_code": "1031"
+}
+
+PATCH {{host}}/api/users/4
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Updated Admin"
+}
+
+DELETE {{host}}/api/users/4
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{token}}
+
+### --- Product parameters management (Admin)
+POST {{host}}/api/product_parameters
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "product_id": 1,
+  "parameter_id": 2,
+  "value": "Value of the parameter"
+}
+
+PATCH {{host}}/api/product_parameters/2
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "value": "Updated value"
+}
+
+DELETE {{host}}/api/product_parameters/2
+Authorization: Bearer {{token}}
+
+### --- Admin manages categories
+POST {{host}}/api/categories
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "category_name": "New Category"
+}
+###
+POST {{host}}/api/categories/22
+Authorization: Bearer {{token}}
+Accept: application/json
+Content-Type: application/json
+
+{
+    "_method": "PATCH",
+    "category_name": "Geci"
+}
+### Saját profil lekérése
+GET {{host}}/api/usersme
+Authorization: Bearer {{token}}
+
+### Saját profil módosítása (Név, cím, stb.)
+POST {{host}}/api/usersme
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "_method": "PATCH",
+    "name": "Új Teszt Név"
+}
+
+### Saját jelszó módosítása
+PATCH {{host}}/api/usersmeupdatepassword
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "current_password": "123",
+    "new_password": "1234",
+    "new_password_confirmation": "1234"
+}
+
+### Saját fiók törlése
+DELETE {{host}}/api/usersme
+Authorization: Bearer {{token}}
 
 
+### Cég módosítása (Admin)
+PATCH  {{host}}/api/companies/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
 
+{
+    "_method": "PATCH",
+    "company_name": "Módosítotdt Cég Kft"
+}
 
+### Egység módosítása (pl. kg-ról literre)
+POST {{host}}/api/units/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "_method": "PATCH",
+    "unit_name": "liter"
+}
+
+### Kép URL módosítása
+POST {{host}}/api/pics/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "_method": "PATCH",
+    "url": "http://example.com/new-image.jpg"
+}
+
+### Admin töröl egy trágár kommentet
+DELETE {{host}}/api/comments/5
+Authorization: Bearer {{token}}
+
+### Admin módosít egy kommentet (pl. kimoderálja a reklámot)
+POST {{host}}/api/comments/5
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "_method": "PATCH",
+    "comment_text": "[Moderálva]"
+}
+
+### Vásárló létrehozza a saját kosarát
+POST {{host}}/api/carts
+Authorization: Bearer {{token}}
+
+### Tétel hozzáadása a kosárhoz
+POST {{host}}/api/cart-items
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "product_id": 1,
+    "quantity": 3
+}
+
+### Tétel mennyiségének módosítása a kosárban
+POST {{host}}/api/cart-items/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "_method": "PATCH",
+    "quantity": 5
+}
+
+### Keresés név alapján
+GET {{host}}/api/products?search=Kingston
+
+### Szűrés kategóriára
+GET {{host}}/api/products?category_id=4
 

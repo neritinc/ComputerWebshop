@@ -29,6 +29,7 @@ class UserController extends Controller
 
         $user = User::where('email', $email)->first();
 
+        // 1. Felhasználó és jelszó ellenőrzése
         if (!$user || !Hash::check($password, $user->password)) {
             return response()->json([
                 'message' => 'Invalid email or password',
@@ -36,27 +37,22 @@ class UserController extends Controller
             ], 401, [], JSON_UNESCAPED_UNICODE);
         }
 
-        $expirationTime = Carbon::now()->addDays(1);
-        $role = (int) $user->role;
-        $name = "1day-role:$role";
+        // 2. Token paraméterek beállítása
+        $expirationTime = now()->addDays(1);
+        $abilities = $user->getUserAbilities(); // A modellből kérjük le: ['admin', 'customer']
+        $tokenName = "1day-token-role-" . $user->role;
 
-        switch ($role) {
-            case 1: // ADMIN
-                $abilities = ['admin', 'customer'];
-                break;
-            default: // CUSTOMER
-                $abilities = ['customer'];
-                break;
-        }
-
-        $user->token = $user->createToken(
-            $name,
+        // 3. Token létrehozása (itt adjuk át a képességeket és a lejárati időt)
+        $token = $user->createToken(
+            $tokenName,
             $abilities,
             $expirationTime
         )->plainTextToken;
 
+        // 4. Válasz küldése (CSAK EGYETLEN RETURN LEGYEN!)
         return response()->json([
             'message' => 'ok',
+            'token' => $token,
             'data' => $user
         ], 200, [], JSON_UNESCAPED_UNICODE);
     }

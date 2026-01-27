@@ -11,7 +11,7 @@ class UpdateUnitRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class UpdateUnitRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            // Ha ez a sor hiányzik, a validated() üres lesz!
+            'unit_name' => 'required|string|max:255|unique:units,unit_name,' . 
+            $this->unit->id,
         ];
     }
 }

@@ -40,8 +40,8 @@ class UnitPolicy
      */
     public function update(User $user, Unit $unit): bool
     {
-        // Csak adminok módosíthatnak egységeket
-        return $user->role === 1;
+        // Csak akkor engedjük, ha a tokennek van 'admin' képessége
+        return $user->tokenCan('admin');
     }
 
     /**

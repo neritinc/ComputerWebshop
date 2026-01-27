@@ -15,25 +15,32 @@ class ProductController extends Controller
     use AuthorizesRequests;
 
     /**
-     * Termékek listázása kapcsolatokkal
+     * Termékek listázása szűréssel és kereséssel
      */
-    public function index()
-    {
-        try {
-            // JAVÍTVA: A parameters kapcsolaton keresztül töltjük be a unit-ot.
-            // Feltételezve, hogy a Parameter modellben van 'unit' kapcsolat.
-            $products = Product::with(['category', 'company', 'parameters.unit'])->get();
-            return response()->json($products);
-        } catch (\Exception $e) {
-            Log::error("Hiba a termékek lekérdezésekor: " . $e->getMessage());
-            
-            return response()->json([
-                'error' => 'Hiba a kapcsolatok betöltésekor.',
-                'message' => $e->getMessage(),
-                'data' => Product::all() // Vészmegoldás: adatok kapcsolatok nélkül
-            ], 500);
+   public function index(Request $request) // 1. Itt átvesszük a kérést
+{
+    try {
+        $query = Product::with(['category', 'company', 'parameters.unit']);
+
+        // 2. Szűrés kategóriára, ha van az URL-ben
+        if ($request->has('category_id')) {
+            $query->where('category_id', $request->category_id);
         }
+
+        // 3. Keresés névben vagy leírásban, ha van az URL-ben
+        if ($request->has('search')) {
+            $search = $request->search;
+            $query->where(function($q) use ($search) {
+                $q->where('name', 'like', "%$search%")
+                  ->orWhere('description', 'like', "%$search%");
+            });
+        }
+
+        return response()->json($query->get());
+    } catch (\Exception $e) {
+        return response()->json(['error' => $e->getMessage()], 500);
     }
+}
 
     /**
      * Új termék mentése
@@ -42,19 +49,14 @@ class ProductController extends Controller
     {
         try {
             $this->authorize('create', Product::class);
-            
-            $validated = $request->validated();
-            $product = Product::create($validated);
+            $product = Product::create($request->validated());
             
             return response()->json([
                 'message' => 'Termék sikeresen létrehozva',
                 'data' => $product
             ], 201);
         } catch (\Exception $e) {
-            return response()->json([
-                'error' => 'Mentési hiba',
-                'message' => $e->getMessage()
-            ], 500);
+            return response()->json(['error' => 'Mentési hiba', 'message' => $e->getMessage()], 500);
         }
     }
 
@@ -64,7 +66,6 @@ class ProductController extends Controller
     public function show($id)
     {
         try {
-            // JAVÍTVA: Itt is a helyes kapcsolati láncot használjuk
             $product = Product::with(['category', 'company', 'parameters.unit'])->find($id);
             
             if (!$product) {
@@ -78,7 +79,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Termék és paraméterek frissítése
+     * Termék frissítése
      */
     public function update(UpdateProductRequest $request, $id)
     {
@@ -86,18 +87,13 @@ class ProductController extends Controller
             $product = Product::findOrFail($id);
             $this->authorize('update', $product);
             
-            // 1. Alapadatok frissítése
             $product->update($request->validated());
 
-            // 2. Extra paraméterek frissítése Many-to-Many esetén a sync() vagy attach() ajánlott,
-            // de ha maradunk a ProductParameter modellnél:
+            // Paraméterek frissítése (ha érkezik 'params' tömb)
             if ($request->has('params')) {
                 foreach ($request->params as $paramId => $value) {
                     ProductParameter::updateOrCreate(
-                        [
-                            'product_id' => $product->id,
-                            'parameter_id' => $paramId
-                        ],
+                        ['product_id' => $product->id, 'parameter_id' => $paramId],
                         ['value' => $value]
                     );
                 }
@@ -120,7 +116,6 @@ class ProductController extends Controller
         try {
             $product = Product::findOrFail($id);
             $this->authorize('delete', $product);
-            
             $product->delete();
             
             return response()->json(['message' => 'Termék sikeresen törölve']);

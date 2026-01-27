@@ -11,7 +11,7 @@ class UpdateCompanyRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +21,8 @@ class UpdateCompanyRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
-        ];
+       return [
+        'company_name' => 'sometimes|required|string|unique:companies,company_name,' . $this->route('company'),
+    ];
     }
 }
