@@ -309,7 +309,7 @@ Content-Type: application/json
 DELETE {{host}}/api/comments/5
 Authorization: Bearer {{token}}
 
-### Admin módosít egy kommentet (pl. kimoderálja a reklámot)
+############################################################### Admin módosít egy kommentet (pl. kimoderálja a reklámot)
 POST {{host}}/api/comments/6
 Authorization: Bearer {{token}}
 Content-Type: application/json
