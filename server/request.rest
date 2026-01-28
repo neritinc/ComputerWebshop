@@ -19,6 +19,7 @@ Content-Type: application/json
   "email": "admin@example.com",
   "password": "123"
 }
+
 ### token kiszed
 @token = {{login.response.body.data.token}}
 

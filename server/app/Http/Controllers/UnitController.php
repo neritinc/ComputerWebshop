@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Unit;
-use App\Http\Requests\StoreUnitRequest;
-use App\Http\Requests\UpdateUnitRequest;
+// Aliasing a modellhez és a requestekhez a könnyebb kezelhetőségért
+use App\Models\Unit as CurrentModel;
+use App\Http\Requests\StoreUnitRequest as StoreCurrentModelRequest;
+use App\Http\Requests\UpdateUnitRequest as UpdateCurrentModelRequest;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class UnitController extends Controller
@@ -16,50 +17,57 @@ class UnitController extends Controller
      */
     public function index()
     {
-        $units = Unit::all();
-        return response()->json($units);
+        return $this->apiResponse(function () {
+            return CurrentModel::all();
+        });
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreUnitRequest $request)
+    public function store(StoreCurrentModelRequest $request)
     {
-        $this->authorize('create', Unit::class);
-        
-        $validated = $request->validated();
-        $unit = Unit::create($validated);
-        return response()->json($unit, 201);
+        return $this->apiResponse(function () use ($request) {
+            $this->authorize('create', CurrentModel::class);
+            return CurrentModel::create($request->validated());
+        });
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Unit $unit)
+    public function show(int $id)
     {
-        return response()->json($unit);
+        return $this->apiResponse(function () use ($id) {
+            return CurrentModel::findOrFail($id);
+        });
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateUnitRequest $request, Unit $unit)
+    public function update(UpdateCurrentModelRequest $request, int $id)
     {
-        $this->authorize('update', $unit);
-        
-        $validated = $request->validated();
-        $unit->update($validated);
-        return response()->json($unit);
+        return $this->apiResponse(function () use ($request, $id) {
+            $row = CurrentModel::findOrFail($id);
+            $this->authorize('update', $row);
+            
+            $row->update($request->validated());
+            return $row;
+        });
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Unit $unit)
+    public function destroy(int $id)
     {
-        $this->authorize('delete', $unit);
-        
-        $unit->delete();
-        return response()->json(['message' => 'Deleted successfully']);
+        return $this->apiResponse(function () use ($id) {
+            $row = CurrentModel::findOrFail($id);
+            $this->authorize('delete', $row);
+            
+            $row->delete();
+            return ['id' => $id];
+        });
     }
 }

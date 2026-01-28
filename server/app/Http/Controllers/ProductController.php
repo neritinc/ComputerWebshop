@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Product as CurrentModel;
 use App\Models\ProductParameter;
-use App\Http\Requests\StoreProductRequest;
-use App\Http\Requests\UpdateProductRequest;
+use App\Http\Requests\StoreProductRequest as StoreCurrentModelRequest;
+use App\Http\Requests\UpdateProductRequest as UpdateCurrentModelRequest;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
@@ -17,110 +16,83 @@ class ProductController extends Controller
     /**
      * Termékek listázása szűréssel és kereséssel
      */
-   public function index(Request $request) // 1. Itt átvesszük a kérést
-{
-    try {
-        $query = Product::with(['category', 'company', 'parameters.unit']);
+    public function index(Request $request)
+    {
+        return $this->apiResponse(function () use ($request) {
+            $query = CurrentModel::with(['category', 'company', 'parameters.unit']);
 
-        // 2. Szűrés kategóriára, ha van az URL-ben
-        if ($request->has('category_id')) {
-            $query->where('category_id', $request->category_id);
-        }
+            if ($request->has('category_id')) {
+                $query->where('category_id', $request->category_id);
+            }
 
-        // 3. Keresés névben vagy leírásban, ha van az URL-ben
-        if ($request->has('search')) {
-            $search = $request->search;
-            $query->where(function($q) use ($search) {
-                $q->where('name', 'like', "%$search%")
-                  ->orWhere('description', 'like', "%$search%");
-            });
-        }
+            if ($request->has('search')) {
+                $search = $request->search;
+                $query->where(function($q) use ($search) {
+                    $q->where('name', 'like', "%$search%")
+                      ->orWhere('description', 'like', "%$search%");
+                });
+            }
 
-        return response()->json($query->get());
-    } catch (\Exception $e) {
-        return response()->json(['error' => $e->getMessage()], 500);
+            return $query->get();
+        });
     }
-}
 
     /**
      * Új termék mentése
      */
-    public function store(StoreProductRequest $request)
+    public function store(StoreCurrentModelRequest $request)
     {
-        try {
-            $this->authorize('create', Product::class);
-            $product = Product::create($request->validated());
-            
-            return response()->json([
-                'message' => 'Termék sikeresen létrehozva',
-                'data' => $product
-            ], 201);
-        } catch (\Exception $e) {
-            return response()->json(['error' => 'Mentési hiba', 'message' => $e->getMessage()], 500);
-        }
+        return $this->apiResponse(function () use ($request) {
+            $this->authorize('create', CurrentModel::class);
+            return CurrentModel::create($request->validated());
+        });
     }
 
     /**
      * Egy termék részletei
      */
-    public function show($id)
+    public function show(int $id)
     {
-        try {
-            $product = Product::with(['category', 'company', 'parameters.unit'])->find($id);
-            
-            if (!$product) {
-                return response()->json(['message' => 'Termék nem található'], 404);
-            }
-            
-            return response()->json($product);
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
-        }
+        return $this->apiResponse(function () use ($id) {
+            return CurrentModel::with(['category', 'company', 'parameters.unit'])->findOrFail($id);
+        });
     }
 
     /**
      * Termék frissítése
      */
-    public function update(UpdateProductRequest $request, $id)
+    public function update(UpdateCurrentModelRequest $request, int $id)
     {
-        try {
-            $product = Product::findOrFail($id);
-            $this->authorize('update', $product);
+        return $this->apiResponse(function () use ($request, $id) {
+            $row = CurrentModel::findOrFail($id);
+            $this->authorize('update', $row);
             
-            $product->update($request->validated());
+            $row->update($request->validated());
 
             // Paraméterek frissítése (ha érkezik 'params' tömb)
             if ($request->has('params')) {
                 foreach ($request->params as $paramId => $value) {
                     ProductParameter::updateOrCreate(
-                        ['product_id' => $product->id, 'parameter_id' => $paramId],
+                        ['product_id' => $row->id, 'parameter_id' => $paramId],
                         ['value' => $value]
                     );
                 }
             }
 
-            return response()->json([
-                'message' => 'Sikeres frissítés',
-                'data' => $product->load(['category', 'company', 'parameters.unit'])
-            ]);
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
-        }
+            return $row->load(['category', 'company', 'parameters.unit']);
+        });
     }
 
     /**
      * Termék törlése
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
-        try {
-            $product = Product::findOrFail($id);
-            $this->authorize('delete', $product);
-            $product->delete();
-            
-            return response()->json(['message' => 'Termék sikeresen törölve']);
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
-        }
+        return $this->apiResponse(function () use ($id) {
+            $row = CurrentModel::findOrFail($id);
+            $this->authorize('delete', $row);
+            $row->delete();
+            return ['id' => $id];
+        });
     }
 }

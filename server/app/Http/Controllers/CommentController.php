@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Comment;
-use App\Http\Requests\StoreCommentRequest;
-use App\Http\Requests\UpdateCommentRequest;
+use App\Models\Comment as CurrentModel;
+use App\Http\Requests\StoreCommentRequest as StoreCurrentModelRequest;
+use App\Http\Requests\UpdateCommentRequest as UpdateCurrentModelRequest;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class CommentController extends Controller
@@ -16,50 +16,62 @@ class CommentController extends Controller
      */
     public function index()
     {
-        $comments = Comment::all();
-        return response()->json($comments);
+        return $this->apiResponse(function () {
+            // Betöltjük a user nevét és a termék nevét is
+            return CurrentModel::with([
+                'user:id,name',
+                'product:id,name'
+            ])->latest()->get(); // A legfrissebb kommentek lesznek legfelül
+        });
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCommentRequest $request)
+    public function store(StoreCurrentModelRequest $request)
     {
-        $this->authorize('create', Comment::class);
-        
-        $validated = $request->validated();
-        $comment = Comment::create($validated);
-        return response()->json($comment, 201);
+        return $this->apiResponse(function () use ($request) {
+            $this->authorize('create', CurrentModel::class);
+            return CurrentModel::create($request->validated());
+        });
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Comment $comment)
+    public function show(int $id)
     {
-        return response()->json($comment);
+        return $this->apiResponse(function () use ($id) {
+            // Itt is betöltjük a részleteket
+            return CurrentModel::with(['user:id,name', 'product:id,name'])->findOrFail($id);
+        });
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCommentRequest $request, Comment $comment)
+    public function update(UpdateCurrentModelRequest $request, int $id)
     {
-        $this->authorize('update', $comment);
-        
-        $validated = $request->validated();
-        $comment->update($validated);
-        return response()->json($comment);
+        return $this->apiResponse(function () use ($request, $id) {
+            $comment = CurrentModel::findOrFail($id);
+            $this->authorize('update', $comment);
+
+            $comment->update($request->validated());
+            return $comment;
+        });
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Comment $comment)
+    public function destroy(int $id)
     {
-        $this->authorize('delete', $comment);
-        
-        $comment->delete();
-        return response()->json(['message' => 'Deleted successfully']);
+        return $this->apiResponse(function () use ($id) {
+            $comment = CurrentModel::findOrFail($id);
+            $this->authorize('delete', $comment);
+
+            $comment->delete();
+            return ['id' => $id, 'message' => 'Deleted successfully'];
+        });
     }
 }

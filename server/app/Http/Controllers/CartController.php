@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cart;
-use App\Http\Requests\StoreCartRequest;
-use App\Http\Requests\UpdateCartRequest;
+// Aliasing a modelhez és a requestekhez
+use App\Models\Cart as CurrentModel;
+use App\Http\Requests\StoreCartRequest as StoreCurrentModelRequest;
+use App\Http\Requests\UpdateCartRequest as UpdateCurrentModelRequest;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class CartController extends Controller
@@ -16,52 +17,59 @@ class CartController extends Controller
      */
     public function index()
     {
-        $carts = Cart::all();
-        return response()->json($carts);
+        return $this->apiResponse(function () {
+            // A with('user:id,name') csak az ID-t és a nevet kéri le a felhasználók táblából
+            return CurrentModel::with('user:id,name')->get();
+        });
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCartRequest $request)
+    public function store(StoreCurrentModelRequest $request)
     {
-        $this->authorize('create', Cart::class);
-        
-        $validated = $request->validated();
-        $cart = Cart::create($validated);
-        return response()->json($cart, 201);
+        return $this->apiResponse(function () use ($request) {
+            $this->authorize('create', CurrentModel::class);
+            return CurrentModel::create($request->validated());
+        });
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Cart $cart)
+    public function show(int $id)
     {
-        $this->authorize('view', $cart);
-        
-        return response()->json($cart);
+        return $this->apiResponse(function () use ($id) {
+            // Itt láncoljuk: a kosárhoz a user-t, és az itemekhez a product-ot is betöltjük
+            $cart = CurrentModel::with(['user:id,name', 'items.product'])->findOrFail($id);
+            $this->authorize('view', $cart);
+            return $cart;
+        });
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCartRequest $request, Cart $cart)
+    public function update(UpdateCurrentModelRequest $request, int $id)
     {
-        $this->authorize('update', $cart);
-        
-        $validated = $request->validated();
-        $cart->update($validated);
-        return response()->json($cart);
+        return $this->apiResponse(function () use ($request, $id) {
+            $cart = CurrentModel::findOrFail($id);
+            $this->authorize('update', $cart);
+            $cart->update($request->validated());
+            return $cart;
+        });
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Cart $cart)
+    public function destroy(int $id)
     {
-        $this->authorize('delete', $cart);
-        
-        $cart->delete();
-        return response()->json(['message' => 'Deleted successfully']);
+        return $this->apiResponse(function () use ($id) {
+            $cart = CurrentModel::findOrFail($id);
+            $this->authorize('delete', $cart);
+            $cart->delete();
+            return ['id' => $id, 'message' => 'Deleted successfully'];
+        });
     }
 }

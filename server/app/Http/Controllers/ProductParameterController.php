@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ProductParameter;
+use App\Models\ProductParameter as CurrentModel;
 use Illuminate\Http\Request;
 
 class ProductParameterController extends Controller
@@ -13,8 +13,9 @@ class ProductParameterController extends Controller
      */
     public function index()
     {
-        $params = ProductParameter::with(['product', 'parameter'])->get();
-        return response()->json($params);
+        return $this->apiResponse(function () {
+            return CurrentModel::with(['product', 'parameter'])->get();
+        });
     }
 
     /**
@@ -22,48 +23,55 @@ class ProductParameterController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'product_id' => 'required|exists:products,id',
-            'parameter_id' => 'required|exists:parameters,id',
-            'value' => 'required|string|max:191',
-        ]);
+        return $this->apiResponse(function () use ($request) {
+            $validated = $request->validate([
+                'product_id' => 'required|exists:products,id',
+                'parameter_id' => 'required|exists:parameters,id',
+                'value' => 'required|string|max:191',
+            ]);
 
-        $param = ProductParameter::create($validated);
-
-        return response()->json($param, 201);
+            return CurrentModel::create($validated);
+        });
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(ProductParameter $product_parameter)
+    public function show(int $id)
     {
-        $product_parameter->load(['product', 'parameter']); // Kapcsolatok betöltése
-        return response()->json($product_parameter);
+        return $this->apiResponse(function () use ($id) {
+            return CurrentModel::with(['product', 'parameter'])->findOrFail($id);
+        });
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ProductParameter $product_parameter)
+    public function update(Request $request, int $id)
     {
-        $validated = $request->validate([
-            'product_id' => 'sometimes|required|exists:products,id',
-            'parameter_id' => 'sometimes|required|exists:parameters,id',
-            'value' => 'sometimes|required|string|max:191',
-        ]);
+        return $this->apiResponse(function () use ($request, $id) {
+            $row = CurrentModel::findOrFail($id);
 
-        $product_parameter->update($validated);
+            $validated = $request->validate([
+                'product_id' => 'sometimes|required|exists:products,id',
+                'parameter_id' => 'sometimes|required|exists:parameters,id',
+                'value' => 'sometimes|required|string|max:191',
+            ]);
 
-        return response()->json($product_parameter);
+            $row->update($validated);
+            return $row;
+        });
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ProductParameter $product_parameter)
+    public function destroy(int $id)
     {
-        $product_parameter->delete();
-        return response()->json(['message' => 'Deleted successfully']);
+        return $this->apiResponse(function () use ($id) {
+            $row = CurrentModel::findOrFail($id);
+            $row->delete();
+            return ['id' => $id];
+        });
     }
 }

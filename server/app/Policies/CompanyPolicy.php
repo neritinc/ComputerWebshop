@@ -11,9 +11,8 @@ class CompanyPolicy
     /**
      * Determine whether the user can view any models.
      */
-    public function viewAny(User $user): bool
+    public function viewAny(User $user): bool // Add hozzá a : bool-t
     {
-        // Mindenki megtekintheti a cégeket
         return true;
     }
 

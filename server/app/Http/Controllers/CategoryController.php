@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Http\Requests\StoreCategoryRequest;
-use App\Http\Requests\UpdateCategoryRequest;
+// Aliasok a konzisztens struktúrához
+use App\Models\Category as CurrentModel;
+use App\Http\Requests\StoreCategoryRequest as StoreCurrentModelRequest;
+use App\Http\Requests\UpdateCategoryRequest as UpdateCurrentModelRequest;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -14,48 +15,60 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return response()->json(Category::all());
+        return $this->apiResponse(function () {
+            return CurrentModel::all();
+        });
     }
 
     /**
      * Új kategória mentése.
-     * A jogosultságot és validációt a StoreCategoryRequest kezeli.
      */
-    public function store(StoreCategoryRequest $request)
+    public function store(StoreCurrentModelRequest $request)
     {
-        $category = Category::create($request->validated());
-        return response()->json($category, 201);
+        return $this->apiResponse(function () use ($request) {
+            return CurrentModel::create($request->validated());
+        });
     }
 
     /**
      * Egy konkrét kategória megjelenítése.
      */
-    public function show(Category $category)
+    public function show(int $id)
     {
-        return response()->json($category);
+        return $this->apiResponse(function () use ($id) {
+            return CurrentModel::findOrFail($id);
+        });
     }
 
     /**
      * Kategória frissítése.
-     * A jogosultságot és validációt az UpdateCategoryRequest kezeli.
      */
-    public function update(UpdateCategoryRequest $request, Category $category)
+    public function update(UpdateCurrentModelRequest $request, int $id)
     {
-        $category->update($request->validated());
-        return response()->json($category);
+        return $this->apiResponse(function () use ($request, $id) {
+            $category = CurrentModel::findOrFail($id);
+            $category->update($request->validated());
+            return $category;
+        });
     }
 
     /**
      * Kategória törlése.
      */
-    public function destroy(Category $category)
+    public function destroy(int $id)
     {
-        // Mivel itt nincs külön FormRequest, kézzel ellenőrizzük az admint
-        if (auth()->user()->role !== 1) {
-            return response()->json(['message' => 'Unauthorized. Admin role required.'], 403);
-        }
+        return $this->apiResponse(function () use ($id) {
+            // Mivel itt nincs Policy, a manuális ellenőrzést bent tartjuk a closure-ben
+            if (auth()->user()->role !== 1) {
+                // Itt érdemesebb lehet egy kivételt dobni, amit az apiResponse lekezel, 
+                // de a te logikádat követve marad a manuális hibaüzenet:
+                abort(403, 'Unauthorized. Admin role required.');
+            }
 
-        $category->delete();
-        return response()->json(['message' => 'Deleted successfully']);
+            $category = CurrentModel::findOrFail($id);
+            $category->delete();
+            
+            return ['id' => $id, 'message' => 'Deleted successfully'];
+        });
     }
 }

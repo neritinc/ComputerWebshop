@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Parameter;
-use App\Http\Requests\StoreParameterRequest;
-use App\Http\Requests\UpdateParameterRequest;
+use App\Models\Parameter as CurrentModel;
+use App\Http\Requests\StoreParameterRequest as StoreCurrentModelRequest;
+use App\Http\Requests\UpdateParameterRequest as UpdateCurrentModelRequest;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class ParameterController extends Controller
@@ -16,50 +16,55 @@ class ParameterController extends Controller
      */
     public function index()
     {
-        $parameters = Parameter::all();
-        return response()->json($parameters);
+        return $this->apiResponse(function () {
+            return CurrentModel::all();
+        });
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreParameterRequest $request)
+    public function store(StoreCurrentModelRequest $request)
     {
-        $this->authorize('create', Parameter::class);
-        
-        $validated = $request->validated();
-        $parameter = Parameter::create($validated);
-        return response()->json($parameter, 201);
+        return $this->apiResponse(function () use ($request) {
+            $this->authorize('create', CurrentModel::class);
+            return CurrentModel::create($request->validated());
+        });
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Parameter $parameter)
+    public function show(int $id)
     {
-        return response()->json($parameter);
+        return $this->apiResponse(function () use ($id) {
+            return CurrentModel::findOrFail($id);
+        });
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateParameterRequest $request, Parameter $parameter)
+    public function update(UpdateCurrentModelRequest $request, int $id)
     {
-        $this->authorize('update', $parameter);
-        
-        $validated = $request->validated();
-        $parameter->update($validated);
-        return response()->json($parameter);
+        return $this->apiResponse(function () use ($request, $id) {
+            $row = CurrentModel::findOrFail($id);
+            $this->authorize('update', $row);
+            $row->update($request->validated());
+            return $row;
+        });
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Parameter $parameter)
+    public function destroy(int $id)
     {
-        $this->authorize('delete', $parameter);
-        
-        $parameter->delete();
-        return response()->json(['message' => 'Deleted successfully']);
+        return $this->apiResponse(function () use ($id) {
+            $row = CurrentModel::findOrFail($id);
+            $this->authorize('delete', $row);
+            $row->delete();
+            return ['id' => $id];
+        });
     }
 }
