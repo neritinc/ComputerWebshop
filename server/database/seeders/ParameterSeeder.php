@@ -110,14 +110,16 @@ class ParameterSeeder extends Seeder
         ];
 
         foreach ($parameters as $p) {
-            Parameter::updateOrCreate([
-                'parameter_name' => $p['parameter_name'],
-                'category_id' => $resolveCategoryId($p['category_name']),
-            ], [
-                'unit_id' => $resolveUnitId($p['unit_name']),
-            ]);
+            \DB::table('parameters')->updateOrInsert(
+                ['parameter_name' => trim($p['parameter_name'])], // trim a biztonságért
+                [
+                    'category_id' => $resolveCategoryId($p['category_name']),
+                    'unit_id' => $resolveUnitId($p['unit_name']),
+                    'updated_at' => now(),
+                    'created_at' => now(),
+                ]
+            );
         }
-
         $this->command->info('A paraméterek sikeresen hozzáadva!');
     }
 }

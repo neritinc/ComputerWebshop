@@ -4,17 +4,17 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash; // Ezt ne felejtsd el importálni!
 
 class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        // Admin felhasználó beszúrása vagy frissítése
+        // Admin
         $usersAdmin = [
             'name' => 'Admin',
             'email' => 'admin@example.com',
-            'password' => '123', // titkosított jelszó
+            'password' => Hash::make('123'), // Így már titkosítva kerül be!
             'role' => 1,
             'phone' => '+36301234567',
             'city' => 'Budapest',
@@ -24,11 +24,11 @@ class UserSeeder extends Seeder
         ];
         User::updateOrCreate(['email' => $usersAdmin['email']], $usersAdmin);
 
-        // Vásárló1 felhasználó beszúrása vagy frissítése
+        // Vásárló1
         $usersVasarlo1 = [
             'name' => 'Vásárló1',
             'email' => 'vasarlo1@example.com',
-            'password' =>'ronaldo', // titkosított jelszó
+            'password' => Hash::make('ronaldo'), // Itt is titkosítunk
             'role' => 3,
             'phone' => '+36301111111',
             'city' => 'Debrecen',

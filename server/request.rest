@@ -262,14 +262,16 @@ Content-Type: application/json
 }
 
 ### Saját jelszó módosítása
+### Saját jelszó módosítása
 PATCH {{host}}/api/usersmeupdatepassword
 Authorization: Bearer {{token}}
 Content-Type: application/json
+Accept: application/json
 
 {
-    "current_password": "123",
-    "new_password": "1234",
-    "new_password_confirmation": "1234"
+    "oldpassword": "1234",
+    "newpassword": "123455",
+    "newpassword_confirmation": "123455"
 }
 
 ### Saját fiók törlése
