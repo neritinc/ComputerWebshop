@@ -86,7 +86,7 @@ class ParameterSeeder extends Seeder
 
             // Case (ID: 8)
             ['parameter_name' => 'Type', 'category_name' => 'Case', 'unit_name' => 'Tower'],
-            ['parameter_name' => 'Dimensions', 'category_name' => 'Case', 'unit_name' => 'mm'],
+            ['parameter_name' => 'Dimensions', 'category_name' => 'Case', 'unit_name' => ''],
             ['parameter_name' => 'Color', 'category_name' => 'Case', 'unit_name' => 'Color'],
             ['parameter_name' => 'Side Panel', 'category_name' => 'Case', 'unit_name' => 'Material'],
             ['parameter_name' => 'Max GPU Length', 'category_name' => 'Case', 'unit_name' => 'mm'],
