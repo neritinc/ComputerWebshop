@@ -159,7 +159,7 @@ class ParameterSeeder extends Seeder
             ['parameter_name' => 'FOV Angle', 'category_name' => 'Webcam', 'unit_name' => '°'],
 
             //Headset
-            ['parameter_name' => 'Color', 'category_name' => 'Headset', 'unit_name' => '-'],
+            ['parameter_name' => 'Coldor', 'category_name' => 'Headset', 'unit_name' => '-'],
             ['parameter_name' => 'Frequency Range', 'category_name' => 'Headset', 'unit_name' => 'kHz'],
             ['parameter_name' => 'Microphone', 'category_name' => 'Headset', 'unit_name' => 'Yes/No'],
             ['parameter_name' => 'Active Noise Cancelling', 'category_name' => 'Headset', 'unit_name' => 'Yes/No'],
