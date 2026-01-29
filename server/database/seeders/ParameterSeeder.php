@@ -70,7 +70,7 @@ class ParameterSeeder extends Seeder
             ['parameter_name' => 'Memory Type', 'category_name' => 'Motherboard', 'unit_name' => 'N/A'],
             ['parameter_name' => 'PCIe Slots', 'category_name' => 'Motherboard', 'unit_name' => 'Pcs'],
             ['parameter_name' => 'Wireless Networking', 'category_name' => 'Motherboard', 'unit_name' => 'N/A'],
-            ['parameter_name' => 'RAID Support', 'category_name' => 'Motherboard', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'RAID Support', 'category_name' => 'Motherboard', 'unit_name' => 'Yes/No'],
 
             // Graphics Card (ID: 4)
             ['parameter_name' => 'VRAM', 'category_name' => 'Graphics Card', 'unit_name' => 'GB'],
@@ -149,6 +149,34 @@ class ParameterSeeder extends Seeder
             ['parameter_name' => 'Key Amounts', 'category_name' => 'Keyboard', 'unit_name' => 'pcs'],
             ['parameter_name' => 'Compatible', 'category_name' => 'Keyboard', 'unit_name' => '-'],
             ['parameter_name' => 'Connectivity Technology', 'category_name' => 'Keyboard', 'unit_name' => '-'],
+
+            // Webcam
+
+            ['parameter_name' => 'Resolution', 'category_name' => 'Webcam', 'unit_name' => '-'],
+            ['parameter_name' => 'Connectivity Technology', 'category_name' => 'Webcam', 'unit_name' => '-'],
+            ['parameter_name' => 'Connectivity Technology', 'category_name' => 'Webcam', 'unit_name' => '-'],
+            ['parameter_name' => 'Focus Type', 'category_name' => 'Webcam', 'unit_name' => '-'],
+            ['parameter_name' => 'FOV Angle', 'category_name' => 'Webcam', 'unit_name' => '°'],
+
+            //Headset
+            ['parameter_name' => 'Color', 'category_name' => 'Headset', 'unit_name' => '-'],
+            ['parameter_name' => 'Frequency Range', 'category_name' => 'Headset', 'unit_name' => 'kHz'],
+            ['parameter_name' => 'Microphone', 'category_name' => 'Headset', 'unit_name' => 'Yes/No'],
+            ['parameter_name' => 'Active Noise Cancelling', 'category_name' => 'Headset', 'unit_name' => 'Yes/No'],
+            ['parameter_name' => 'Impedance', 'category_name' => 'Headset', 'unit_name' => 'Ω'],
+
+            //Speaker
+            ['parameter_name' => 'Color', 'category_name' => 'Speaker', 'unit_name' => '-'],
+            ['parameter_name' => 'Frequency Range', 'category_name' => 'Speaker', 'unit_name' => 'kHz'],
+            ['parameter_name' => 'Tweeter', 'category_name' => 'Speaker', 'unit_name' => '"'],
+            ['parameter_name' => 'Wattage', 'category_name' => 'Speaker', 'unit_name' => 'W'],
+            ['parameter_name' => 'Crossover Frequency', 'category_name' => 'Speaker', 'unit_name' => 'kHz'],
+            ['parameter_name' => 'Woofer Size', 'category_name' => 'Speaker', 'unit_name' => '"'],
+            ['parameter_name' => 'Power Output', 'category_name' => 'Speaker', 'unit_name' => 'W'],
+            ['parameter_name' => 'Bass Reflex System', 'category_name' => 'Speaker', 'unit_name' => 'Yes/No'],
+
+            
+
 
         ];
 
