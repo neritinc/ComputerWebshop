@@ -8,13 +8,20 @@ return new class extends Migration {
     public function up(): void {
         Schema::create('parameters', function (Blueprint $table) {
             $table->id();
-            $table->string('parameter_name',50)->unique();
+            // Itt NINCS unique(), csak a sima mező
+            $table->string('parameter_name', 99); 
+            
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('unit_id');
             $table->timestamps();
 
-            $table->foreign('category_id')->references('id')->on('categories');
-            $table->foreign('unit_id')->references('id')->on('units');
+            // Idegen kulcsok
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('unit_id')->references('id')->on('units')->onDelete('cascade');
+
+            // Összetett egyediség: A név + kategória párosnak kell egyedinek lennie
+            // Ez engedi a "Write Speed"-et többször, de különböző kategóriákban
+            $table->unique(['parameter_name', 'category_id']);
         });
     }
 

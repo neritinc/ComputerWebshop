@@ -9,19 +9,22 @@ class UnitSeeder extends Seeder
 {
     public function run(): void
     {
-        // CSV fájl és elválasztó karakter beállítása
         $fileName = 'csv/units.csv';
-        $delimiter = ';';  // Elválasztó karakter
+        $delimiter = ';';
 
-        // CSV fájl beolvasása
         $data = CsvReader::csvToArray($fileName, $delimiter);
 
-        // Minden kategória adatának beszúrása a `categories` táblába
         foreach ($data as $unit) {
-            Unit::create([
-                'unit_name' => $unit['unit_name'],
-            ]);
+            // A 'create' helyett 'updateOrCreate'-et használunk
+            Unit::updateOrCreate(
+                // 1. Megnézzük, létezik-e már ilyen nevű mértékegység
+                ['unit_name' => trim($unit['unit_name'])],
+                // 2. Ha létezik, nem csinálunk semmit (üres tömb), 
+                // ha nem létezik, létrehozzuk.
+                []
+            );
         }
-
+        
+        $this->command->info('Mértékegységek sikeresen feldolgozva (duplikációk kiszűrve).');
     }
 }

@@ -44,69 +44,53 @@ class ParameterSeeder extends Seeder
         };
 
         $parameters = [
-            // ... (A korábbi Processor, Memory, GPU, Mouse, Motherboard, Monitor részek maradnak)
+            // Processor (ID: 1)
+            ['parameter_name' => 'Clock Speed', 'category_name' => 'Processor', 'unit_name' => 'MHz'],
+            ['parameter_name' => 'Turbo Clock Speed', 'category_name' => 'Processor', 'unit_name' => 'MHz'],
+            ['parameter_name' => 'Core Count', 'category_name' => 'Processor', 'unit_name' => 'Pcs'],
+            ['parameter_name' => 'Thread Count', 'category_name' => 'Processor', 'unit_name' => 'Pcs'],
+            ['parameter_name' => 'L2 Cache Size', 'category_name' => 'Processor', 'unit_name' => 'MB'],
+            ['parameter_name' => 'L3 Cache Size', 'category_name' => 'Processor', 'unit_name' => 'MB'],
+            ['parameter_name' => 'Thermal Design Power (TDP)', 'category_name' => 'Processor', 'unit_name' => 'W'],
+            ['parameter_name' => 'Architecture', 'category_name' => 'Processor', 'unit_name' => 'N/A'],
 
-            // Storage (SSD/HDD)
-            ['parameter_name' => 'Capacity', 'category_name' => 'Storage', 'unit_name' => 'GB'],
-            ['parameter_name' => 'Interface', 'category_name' => 'Storage', 'unit_name' => 'Type'],
-            ['parameter_name' => 'Read Speed', 'category_name' => 'Storage', 'unit_name' => 'MB/s'],
-            ['parameter_name' => 'Write Speed', 'category_name' => 'Storage', 'unit_name' => 'MB/s'],
+            // Memory Module (ID: 2)
+            ['parameter_name' => 'Memory Capacity', 'category_name' => 'Memory Module', 'unit_name' => 'GB'],
+            ['parameter_name' => 'Memory Type', 'category_name' => 'Memory Module', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Bus Speed', 'category_name' => 'Memory Module', 'unit_name' => 'MHz'],
 
-            // Power Supply (PSU)
-            ['parameter_name' => 'Wattage', 'category_name' => 'Power Supply', 'unit_name' => 'W'],
-            ['parameter_name' => 'Efficiency Rating', 'category_name' => 'Power Supply', 'unit_name' => 'Type'],
-            ['parameter_name' => 'Modularity', 'category_name' => 'Power Supply', 'unit_name' => 'Type'],
+            // Motherboard (ID: 3)
+            ['parameter_name' => 'Socket', 'category_name' => 'Motherboard', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Chipset', 'category_name' => 'Motherboard', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Form Factor', 'category_name' => 'Motherboard', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Memory Slots', 'category_name' => 'Motherboard', 'unit_name' => 'Pcs'],
+            ['parameter_name' => 'Max Memory', 'category_name' => 'Motherboard', 'unit_name' => 'GB'],
+            ['parameter_name' => 'PCIe Slots', 'category_name' => 'Motherboard', 'unit_name' => 'Pcs'],
 
-            // Cooling
-            ['parameter_name' => 'Fan Size', 'category_name' => 'Cooling', 'unit_name' => 'mm'],
-            ['parameter_name' => 'Noise Level', 'category_name' => 'Cooling', 'unit_name' => 'dB'],
-            ['parameter_name' => 'Airflow', 'category_name' => 'Cooling', 'unit_name' => 'CFM'],
+            // Graphics Card (ID: 4)
+            ['parameter_name' => 'VRAM', 'category_name' => 'Graphics Card', 'unit_name' => 'GB'],
+            ['parameter_name' => 'Core Clock', 'category_name' => 'Graphics Card', 'unit_name' => 'MHz'],
+            ['parameter_name' => 'Memory Clock', 'category_name' => 'Graphics Card', 'unit_name' => 'MHz'],
+            ['parameter_name' => 'CUDA Cores', 'category_name' => 'Graphics Card', 'unit_name' => 'Pcs'],
+            ['parameter_name' => 'DirectX Version', 'category_name' => 'Graphics Card', 'unit_name' => 'N/A'],
 
-            // Case
+            // Monitor (ID: 13)
+            ['parameter_name' => 'Screen Size', 'category_name' => 'Monitor', 'unit_name' => 'inch'],
+            ['parameter_name' => 'Resolution', 'category_name' => 'Monitor', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Refresh Rate', 'category_name' => 'Monitor', 'unit_name' => 'Hz'],
+            ['parameter_name' => 'Panel Type', 'category_name' => 'Monitor', 'unit_name' => 'N/A'],
+
+            // Mouse (ID: 15)
+            ['parameter_name' => 'DPI', 'category_name' => 'Mouse', 'unit_name' => 'DPI'],
+            ['parameter_name' => 'Wireless', 'category_name' => 'Mouse', 'unit_name' => 'Yes/No'],
+
+            // Case (ID: 8)
+            ['parameter_name' => 'Type', 'category_name' => 'Case', 'unit_name' => 'Tower'],
+            ['parameter_name' => 'Dimensions', 'category_name' => 'Case', 'unit_name' => 'mm'],
+            ['parameter_name' => 'Color', 'category_name' => 'Case', 'unit_name' => 'Color'],
             ['parameter_name' => 'Side Panel', 'category_name' => 'Case', 'unit_name' => 'Material'],
             ['parameter_name' => 'Max GPU Length', 'category_name' => 'Case', 'unit_name' => 'mm'],
             ['parameter_name' => 'Drive Bays', 'category_name' => 'Case', 'unit_name' => 'Pcs'],
-
-            // Optical Drive
-            ['parameter_name' => 'Write Speed', 'category_name' => 'Optical Drive', 'unit_name' => 'x'],
-            ['parameter_name' => 'Media Type', 'category_name' => 'Optical Drive', 'unit_name' => 'Type'],
-
-            // Network Card
-            ['parameter_name' => 'Max Speed', 'category_name' => 'Network Card', 'unit_name' => 'Mbps'],
-            ['parameter_name' => 'Standard', 'category_name' => 'Network Card', 'unit_name' => 'Type'],
-
-            // Sound Card
-            ['parameter_name' => 'Channels', 'category_name' => 'Sound Card', 'unit_name' => 'Type'],
-            ['parameter_name' => 'Signal-to-Noise Ratio', 'category_name' => 'Sound Card', 'unit_name' => 'dB'],
-
-            // USB Hub
-            ['parameter_name' => 'USB Version', 'category_name' => 'USB Hub', 'unit_name' => 'Version'],
-            ['parameter_name' => 'Number of Ports', 'category_name' => 'USB Hub', 'unit_name' => 'Pcs'],
-
-            // Keyboard
-            ['parameter_name' => 'Switch Type', 'category_name' => 'Keyboard', 'unit_name' => 'Type'],
-            ['parameter_name' => 'Layout', 'category_name' => 'Keyboard', 'unit_name' => 'Type'],
-            ['parameter_name' => 'Backlight', 'category_name' => 'Keyboard', 'unit_name' => 'Type'],
-
-            // Headset
-            ['parameter_name' => 'Impedance', 'category_name' => 'Headset', 'unit_name' => 'Ohm'],
-            ['parameter_name' => 'Frequency Response', 'category_name' => 'Headset', 'unit_name' => 'Hz'],
-
-            // Speakers
-            ['parameter_name' => 'Power Output', 'category_name' => 'Speakers', 'unit_name' => 'W'],
-            ['parameter_name' => 'Configuration', 'category_name' => 'Speakers', 'unit_name' => 'Type'],
-
-            // Webcam
-            ['parameter_name' => 'Resolution', 'category_name' => 'Webcam', 'unit_name' => 'Type'],
-            ['parameter_name' => 'Max FPS', 'category_name' => 'Webcam', 'unit_name' => 'fps'],
-
-            // Microphone
-            ['parameter_name' => 'Polar Pattern', 'category_name' => 'Microphone', 'unit_name' => 'Type'],
-            ['parameter_name' => 'Connection', 'category_name' => 'Microphone', 'unit_name' => 'Type'],
-
-            // External Storage
-            ['parameter_name' => 'External Interface', 'category_name' => 'External Storage', 'unit_name' => 'Type'],
-            ['parameter_name' => 'Encryption', 'category_name' => 'External Storage', 'unit_name' => 'Yes/No'],
         ];
 
         foreach ($parameters as $p) {
