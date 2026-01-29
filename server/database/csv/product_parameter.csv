@@ -1,8 +1,4 @@
 product_name;parameter_name;value
-Kingston Fury Beast 16GB DDR5;Memory Capacity;2x8
-Kingston Fury Beast 16GB DDR5;Memory Type;DDR5
-Kingston Fury Beast 16GB DDR5;Bus Speed;5600
-Kingston Fury Beast 16GB DDR5;CAS Latency;36
 
 AMD Ryzen 7 7700X;Clock Speed;4500
 AMD Ryzen 7 7700X;Turbo Clock Speed;5400
@@ -13,25 +9,10 @@ AMD Ryzen 7 7700X;L3 Cache Size;32
 AMD Ryzen 7 7700X;Thermal Design Power (TDP);105
 AMD Ryzen 7 7700X;Architecture;Zen 4
 
-AMD Radeon RX 7800 XT;VRAM;16
-AMD Radeon RX 7800 XT;Core Clock;2124
-AMD Radeon RX 7800 XT;Memory Clock;19500
-AMD Radeon RX 7800 XT;DirectX Version;12
-
-NVIDIA GeForce RTX 4070;VRAM;12
-NVIDIA GeForce RTX 4070;Core Clock;1920
-NVIDIA GeForce RTX 4070;Boost Clock;2480
-NVIDIA GeForce RTX 4070;Memory Clock;21000
-NVIDIA GeForce RTX 4070;CUDA Cores;5888
-NVIDIA GeForce RTX 4070;DirectX Version;12
-NVIDIA GeForce RTX 4070;Thermal Design Power (TDP);200
-NVIDIA GeForce RTX 4070;Length;244
-NVIDIA GeForce RTX 4070;Cooling Fans;2
-
-Logitech MX Master 3S (Wireless);DPI;8000
-Logitech MX Master 3S (Wireless);Wireless;Yes
-Logitech MX Master 3S (Wireless);Battery Life;70
-Logitech MX Master 3S (Wireless);Weight;141
+Kingston Fury Beast 16GB DDR5;Memory Capacity;2x8
+Kingston Fury Beast 16GB DDR5;Memory Type;DDR5
+Kingston Fury Beast 16GB DDR5;Bus Speed;5600
+Kingston Fury Beast 16GB DDR5;CAS Latency;36
 
 ASUS TUF B650-PLUS;Socket;AM5
 ASUS TUF B650-PLUS;Chipset;B650
@@ -44,6 +25,36 @@ ASUS TUF B650-PLUS;Memory Type;DDR5
 ASUS TUF B650-PLUS;Wireless Networking;Wi-Fi 6E
 ASUS TUF B650-PLUS;RAID Support;Yes
 
+NVIDIA GeForce RTX 4070;VRAM;12
+NVIDIA GeForce RTX 4070;Core Clock;1920
+NVIDIA GeForce RTX 4070;Boost Clock;2480
+NVIDIA GeForce RTX 4070;Memory Clock;21000
+NVIDIA GeForce RTX 4070;CUDA Cores;5888
+NVIDIA GeForce RTX 4070;DirectX Version;12
+NVIDIA GeForce RTX 4070;Thermal Design Power (TDP);200
+NVIDIA GeForce RTX 4070;Length;244
+NVIDIA GeForce RTX 4070;Cooling Fans;2
+
+Samsung 990 Pro 2 TB;Capacity;2
+Samsung 990 Pro 2 TB;Cache;2048
+Samsung 990 Pro 2 TB;Maximum Read Speed;7450
+Samsung 990 Pro 2 TB;Maximum Write Speed;6900
+Samsung 990 Pro 2 TB;Connectivity Technology;M.2
+
+MSI MAG A750GL PCIE5;Wattage;750
+MSI MAG A750GL PCIE5;Efficiency Rating;80+ Gold
+MSI MAG A750GL PCIE5;Modular;Full
+MSI MAG A750GL PCIE5;Wattage;750
+MSI MAG A750GL PCIE5;Color;Black
+
+Corsair NAUTILUS 360 RS ARGB;Color;Black
+Corsair NAUTILUS 360 RS ARGB;Lighting;RGB
+Corsair NAUTILUS 360 RS ARGB;Cooling;Water
+Corsair NAUTILUS 360 RS ARGB;Radiator Size;360
+Corsair NAUTILUS 360 RS ARGB;FAN RPM;2100
+Corsair NAUTILUS 360 RS ARGB;Noise Level;34
+Corsair NAUTILUS 360 RS ARGB;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+
 Samsung Odyssey G5;Screen Size;32
 Samsung Odyssey G5;Resolution;2560x1440
 Samsung Odyssey G5;Refresh Rate;165
@@ -51,6 +62,13 @@ Samsung Odyssey G5;Panel Type;VA
 Samsung Odyssey G5;Brightness;300
 Samsung Odyssey G5;Response Time;1
 Samsung Odyssey G5;Contrast Ratio;2500:1
+
+Logitech MX Master 3S (Wireless);Color;Graphite
+Logitech MX Master 3S (Wireless);DPI;8000
+Logitech MX Master 3S (Wireless);Wireless;Yes
+Logitech MX Master 3S (Wireless);Battery Life;70
+Logitech MX Master 3S (Wireless);Weight;141
+Logitech MX Master 3S (Wireless);Connectivity Technology;Wireless
 
 Fractal Design Meshify 2;Side Panel;Tempered Glass
 Fractal Design Meshify 2;Type;ATX Mid 
@@ -60,18 +78,24 @@ Fractal Design Meshify 2;Color;Black
 Fractal Design Meshify 2;Dimensions;542x240x474
 Fractal Design Meshify 2;Radiator Support;120 mm 140 mm 240 mm 280 mm 360 mm 420 mm
 Fractal Design Meshify 2;Motherboard Form Factor;ATX EATX Micro ATX Mini ITX
+Fractal Design Meshify 2;Warranty;2
 
-MSI MAG A750GL PCIE5;Wattage;750
-MSI MAG A750GL PCIE5;Efficiency Rating;80+ Gold
-MSI MAG A750GL PCIE5;Modular;Full
-MSI MAG A750GL PCIE5;Wattage;750
-MSI MAG A750GL PCIE5;Color;Black
+Lian Li UNI SL120 INF;Color;White
+Lian Li UNI SL120 INF;Fan Size;120
+Lian Li UNI SL120 INF;Fan height;25
+Lian Li UNI SL120 INF;Fan RPM;2100
+Lian Li UNI SL120 INF;Noise Level;32
+Lian Li UNI SL120 INF;Fan Connectors;4
+Lian Li UNI SL120 INF;Warranty;2
 
-Samsung 990 Pro 2 TB;Capacity;2
-Samsung 990 Pro 2 TB;Cache;2048
-Samsung 990 Pro 2 TB;Maximum Read Speed;7450
-Samsung 990 Pro 2 TB;Maximum Write Speed;6900
-Samsung 990 Pro 2 TB;Connectivity Technology;M.2
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Color;Black
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Switch Type;Linear White Jade Switch
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Mounting Type;Upgraded Gasket
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Weight;900
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Battery Capacity;5000
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Backlight;RGB
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Key Amounts;812
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Compatible;PC,Mac,Smartphone,Tablet
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Connectivity Technology;2.4G Wireless/Bluetooth 5.0/USB-C Wired
 
-Corsair NAUTILUS 360 RS ARGB;Color;Black
-Corsair NAUTILUS 360 RS ARGB;Cooling;Water
+

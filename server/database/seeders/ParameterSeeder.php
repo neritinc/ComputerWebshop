@@ -99,7 +99,12 @@ class ParameterSeeder extends Seeder
 
             //Cooling
             ['parameter_name' => 'Color', 'category_name' => 'Cooling', 'unit_name' => 'Color'],
+            ['parameter_name' => 'Lighting', 'category_name' => 'Cooling', 'unit_name' => 'Color'],
             ['parameter_name' => 'Cooling', 'category_name' => 'Cooling', 'unit_name' => 'Cooled'],
+            ['parameter_name' => 'Radiator Size', 'category_name' => 'Cooling', 'unit_name' => 'mm'],
+            ['parameter_name' => 'Fan RPM', 'category_name' => 'Cooling', 'unit_name' => 'RPM'],
+            ['parameter_name' => 'Noise Level', 'category_name' => 'Cooling', 'unit_name' => 'dB'],
+            ['parameter_name' => 'CPU Socket', 'category_name' => 'Cooling', 'unit_name' => '-'],
 
             // Monitor (ID: 13)
             ['parameter_name' => 'Screen Size', 'category_name' => 'Monitor', 'unit_name' => 'inch'],
@@ -108,8 +113,11 @@ class ParameterSeeder extends Seeder
             ['parameter_name' => 'Panel Type', 'category_name' => 'Monitor', 'unit_name' => 'N/A'],
 
             // Mouse (ID: 15)
+            ['parameter_name' => 'Color', 'category_name' => 'Mouse', 'unit_name' => 'Color'],
+            ['parameter_name' => 'Connectivity Technology', 'category_name' => 'Mouse', 'unit_name' => '-'],
             ['parameter_name' => 'DPI', 'category_name' => 'Mouse', 'unit_name' => 'DPI'],
             ['parameter_name' => 'Wireless', 'category_name' => 'Mouse', 'unit_name' => 'Yes/No'],
+            ['parameter_name' => 'Battery Life', 'category_name' => 'Mouse', 'unit_name' => 'Hour'],
 
             // Case (ID: 8)
             ['parameter_name' => 'Type', 'category_name' => 'Case', 'unit_name' => 'Tower'],
@@ -120,6 +128,28 @@ class ParameterSeeder extends Seeder
             ['parameter_name' => 'Drive Bays', 'category_name' => 'Case', 'unit_name' => 'Pcs'],
             ['parameter_name' => 'Radiator Support', 'category_name' => 'Case', 'unit_name' => 'mm'],
             ['parameter_name' => 'Motherboard Form Factor', 'category_name' => 'Case', 'unit_name' => '-'],
+            ['parameter_name' => 'Warranty', 'category_name' => 'Case', 'unit_name' => 'Year'],
+
+            // Case Fan
+            ['parameter_name' => 'Color', 'category_name' => 'Case Fan', 'unit_name' => '-'],
+            ['parameter_name' => 'Fan Size', 'category_name' => 'Case Fan', 'unit_name' => 'mm'],
+            ['parameter_name' => 'Fan height', 'category_name' => 'Case Fan', 'unit_name' => 'mm'],
+            ['parameter_name' => 'Fan RPM', 'category_name' => 'Case Fan', 'unit_name' => 'RPM'],
+            ['parameter_name' => 'Noise Level', 'category_name' => 'Case Fan', 'unit_name' => 'dB'],
+            ['parameter_name' => 'Fan Connectors', 'category_name' => 'Case Fan', 'unit_name' => '4 pin'],
+            ['parameter_name' => 'Warranty', 'category_name' => 'Case Fan', 'unit_name' => 'Year'],
+
+            // Keyboard
+            ['parameter_name' => 'Color', 'category_name' => 'Keyboard', 'unit_name' => '-'],
+            ['parameter_name' => 'Switch Type', 'category_name' => 'Keyboard', 'unit_name' => '-'],
+            ['parameter_name' => 'Mounting Type', 'category_name' => 'Keyboard', 'unit_name' => '-'],
+            ['parameter_name' => 'Weight', 'ctegory_name' => 'Keyboard', 'unit_name' => 'g'],
+            ['parameter_name' => 'Battery Capacity', 'category_name' => 'Keyboard', 'unit_name' => 'mAh'],
+            ['parameter_name' => 'Backlight', 'category_name' => 'Keyboard', 'unit_name' => '-'],
+            ['parameter_name' => 'Key Amounts', 'category_name' => 'Keyboard', 'unit_name' => 'pcs'],
+            ['parameter_name' => 'Compatible', 'category_name' => 'Keyboard', 'unit_name' => '-'],
+            ['parameter_name' => 'Connectivity Technology', 'category_name' => 'Keyboard', 'unit_name' => '-'],
+
         ];
 
         foreach ($parameters as $p) {
