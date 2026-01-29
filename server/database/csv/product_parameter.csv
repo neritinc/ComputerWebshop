@@ -1,7 +1,8 @@
 product_name;parameter_name;value
-Kingston Fury Beast 16GB DDR5;Memory Capacity;16
+Kingston Fury Beast 16GB DDR5;Memory Capacity;2x8
 Kingston Fury Beast 16GB DDR5;Memory Type;DDR5
 Kingston Fury Beast 16GB DDR5;Bus Speed;5600
+Kingston Fury Beast 16GB DDR5;CAS Latency;36
 
 AMD Ryzen 7 7700X;Clock Speed;4500
 AMD Ryzen 7 7700X;Turbo Clock Speed;5400
@@ -12,96 +13,6 @@ AMD Ryzen 7 7700X;L3 Cache Size;32
 AMD Ryzen 7 7700X;Thermal Design Power (TDP);105
 AMD Ryzen 7 7700X;Architecture;Zen 4
 
-AMD Ryzen 9 7950X;Clock Speed;4500
-AMD Ryzen 9 7950X;Turbo Clock Speed;5700
-AMD Ryzen 9 7950X;Core Count;16
-AMD Ryzen 9 7950X;Thread Count;32
-AMD Ryzen 9 7950X;L2 Cache Size;16
-AMD Ryzen 9 7950X;L3 Cache Size;64
-AMD Ryzen 9 7950X;Thermal Design Power (TDP);170
-AMD Ryzen 9 7950X;Architecture;Zen 4
-
-AMD Ryzen 9 7900X;Clock Speed;4700
-AMD Ryzen 9 7900X;Turbo Clock Speed;5600
-AMD Ryzen 9 7900X;Core Count;12
-AMD Ryzen 9 7900X;Thread Count;24
-AMD Ryzen 9 7900X;L2 Cache Size;12
-AMD Ryzen 9 7900X;L3 Cache Size;64
-AMD Ryzen 9 7900X;Thermal Design Power (TDP);170
-AMD Ryzen 9 7900X;Architecture;Zen 4
-
-AMD Ryzen 5 7600X;Clock Speed;4700
-AMD Ryzen 5 7600X;Turbo Clock Speed;5300
-AMD Ryzen 5 7600X;Core Count;6
-AMD Ryzen 5 7600X;Thread Count;12
-AMD Ryzen 5 7600X;L2 Cache Size;6
-AMD Ryzen 5 7600X;L3 Cache Size;32
-AMD Ryzen 5 7600X;Thermal Design Power (TDP);105
-AMD Ryzen 5 7600X;Architecture;Zen 4
-
-AMD Ryzen 7 5800X3D;Clock Speed;3400
-AMD Ryzen 7 5800X3D;Turbo Clock Speed;4500
-AMD Ryzen 7 5800X3D;Core Count;8
-AMD Ryzen 7 5800X3D;Thread Count;16
-AMD Ryzen 7 5800X3D;L2 Cache Size;8
-AMD Ryzen 7 5800X3D;L3 Cache Size;96
-AMD Ryzen 7 5800X3D;Thermal Design Power (TDP);105
-AMD Ryzen 7 5800X3D;Architecture;Zen 3
-
-Intel Core i9-13900K;Clock Speed;3000
-Intel Core i9-13900K;Turbo Clock Speed;5800
-Intel Core i9-13900K;Core Count;24
-Intel Core i9-13900K;Thread Count;32
-Intel Core i9-13900K;L2 Cache Size;32
-Intel Core i9-13900K;L3 Cache Size;36
-Intel Core i9-13900K;Thermal Design Power (TDP);125
-Intel Core i9-13900K;Architecture;Raptor Lake
-
-Intel Core i7-13700K;Clock Speed;3400
-Intel Core i7-13700K;Turbo Clock Speed;5400
-Intel Core i7-13700K;Core Count;16
-Intel Core i7-13700K;Thread Count;24
-Intel Core i7-13700K;L2 Cache Size;24
-Intel Core i7-13700K;L3 Cache Size;30
-Intel Core i7-13700K;Thermal Design Power (TDP);125
-Intel Core i7-13700K;Architecture;Raptor Lake
-
-Intel Core i5-13600K;Clock Speed;3500
-Intel Core i5-13600K;Turbo Clock Speed;5100
-Intel Core i5-13600K;Core Count;14
-Intel Core i5-13600K;Thread Count;20
-Intel Core i5-13600K;L2 Cache Size;20
-Intel Core i5-13600K;L3 Cache Size;24
-Intel Core i5-13600K;Thermal Design Power (TDP);125
-Intel Core i5-13600K;Architecture;Raptor Lake
-
-AMD Ryzen 5 5600;Clock Speed;3500
-AMD Ryzen 5 5600;Turbo Clock Speed;4400
-AMD Ryzen 5 5600;Core Count;6
-AMD Ryzen 5 5600;Thread Count;12
-AMD Ryzen 5 5600;L2 Cache Size;6
-AMD Ryzen 5 5600;L3 Cache Size;32
-AMD Ryzen 5 5600;Thermal Design Power (TDP);65
-AMD Ryzen 5 5600;Architecture;Zen 3
-
-AMD Ryzen 9 3950X;Clock Speed;3500
-AMD Ryzen 9 3950X;Turbo Clock Speed;4700
-AMD Ryzen 9 3950X;Core Count;16
-AMD Ryzen 9 3950X;Thread Count;32
-AMD Ryzen 9 3950X;L2 Cache Size;16
-AMD Ryzen 9 3950X;L3 Cache Size;64
-AMD Ryzen 9 3950X;Thermal Design Power (TDP);105
-AMD Ryzen 9 3950X;Architecture;Zen 2
-
-Intel Core i5-12400F;Clock Speed;2500
-Intel Core i5-12400F;Turbo Clock Speed;4400
-Intel Core i5-12400F;Core Count;6
-Intel Core i5-12400F;Thread Count;12
-Intel Core i5-12400F;L2 Cache Size;7.5
-Intel Core i5-12400F;L3 Cache Size;18
-Intel Core i5-12400F;Thermal Design Power (TDP);65
-Intel Core i5-12400F;Architecture;Alder Lake
-
 AMD Radeon RX 7800 XT;VRAM;16
 AMD Radeon RX 7800 XT;Core Clock;2124
 AMD Radeon RX 7800 XT;Memory Clock;19500
@@ -109,9 +20,13 @@ AMD Radeon RX 7800 XT;DirectX Version;12
 
 NVIDIA GeForce RTX 4070;VRAM;12
 NVIDIA GeForce RTX 4070;Core Clock;1920
+NVIDIA GeForce RTX 4070;Boost Clock;2480
 NVIDIA GeForce RTX 4070;Memory Clock;21000
 NVIDIA GeForce RTX 4070;CUDA Cores;5888
 NVIDIA GeForce RTX 4070;DirectX Version;12
+NVIDIA GeForce RTX 4070;Thermal Design Power (TDP);200
+NVIDIA GeForce RTX 4070;Length;244
+NVIDIA GeForce RTX 4070;Cooling Fans;2
 
 Logitech MX Master 3S (Wireless);DPI;8000
 Logitech MX Master 3S (Wireless);Wireless;Yes
@@ -122,30 +37,12 @@ ASUS TUF B650-PLUS;Socket;AM5
 ASUS TUF B650-PLUS;Chipset;B650
 ASUS TUF B650-PLUS;Form Factor;ATX
 ASUS TUF B650-PLUS;Memory Slots;4
+ASUS TUF B650-PLUS;M.2 Slots;2
 ASUS TUF B650-PLUS;Max Memory;128
 ASUS TUF B650-PLUS;PCIe Slots;3
-
-MSI PRO B650-P WIFI;Socket;AM5
-MSI PRO B650-P WIFI;Chipset;B650
-MSI PRO B650-P WIFI;Form Factor;ATX
-MSI PRO B650-P WIFI;Memory Slots;4
-MSI PRO B650-P WIFI;Max Memory;128
-MSI PRO B650-P WIFI;PCIe Slots;2
-
-Gigabyte B760M DS3H DDR4;Socket;LGA1700
-Gigabyte B760M DS3H DDR4;Chipset;B760
-Gigabyte B760M DS3H DDR4;Form Factor;mATX
-Gigabyte B760M DS3H DDR4;Memory Slots;4
-Gigabyte B760M DS3H DDR4;Max Memory;128
-Gigabyte B760M DS3H DDR4;PCIe Slots;2
-
-Dell UltraSharp U2723QE;Screen Size;27
-Dell UltraSharp U2723QE;Resolution;3840x2160
-Dell UltraSharp U2723QE;Refresh Rate;60
-Dell UltraSharp U2723QE;Panel Type;IPS
-Dell UltraSharp U2723QE;Brightness;400
-Dell UltraSharp U2723QE;Response Time;5
-Dell UltraSharp U2723QE;Contrast Ratio;2000:1
+ASUS TUF B650-PLUS;Memory Type;DDR5
+ASUS TUF B650-PLUS;Wireless Networking;Wi-Fi 6E
+ASUS TUF B650-PLUS;RAID Support;Yes
 
 Samsung Odyssey G5;Screen Size;32
 Samsung Odyssey G5;Resolution;2560x1440
@@ -161,3 +58,20 @@ Fractal Design Meshify 2;Max GPU Length;450
 Fractal Design Meshify 2;Drive Bays;6
 Fractal Design Meshify 2;Color;Black
 Fractal Design Meshify 2;Dimensions;542x240x474
+Fractal Design Meshify 2;Radiator Support;120 mm 140 mm 240 mm 280 mm 360 mm 420 mm
+Fractal Design Meshify 2;Motherboard Form Factor;ATX EATX Micro ATX Mini ITX
+
+MSI MAG A750GL PCIE5;Wattage;750
+MSI MAG A750GL PCIE5;Efficiency Rating;80+ Gold
+MSI MAG A750GL PCIE5;Modular;Full
+MSI MAG A750GL PCIE5;Wattage;750
+MSI MAG A750GL PCIE5;Color;Black
+
+Samsung 990 Pro 2 TB;Capacity;2
+Samsung 990 Pro 2 TB;Cache;2048
+Samsung 990 Pro 2 TB;Maximum Read Speed;7450
+Samsung 990 Pro 2 TB;Maximum Write Speed;6900
+Samsung 990 Pro 2 TB;Connectivity Technology;M.2
+
+Corsair NAUTILUS 360 RS ARGB;Color;Black
+Corsair NAUTILUS 360 RS ARGB;Cooling;Water

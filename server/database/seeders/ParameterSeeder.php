@@ -58,21 +58,48 @@ class ParameterSeeder extends Seeder
             ['parameter_name' => 'Memory Capacity', 'category_name' => 'Memory Module', 'unit_name' => 'GB'],
             ['parameter_name' => 'Memory Type', 'category_name' => 'Memory Module', 'unit_name' => 'N/A'],
             ['parameter_name' => 'Bus Speed', 'category_name' => 'Memory Module', 'unit_name' => 'MHz'],
+            ['parameter_name' => 'CAS Latency', 'category_name' => 'Memory Module', 'unit_name' => 'CL'],
 
             // Motherboard (ID: 3)
             ['parameter_name' => 'Socket', 'category_name' => 'Motherboard', 'unit_name' => 'N/A'],
             ['parameter_name' => 'Chipset', 'category_name' => 'Motherboard', 'unit_name' => 'N/A'],
             ['parameter_name' => 'Form Factor', 'category_name' => 'Motherboard', 'unit_name' => 'N/A'],
             ['parameter_name' => 'Memory Slots', 'category_name' => 'Motherboard', 'unit_name' => 'Pcs'],
+            ['parameter_name' => 'M.2 Slots', 'category_name' => 'Motherboard', 'unit_name' => 'Pcs'],
             ['parameter_name' => 'Max Memory', 'category_name' => 'Motherboard', 'unit_name' => 'GB'],
+            ['parameter_name' => 'Memory Type', 'category_name' => 'Motherboard', 'unit_name' => 'N/A'],
             ['parameter_name' => 'PCIe Slots', 'category_name' => 'Motherboard', 'unit_name' => 'Pcs'],
+            ['parameter_name' => 'Wireless Networking', 'category_name' => 'Motherboard', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'RAID Support', 'category_name' => 'Motherboard', 'unit_name' => 'N/A'],
 
             // Graphics Card (ID: 4)
             ['parameter_name' => 'VRAM', 'category_name' => 'Graphics Card', 'unit_name' => 'GB'],
             ['parameter_name' => 'Core Clock', 'category_name' => 'Graphics Card', 'unit_name' => 'MHz'],
+            ['parameter_name' => 'Boost Clock', 'category_name' => 'Graphics Card', 'unit_name' => 'MHz'],
             ['parameter_name' => 'Memory Clock', 'category_name' => 'Graphics Card', 'unit_name' => 'MHz'],
             ['parameter_name' => 'CUDA Cores', 'category_name' => 'Graphics Card', 'unit_name' => 'Pcs'],
             ['parameter_name' => 'DirectX Version', 'category_name' => 'Graphics Card', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Thermal Design Power (TDP)', 'category_name' => 'Graphics Card', 'unit_name' => 'W'],
+            ['parameter_name' => 'Cooling Fans', 'category_name' => 'Graphics Card', 'unit_name' => 'Pcs'],
+            ['parameter_name' => 'Length', 'category_name' => 'Graphics Card', 'unit_name' => 'mm'],
+
+            //STORAGE
+            ['parameter_name' => 'Capacity', 'category_name' => 'Storage', 'unit_name' => 'TB'],
+            ['parameter_name' => 'Cache', 'category_name' => 'Storage', 'unit_name' => 'MB'],
+            ['parameter_name' => 'Maximum Read Speed', 'category_name' => 'Storage', 'unit_name' => 'MB/s'],
+            ['parameter_name' => 'Maximum Write Speed', 'category_name' => 'Storage', 'unit_name' => 'MB/s'],
+            ['parameter_name' => 'Connectivity Technology', 'category_name' => 'Storage', 'unit_name' => 'N/A'],
+
+            //POWER SUPPLY
+            ['parameter_name' => 'Wattage', 'category_name' => 'Power Supply', 'unit_name' => 'W'],
+            ['parameter_name' => 'Efficiency Rating', 'category_name' => 'Power Supply', 'unit_name' => 'N/A'],
+            ['parameter_name' => 'Modular', 'category_name' => 'Power Supply', 'unit_name' => 'Full'],
+            ['parameter_name' => 'Wattage', 'category_name' => 'Power Supply', 'unit_name' => 'W'],
+            ['parameter_name' => 'Color', 'category_name' => 'Power Supply', 'unit_name' => '-'],
+
+            //Cooling
+            ['parameter_name' => 'Color', 'category_name' => 'Cooling', 'unit_name' => 'Color'],
+            ['parameter_name' => 'Cooling', 'category_name' => 'Cooling', 'unit_name' => 'Cooled'],
 
             // Monitor (ID: 13)
             ['parameter_name' => 'Screen Size', 'category_name' => 'Monitor', 'unit_name' => 'inch'],
@@ -91,6 +118,8 @@ class ParameterSeeder extends Seeder
             ['parameter_name' => 'Side Panel', 'category_name' => 'Case', 'unit_name' => 'Material'],
             ['parameter_name' => 'Max GPU Length', 'category_name' => 'Case', 'unit_name' => 'mm'],
             ['parameter_name' => 'Drive Bays', 'category_name' => 'Case', 'unit_name' => 'Pcs'],
+            ['parameter_name' => 'Radiator Support', 'category_name' => 'Case', 'unit_name' => 'mm'],
+            ['parameter_name' => 'Motherboard Form Factor', 'category_name' => 'Case', 'unit_name' => '-'],
         ];
 
         foreach ($parameters as $p) {
