@@ -1,5 +1,6 @@
 product_name;parameter_name;value
 
+product_name;parameter_name;value
 AMD Ryzen 7 7700X;Clock Speed;4500
 AMD Ryzen 7 7700X;Turbo Clock Speed;5400
 AMD Ryzen 7 7700X;Core Count;8
@@ -8,11 +9,59 @@ AMD Ryzen 7 7700X;L2 Cache Size;8
 AMD Ryzen 7 7700X;L3 Cache Size;32
 AMD Ryzen 7 7700X;Thermal Design Power (TDP);105
 AMD Ryzen 7 7700X;Architecture;Zen 4
+AMD Ryzen 7 9800X3D;Clock Speed;4700
+AMD Ryzen 7 9800X3D;Turbo Clock Speed;5200
+AMD Ryzen 7 9800X3D;Core Count;8
+AMD Ryzen 7 9800X3D;Thread Count;16
+AMD Ryzen 7 9800X3D;L2 Cache Size;8
+AMD Ryzen 7 9800X3D;L3 Cache Size;96
+AMD Ryzen 7 9800X3D;Thermal Design Power (TDP);120
+AMD Ryzen 7 9800X3D;Architecture;Zen 5
+AMD Ryzen 9 9950X;Clock Speed;4300
+AMD Ryzen 9 9950X;Turbo Clock Speed;5700
+AMD Ryzen 9 9950X;Core Count;16
+AMD Ryzen 9 9950X;Thread Count;32
+AMD Ryzen 9 9950X;L2 Cache Size;16
+AMD Ryzen 9 9950X;L3 Cache Size;64
+AMD Ryzen 9 9950X;Thermal Design Power (TDP);170
+AMD Ryzen 9 9950X;Architecture;Zen 5
+Intel Core Ultra 9 285K;Clock Speed;3700
+Intel Core Ultra 9 285K;Turbo Clock Speed;5700
+Intel Core Ultra 9 285K;Core Count;24
+Intel Core Ultra 9 285K;Thread Count;24
+Intel Core Ultra 9 285K;L2 Cache Size;40
+Intel Core Ultra 9 285K;L3 Cache Size;36
+Intel Core Ultra 9 285K;Thermal Design Power (TDP);125
+Intel Core Ultra 9 285K;Architecture;Arrow Lake
+Intel Core Ultra 5 245K;Clock Speed;4200
+Intel Core Ultra 5 245K;Turbo Clock Speed;5200
+Intel Core Ultra 5 245K;Core Count;14
+Intel Core Ultra 5 245K;Thread Count;14
+Intel Core Ultra 5 245K;L2 Cache Size;26
+Intel Core Ultra 5 245K;L3 Cache Size;24
+Intel Core Ultra 5 245K;Thermal Design Power (TDP);125
+Intel Core Ultra 5 245K;Architecture;Arrow Lake
 
 Kingston Fury Beast 16GB DDR5;Memory Capacity;2x8
 Kingston Fury Beast 16GB DDR5;Memory Type;DDR5
 Kingston Fury Beast 16GB DDR5;Bus Speed;5600
 Kingston Fury Beast 16GB DDR5;CAS Latency;36
+G.Skill Trident Z5 RGB 32GB DDR5;Memory Capacity;2x16
+G.Skill Trident Z5 RGB 32GB DDR5;Memory Type;DDR5
+G.Skill Trident Z5 RGB 32GB DDR5;Bus Speed;6400
+G.Skill Trident Z5 RGB 32GB DDR5;CAS Latency;32
+Corsair Vengeance RGB 32GB DDR5;Memory Capacity;2x16
+Corsair Vengeance RGB 32GB DDR5;Memory Type;DDR5
+Corsair Vengeance RGB 32GB DDR5;Bus Speed;6000
+Corsair Vengeance RGB 32GB DDR5;CAS Latency;30
+Crucial Pro 32GB DDR5;Memory Capacity;2x16
+Crucial Pro 32GB DDR5;Memory Type;DDR5
+Crucial Pro 32GB DDR5;Bus Speed;5600
+Crucial Pro 32GB DDR5;CAS Latency;46
+TeamGroup T-Force Delta RGB 32GB DDR5;Memory Capacity;2x16
+TeamGroup T-Force Delta RGB 32GB DDR5;Memory Type;DDR5
+TeamGroup T-Force Delta RGB 32GB DDR5;Bus Speed;7200
+TeamGroup T-Force Delta RGB 32GB DDR5;CAS Latency;34
 
 ASUS TUF B650-PLUS;Socket;AM5
 ASUS TUF B650-PLUS;Chipset;B650
@@ -24,6 +73,46 @@ ASUS TUF B650-PLUS;PCIe Slots;3
 ASUS TUF B650-PLUS;Memory Type;DDR5
 ASUS TUF B650-PLUS;Wireless Networking;Wi-Fi 6E
 ASUS TUF B650-PLUS;RAID Support;Yes
+MSI MAG Z790 TOMAHAWK WIFI;Socket;LGA1700
+MSI MAG Z790 TOMAHAWK WIFI;Chipset;Z790
+MSI MAG Z790 TOMAHAWK WIFI;Form Factor;ATX
+MSI MAG Z790 TOMAHAWK WIFI;Memory Slots;4
+MSI MAG Z790 TOMAHAWK WIFI;M.2 Slots;4
+MSI MAG Z790 TOMAHAWK WIFI;Max Memory;192
+MSI MAG Z790 TOMAHAWK WIFI;PCIe Slots;3
+MSI MAG Z790 TOMAHAWK WIFI;Memory Type;DDR5
+MSI MAG Z790 TOMAHAWK WIFI;Wireless Networking;Wi-Fi 6E
+MSI MAG Z790 TOMAHAWK WIFI;RAID Support;Yes
+Gigabyte B650I AX;Socket;AM5
+Gigabyte B650I AX;Chipset;B650
+Gigabyte B650I AX;Form Factor;Mini-ITX
+Gigabyte B650I AX;Memory Slots;2
+Gigabyte B650I AX;M.2 Slots;2
+Gigabyte B650I AX;Max Memory;96
+Gigabyte B650I AX;PCIe Slots;1
+Gigabyte B650I AX;Memory Type;DDR5
+Gigabyte B650I AX;Wireless Networking;Wi-Fi 6E
+Gigabyte B650I AX;RAID Support;No
+ASRock X670E Taichi;Socket;AM5
+ASRock X670E Taichi;Chipset;X670E
+ASRock X670E Taichi;Form Factor;E-ATX
+ASRock X670E Taichi;Memory Slots;4
+ASRock X670E Taichi;M.2 Slots;5
+ASRock X670E Taichi;Max Memory;192
+ASRock X670E Taichi;PCIe Slots;2
+ASRock X670E Taichi;Memory Type;DDR5
+ASRock X670E Taichi;Wireless Networking;Wi-Fi 7
+ASRock X670E Taichi;RAID Support;Yes
+MSI PRO Z890-P WIFI;Socket;LGA1851
+MSI PRO Z890-P WIFI;Chipset;Z890
+MSI PRO Z890-P WIFI;Form Factor;ATX
+MSI PRO Z890-P WIFI;Memory Slots;4
+MSI PRO Z890-P WIFI;M.2 Slots;4
+MSI PRO Z890-P WIFI;Max Memory;256
+MSI PRO Z890-P WIFI;PCIe Slots;3
+MSI PRO Z890-P WIFI;Memory Type;DDR5
+MSI PRO Z890-P WIFI;Wireless Networking;Wi-Fi 7
+MSI PRO Z890-P WIFI;RAID Support;Yes
 
 NVIDIA GeForce RTX 4070;VRAM;12
 NVIDIA GeForce RTX 4070;Core Clock;1920
@@ -34,18 +123,93 @@ NVIDIA GeForce RTX 4070;DirectX Version;12
 NVIDIA GeForce RTX 4070;Thermal Design Power (TDP);200
 NVIDIA GeForce RTX 4070;Length;244
 NVIDIA GeForce RTX 4070;Cooling Fans;2
+AMD Radeon RX 8800 XT;VRAM;16
+AMD Radeon RX 8800 XT;Core Clock;2200
+AMD Radeon RX 8800 XT;Boost Clock;2550
+AMD Radeon RX 8800 XT;Memory Clock;20000
+AMD Radeon RX 8800 XT;Stream Processors;4096
+AMD Radeon RX 8800 XT;DirectX Version;12
+AMD Radeon RX 8800 XT;Thermal Design Power (TDP);220
+AMD Radeon RX 8800 XT;Length;267
+AMD Radeon RX 8800 XT;Cooling Fans;3
+AMD Radeon RX 7900 XTX;VRAM;24
+AMD Radeon RX 7900 XTX;Core Clock;1900
+AMD Radeon RX 7900 XTX;Boost Clock;2500
+AMD Radeon RX 7900 XTX;Memory Clock;20000
+AMD Radeon RX 7900 XTX;Stream Processors;6144
+AMD Radeon RX 7900 XTX;DirectX Version;12
+AMD Radeon RX 7900 XTX;Thermal Design Power (TDP);355
+AMD Radeon RX 7900 XTX;Length;287
+AMD Radeon RX 7900 XTX;Cooling Fans;3
+NVIDIA GeForce RTX 5080;VRAM;16
+NVIDIA GeForce RTX 5080;Core Clock;2295
+NVIDIA GeForce RTX 5080;Boost Clock;2617
+NVIDIA GeForce RTX 5080;Memory Clock;30000
+NVIDIA GeForce RTX 5080;CUDA Cores;10752
+NVIDIA GeForce RTX 5080;DirectX Version;12
+NVIDIA GeForce RTX 5080;Thermal Design Power (TDP);360
+NVIDIA GeForce RTX 5080;Length;304
+NVIDIA GeForce RTX 5080;Cooling Fans;3
+AMD Radeon RX 8700 XT;VRAM;12
+AMD Radeon RX 8700 XT;Core Clock;2100
+AMD Radeon RX 8700 XT;Boost Clock;2450
+AMD Radeon RX 8700 XT;Memory Clock;19000
+AMD Radeon RX 8700 XT;Stream Processors;3584
+AMD Radeon RX 8700 XT;DirectX Version;12
+AMD Radeon RX 8700 XT;Thermal Design Power (TDP);190
+AMD Radeon RX 8700 XT;Length;240
+AMD Radeon RX 8700 XT;Cooling Fans;2
 
 Samsung 990 Pro 2 TB;Capacity;2
 Samsung 990 Pro 2 TB;Cache;2048
 Samsung 990 Pro 2 TB;Maximum Read Speed;7450
 Samsung 990 Pro 2 TB;Maximum Write Speed;6900
 Samsung 990 Pro 2 TB;Connectivity Technology;M.2
+Crucial T705 2TB;Capacity;2
+Crucial T705 2TB;Cache;4096
+Crucial T705 2TB;Maximum Read Speed;14500
+Crucial T705 2TB;Maximum Write Speed;12700
+Crucial T705 2TB;Connectivity Technology;PCIe 5.0 M.2
+WD Black SN850X 2TB;Capacity;2
+WD Black SN850X 2TB;Cache;2048
+WD Black SN850X 2TB;Maximum Read Speed;7300
+WD Black SN850X 2TB;Maximum Write Speed;6600
+WD Black SN850X 2TB;Connectivity Technology;M.2
+Kingston KC3000 2TB;Capacity;2
+Kingston KC3000 2TB;Cache;2048
+Kingston KC3000 2TB;Maximum Read Speed;7000
+Kingston KC3000 2TB;Maximum Write Speed;7000
+Kingston KC3000 2TB;Connectivity Technology;M.2
+Sabrent Rocket 5 4TB;Capacity;4
+Sabrent Rocket 5 4TB;Cache;8192
+Sabrent Rocket 5 4TB;Maximum Read Speed;14000
+Sabrent Rocket 5 4TB;Maximum Write Speed;12000
+Sabrent Rocket 5 4TB;Connectivity Technology;PCIe 5.0 M.2
 
 MSI MAG A750GL PCIE5;Wattage;750
 MSI MAG A750GL PCIE5;Efficiency Rating;80+ Gold
 MSI MAG A750GL PCIE5;Modular;Full
-MSI MAG A750GL PCIE5;Wattage;750
 MSI MAG A750GL PCIE5;Color;Black
+Deepcool PX1000G;Wattage;1000
+Deepcool PX1000G;Efficiency Rating;80+ Gold
+Deepcool PX1000G;Modular;Full
+Deepcool PX1000G;Color;Black
+Deepcool DQ750-M-V2L;Wattage;750
+Deepcool DQ750-M-V2L;Efficiency Rating;80+ Gold
+Deepcool DQ750-M-V2L;Modular;Full
+Deepcool DQ750-M-V2L;Color;White
+Corsair RM850x Shift;Wattage;850
+Corsair RM850x Shift;Efficiency Rating;80+ Gold
+Corsair RM850x Shift;Modular;Full
+Corsair RM850x Shift;Color;Black
+Seasonic PRIME TX-1300;Wattage;1300
+Seasonic PRIME TX-1300;Efficiency Rating;80+ Titanium
+Seasonic PRIME TX-1300;Modular;Full
+Seasonic PRIME TX-1300;Color;Black
+Be Quiet! Straight Power 12;Wattage;1200
+Be Quiet! Straight Power 12;Efficiency Rating;80+ Platinum
+Be Quiet! Straight Power 12;Modular;Full
+Be Quiet! Straight Power 12;Color;Black
 
 Corsair NAUTILUS 360 RS ARGB;Color;Black
 Corsair NAUTILUS 360 RS ARGB;Lighting;RGB
@@ -54,6 +218,34 @@ Corsair NAUTILUS 360 RS ARGB;Radiator Size;360
 Corsair NAUTILUS 360 RS ARGB;FAN RPM;2100
 Corsair NAUTILUS 360 RS ARGB;Noise Level;34
 Corsair NAUTILUS 360 RS ARGB;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+Arctic Liquid Freezer III 360;Color;Black
+Arctic Liquid Freezer III 360;Lighting;None
+Arctic Liquid Freezer III 360;Cooling;Water
+Arctic Liquid Freezer III 360;Radiator Size;360
+Arctic Liquid Freezer III 360;FAN RPM;1800
+Arctic Liquid Freezer III 360;Noise Level;23
+Arctic Liquid Freezer III 360;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+Noctua NH-D15 G2;Color;Brown
+Noctua NH-D15 G2;Lighting;None
+Noctua NH-D15 G2;Cooling;Air
+Noctua NH-D15 G2;Radiator Size;0
+Noctua NH-D15 G2;FAN RPM;1500
+Noctua NH-D15 G2;Noise Level;24.8
+Noctua NH-D15 G2;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+Deepcool AK620 Digital;Color;Black
+Deepcool AK620 Digital;Lighting;ARGB
+Deepcool AK620 Digital;Cooling;Air
+Deepcool AK620 Digital;Radiator Size;0
+Deepcool AK620 Digital;FAN RPM;1850
+Deepcool AK620 Digital;Noise Level;28
+Deepcool AK620 Digital;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+NZXT Kraken Elite 360;Color;White
+NZXT Kraken Elite 360;Lighting;RGB/LCD Screen
+NZXT Kraken Elite 360;Cooling;Water
+NZXT Kraken Elite 360;Radiator Size;360
+NZXT Kraken Elite 360;FAN RPM;1800
+NZXT Kraken Elite 360;Noise Level;30
+NZXT Kraken Elite 360;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
 
 Samsung Odyssey G5;Screen Size;32
 Samsung Odyssey G5;Resolution;2560x1440
@@ -62,6 +254,34 @@ Samsung Odyssey G5;Panel Type;VA
 Samsung Odyssey G5;Brightness;300
 Samsung Odyssey G5;Response Time;1
 Samsung Odyssey G5;Contrast Ratio;2500:1
+Alienware AW2524H;Screen Size;24.5
+Alienware AW2524H;Resolution;1920x1080
+Alienware AW2524H;Refresh Rate;500
+Alienware AW2524H;Panel Type;Fast IPS
+Alienware AW2524H;Brightness;400
+Alienware AW2524H;Response Time;0.5
+Alienware AW2524H;Contrast Ratio;1000:1
+ASUS ROG Swift Pro PG248QB;Screen Size;24.1
+ASUS ROG Swift Pro PG248QB;Resolution;1920x1080
+ASUS ROG Swift Pro PG248QB;Refresh Rate;540
+ASUS ROG Swift Pro PG248QB;Panel Type;E-TN
+ASUS ROG Swift Pro PG248QB;Brightness;400
+ASUS ROG Swift Pro PG248QB;Response Time;0.2
+ASUS ROG Swift Pro PG248QB;Contrast Ratio;1000:1
+LG UltraGear 32GS95UE;Screen Size;31.5
+LG UltraGear 32GS95UE;Resolution;3840x2160
+LG UltraGear 32GS95UE;Refresh Rate;240
+LG UltraGear 32GS95UE;Panel Type;OLED
+LG UltraGear 32GS95UE;Brightness;450
+LG UltraGear 32GS95UE;Response Time;0.03
+LG UltraGear 32GS95UE;Contrast Ratio;1500000:1
+MSI MPG 271QRX QD-OLED;Screen Size;27
+MSI MPG 271QRX QD-OLED;Resolution;2560x1440
+MSI MPG 271QRX QD-OLED;Refresh Rate;360
+MSI MPG 271QRX QD-OLED;Panel Type;QD-OLED
+MSI MPG 271QRX QD-OLED;Brightness;250
+MSI MPG 271QRX QD-OLED;Response Time;0.03
+MSI MPG 271QRX QD-OLED;Contrast Ratio;1500000:1
 
 Logitech MX Master 3S (Wireless);Color;Graphite
 Logitech MX Master 3S (Wireless);DPI;8000
@@ -69,9 +289,33 @@ Logitech MX Master 3S (Wireless);Wireless;Yes
 Logitech MX Master 3S (Wireless);Battery Life;70
 Logitech MX Master 3S (Wireless);Weight;141
 Logitech MX Master 3S (Wireless);Connectivity Technology;Wireless
+Razer Viper V3 Pro;Color;White
+Razer Viper V3 Pro;DPI;35000
+Razer Viper V3 Pro;Wireless;Yes
+Razer Viper V3 Pro;Battery Life;95
+Razer Viper V3 Pro;Weight;54
+Razer Viper V3 Pro;Connectivity Technology;HyperPolling Wireless (8K)
+Logitech G Pro X Superlight 2;Color;Magenta
+Logitech G Pro X Superlight 2;DPI;32000
+Logitech G Pro X Superlight 2;Wireless;Yes
+Logitech G Pro X Superlight 2;Battery Life;95
+Logitech G Pro X Superlight 2;Weight;60
+Logitech G Pro X Superlight 2;Connectivity Technology;Lightspeed Wireless
+SteelSeries Aerox 9 Wireless;Color;Black
+SteelSeries Aerox 9 Wireless;DPI;18000
+SteelSeries Aerox 9 Wireless;Wireless;Yes
+SteelSeries Aerox 9 Wireless;Battery Life;180
+SteelSeries Aerox 9 Wireless;Weight;89
+SteelSeries Aerox 9 Wireless;Connectivity Technology;2.4GHz / Bluetooth
+Finalmouse UltralightX;Color;Guardian (Gold)
+Finalmouse UltralightX;DPI;26000
+Finalmouse UltralightX;Wireless;Yes
+Finalmouse UltralightX;Battery Life;40
+Finalmouse UltralightX;Weight;29
+Finalmouse UltralightX;Connectivity Technology;Wireless
 
 Fractal Design Meshify 2;Side Panel;Tempered Glass
-Fractal Design Meshify 2;Type;ATX Mid 
+Fractal Design Meshify 2;Type;ATX Mid
 Fractal Design Meshify 2;Max GPU Length;450
 Fractal Design Meshify 2;Drive Bays;6
 Fractal Design Meshify 2;Color;Black
@@ -79,6 +323,42 @@ Fractal Design Meshify 2;Dimensions;542x240x474
 Fractal Design Meshify 2;Radiator Support;120 mm 140 mm 240 mm 280 mm 360 mm 420 mm
 Fractal Design Meshify 2;Motherboard Form Factor;ATX EATX Micro ATX Mini ITX
 Fractal Design Meshify 2;Warranty;2
+Lian Li O11 Vision;Side Panel;Triple Tempered Glass
+Lian Li O11 Vision;Type;ATX Mid Tower
+Lian Li O11 Vision;Max GPU Length;455
+Lian Li O11 Vision;Drive Bays;5
+Lian Li O11 Vision;Color;Chrome/White
+Lian Li O11 Vision;Dimensions;480x304x464
+Lian Li O11 Vision;Radiator Support;240 mm 280 mm 360 mm
+Lian Li O11 Vision;Motherboard Form Factor;EATX ATX Micro ATX Mini ITX
+Lian Li O11 Vision;Warranty;1
+NZXT H6 Flow;Side Panel;Tempered Glass
+NZXT H6 Flow;Type;Dual-Chamber Mid Tower
+NZXT H6 Flow;Max GPU Length;365
+NZXT H6 Flow;Drive Bays;3
+NZXT H6 Flow;Color;White
+NZXT H6 Flow;Dimensions;435x287x415
+NZXT H6 Flow;Radiator Support;120 mm 240 mm 280 mm 360 mm
+NZXT H6 Flow;Motherboard Form Factor;ATX Micro ATX Mini ITX
+NZXT H6 Flow;Warranty;2
+Corsair 2500D Airflow;Side Panel;Tempered Glass
+Corsair 2500D Airflow;Type;Small Form Factor Dual-Chamber
+Corsair 2500D Airflow;Max GPU Length;400
+Corsair 2500D Airflow;Drive Bays;4
+Corsair 2500D Airflow;Color;Black
+Corsair 2500D Airflow;Dimensions;304x479x376
+Corsair 2500D Airflow;Radiator Support;120 mm 140 mm 240 mm 280 mm 360 mm
+Corsair 2500D Airflow;Motherboard Form Factor;Micro ATX Mini ITX
+Corsair 2500D Airflow;Warranty;2
+Hyte Y70 Touch;Side Panel;Panoramic Glass
+Hyte Y70 Touch;Type;ATX Mid Tower
+Hyte Y70 Touch;Max GPU Length;422
+Hyte Y70 Touch;Drive Bays;4
+Hyte Y70 Touch;Color;Milk/Red
+Hyte Y70 Touch;Dimensions;470x320x470
+Hyte Y70 Touch;Radiator Support;120 mm 140 mm 240 mm 280 mm 360 mm
+Hyte Y70 Touch;Motherboard Form Factor;EATX ATX Micro ATX Mini ITX
+Hyte Y70 Touch;Warranty;3
 
 Lian Li UNI SL120 INF;Color;White
 Lian Li UNI SL120 INF;Fan Size;120
@@ -87,6 +367,34 @@ Lian Li UNI SL120 INF;Fan RPM;2100
 Lian Li UNI SL120 INF;Noise Level;32
 Lian Li UNI SL120 INF;Fan Connectors;4
 Lian Li UNI SL120 INF;Warranty;2
+Arctic P12 PWM PST;Color;Black
+Arctic P12 PWM PST;Fan Size;120
+Arctic P12 PWM PST;Fan height;25
+Arctic P12 PWM PST;Fan RPM;1800
+Arctic P12 PWM PST;Noise Level;22.5
+Arctic P12 PWM PST;Fan Connectors;4
+Arctic P12 PWM PST;Warranty;6
+Noctua NF-A14 PWM chromax.black;Color;Black
+Noctua NF-A14 PWM chromax.black;Fan Size;140
+Noctua NF-A14 PWM chromax.black;Fan height;25
+Noctua NF-A14 PWM chromax.black;Fan RPM;1500
+Noctua NF-A14 PWM chromax.black;Noise Level;24.6
+Noctua NF-A14 PWM chromax.black;Fan Connectors;4
+Noctua NF-A14 PWM chromax.black;Warranty;6
+Be Quiet! Silent Wings 4 Pro;Color;Black
+Be Quiet! Silent Wings 4 Pro;Fan Size;120
+Be Quiet! Silent Wings 4 Pro;Fan height;25
+Be Quiet! Silent Wings 4 Pro;Fan RPM;3000
+Be Quiet! Silent Wings 4 Pro;Noise Level;36.9
+Be Quiet! Silent Wings 4 Pro;Fan Connectors;4
+Be Quiet! Silent Wings 4 Pro;Warranty;5
+Corsair iCUE Link QX120 RGB;Color;Black
+Corsair iCUE Link QX120 RGB;Fan Size;120
+Corsair iCUE Link QX120 RGB;Fan height;25
+Corsair iCUE Link QX120 RGB;Fan RPM;2400
+Corsair iCUE Link QX120 RGB;Noise Level;37
+Corsair iCUE Link QX120 RGB;Fan Connectors;Proprietary Link
+Corsair iCUE Link QX120 RGB;Warranty;5
 
 ATTACK SHARK X85 Wireless Mechanical Keyboard;Color;Black
 ATTACK SHARK X85 Wireless Mechanical Keyboard;Switch Type;Linear White Jade Switch
@@ -94,20 +402,92 @@ ATTACK SHARK X85 Wireless Mechanical Keyboard;Mounting Type;Upgraded Gasket
 ATTACK SHARK X85 Wireless Mechanical Keyboard;Weight;900
 ATTACK SHARK X85 Wireless Mechanical Keyboard;Battery Capacity;5000
 ATTACK SHARK X85 Wireless Mechanical Keyboard;Backlight;RGB
-ATTACK SHARK X85 Wireless Mechanical Keyboard;Key Amounts;812
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Key Amounts;81
 ATTACK SHARK X85 Wireless Mechanical Keyboard;Compatible;PC,Mac,Smartphone,Tablet
 ATTACK SHARK X85 Wireless Mechanical Keyboard;Connectivity Technology;2.4G Wireless/Bluetooth 5.0/USB-C Wired
+Wooting 60HE+;Color;Black
+Wooting 60HE+;Switch Type;Lekker Magnetic (Hall Effect)
+Wooting 60HE+;Mounting Type;Tray Mount
+Wooting 60HE+;Weight;605
+Wooting 60HE+;Battery Capacity;0
+Wooting 60HE+;Backlight;RGB
+Wooting 60HE+;Key Amounts;61
+Wooting 60HE+;Compatible;PC,Mac,Xbox,PS5
+Wooting 60HE+;Connectivity Technology;USB-C Wired
+Keychron Q1 Max;Color;Shell White
+Keychron Q1 Max;Switch Type;Gateron Jupiter Banana (Tactile)
+Keychron Q1 Max;Mounting Type;Double-Gasket
+Keychron Q1 Max;Weight;1724
+Keychron Q1 Max;Battery Capacity;4000
+Keychron Q1 Max;Backlight;RGB
+Keychron Q1 Max;Key Amounts;81
+Keychron Q1 Max;Compatible;PC,Mac,Linux
+Keychron Q1 Max;Connectivity Technology;2.4G Wireless/Bluetooth 5.1/Wired
+Razer BlackWidow V4 Pro;Color;Black
+Razer BlackWidow V4 Pro;Switch Type;Razer Green (Clicky)
+Razer BlackWidow V4 Pro;Mounting Type;Top Mount
+Razer BlackWidow V4 Pro;Weight;1640
+Razer BlackWidow V4 Pro;Battery Capacity;0
+Razer BlackWidow V4 Pro;Backlight;RGB
+Razer BlackWidow V4 Pro;Key Amounts;104
+Razer BlackWidow V4 Pro;Compatible;PC
+Razer BlackWidow V4 Pro;Connectivity Technology;USB-C Wired
+ASUS ROG Azoth;Color;Moonlight White
+ASUS ROG Azoth;Switch Type;ROG NX Snow (Linear)
+ASUS ROG Azoth;Mounting Type;Gasket Mount
+ASUS ROG Azoth;Weight;1186
+ASUS ROG Azoth;Battery Capacity;4000
+ASUS ROG Azoth;Backlight;RGB
+ASUS ROG Azoth;Key Amounts;81
+ASUS ROG Azoth;Compatible;PC,Mac
+ASUS ROG Azoth;Connectivity Technology;2.4G Wireless/Bluetooth 5.1/Wired
 
 Elgato Facecam Pro Webcam;Resolution;4k,1080p,720p
 Elgato Facecam Pro Webcam;Connectivity Technology;USB 3.2 Gen 1 Type-C
 Elgato Facecam Pro Webcam;Focus Type;Auto
-Elgato Facecam Pro Webcam;FOV Angle' Type;90
+Elgato Facecam Pro Webcam;FOV Angle Type;90
+Logitech MX Brio;Resolution;4k,1080p,720p
+Logitech MX Brio;Connectivity Technology;USB-C
+Logitech MX Brio;Focus Type;Auto
+Logitech MX Brio;FOV Angle Type;90
+Insta360 Link 2;Resolution;4k,1080p,720p
+Insta360 Link 2;Connectivity Technology;USB-C
+Insta360 Link 2;Focus Type;PDAF (Phase Detection)
+Insta360 Link 2;FOV Angle Type;79.5
+Razer Kiyo Pro Ultra;Resolution;4k,1080p,720p
+Razer Kiyo Pro Ultra;Connectivity Technology;USB 3.0
+Razer Kiyo Pro Ultra;Focus Type;Auto
+Razer Kiyo Pro Ultra;FOV Angle Type;82
+AnkerPowerConf C200;Resolution;2k,1080p,720p
+AnkerPowerConf C200;Connectivity Technology;USB-A
+AnkerPowerConf C200;Focus Type;Auto
+AnkerPowerConf C200;FOV Angle Type;95
 
 Razer BlackShark V2 Pro (2023);Color;Black
 Razer BlackShark V2 Pro (2023);Frequency Range;12-28
 Razer BlackShark V2 Pro (2023);Microphone;Yes
 Razer BlackShark V2 Pro (2023);Active Noise Cancelling;No
-Razer BlackShark V2 Pro (2023);Impedance;Ω
+Razer BlackShark V2 Pro (2023);Impedance;32
+HyperX Cloud III Wireless;Color;Black-Red
+HyperX Cloud III Wireless;Frequency Range;10-21
+HyperX Cloud III Wireless;Microphone;Yes
+HyperX Cloud III Wireless;Active Noise Cancelling;No
+HyperX Cloud III Wireless;Impedance;64
+SteelSeries Arctis Nova Pro Wireless;Color;Black
+SteelSeries Arctis Nova Pro Wireless;Frequency Range;10-40
+SteelSeries Arctis Nova Pro Wireless;Microphone;Yes
+SteelSeries Arctis Nova Pro Wireless;Active Noise Cancelling;Yes
+SteelSeries Arctis Nova Pro Wireless;Impedance;38
+Logitech G Pro X 2 LIGHTSPEED;Color;White
+Logitech G Pro X 2 LIGHTSPEED;Frequency Range;20-20
+Logitech G Pro X 2 LIGHTSPEED;Microphone;Yes
+Logitech G Pro X 2 LIGHTSPEED;Active Noise Cancelling;No
+Logitech G Pro X 2 LIGHTSPEED;Impedance;38
+Corsair Virtuoso RGB Wireless XT;Color;Slate
+Corsair Virtuoso RGB Wireless XT;Frequency Range;20-40
+Corsair Virtuoso RGB Wireless XT;Microphone;Yes
+Corsair Virtuoso RGB Wireless XT;Active Noise Cancelling;No
+Corsair Virtuoso RGB Wireless XT;Impedance;32
 
 Yamaha HS8 120 W Speakers;Color;Black
 Yamaha HS8 120 W Speakers;Frequency Range;30-38
@@ -116,5 +496,36 @@ Yamaha HS8 120 W Speakers;Wattage;120
 Yamaha HS8 120 W Speakers;Crossover Frequency;2
 Yamaha HS8 120 W Speakers;Woofer Size;8
 Yamaha HS8 120 W Speakers;Power Output;120
-Yamaha HS8 120 W Speakers;Power Output;120
 Yamaha HS8 120 W Speakers;Bass Reflex System;Yes
+KRK Rokit RP7 G5;Color;Black/Yellow
+KRK Rokit RP7 G5;Frequency Range;45-40
+KRK Rokit RP7 G5;Tweeter Range;1
+KRK Rokit RP7 G5;Wattage;145
+KRK Rokit RP7 G5;Crossover Frequency;2.3
+KRK Rokit RP7 G5;Woofer Size;7
+KRK Rokit RP7 G5;Power Output;145
+KRK Rokit RP7 G5;Bass Reflex System;Yes (Front)
+Adam Audio T7V;Color;Black
+Adam Audio T7V;Frequency Range;39-25
+Adam Audio T7V;Tweeter Range;1.9 (U-ART)
+Adam Audio T7V;Wattage;70
+Adam Audio T7V;Crossover Frequency;2.5
+Adam Audio T7V;Woofer Size;7
+Adam Audio T7V;Power Output;70
+Adam Audio T7V;Bass Reflex System;Yes (Rear)
+Genelec 8040B;Color;Dark Grey
+Genelec 8040B;Frequency Range;41-25
+Genelec 8040B;Tweeter Range;0.75
+Genelec 8040B;Wattage;180
+Genelec 8040B;Crossover Frequency;3
+Genelec 8040B;Woofer Size;6.5
+Genelec 8040B;Power Output;180
+Genelec 8040B;Bass Reflex System;Yes
+JBL LSR305P MkII;Color;Black
+JBL LSR305P MkII;Frequency Range;43-24
+JBL LSR305P MkII;Tweeter Range;1
+JBL LSR305P MkII;Wattage;82
+JBL LSR305P MkII;Crossover Frequency;1.7
+JBL LSR305P MkII;Woofer Size;5
+JBL LSR305P MkII;Power Output;82
+JBL LSR305P MkII;Bass Reflex System;Yes

@@ -1,39 +1,77 @@
 name;price;pcs;category_name;company_name;description
-Kingston Fury Beast 16GB DDR5;32990;15;Memory Module;Kingston;DDR5 RAM module
-AMD Ryzen 7 7700X;129990;8;Processor;AMD;High performance CPU
-ASUS TUF B650-PLUS;89990;5;Motherboard;ASUS;AM5 ATX motherboard
-NVIDIA GeForce RTX 4070;269990;3;Graphics Card;NVIDIA;High-end gaming GPU
-Samsung 980 Pro 1TB NVMe;34990;20;Storage;Samsung;PCIe 4.0 NVMe SSD
-Corsair RM850x 850W;54990;12;Power Supply;Corsair;80+ Gold Fully Modular PSU
-Noctua NH-D15;39990;10;Cooling;Noctua;Dual-tower CPU cooler
-Fractal Design Meshify 2;59990;6;Case;Fractal Design;ATX Mid Tower Case
-ASUS ZenDrive U9M;14990;5;Optical Drive;ASUS;External DVD Writer
-TP-Link Archer TX3000E;18990;15;Network Card;TP-Link;WiFi 6 & Bluetooth 5.0 PCIe
-Creative Sound Blaster Z SE;32990;4;Sound Card;Creative;Internal PCI-e Gaming Sound Card
-Anker 7-Port USB 3.0 Hub;12990;25;USB Hub;Anker;USB hub with power adapter
-Dell UltraSharp U2723QE;249990;8;Monitor;Dell;27" 4K IPS Monitor
-Razer BlackWidow V4;64990;10;Keyboard;Razer;Mechanical gaming keyboard
-Logitech MX Master 3S;38990;15;Mouse;Logitech;Wireless ergonomic mouse
-HyperX Cloud II;29990;20;Headset;HyperX;7.1 Surround gaming headset
-Logitech Z906 5.1;124990;3;Speakers;Logitech;THX Certified Speaker System
-Logitech C920 HD Pro;31990;12;Webcam;Logitech;Full HD 1080p Webcam
-Blue Yeti USB;45990;8;Microphone;Blue;Professional USB condenser mic
-Samsung T7 1TB;39990;18;External Storage;Samsung;Portable SSD USB 3.2
-WD Blue 2TB HDD;21990;30;Storage;Western Digital;SATA 6Gb/s Internal HDD
-Seasonic Focus GX-750;46990;10;Power Supply;Seasonic;700W 80+ Gold PSU
-Be Quiet! Pure Rock 2;15990;22;Cooling;Be Quiet!;Silent CPU cooler
-NZXT H510 Flow;36990;8;Case;NZXT;Compact ATX Mid Tower
-Intel Core i5-13600K;149990;10;Processor;Intel;High-end 14-core CPU
-ASUS ROG Swift PG279QM;289990;4;Monitor;ASUS;27" QHD 240Hz Gaming Monitor
-Keychron K2 V2;39990;14;Keyboard;Keychron;Wireless mechanical keyboard
-SteelSeries Arctis Nova 7;68990;9;Headset;SteelSeries;Wireless multi-platform headset
-Razer Kiyo Pro;42990;6;Webcam;Razer;Streaming webcam with HDR
-Elgato Wave:3;54990;5;Microphone;Elgato;Premium USB mic and mixer
-MSI MAG A750GL PCIE5;100;67;Power Supply;MSI;blabka
-Samsung 990 Pro 2 TB;200;76;Storage;Samsung;sfnsjfo
-Lian Li UNI SL120 INF;120;88;Case Fan;Lian Li ;smdadk
-ATTACK SHARK X85 Wireless Mechanical Keyboard;24;21;Keyboard;Attack Shark;dnasd
-Elgato Facecam Pro Webcam;100;21;Webcam;Elgato;dkaskd
-Corsair NAUTILUS 360 RS ARGB;100;21;Cooling;Corsair;kdnkasndk
-Yamaha HS8 120 W Speakers;270;24;Speaker;Yamaha;dknsd
-Razer BlackShark V2 Pro (2023);150;88;Headset;Razer;jnaskjdnakj
+AMD Ryzen 7 7700X;299;45;Processor;AMD;High-performance 8-core Zen 4 CPU with 5.4GHz boost, ideal for gaming and productivity.
+AMD Ryzen 7 9800X3D;479;12;Processor;AMD;The ultimate gaming processor featuring 3D V-Cache technology for massive L3 capacity.
+AMD Ryzen 9 9950X;649;28;Processor;AMD;Flagship 16-core workstation CPU for extreme multitasking and professional rendering.
+Intel Core Ultra 9 285K;589;34;Processor;Intel;New Arrow Lake flagship with 24 cores, high efficiency, and AI-boosted performance.
+Intel Core Ultra 5 245K;309;56;Processor;Intel;Mid-range performance king with 14 cores, optimized for modern gaming and streaming.
+Kingston Fury Beast 16GB DDR5;65;142;Memory Module;Kingston;Reliable 5600MHz DDR5 RAM kit with low-profile heat spreaders and Intel XMP support.
+G.Skill Trident Z5 RGB 32GB;145;112;Memory Module;G.Skill;High-speed 6400MHz DDR5 memory with premium RGB lighting and low CL32 latency.
+Corsair Vengeance RGB 32GB;125;89;Memory Module;Corsair;Performance 6000MHz DDR5 memory optimized for high-end builds and iCUE control.
+Crucial Pro 32GB DDR5;110;156;Memory Module;Crucial;Professional-grade 5600MHz memory modules designed for high stability and efficiency.
+TeamGroup T-Force Delta RGB;135;94;Memory Module;TeamGroup;Aggressive 7200MHz DDR5 speed with a unique 120-degree ultra-wide RGB bar.
+ASUS TUF B650-PLUS;210;67;Motherboard;ASUS;Durable AM5 motherboard featuring PCIe 5.0 M.2 and military-grade thermal solution.
+MSI MAG Z790 TOMAHAWK WIFI;259;41;Motherboard;MSI;High-end LGA1700 board with DDR5 support, Wi-Fi 6E, and robust power delivery.
+Gigabyte B650I AX;189;22;Motherboard;Gigabyte;Compact Mini-ITX AM5 motherboard with Wi-Fi 6E, perfect for powerful small form factor builds.
+ASRock X670E Taichi;499;18;Motherboard;ASRock;Premium E-ATX board with PCIe 5.0 support, Wi-Fi 7, and enthusiast-grade VRM.
+MSI PRO Z890-P WIFI;280;39;Motherboard;MSI;Next-gen LGA1851 motherboard for Intel Arrow Lake with Wi-Fi 7 and dual-chasing power.
+NVIDIA GeForce RTX 4070;549;82;Graphics Card;NVIDIA;Versatile 1440p GPU with 12GB VRAM and DLSS 3 support for high-end gaming.
+AMD Radeon RX 8800 XT;549;63;Graphics Card;AMD;Efficient RDNA 4 architecture card with 16GB VRAM and massive raytracing improvements.
+AMD Radeon RX 7900 XTX;929;39;Graphics Card;AMD;High-end RDNA 3 flagship with 24GB VRAM for 4K gaming and heavy productivity.
+NVIDIA GeForce RTX 5080;999;27;Graphics Card;NVIDIA;Next-gen powerhouse with 16GB GDDR7 memory and superior Blackwell architecture.
+AMD Radeon RX 8700 XT;449;72;Graphics Card;AMD;Value-focused RDNA 4 card for ultra-fast 1440p gaming and low energy consumption.
+Samsung 990 Pro 2 TB;170;95;Storage;Samsung;Flagship PCIe 4.0 NVMe SSD with 7450MB/s read speeds and reliable DRAM cache.
+Crucial T705 2TB;280;48;Storage;Crucial;Blazing fast PCIe 5.0 SSD reaching up to 14500MB/s for instant load times and transfers.
+WD Black SN850X 2TB;160;114;Storage;Western Digital;Gaming-optimized NVMe SSD with a dedicated game mode and 7300MB/s read speed.
+Kingston KC3000 2TB;145;130;Storage;Kingston;Professional NVMe SSD with high endurance and a graphene aluminum heat spreader.
+Sabrent Rocket 5 4TB;599;12;Storage;Sabrent;Extreme performance 4TB PCIe 5.0 SSD for professionals and power users.
+MSI MAG A750GL PCIE5;105;120;Power Supply;MSI;80+ Gold modular PSU with native PCIe 5.0 support for the latest graphics cards.
+Deepcool PX1000G;165;74;Power Supply;Deepcool;1000W ATX 3.0 certified gold power supply designed for high-end stable output.
+Deepcool DQ750-M-V2L;95;102;Power Supply;Deepcool;Reliable 750W 80+ Gold fully modular PSU with a sleek white finish.
+Corsair RM850x Shift;145;88;Power Supply;Corsair;Innovative modular PSU with side-mounted cable connectors for better case access.
+Seasonic PRIME TX-1300;520;31;Power Supply;Seasonic;Ultra-premium 1300W 80+ Titanium PSU with near-silent fan and 12-year warranty.
+Be Quiet! Straight Power 12;220;54;Power Supply;Be Quiet!;1200W Platinum efficiency PSU with virtually inaudible cooling and ATX 3.0 support.
+Corsair NAUTILUS 360 RS ARGB;110;68;Cooling;Corsair;Advanced 360mm AIO liquid cooler with high-density radiator and ARGB lighting.
+Arctic Liquid Freezer III 360;115;82;Cooling;Arctic;Award-winning AIO with an integrated VRM fan and superior pressure-optimized fans.
+Noctua NH-D15 G2;149;55;Cooling;Noctua;The legendary air cooler updated with improved heat pipes and fans for high TDP CPUs.
+Deepcool AK620 Digital;80;105;Cooling;Deepcool;High-performance air cooler featuring a real-time digital temperature display.
+NZXT Kraken Elite 360;280;25;Cooling;NZXT;High-end AIO with a customizable 2.36-inch LCD screen for stats and images.
+Samsung Odyssey G5;320;77;Monitor;Samsung;32-inch curved gaming monitor with 1440p resolution and 165Hz refresh rate.
+Alienware AW2524H;499;33;Monitor;Alienware;Esports-grade 500Hz refresh rate IPS monitor for competitive zero-latency gaming.
+ASUS ROG Swift Pro PG248QB;750;19;Monitor;ASUS;The world's fastest 540Hz gaming monitor designed for professional CS and Valorant.
+LG UltraGear 32GS95UE;1399;24;Monitor;LG;Dual-mode 32-inch OLED monitor capable of 4K 240Hz or FHD 480Hz output.
+MSI MPG 271QRX QD-OLED;799;29;Monitor;MSI;27-inch 360Hz QD-OLED display with infinite contrast and exceptional color accuracy.
+Logitech MX Master 3S;99;145;Mouse;Logitech;Ergonomic wireless mouse with an 8K sensor and MagSpeed scrolling for productivity.
+Razer Viper V3 Pro;159;98;Mouse;Razer;Ultra-light 54g wireless mouse with a 35K optical sensor and 8K polling support.
+Logitech G Pro X Superlight 2;159;110;Mouse;Logitech;The gold standard for pro gaming, featuring a 60g weight and HERO 2 sensor.
+SteelSeries Aerox 9 Wireless;149;56;Mouse;SteelSeries;Lightweight 18-button wireless mouse optimized for MMOs and MOBAs.
+Finalmouse UltralightX;189;15;Mouse;Finalmouse;Boutique carbon fiber composite mouse weighing just 29g for pure speed.
+Fractal Design Meshify 2;160;44;Case;Fractal Design;High-airflow ATX case with modular interior and tempered glass side panel.
+Lian Li O11 Vision;200;36;Case;Lian Li;Modern showcase case with three-sided tempered glass and dual-chamber design.
+NZXT H6 Flow;105;91;Case;NZXT;Innovative wrap-around glass case with dual-chamber layout for optimal cooling path.
+Corsair 2500D Airflow;150;42;Case;Corsair;Compact Micro-ATX dual-chamber case designed for high airflow and clean aesthetics.
+Hyte Y70 Touch;350;18;Case;Hyte;Boutique ATX case featuring a 4K resolution integrated touchscreen on the front glass.
+Lian Li UNI SL120 INF;30;165;Case Fan;Lian Li;Modular interlocking RGB fans with an infinity mirror effect and simplified wiring.
+Arctic P12 PWM PST;10;170;Case Fan;Arctic;High-performance, pressure-optimized 120mm fan with a focus on value and silence.
+Noctua NF-A14 chromax;28;140;Case Fan;Noctua;Premium 140mm black fan with superior static pressure for radiators and cases.
+Be Quiet! Silent Wings 4 Pro;32;95;Case Fan;Be Quiet!;Industrial-grade 120mm fan with extreme RPM and ultra-low noise levels.
+Corsair iCUE Link QX120;45;110;Case Fan;Corsair;Smart RGB fan featuring magnetic dome bearings and proprietary link connectivity.
+ATTACK SHARK X85;85;145;Keyboard;Attack Shark;Gasket-mount wireless mechanical keyboard with Linear White Jade switches.
+Wooting 60HE+;175;33;Keyboard;Wooting;Revolutionary analog mechanical keyboard with Rapid Trigger and Hall Effect switches.
+Keychron Q1 Max;210;42;Keyboard;Keychron;Premium wireless aluminum mechanical keyboard with hot-swap and gasket-mount.
+Razer BlackWidow V4 Pro;229;53;Keyboard;Razer;Full-size mechanical keyboard with macro keys, RGB, and a dedicated command dial.
+ASUS ROG Azoth;249;31;Keyboard;ASUS;Custom-grade 75% wireless keyboard with OLED display and pre-lubed switches.
+Elgato Facecam Pro;299;51;Webcam;Elgato;The first 4K60 webcam with a high-end lens for professional streaming and calls.
+Logitech MX Brio;199;62;Webcam;Logitech;Premium 4K webcam with a large sensor for better low-light detail and AI framing.
+Insta360 Link 2;199;37;Webcam;Insta360;4K webcam with a built-in 2-axis gimbal and AI tracking to keep you in focus.
+Razer Kiyo Pro Ultra;299;26;Webcam;Razer;Streaming webcam with a massive 1/1.2" sensor for natural bokeh and HDR.
+Anker PowerConf C200;60;134;Webcam;Anker;Budget-friendly 2K webcam with dual mics and built-in privacy shutter.
+Razer BlackShark V2 Pro (2023);199;88;Headset;Razer;Wireless esports headset with a high-fidelity mic and long 70h battery life.
+HyperX Cloud III Wireless;169;115;Headset;HyperX;Comfort-first wireless gaming headset with DTS Spatial Audio and 120h battery.
+SteelSeries Arctis Nova Pro;349;46;Headset;SteelSeries;Flagship wireless headset with dual-battery system and active noise cancelling.
+Logitech G Pro X 2 LIGHTSPEED;249;64;Headset;Logitech;Gaming headset with 50mm Graphene drivers for precise directional sound.
+Corsair Virtuoso RGB XT;269;38;Headset;Corsair;Hi-Res wireless headset with multi-device connectivity and premium build.
+Yamaha HS8;380;29;Speaker;Yamaha;Active 8-inch studio monitor known for its iconic white woofer and flat response.
+KRK Rokit RP7 G5;245;52;Speaker;KRK;Professional 7-inch nearfield studio monitor with DSP-driven room tuning.
+Adam Audio T7V;249;41;Speaker;Adam Audio;High-end monitor featuring an accelerated ribbon tweeter for exceptional detail.
+Genelec 8040B;1150;14;Speaker;Genelec;Legendary active studio monitor with a rugged aluminum enclosure and precise sound.
+JBL LSR305P MkII;149;86;Speaker;JBL;The go-to entry-level studio monitor with a wide sweet spot and deep bass.
