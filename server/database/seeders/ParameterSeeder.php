@@ -175,7 +175,17 @@ class ParameterSeeder extends Seeder
             ['parameter_name' => 'Power Output', 'category_name' => 'Speaker', 'unit_name' => 'W'],
             ['parameter_name' => 'Bass Reflex System', 'category_name' => 'Speaker', 'unit_name' => 'Yes/No'],
 
-            
+                //Accessories & Tools
+            ['parameter_name' => 'Length', 'category_name' => 'Accessory', 'unit_name' => 'm'],        // Kábelekhez (XLR, Extension)
+            ['parameter_name' => 'Material', 'category_name' => 'Accessory', 'unit_name' => '-'],      // Egérpad, Csuklótámasz
+            ['parameter_name' => 'Max Load', 'category_name' => 'Accessory', 'unit_name' => 'kg'],     // GPU tartóhoz
+            ['parameter_name' => 'Thermal Conductivity', 'category_name' => 'Accessory', 'unit_name' => 'W/mK'], // Pasztához
+            ['parameter_name' => 'Ports', 'category_name' => 'Accessory', 'unit_name' => 'Pcs'],       // Fan Hub-hoz
+            ['parameter_name' => 'Torque', 'category_name' => 'Accessory', 'unit_name' => 'nm'],       // Csavarozógéphez
+            ['parameter_name' => 'Connection Type', 'category_name' => 'Accessory', 'unit_name' => '-'], // Kontrollerhez (BT/Wired)
+            ['parameter_name' => 'Dimensions', 'category_name' => 'Accessory', 'unit_name' => 'mm'], // Kontrollerhez (BT/Wired)
+
+
 
 
         ];

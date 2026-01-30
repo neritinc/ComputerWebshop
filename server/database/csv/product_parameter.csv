@@ -1,6 +1,4 @@
 product_name;parameter_name;value
-
-product_name;parameter_name;value
 AMD Ryzen 7 7700X;Clock Speed;4500
 AMD Ryzen 7 7700X;Turbo Clock Speed;5400
 AMD Ryzen 7 7700X;Core Count;8
@@ -41,6 +39,46 @@ Intel Core Ultra 5 245K;L2 Cache Size;26
 Intel Core Ultra 5 245K;L3 Cache Size;24
 Intel Core Ultra 5 245K;Thermal Design Power (TDP);125
 Intel Core Ultra 5 245K;Architecture;Arrow Lake
+AMD Ryzen 7 5800X3D;Clock Speed;3400
+AMD Ryzen 7 5800X3D;Turbo Clock Speed;4500
+AMD Ryzen 7 5800X3D;Core Count;8
+AMD Ryzen 7 5800X3D;Thread Count;16
+AMD Ryzen 7 5800X3D;L2 Cache Size;4
+AMD Ryzen 7 5800X3D;L3 Cache Size;96
+AMD Ryzen 7 5800X3D;Thermal Design Power (TDP);105
+AMD Ryzen 7 5800X3D;Architecture;Zen 3 (AM4)
+AMD Ryzen 5 7600X;Clock Speed;4700
+AMD Ryzen 5 7600X;Turbo Clock Speed;5300
+AMD Ryzen 5 7600X;Core Count;6
+AMD Ryzen 5 7600X;Thread Count;12
+AMD Ryzen 5 7600X;L2 Cache Size;6
+AMD Ryzen 5 7600X;L3 Cache Size;32
+AMD Ryzen 5 7600X;Thermal Design Power (TDP);105
+AMD Ryzen 5 7600X;Architecture;Zen 4 (AM5)
+AMD Ryzen 9 7950X3D;Clock Speed;4200
+AMD Ryzen 9 7950X3D;Turbo Clock Speed;5700
+AMD Ryzen 9 7950X3D;Core Count;16
+AMD Ryzen 9 7950X3D;Thread Count;32
+AMD Ryzen 9 7950X3D;L2 Cache Size;16
+AMD Ryzen 9 7950X3D;L3 Cache Size;128
+AMD Ryzen 9 7950X3D;Thermal Design Power (TDP);120
+AMD Ryzen 9 7950X3D;Architecture;Zen 4 (AM5)
+AMD Ryzen 5 5600X;Clock Speed;3700
+AMD Ryzen 5 5600X;Turbo Clock Speed;4600
+AMD Ryzen 5 5600X;Core Count;6
+AMD Ryzen 5 5600X;Thread Count;12
+AMD Ryzen 5 5600X;L2 Cache Size;3
+AMD Ryzen 5 5600X;L3 Cache Size;32
+AMD Ryzen 5 5600X;Thermal Design Power (TDP);65
+AMD Ryzen 5 5600X;Architecture;Zen 3 (AM4)
+AMD Ryzen 7 9700X;Clock Speed;3800
+AMD Ryzen 7 9700X;Turbo Clock Speed;5500
+AMD Ryzen 7 9700X;Core Count;8
+AMD Ryzen 7 9700X;Thread Count;16
+AMD Ryzen 7 9700X;L2 Cache Size;8
+AMD Ryzen 7 9700X;L3 Cache Size;32
+AMD Ryzen 7 9700X;Thermal Design Power (TDP);65
+AMD Ryzen 7 9700X;Architecture;Zen 5 (AM5)
 
 Kingston Fury Beast 16GB DDR5;Memory Capacity;2x8
 Kingston Fury Beast 16GB DDR5;Memory Type;DDR5
@@ -62,7 +100,40 @@ TeamGroup T-Force Delta RGB 32GB DDR5;Memory Capacity;2x16
 TeamGroup T-Force Delta RGB 32GB DDR5;Memory Type;DDR5
 TeamGroup T-Force Delta RGB 32GB DDR5;Bus Speed;7200
 TeamGroup T-Force Delta RGB 32GB DDR5;CAS Latency;34
+Corsair Vengeance LPX 16GB DDR4;Memory Capacity;2x8
+Corsair Vengeance LPX 16GB DDR4;Memory Type;DDR4
+Corsair Vengeance LPX 16GB DDR4;Bus Speed;3200
+Corsair Vengeance LPX 16GB DDR4;CAS Latency;16
+G.Skill Trident Z Neo 32GB DDR4;Memory Capacity;2x16
+G.Skill Trident Z Neo 32GB DDR4;Memory Type;DDR4
+G.Skill Trident Z Neo 32GB DDR4;Bus Speed;3600
+G.Skill Trident Z Neo 32GB DDR4;CAS Latency;16
+Kingston FURY Renegade 64GB DDR5;Memory Capacity;2x32
+Kingston FURY Renegade 64GB DDR5;Memory Type;DDR5
+Kingston FURY Renegade 64GB DDR5;Bus Speed;6000
+Kingston FURY Renegade 64GB DDR5;CAS Latency;32
+G.Skill Ripjaws S5 64GB DDR5;Memory Capacity;2x32
+G.Skill Ripjaws S5 64GB DDR5;Memory Type;DDR5
+G.Skill Ripjaws S5 64GB DDR5;Bus Speed;5600
+G.Skill Ripjaws S5 64GB DDR5;CAS Latency;28
+Corsair Dominator Titanium 64GB DDR5;Memory Capacity;2x32
+Corsair Dominator Titanium 64GB DDR5;Memory Type;DDR5
+Corsair Dominator Titanium 64GB DDR5;Bus Speed;6600
+Corsair Dominator Titanium 64GB DDR5;CAS Latency;32
+TeamGroup T-Create Expert 32GB DDR5;Memory Capacity;2x16
+TeamGroup T-Create Expert 32GB DDR5;Memory Type;DDR5
+TeamGroup T-Create Expert 32GB DDR5;Bus Speed;6000
+TeamGroup T-Create Expert 32GB DDR5;CAS Latency;30
+Patriot Viper Venom 16GB DDR5;Memory Capacity;2x8
+Patriot Viper Venom 16GB DDR5;Memory Type;DDR5
+Patriot Viper Venom 16GB DDR5;Bus Speed;5200
+Patriot Viper Venom 16GB DDR5;CAS Latency;36
+Crucial Classic 8GB DDR4;Memory Capacity;1x8
+Crucial Classic 8GB DDR4;Memory Type;DDR4
+Crucial Classic 8GB DDR4;Bus Speed;2666
+Crucial Classic 8GB DDR4;CAS Latency;19
 
+ASUS TUF B650-PLUS;Color;Black
 ASUS TUF B650-PLUS;Socket;AM5
 ASUS TUF B650-PLUS;Chipset;B650
 ASUS TUF B650-PLUS;Form Factor;ATX
@@ -73,6 +144,7 @@ ASUS TUF B650-PLUS;PCIe Slots;3
 ASUS TUF B650-PLUS;Memory Type;DDR5
 ASUS TUF B650-PLUS;Wireless Networking;Wi-Fi 6E
 ASUS TUF B650-PLUS;RAID Support;Yes
+MSI MAG Z790 TOMAHAWK WIFI;Color;Black
 MSI MAG Z790 TOMAHAWK WIFI;Socket;LGA1700
 MSI MAG Z790 TOMAHAWK WIFI;Chipset;Z790
 MSI MAG Z790 TOMAHAWK WIFI;Form Factor;ATX
@@ -83,6 +155,7 @@ MSI MAG Z790 TOMAHAWK WIFI;PCIe Slots;3
 MSI MAG Z790 TOMAHAWK WIFI;Memory Type;DDR5
 MSI MAG Z790 TOMAHAWK WIFI;Wireless Networking;Wi-Fi 6E
 MSI MAG Z790 TOMAHAWK WIFI;RAID Support;Yes
+Gigabyte B650I AX;Color;Black
 Gigabyte B650I AX;Socket;AM5
 Gigabyte B650I AX;Chipset;B650
 Gigabyte B650I AX;Form Factor;Mini-ITX
@@ -93,6 +166,7 @@ Gigabyte B650I AX;PCIe Slots;1
 Gigabyte B650I AX;Memory Type;DDR5
 Gigabyte B650I AX;Wireless Networking;Wi-Fi 6E
 Gigabyte B650I AX;RAID Support;No
+ASRock X670E Taichi;Color;Black/Gold
 ASRock X670E Taichi;Socket;AM5
 ASRock X670E Taichi;Chipset;X670E
 ASRock X670E Taichi;Form Factor;E-ATX
@@ -103,6 +177,7 @@ ASRock X670E Taichi;PCIe Slots;2
 ASRock X670E Taichi;Memory Type;DDR5
 ASRock X670E Taichi;Wireless Networking;Wi-Fi 7
 ASRock X670E Taichi;RAID Support;Yes
+MSI PRO Z890-P WIFI;Color;Black/Silver
 MSI PRO Z890-P WIFI;Socket;LGA1851
 MSI PRO Z890-P WIFI;Chipset;Z890
 MSI PRO Z890-P WIFI;Form Factor;ATX
@@ -113,7 +188,89 @@ MSI PRO Z890-P WIFI;PCIe Slots;3
 MSI PRO Z890-P WIFI;Memory Type;DDR5
 MSI PRO Z890-P WIFI;Wireless Networking;Wi-Fi 7
 MSI PRO Z890-P WIFI;RAID Support;Yes
+ASUS ROG STRIX Z790-A GAMING WIFI II;Color;White
+ASUS ROG STRIX Z790-A GAMING WIFI II;Socket;LGA1700
+ASUS ROG STRIX Z790-A GAMING WIFI II;Chipset;Z790
+ASUS ROG STRIX Z790-A GAMING WIFI II;Form Factor;ATX
+ASUS ROG STRIX Z790-A GAMING WIFI II;Memory Slots;4
+ASUS ROG STRIX Z790-A GAMING WIFI II;M.2 Slots;5
+ASUS ROG STRIX Z790-A GAMING WIFI II;Max Memory;192
+ASUS ROG STRIX Z790-A GAMING WIFI II;Memory Type;DDR5
+ASUS ROG STRIX Z790-A GAMING WIFI II;Wireless Networking;Wi-Fi 7
+MSI MPG B650 EDGE WIFI;Color;White
+MSI MPG B650 EDGE WIFI;Socket;AM5
+MSI MPG B650 EDGE WIFI;Chipset;B650
+MSI MPG B650 EDGE WIFI;Form Factor;ATX
+MSI MPG B650 EDGE WIFI;Memory Slots;4
+MSI MPG B650 EDGE WIFI;M.2 Slots;3
+MSI MPG B650 EDGE WIFI;Max Memory;192
+MSI MPG B650 EDGE WIFI;Memory Type;DDR5
+MSI MPG B650 EDGE WIFI;Wireless Networking;Wi-Fi 6E
+Gigabyte X670E AORUS PRO X;Color;White
+Gigabyte X670E AORUS PRO X;Socket;AM5
+Gigabyte X670E AORUS PRO X;Chipset;X670E
+Gigabyte X670E AORUS PRO X;Form Factor;ATX
+Gigabyte X670E AORUS PRO X;Memory Slots;4
+Gigabyte X670E AORUS PRO X;M.2 Slots;4
+Gigabyte X670E AORUS PRO X;Max Memory;192
+Gigabyte X670E AORUS PRO X;Memory Type;DDR5
+Gigabyte X670E AORUS PRO X;Wireless Networking;Wi-Fi 7
+ASRock B550 Steel Legend;Color;White/Silver
+ASRock B550 Steel Legend;Socket;AM4
+ASRock B550 Steel Legend;Chipset;B550
+ASRock B550 Steel Legend;Form Factor;ATX
+ASRock B550 Steel Legend;Memory Slots;4
+ASRock B550 Steel Legend;M.2 Slots;2
+ASRock B550 Steel Legend;Max Memory;128
+ASRock B550 Steel Legend;Memory Type;DDR4
+ASRock B550 Steel Legend;Wireless Networking;No
+ASUS ROG CROSSHAIR X870E HERO;Color;Black
+ASUS ROG CROSSHAIR X870E HERO;Socket;AM5
+ASUS ROG CROSSHAIR X870E HERO;Chipset;X870E
+ASUS ROG CROSSHAIR X870E HERO;Form Factor;ATX
+ASUS ROG CROSSHAIR X870E HERO;Memory Slots;4
+ASUS ROG CROSSHAIR X870E HERO;M.2 Slots;5
+ASUS ROG CROSSHAIR X870E HERO;Max Memory;192
+ASUS ROG CROSSHAIR X870E HERO;Memory Type;DDR5
+ASUS ROG CROSSHAIR X870E HERO;Wireless Networking;Wi-Fi 7
+MSI MAG B550 TOMAHAWK;Color;Black
+MSI MAG B550 TOMAHAWK;Socket;AM4
+MSI MAG B550 TOMAHAWK;Chipset;B550
+MSI MAG B550 TOMAHAWK;Form Factor;ATX
+MSI MAG B550 TOMAHAWK;Memory Slots;4
+MSI MAG B550 TOMAHAWK;M.2 Slots;2
+MSI MAG B550 TOMAHAWK;Max Memory;128
+MSI MAG B550 TOMAHAWK;Memory Type;DDR4
+MSI MAG B550 TOMAHAWK;Wireless Networking;No
+Gigabyte Z790 D AC;Color;Black
+Gigabyte Z790 D AC;Socket;LGA1700
+Gigabyte Z790 D AC;Chipset;Z790
+Gigabyte Z790 D AC;Form Factor;ATX
+Gigabyte Z790 D AC;Memory Slots;4
+Gigabyte Z790 D AC;M.2 Slots;3
+Gigabyte Z790 D AC;Max Memory;192
+Gigabyte Z790 D AC;Memory Type;DDR5
+Gigabyte Z790 D AC;Wireless Networking;Wi-Fi 5
+ASUS Prime Z890-A WiFi;Color;White/Silver
+ASUS Prime Z890-A WiFi;Socket;LGA1851
+ASUS Prime Z890-A WiFi;Chipset;Z890
+ASUS Prime Z890-A WiFi;Form Factor;ATX
+ASUS Prime Z890-A WiFi;Memory Slots;4
+ASUS Prime Z890-A WiFi;M.2 Slots;4
+ASUS Prime Z890-A WiFi;Max Memory;256
+ASUS Prime Z890-A WiFi;Memory Type;DDR5
+ASUS Prime Z890-A WiFi;Wireless Networking;Wi-Fi 7
+NZXT N7 B650E;Color;White
+NZXT N7 B650E;Socket;AM5
+NZXT N7 B650E;Chipset;B650E
+NZXT N7 B650E;Form Factor;ATX
+NZXT N7 B650E;Memory Slots;4
+NZXT N7 B650E;M.2 Slots;3
+NZXT N7 B650E;Max Memory;128
+NZXT N7 B650E;Memory Type;DDR5
+NZXT N7 B650E;Wireless Networking;Wi-Fi 6E
 
+NVIDIA GeForce RTX 4070;Color;Black
 NVIDIA GeForce RTX 4070;VRAM;12
 NVIDIA GeForce RTX 4070;Core Clock;1920
 NVIDIA GeForce RTX 4070;Boost Clock;2480
@@ -123,6 +280,7 @@ NVIDIA GeForce RTX 4070;DirectX Version;12
 NVIDIA GeForce RTX 4070;Thermal Design Power (TDP);200
 NVIDIA GeForce RTX 4070;Length;244
 NVIDIA GeForce RTX 4070;Cooling Fans;2
+AMD Radeon RX 8800 XT;Color;Black
 AMD Radeon RX 8800 XT;VRAM;16
 AMD Radeon RX 8800 XT;Core Clock;2200
 AMD Radeon RX 8800 XT;Boost Clock;2550
@@ -132,6 +290,7 @@ AMD Radeon RX 8800 XT;DirectX Version;12
 AMD Radeon RX 8800 XT;Thermal Design Power (TDP);220
 AMD Radeon RX 8800 XT;Length;267
 AMD Radeon RX 8800 XT;Cooling Fans;3
+AMD Radeon RX 7900 XTX;Color;Black
 AMD Radeon RX 7900 XTX;VRAM;24
 AMD Radeon RX 7900 XTX;Core Clock;1900
 AMD Radeon RX 7900 XTX;Boost Clock;2500
@@ -141,6 +300,7 @@ AMD Radeon RX 7900 XTX;DirectX Version;12
 AMD Radeon RX 7900 XTX;Thermal Design Power (TDP);355
 AMD Radeon RX 7900 XTX;Length;287
 AMD Radeon RX 7900 XTX;Cooling Fans;3
+NVIDIA GeForce RTX 5080;Color;Black/Silver
 NVIDIA GeForce RTX 5080;VRAM;16
 NVIDIA GeForce RTX 5080;Core Clock;2295
 NVIDIA GeForce RTX 5080;Boost Clock;2617
@@ -150,6 +310,7 @@ NVIDIA GeForce RTX 5080;DirectX Version;12
 NVIDIA GeForce RTX 5080;Thermal Design Power (TDP);360
 NVIDIA GeForce RTX 5080;Length;304
 NVIDIA GeForce RTX 5080;Cooling Fans;3
+AMD Radeon RX 8700 XT;Color;Black
 AMD Radeon RX 8700 XT;VRAM;12
 AMD Radeon RX 8700 XT;Core Clock;2100
 AMD Radeon RX 8700 XT;Boost Clock;2450
@@ -159,32 +320,147 @@ AMD Radeon RX 8700 XT;DirectX Version;12
 AMD Radeon RX 8700 XT;Thermal Design Power (TDP);190
 AMD Radeon RX 8700 XT;Length;240
 AMD Radeon RX 8700 XT;Cooling Fans;2
+NVIDIA GeForce RTX 4070 Ti Super;Color;White
+NVIDIA GeForce RTX 4070 Ti Super;VRAM;16
+NVIDIA GeForce RTX 4070 Ti Super;Core Clock;2340
+NVIDIA GeForce RTX 4070 Ti Super;Boost Clock;2610
+NVIDIA GeForce RTX 4070 Ti Super;Memory Clock;21000
+NVIDIA GeForce RTX 4070 Ti Super;CUDA Cores;8448
+NVIDIA GeForce RTX 4070 Ti Super;Thermal Design Power (TDP);285
+NVIDIA GeForce RTX 4070 Ti Super;Length;300
+NVIDIA GeForce RTX 4070 Ti Super;Cooling Fans;3
+NVIDIA GeForce RTX 4080 Super;Color;Black
+NVIDIA GeForce RTX 4080 Super;VRAM;16
+NVIDIA GeForce RTX 4080 Super;Core Clock;2295
+NVIDIA GeForce RTX 4080 Super;Boost Clock;2550
+NVIDIA GeForce RTX 4080 Super;CUDA Cores;10240
+NVIDIA GeForce RTX 4080 Super;Thermal Design Power (TDP);320
+NVIDIA GeForce RTX 4080 Super;Length;310
+NVIDIA GeForce RTX 4080 Super;Cooling Fans;3
+NVIDIA GeForce RTX 4090;Color;White
+NVIDIA GeForce RTX 4090;VRAM;24
+NVIDIA GeForce RTX 4090;Core Clock;2230
+NVIDIA GeForce RTX 4090;Boost Clock;2520
+NVIDIA GeForce RTX 4090;CUDA Cores;16384
+NVIDIA GeForce RTX 4090;Thermal Design Power (TDP);450
+NVIDIA GeForce RTX 4090;Length;336
+NVIDIA GeForce RTX 4090;Cooling Fans;3
+NVIDIA GeForce RTX 4060 Ti;Color;White
+NVIDIA GeForce RTX 4060 Ti;VRAM;16
+NVIDIA GeForce RTX 4060 Ti;Core Clock;2310
+NVIDIA GeForce RTX 4060 Ti;Boost Clock;2535
+NVIDIA GeForce RTX 4060 Ti;CUDA Cores;4352
+NVIDIA GeForce RTX 4060 Ti;Thermal Design Power (TDP);165
+NVIDIA GeForce RTX 4060 Ti;Length;240
+NVIDIA GeForce RTX 4060 Ti;Cooling Fans;2
+AMD Radeon RX 7900 GRE;Color;White
+AMD Radeon RX 7900 GRE;VRAM;16
+AMD Radeon RX 7900 GRE;Core Clock;1880
+AMD Radeon RX 7900 GRE;Boost Clock;2245
+AMD Radeon RX 7900 GRE;Stream Processors;5120
+AMD Radeon RX 7900 GRE;Thermal Design Power (TDP);260
+AMD Radeon RX 7900 GRE;Length;280
+AMD Radeon RX 7900 GRE;Cooling Fans;3
+AMD Radeon RX 7800 XT;Color;Black
+AMD Radeon RX 7800 XT;VRAM;16
+AMD Radeon RX 7800 XT;Core Clock;2124
+AMD Radeon RX 7800 XT;Boost Clock;2430
+AMD Radeon RX 7800 XT;Stream Processors;3840
+AMD Radeon RX 7800 XT;Thermal Design Power (TDP);263
+AMD Radeon RX 7800 XT;Length;267
+AMD Radeon RX 7800 XT;Cooling Fans;2
+NVIDIA GeForce RTX 5090;Color;Black/Gold
+NVIDIA GeForce RTX 5090;VRAM;32
+NVIDIA GeForce RTX 5090;Core Clock;2400
+NVIDIA GeForce RTX 5090;Boost Clock;2800
+NVIDIA GeForce RTX 5090;CUDA Cores;21760
+NVIDIA GeForce RTX 5090;Thermal Design Power (TDP);500
+NVIDIA GeForce RTX 5090;Length;350
+NVIDIA GeForce RTX 5090;Cooling Fans;3
+AMD Radeon RX 7600 XT;Color;Black
+AMD Radeon RX 7600 XT;VRAM;16
+AMD Radeon RX 7600 XT;Core Clock;2470
+AMD Radeon RX 7600 XT;Boost Clock;2755
+AMD Radeon RX 7600 XT;Stream Processors;2048
+AMD Radeon RX 7600 XT;Thermal Design Power (TDP);190
+AMD Radeon RX 7600 XT;Length;241
+AMD Radeon RX 7600 XT;Cooling Fans;2
 
+Megértettem, leszűkítettem a listát kizárólag az SSD-kre, és bővítettem további 8 variációval. Most már szerepelnek benne a belépő szintű Kingstonok, a népszerű középkategóriás darabok és a professzionális munkaállomásokba szánt meghajtók is.
+
+Code snippet
+
+product_name;parameter_name;value
 Samsung 990 Pro 2 TB;Capacity;2
 Samsung 990 Pro 2 TB;Cache;2048
 Samsung 990 Pro 2 TB;Maximum Read Speed;7450
 Samsung 990 Pro 2 TB;Maximum Write Speed;6900
-Samsung 990 Pro 2 TB;Connectivity Technology;M.2
+Samsung 990 Pro 2 TB;Connectivity Technology;M.2 NVMe (Gen4)
 Crucial T705 2TB;Capacity;2
 Crucial T705 2TB;Cache;4096
 Crucial T705 2TB;Maximum Read Speed;14500
 Crucial T705 2TB;Maximum Write Speed;12700
-Crucial T705 2TB;Connectivity Technology;PCIe 5.0 M.2
+Crucial T705 2TB;Connectivity Technology;M.2 NVMe (Gen5)
 WD Black SN850X 2TB;Capacity;2
 WD Black SN850X 2TB;Cache;2048
 WD Black SN850X 2TB;Maximum Read Speed;7300
 WD Black SN850X 2TB;Maximum Write Speed;6600
-WD Black SN850X 2TB;Connectivity Technology;M.2
+WD Black SN850X 2TB;Connectivity Technology;M.2 NVMe (Gen4)
 Kingston KC3000 2TB;Capacity;2
 Kingston KC3000 2TB;Cache;2048
 Kingston KC3000 2TB;Maximum Read Speed;7000
 Kingston KC3000 2TB;Maximum Write Speed;7000
-Kingston KC3000 2TB;Connectivity Technology;M.2
+Kingston KC3000 2TB;Connectivity Technology;M.2 NVMe (Gen4)
 Sabrent Rocket 5 4TB;Capacity;4
 Sabrent Rocket 5 4TB;Cache;8192
 Sabrent Rocket 5 4TB;Maximum Read Speed;14000
 Sabrent Rocket 5 4TB;Maximum Write Speed;12000
-Sabrent Rocket 5 4TB;Connectivity Technology;PCIe 5.0 M.2
+Sabrent Rocket 5 4TB;Connectivity Technology;M.2 NVMe (Gen5)
+Kingston NV2 1TB;Capacity;1
+Kingston NV2 1TB;Cache;0
+Kingston NV2 1TB;Maximum Read Speed;3500
+Kingston NV2 1TB;Maximum Write Speed;2100
+Kingston NV2 1TB;Connectivity Technology;M.2 NVMe (Gen4)
+Kingston A400 480GB;Capacity;0.48
+Kingston A400 480GB;Cache;0
+Kingston A400 480GB;Maximum Read Speed;500
+Kingston A400 480GB;Maximum Write Speed;450
+Kingston A400 480GB;Connectivity Technology;SATA III
+Samsung 870 EVO 1TB;Capacity;1
+Samsung 870 EVO 1TB;Cache;1024
+Samsung 870 EVO 1TB;Maximum Read Speed;560
+Samsung 870 EVO 1TB;Maximum Write Speed;530
+Samsung 870 EVO 1TB;Connectivity Technology;SATA III
+Kingston FURY Renegade 2TB;Capacity;2
+Kingston FURY Renegade 2TB;Cache;2048
+Kingston FURY Renegade 2TB;Maximum Read Speed;7300
+Kingston FURY Renegade 2TB;Maximum Write Speed;7000
+Kingston FURY Renegade 2TB;Connectivity Technology;M.2 NVMe (Gen4)
+Crucial P3 Plus 1TB;Capacity;1
+Crucial P3 Plus 1TB;Cache;0
+Crucial P3 Plus 1TB;Maximum Read Speed;5000
+Crucial P3 Plus 1TB;Maximum Write Speed;3600
+Crucial P3 Plus 1TB;Connectivity Technology;M.2 NVMe (Gen4)
+Lexar NM790 2TB;Capacity;2
+Lexar NM790 2TB;Cache;0
+Lexar NM790 2TB;Maximum Read Speed;7400
+Lexar NM790 2TB;Maximum Write Speed;6500
+Lexar NM790 2TB;Connectivity Technology;M.2 NVMe (Gen4)
+Corsair MP700 PRO 2TB;Capacity;2
+Corsair MP700 PRO 2TB;Cache;4096
+Corsair MP700 PRO 2TB;Maximum Read Speed;12400
+Corsair MP700 PRO 2TB;Maximum Write Speed;11800
+Corsair MP700 PRO 2TB;Connectivity Technology;M.2 NVMe (Gen5)
+SK Hynix Platinum P41 2TB;Capacity;2
+SK Hynix Platinum P41 2TB;Cache;2048
+SK Hynix Platinum P41 2TB;Maximum Read Speed;7000
+SK Hynix Platinum P41 2TB;Maximum Write Speed;6500
+SK Hynix Platinum P41 2TB;Connectivity Technology;M.2 NVMe (Gen4)
+TeamGroup T-Force Cardea A440 Pro;Capacity;2
+TeamGroup T-Force Cardea A440 Pro;Cache;2048
+TeamGroup T-Force Cardea A440 Pro;Maximum Read Speed;7400
+TeamGroup T-Force Cardea A440 Pro;Maximum Write Speed;7000
+TeamGroup T-Force Cardea A440 Pro;Connectivity Technology;M.2 NVMe (Gen4)
 
 MSI MAG A750GL PCIE5;Wattage;750
 MSI MAG A750GL PCIE5;Efficiency Rating;80+ Gold
@@ -210,6 +486,38 @@ Be Quiet! Straight Power 12;Wattage;1200
 Be Quiet! Straight Power 12;Efficiency Rating;80+ Platinum
 Be Quiet! Straight Power 12;Modular;Full
 Be Quiet! Straight Power 12;Color;Black
+Corsair RM750e;Wattage;750
+Corsair RM750e;Efficiency Rating;80+ Gold
+Corsair RM750e;Modular;Full
+Corsair RM750e;Color;Black
+ASUS ROG Thor 1200W Platinum II;Wattage;1200
+ASUS ROG Thor 1200W Platinum II;Efficiency Rating;80+ Platinum
+ASUS ROG Thor 1200W Platinum II;Modular;Full
+ASUS ROG Thor 1200W Platinum II;Color;Black/OLED
+Cooler Master V850 Gold-V2;Wattage;850
+Cooler Master V850 Gold-V2;Efficiency Rating;80+ Gold
+Cooler Master V850 Gold-V2;Modular;Full
+Cooler Master V850 Gold-V2;Color;White
+EVGA SuperNOVA 850 G7;Wattage;850
+EVGA SuperNOVA 850 G7;Efficiency Rating;80+ Gold
+EVGA SuperNOVA 850 G7;Modular;Full
+EVGA SuperNOVA 850 G7;Color;Black
+Phanteks AMP GH 1000W;Wattage;1000
+Phanteks AMP GH 1000W;Efficiency Rating;80+ Platinum
+Phanteks AMP GH 1000W;Modular;Full
+Phanteks AMP GH 1000W;Color;White
+Seasonic Focus GX-850 White;Wattage;850
+Seasonic Focus GX-850 White;Efficiency Rating;80+ Gold
+Seasonic Focus GX-850 White;Modular;Full
+Seasonic Focus GX-850 White;Color;White
+Thermaltake Toughpower GF3 1350W;Wattage;1350
+Thermaltake Toughpower GF3 1350W;Efficiency Rating;80+ Gold
+Thermaltake Toughpower GF3 1350W;Modular;Full
+Thermaltake Toughpower GF3 1350W;Color;Black
+Be Quiet! Dark Power Pro 13;Wattage;1600
+Be Quiet! Dark Power Pro 13;Efficiency Rating;80+ Titanium
+Be Quiet! Dark Power Pro 13;Modular;Full
+Be Quiet! Dark Power Pro 13;Color;Black
 
 Corsair NAUTILUS 360 RS ARGB;Color;Black
 Corsair NAUTILUS 360 RS ARGB;Lighting;RGB
@@ -246,6 +554,62 @@ NZXT Kraken Elite 360;Radiator Size;360
 NZXT Kraken Elite 360;FAN RPM;1800
 NZXT Kraken Elite 360;Noise Level;30
 NZXT Kraken Elite 360;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+Lian Li Galahad II Trinity Performance;Color;Black
+Lian Li Galahad II Trinity Performance;Lighting;ARGB
+Lian Li Galahad II Trinity Performance;Cooling;Water
+Lian Li Galahad II Trinity Performance;Radiator Size;360
+Lian Li Galahad II Trinity Performance;FAN RPM;3000
+Lian Li Galahad II Trinity Performance;Noise Level;39.9
+Lian Li Galahad II Trinity Performance;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+Arctic Liquid Freezer III 240 White;Color;White
+Arctic Liquid Freezer III 240 White;Lighting;ARGB
+Arctic Liquid Freezer III 240 White;Cooling;Water
+Arctic Liquid Freezer III 240 White;Radiator Size;240
+Arctic Liquid Freezer III 240 White;FAN RPM;2000
+Arctic Liquid Freezer III 240 White;Noise Level;23
+Arctic Liquid Freezer III 240 White;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+ASUS ROG Ryujin III 360 ARGB;Color;White
+ASUS ROG Ryujin III 360 ARGB;Lighting;ARGB/LCD Screen
+ASUS ROG Ryujin III 360 ARGB;Cooling;Water
+ASUS ROG Ryujin III 360 ARGB;Radiator Size;360
+ASUS ROG Ryujin III 360 ARGB;FAN RPM;2200
+ASUS ROG Ryujin III 360 ARGB;Noise Level;36
+ASUS ROG Ryujin III 360 ARGB;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+Deepcool LT520 White;Color;White
+Deepcool LT520 White;Lighting;Infinity Mirror RGB
+Deepcool LT520 White;Cooling;Water
+Deepcool LT520 White;Radiator Size;240
+Deepcool LT520 White;FAN RPM;2250
+Deepcool LT520 White;Noise Level;32.9
+Deepcool LT520 White;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+Be Quiet! Pure Loop 2 280;Color;Black
+Be Quiet! Pure Loop 2 280;Lighting;ARGB
+Be Quiet! Pure Loop 2 280;Cooling;Water
+Be Quiet! Pure Loop 2 280;Radiator Size;280
+Be Quiet! Pure Loop 2 280;FAN RPM;1900
+Be Quiet! Pure Loop 2 280;Noise Level;33.8
+Be Quiet! Pure Loop 2 280;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+Cooler Master MasterLiquid 360L Core;Color;White
+Cooler Master MasterLiquid 360L Core;Lighting;ARGB
+Cooler Master MasterLiquid 360L Core;Cooling;Water
+Cooler Master MasterLiquid 360L Core;Radiator Size;360
+Cooler Master MasterLiquid 360L Core;FAN RPM;1750
+Cooler Master MasterLiquid 360L Core;Noise Level;27.2
+Cooler Master MasterLiquid 360L Core;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+Thermalright Peerless Assassin 120 SE;Color;White
+Thermalright Peerless Assassin 120 SE;Lighting;ARGB
+Thermalright Peerless Assassin 120 SE;Cooling;Air
+Thermalright Peerless Assassin 120 SE;Radiator Size;0
+Thermalright Peerless Assassin 120 SE;FAN RPM;1550
+Thermalright Peerless Assassin 120 SE;Noise Level;25.6
+Thermalright Peerless Assassin 120 SE;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+Noctua NH-U12A chromax.black;Color;Black
+Noctua NH-U12A chromax.black;Lighting;None
+Noctua NH-U12A chromax.black;Cooling;Air
+Noctua NH-U12A chromax.black;Radiator Size;0
+Noctua NH-U12A chromax.black;FAN RPM;2000
+Noctua NH-U12A chromax.black;Noise Level;22.6
+Noctua NH-U12A chromax.black;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
 
 Samsung Odyssey G5;Screen Size;32
 Samsung Odyssey G5;Resolution;2560x1440
@@ -282,6 +646,55 @@ MSI MPG 271QRX QD-OLED;Panel Type;QD-OLED
 MSI MPG 271QRX QD-OLED;Brightness;250
 MSI MPG 271QRX QD-OLED;Response Time;0.03
 MSI MPG 271QRX QD-OLED;Contrast Ratio;1500000:1
+BenQ Zowie XL2566K;Screen Size;24.5
+BenQ Zowie XL2566K;Resolution;1920x1080
+BenQ Zowie XL2566K;Refresh Rate;360
+BenQ Zowie XL2566K;Panel Type;Fast TN
+BenQ Zowie XL2566K;Brightness;320
+BenQ Zowie XL2566K;Response Time;0.5
+BenQ Zowie XL2566K;Contrast Ratio;1000:1
+Samsung Odyssey OLED G9;Screen Size;49
+Samsung Odyssey OLED G9;Resolution;5120x1440
+Samsung Odyssey OLED G9;Refresh Rate;240
+Samsung Odyssey OLED G9;Panel Type;QD-OLED
+Samsung Odyssey OLED G9;Brightness;250
+Samsung Odyssey OLED G9;Response Time;0.03
+Samsung Odyssey OLED G9;Contrast Ratio;1000000:1
+Alienware AW3423DWF;Screen Size;34.1
+Alienware AW3423DWF;Resolution;3440x1440
+Alienware AW3423DWF;Refresh Rate;165
+Alienware AW3423DWF;Panel Type;QD-OLED
+Alienware AW3423DWF;Brightness;250
+Alienware AW3423DWF;Response Time;0.1
+Alienware AW3423DWF;Contrast Ratio;1000000:1
+ASUS ROG Swift OLED PG42UQ;Screen Size;41.5
+ASUS ROG Swift OLED PG42UQ;Resolution;3840x2160
+ASUS ROG Swift OLED PG42UQ;Refresh Rate;138
+ASUS ROG Swift OLED PG42UQ;Panel Type;OLED
+ASUS ROG Swift OLED PG42UQ;Brightness;450
+ASUS ROG Swift OLED PG42UQ;Response Time;0.1
+ASUS ROG Swift OLED PG42UQ;Contrast Ratio;1500000:1
+Dell UltraSharp U4025QW;Screen Size;39.7
+Dell UltraSharp U4025QW;Resolution;5120x2160
+Dell UltraSharp U4025QW;Refresh Rate;120
+Dell UltraSharp U4025QW;Panel Type;IPS Black
+Dell UltraSharp U4025QW;Brightness;450
+Dell UltraSharp U4025QW;Response Time;5
+Dell UltraSharp U4025QW;Contrast Ratio;2000:1
+Gigabyte M27Q P;Screen Size;27
+Gigabyte M27Q P;Resolution;2560x1440
+Gigabyte M27Q P;Refresh Rate;170
+Gigabyte M27Q P;Panel Type;IPS
+Gigabyte M27Q P;Brightness;400
+Gigabyte M27Q P;Response Time;1
+Gigabyte M27Q P;Contrast Ratio;1000:1
+AOC AGON Pro AG276QSG;Screen Size;27
+AOC AGON Pro AG276QSG;Resolution;2560x1440
+AOC AGON Pro AG276QSG;Refresh Rate;240
+AOC AGON Pro AG276QSG;Panel Type;G-Sync IPS
+AOC AGON Pro AG276QSG;Brightness;400
+AOC AGON Pro AG276QSG;Response Time;1
+AOC AGON Pro AG276QSG;Contrast Ratio;1000:1
 
 Logitech MX Master 3S (Wireless);Color;Graphite
 Logitech MX Master 3S (Wireless);DPI;8000
@@ -313,6 +726,36 @@ Finalmouse UltralightX;Wireless;Yes
 Finalmouse UltralightX;Battery Life;40
 Finalmouse UltralightX;Weight;29
 Finalmouse UltralightX;Connectivity Technology;Wireless
+Attack Shark X3;Color;White
+Attack Shark X3;DPI;26000
+Attack Shark X3;Wireless;Yes
+Attack Shark X3;Battery Life;200
+Attack Shark X3;Weight;49
+Attack Shark X3;Connectivity Technology;2.4GHz / BT / Wired
+VGN Dragonfly F1 Pro Max;Color;Black
+VGN Dragonfly F1 Pro Max;DPI;26000
+VGN Dragonfly F1 Pro Max;Wireless;Yes
+VGN Dragonfly F1 Pro Max;Battery Life;130
+VGN Dragonfly F1 Pro Max;Weight;55
+VGN Dragonfly F1 Pro Max;Connectivity Technology;Lightspeed Wireless
+Zowie EC2-C;Color;Black
+Zowie EC2-C;DPI;3200)
+Zowie EC2-C;Wireless;No
+Zowie EC2-C;Battery Life;0
+Zowie EC2-C;Weight;73
+Zowie EC2-C;Connectivity Technology;Wired
+Glorious Model O 2 Wireless;Color;White
+Glorious Model O 2 Wireless;DPI;26000
+Glorious Model O 2 Wireless;Wireless;Yes
+Glorious Model O 2 Wireless;Battery Life;210
+Glorious Model O 2 Wireless;Weight;68
+Glorious Model O 2 Wireless;Connectivity Technology;2.4GHz / Bluetooth
+Pulsar X2V2;Color;Red
+Pulsar X2V2;DPI;26000
+Pulsar X2V2;Wireless;Yes
+Pulsar X2V2;Battery Life;70
+Pulsar X2V2;Weight;52
+Pulsar X2V2;Connectivity Technology;Wireless
 
 Fractal Design Meshify 2;Side Panel;Tempered Glass
 Fractal Design Meshify 2;Type;ATX Mid
@@ -529,3 +972,45 @@ JBL LSR305P MkII;Crossover Frequency;1.7
 JBL LSR305P MkII;Woofer Size;5
 JBL LSR305P MkII;Power Output;82
 JBL LSR305P MkII;Bass Reflex System;Yes
+
+
+Artisan Ninja FX Hayate Otsu;Material;Polyester Blend / Foam
+Artisan Ninja FX Hayate Otsu;Dimensions;490 x 420 x 4
+Ugreen 100W USB-C Charging Cable;Length;2
+Ugreen 100W USB-C Charging Cable;Material;Braided Nylon
+Mogami Gold XLR Cable 3m;Length;3
+Mogami Gold XLR Cable 3m;Connection Type;XLR Male to XLR Female
+Corsair iCUE Commander Core XT;Ports;6
+Corsair iCUE Commander Core XT;Connection Type;USB 2.0 Internal Header
+Velcro Brand Reusable Cable Ties;Material;Nylon
+Velcro Brand Reusable Cable Ties;Length;0.2
+Razer Ergonomic Wrist Rest;Material;Memory Foam / Cooling Gel
+Razer Ergonomic Wrist Rest;Dimensions;444 x 90 x 26
+Deepcool ST500 GPU Support Brace;Max Load;5
+Deepcool ST500 GPU Support Brace;Material;Steel
+3M VHB Double-Sided Mounting Tape;Length;3
+3M VHB Double-Sided Mounting Tape;Material;Acrylic Foam
+Thermal Grizzly Kryonaut 1g;Thermal Conductivity;12.5
+Thermal Grizzly Kryonaut 1g;Material;Thermal Grease
+Cooler Master Vertical GPU Kit V3;Max Load;3.5
+Cooler Master Vertical GPU Kit V3;Connection Type;PCIe 4.0 x16
+Lian Li Strimer Plus V2 24-Pin;Length;0.2
+Lian Li Strimer Plus V2 24-Pin;Connection Type;24-pin ATX
+Lian Li Strimer Plus V2 12VHPWR;Length;0.3
+Lian Li Strimer Plus V2 12VHPWR;Connection Type;12VHPWR (16-pin)
+Xbox Wireless Controller;Connection Type;Bluetooth / Wireless / USB-C
+Xbox Wireless Controller;Material;Plastic
+Sony DualSense Edge Controller;Connection Type;USB-C / Wireless
+Sony DualSense Edge Controller;Material;Premium Plastic / Rubber
+Xiaomi Wowstick 1P+ Electric Screwdriver;Torque;0.15
+Xiaomi Wowstick 1P+ Electric Screwdriver;Material;Aluminum Alloy
+Thermalright M.2 HR-09 Pro;Material;Aluminum / Copper Heatpipes
+Thermalright M.2 HR-09 Pro;Thermal Conductivity;6
+Logitech G Powerplay Wireless Charging;Connection Type;Proprietary Wireless
+Logitech G Powerplay Wireless Charging;Material;Hard / Cloth Surface
+Elgato Stream Deck MK.2;Ports;15
+Elgato Stream Deck MK.2;Connection Type;USB 2.0
+CableMod PRO ModMesh Cable Kit;Material;ModMesh Sleeved
+CableMod PRO ModMesh Cable Kit;Connection Type;Full Modular Set
+Glorious GMMK Gaming Wrist Rest;Material;Cloth / Foam
+Glorious GMMK Gaming Wrist Rest;Dimensions;430 x 100 x 25
