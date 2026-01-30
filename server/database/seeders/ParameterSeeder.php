@@ -143,10 +143,10 @@ class ParameterSeeder extends Seeder
             ['parameter_name' => 'Color', 'category_name' => 'Keyboard', 'unit_name' => '-'],
             ['parameter_name' => 'Switch Type', 'category_name' => 'Keyboard', 'unit_name' => '-'],
             ['parameter_name' => 'Mounting Type', 'category_name' => 'Keyboard', 'unit_name' => '-'],
-            ['parameter_name' => 'Weight', 'ctegory_name' => 'Keyboard', 'unit_name' => 'g'],
+            ['parameter_name' => 'Weight', 'category_name' => 'Keyboard', 'unit_name' => 'g'],
             ['parameter_name' => 'Battery Capacity', 'category_name' => 'Keyboard', 'unit_name' => 'mAh'],
             ['parameter_name' => 'Backlight', 'category_name' => 'Keyboard', 'unit_name' => '-'],
-            ['parameter_name' => 'Key Amounts', 'category_name' => 'Keyboard', 'unit_name' => 'pcs'],
+            ['parameter_name' => 'Key Amounts', 'category_name' => 'Keyboard', 'unit_name' => 'Pcs'],
             ['parameter_name' => 'Compatible', 'category_name' => 'Keyboard', 'unit_name' => '-'],
             ['parameter_name' => 'Connectivity Technology', 'category_name' => 'Keyboard', 'unit_name' => '-'],
 
@@ -168,10 +168,10 @@ class ParameterSeeder extends Seeder
             //Speaker
             ['parameter_name' => 'Color', 'category_name' => 'Speaker', 'unit_name' => '-'],
             ['parameter_name' => 'Frequency Range', 'category_name' => 'Speaker', 'unit_name' => 'kHz'],
-            ['parameter_name' => 'Tweeter', 'category_name' => 'Speaker', 'unit_name' => '"'],
+            ['parameter_name' => 'Tweeter', 'category_name' => 'Speaker', 'unit_name' => 'Teszt'],
             ['parameter_name' => 'Wattage', 'category_name' => 'Speaker', 'unit_name' => 'W'],
             ['parameter_name' => 'Crossover Frequency', 'category_name' => 'Speaker', 'unit_name' => 'kHz'],
-            ['parameter_name' => 'Woofer Size', 'category_name' => 'Speaker', 'unit_name' => '"'],
+            ['parameter_name' => 'Woofer Size', 'category_name' => 'Speaker', 'unit_name' => 'Teszt'],
             ['parameter_name' => 'Power Output', 'category_name' => 'Speaker', 'unit_name' => 'W'],
             ['parameter_name' => 'Bass Reflex System', 'category_name' => 'Speaker', 'unit_name' => 'Yes/No'],
 
