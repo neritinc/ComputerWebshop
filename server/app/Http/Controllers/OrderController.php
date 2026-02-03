@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 
 namespace App\Http\Controllers;
 
@@ -22,14 +22,14 @@ class OrderController extends Controller
             $this->authorize('view', $cart);
 
             if ($cart->items->isEmpty()) {
-                abort(422, 'A kosár üres, nem lehet rendelést leadni.');
+                abort(422, 'A kosÃ¡r Ã¼res, nem lehet rendelÃ©st leadni.');
             }
 
             $items = $cart->items->map(function ($item) {
                 $product = $item->product;
 
                 if (!$product) {
-                    abort(422, 'A kosárban lévõ egyik termék törlésre került.');
+                    abort(422, 'A kosÃ¡rban lÃ©vÅ‘ egyik termÃ©k tÃ¶rlÃ©sre kerÃ¼lt.');
                 }
 
                 $quantity = $item->pcs ?? $item->quantity ?? 0;
@@ -63,67 +63,85 @@ class OrderController extends Controller
 
     private function resolveProductImage(Product $product): ?string
     {
-        // 1) pics tábla
+        $candidates = [];
+
+        // 1) pics tÃ¡bla
         $pic = $product->relationLoaded('pics')
             ? $product->pics->first()
             : $product->pics()->first();
-
         if ($pic && $pic->image_path) {
-            $dataUri = $this->localImageToDataUri($pic->image_path);
-            if ($dataUri) {
-                return $dataUri;
-            }
             if (str_starts_with($pic->image_path, 'http://') || str_starts_with($pic->image_path, 'https://')) {
                 return $pic->image_path;
             }
+            $candidates[] = $this->makePublicPath($pic->image_path);
         }
 
-        // 2) slug alapú keresés a public/images/products-ben
+        // 2) slug alapÃº keresÃ©s (tÃ¶bb variÃ¡ns)
         $slug = Str::slug($product->name, '_');
-        $pattern = public_path('images/products/' . $slug . '*.{jpg,jpeg,png}');
-        $matches = glob($pattern, GLOB_BRACE);
-        if ($matches && count($matches) > 0) {
-            $dataUri = $this->fileToDataUri($matches[0]);
+        foreach ($this->findImagesBySlug($slug) as $match) {
+            $candidates[] = $match;
+        }
+
+        // 3) pics.csv mapping
+        foreach ($this->getPicsCsvFilenames($product->id) as $file) {
+            $candidates[] = $this->makePublicPath($file);
+        }
+
+        // elsÅ‘ lÃ©tezÅ‘ -> base64 data URI
+        foreach ($candidates as $path) {
+            $dataUri = $this->fileToDataUri($path);
             if ($dataUri) {
                 return $dataUri;
-            }
-        }
-
-        // 3) pics.csv mapping (product_id;filename)
-        static $picsMap = null;
-        if ($picsMap === null) {
-            $picsMap = [];
-            $csvPath = database_path('csv/pics.csv');
-            if (file_exists($csvPath)) {
-                foreach (file($csvPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
-                    [$pid, $file] = array_pad(explode(';', $line, 2), 2, null);
-                    if ($pid && $file) {
-                        $picsMap[(int)$pid][] = $file;
-                    }
-                }
-            }
-        }
-        $pid = (int) $product->id;
-        if (!empty($picsMap[$pid])) {
-            foreach ($picsMap[$pid] as $file) {
-                $full = public_path('images/products/' . ltrim($file, '/'));
-                $dataUri = $this->fileToDataUri($full);
-                if ($dataUri) {
-                    return $dataUri;
-                }
             }
         }
 
         return null;
     }
 
-    private function localImageToDataUri(string $path): ?string
+    private function findImagesBySlug(string $slug): array
     {
-        $full = $path;
-        if (!str_starts_with($full, '/')) {
-            $full = public_path('images/products/' . ltrim($path, '/'));
+        $exts = ['jpg', 'jpeg', 'png'];
+        $variants = [
+            $slug,
+            str_replace('_m2', '_m_2', $slug),
+            str_replace('_m_2', '_m2', $slug),
+            str_replace('_', '', $slug),
+        ];
+        $out = [];
+        foreach (array_unique($variants) as $v) {
+            foreach ($exts as $ext) {
+                $pattern = public_path('images/products/*' . $v . '*.' . $ext);
+                $matches = glob($pattern);
+                if ($matches) {
+                    $out = array_merge($out, $matches);
+                }
+            }
         }
-        return $this->fileToDataUri($full);
+        return $out;
+    }
+
+    private function getPicsCsvFilenames(int $productId): array
+    {
+        static $map = null;
+        if ($map === null) {
+            $map = [];
+            $csvPath = database_path('csv/pics.csv');
+            if (file_exists($csvPath)) {
+                foreach (file($csvPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
+                    [$pid, $file] = array_pad(explode(';', $line, 2), 2, null);
+                    if ($pid && $file) {
+                        $map[(int) $pid][] = $file;
+                    }
+                }
+            }
+        }
+        return $map[$productId] ?? [];
+    }
+
+    private function makePublicPath(string $relative): string
+    {
+        $relative = ltrim($relative, '/\\');
+        return public_path('images/products/' . $relative);
     }
 
     private function fileToDataUri(string $fullPath): ?string

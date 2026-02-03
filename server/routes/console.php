@@ -13,26 +13,18 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote');
 
 Artisan::command('send-mail', function () {
-    // Teszt cÃ­m a .env-bÅ‘l, ha a kosÃ¡r userÃ©nek nincs emailje
     $fallbackTo = env('MAIL_TEST_TO', 'szu.pet99@gmail.com');
-
-    // OpcionÃ¡lis: konkrÃ©t kosÃ¡r ID a .env-ben
     $cartId = env('MAIL_TEST_CART_ID');
 
     $cartQuery = Cart::with(['user', 'items.product.pics'])->whereHas('items')->latest('id');
-
     if ($cartId) {
         $cartQuery->where('id', $cartId);
     }
 
-    // Ha nincs fix ID, keressÃ¼k a legutÃ³bbi olyan kosarat, ahol legalÃ¡bb egy tÃ©telhez sikerÃ¼l kÃ©pet rendelni
     $cart = $cartQuery->get()->first(function ($cart) {
         foreach ($cart->items as $item) {
             $product = $item->product;
-            if (!$product) {
-                continue;
-            }
-            if (resolveProductImage($product)) {
+            if ($product && resolveProductImage($product)) {
                 return true;
             }
         }
@@ -40,12 +32,12 @@ Artisan::command('send-mail', function () {
     });
 
     if (!$cart) {
-        $this->error('Nincs olyan kosÃ¡r, amihez tartoznak tÃ©telek Ã©s legalÃ¡bb egy kÃ©p. TÃ¶ltsd fel seederrel vagy add meg a MAIL_TEST_CART_ID-t.');
+        $this->error('Nincs olyan kosár, amihez tartoznak tételek és legalább egy kép.');
         return 1;
     }
 
     $user = $cart->user ?? new User([
-        'name' => 'Ismeretlen vÃ¡sÃ¡rlÃ³',
+        'name' => 'Ismeretlen vásárló',
         'email' => $fallbackTo,
     ]);
 
@@ -68,7 +60,7 @@ Artisan::command('send-mail', function () {
     }
 
     if (empty($items)) {
-        $this->error('A kivÃ¡lasztott kosÃ¡rban nincs Ã©rvÃ©nyes termÃ©k tÃ©tel.');
+        $this->error('A kiválasztott kosárban nincs érvényes termék tétel.');
         return 1;
     }
 
@@ -78,56 +70,81 @@ Artisan::command('send-mail', function () {
 
     Mail::to($to)->send(new OrderPlacedMail($user, $items, $total, $orderCode));
 
-    $this->info("RendelÃ©s email kikÃ¼ldve. Cart #{$cart->id}, cÃ­mzett: {$to}, tÃ©telek: " . count($items) . ", Ã¶sszeg: {$total}");
+    $this->info("Rendelés email kiküldve. Cart #{$cart->id}, címzett: {$to}, tételek: " . count($items) . ", összeg: {$total}");
 })->purpose('Send Mail');
 
 function resolveProductImage($product): ?string {
-    $pic = $product->relationLoaded('pics')
-        ? $product->pics->first()
-        : $product->pics()->first();
+    $candidates = [];
 
+    // pics tábla
+    $pic = $product->relationLoaded('pics') ? $product->pics->first() : $product->pics()->first();
     if ($pic && $pic->image_path) {
         if (str_starts_with($pic->image_path, 'http://') || str_starts_with($pic->image_path, 'https://')) {
             return $pic->image_path;
         }
-        $path = $pic->image_path;
-        if (!str_starts_with($path, '/')) {
-            $path = 'images/products/' . ltrim($path, '/');
-        }
-        return rtrim(config('app.url'), '/') . '/' . ltrim($path, '/');
+        $candidates[] = makePublicPath($pic->image_path);
     }
 
+    // slug variánsok
     $slug = Str::slug($product->name, '_');
-    $pattern = public_path('images/products/' . $slug . '*.{jpg,jpeg,png}');
-    $matches = glob($pattern, GLOB_BRACE);
-    if ($matches && count($matches) > 0) {
-        $relative = str_replace(public_path() . DIRECTORY_SEPARATOR, '', $matches[0]);
-        return rtrim(config('app.url'), '/') . '/' . str_replace('\\', '/', $relative);
+    foreach (findImagesBySlug($slug) as $match) {
+        $candidates[] = $match;
     }
 
-    // Fallback: database/csv/pics.csv mapping (product_id;filename)
-    static $picsMap = null;
-    if ($picsMap === null) {
-        $picsMap = [];
+    // pics.csv mapping
+    foreach (getPicsCsvFilenames($product->id) as $file) {
+        $candidates[] = makePublicPath($file);
+    }
+
+    foreach ($candidates as $path) {
+        $dataUri = fileToDataUri($path);
+        if ($dataUri) {
+            return $dataUri;
+        }
+    }
+    return null;
+}
+
+function findImagesBySlug(string $slug): array {
+    $exts = ['jpg', 'jpeg', 'png'];
+    $out = [];
+    foreach ($exts as $ext) {
+        $pattern = public_path('images/products/*' . $slug . '*.' . $ext);
+        $matches = glob($pattern);
+        if ($matches) {
+            $out = array_merge($out, $matches);
+        }
+    }
+    return $out;
+}
+
+function getPicsCsvFilenames(int $productId): array {
+    static $map = null;
+    if ($map === null) {
+        $map = [];
         $csvPath = database_path('csv/pics.csv');
         if (file_exists($csvPath)) {
             foreach (file($csvPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
                 [$pid, $file] = array_pad(explode(';', $line, 2), 2, null);
                 if ($pid && $file) {
-                    $picsMap[(int)$pid][] = $file;
+                    $map[(int)$pid][] = $file;
                 }
             }
         }
     }
-    $pid = (int) $product->id;
-    if (!empty($picsMap[$pid])) {
-        foreach ($picsMap[$pid] as $file) {
-            $full = public_path('images/products/' . ltrim($file, '/'));
-            if (file_exists($full)) {
-                $relative = 'images/products/' . ltrim($file, '/');
-                return rtrim(config('app.url'), '/') . '/' . $relative;
-            }
-        }
+    return $map[$productId] ?? [];
+}
+
+function makePublicPath(string $relative): string {
+    $relative = ltrim($relative, '/\\');
+    return public_path('images/products/' . $relative);
+}
+
+function fileToDataUri(string $fullPath): ?string {
+    if (!file_exists($fullPath)) {
+        return null;
     }
-    return null;
+    $mime = mime_content_type($fullPath) ?: 'image/jpeg';
+    $data = base64_encode(file_get_contents($fullPath));
+    return "data:{$mime};base64,{$data}";
 }
