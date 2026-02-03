@@ -29,6 +29,11 @@ class Product extends Model
         return $this->belongsTo(Company::class);
     }
 
+    public function pics()
+    {
+        return $this->hasMany(Pic::class);
+    }
+
     // Helyes pivot tábla név
     public function parameters()
     {

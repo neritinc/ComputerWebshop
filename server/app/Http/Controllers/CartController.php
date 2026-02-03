@@ -30,7 +30,10 @@ class CartController extends Controller
     {
         return $this->apiResponse(function () use ($request) {
             $this->authorize('create', CurrentModel::class);
-            return CurrentModel::create($request->validated());
+            $data = $request->validated();
+            $data['date'] = $data['date'] ?? now()->toDateString();
+
+            return CurrentModel::create($data);
         });
     }
 

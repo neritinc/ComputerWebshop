@@ -115,4 +115,13 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Optional logo URL for email templates
+    |--------------------------------------------------------------------------
+    | If set (MAIL_LOGO_URL), the order confirmation email will use this URL
+    | for the header logo. Otherwise it will embed resources/images/doomshop-logo.png.
+    */
+    'logo_url' => env('MAIL_LOGO_URL'),
+
 ];

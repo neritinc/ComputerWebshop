@@ -13,7 +13,7 @@ class Cart_item extends Model
     protected $fillable = [
         'cart_id',
         'product_id',
-        'quantity',
+        'pcs',
     ];
 
     // Kapcsolat a kosárral
@@ -26,5 +26,10 @@ class Cart_item extends Model
     public function product()
     {
         return $this->belongsTo(Product::class);
+    }
+
+    public function getQuantityAttribute(): int
+    {
+        return (int) $this->pcs;
     }
 }

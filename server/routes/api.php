@@ -12,6 +12,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartItemController;
 use App\Http\Controllers\ProductParameterController;
+use App\Http\Controllers\OrderController;
 
 // Alap teszt endpoint
 Route::get('/x', function () {
@@ -135,4 +136,8 @@ Route::get('cart-items', [CartItemController::class, 'index'])
 Route::post('cart-items', [CartItemController::class, 'store'])
     ->middleware(['auth:sanctum', 'ability:customer']);
 Route::delete('cart-items/{id}', [CartItemController::class, 'destroy'])
+    ->middleware(['auth:sanctum', 'ability:customer']);
+
+// --- REGION: ORDERS / CHECKOUT ---
+Route::post('orders', [OrderController::class, 'store'])
     ->middleware(['auth:sanctum', 'ability:customer']);

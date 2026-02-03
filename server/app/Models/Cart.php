@@ -12,6 +12,7 @@ class Cart extends Model
 
     protected $fillable = [
         'user_id',
+        'date',
     ];
 
     // Kapcsolat a felhasználóval
