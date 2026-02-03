@@ -776,6 +776,7 @@ GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD
 GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);HDMI Ports;1 db
 GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);DisplayPort Ports;3 db
 
+<<<<<<< HEAD
 Kingston NV3 1TB (SNV3S/1000G);Capacity;1
 Kingston NV3 1TB (SNV3S/1000G);Maximum Read Speed;6000 MB/s
 Kingston NV3 1TB (SNV3S/1000G);Maximum Write Speed;4000 MB/s
@@ -1138,6 +1139,80 @@ be quiet! Dark Rock Elite RGB (BK037);Fan RPM;2000
 be quiet! Dark Rock Elite RGB (BK037);LED Lighting;Yes
 be quiet! Dark Rock Elite RGB (BK037);Dimensions;145
 be quiet! Dark Rock Elite RGB (BK037);Weight;1770
+=======
+
+
+Samsung 990 Pro 2 TB;Capacity;2
+Samsung 990 Pro 2 TB;Cache;2048
+Samsung 990 Pro 2 TB;Maximum Read Speed;7450
+Samsung 990 Pro 2 TB;Maximum Write Speed;6900
+Samsung 990 Pro 2 TB;Connectivity Technology;M.2 NVMe (Gen4)
+Crucial T705 2TB;Capacity;2
+Crucial T705 2TB;Cache;4096
+Crucial T705 2TB;Maximum Read Speed;14500
+Crucial T705 2TB;Maximum Write Speed;12700
+Crucial T705 2TB;Connectivity Technology;M.2 NVMe (Gen5)
+WD Black SN850X 2TB;Capacity;2
+WD Black SN850X 2TB;Cache;2048
+WD Black SN850X 2TB;Maximum Read Speed;7300
+WD Black SN850X 2TB;Maximum Write Speed;6600
+WD Black SN850X 2TB;Connectivity Technology;M.2 NVMe (Gen4)
+Kingston KC3000 2TB;Capacity;2
+Kingston KC3000 2TB;Cache;2048
+Kingston KC3000 2TB;Maximum Read Speed;7000
+Kingston KC3000 2TB;Maximum Write Speed;7000
+Kingston KC3000 2TB;Connectivity Technology;M.2 NVMe (Gen4)
+Sabrent Rocket 5 4TB;Capacity;4
+Sabrent Rocket 5 4TB;Cache;8192
+Sabrent Rocket 5 4TB;Maximum Read Speed;14000
+Sabrent Rocket 5 4TB;Maximum Write Speed;12000
+Sabrent Rocket 5 4TB;Connectivity Technology;M.2 NVMe (Gen5)
+Kingston NV2 1TB;Capacity;1
+Kingston NV2 1TB;Cache;0
+Kingston NV2 1TB;Maximum Read Speed;3500
+Kingston NV2 1TB;Maximum Write Speed;2100
+Kingston NV2 1TB;Connectivity Technology;M.2 NVMe (Gen4)
+Kingston A400 480GB;Capacity;0.48
+Kingston A400 480GB;Cache;0
+Kingston A400 480GB;Maximum Read Speed;500
+Kingston A400 480GB;Maximum Write Speed;450
+Kingston A400 480GB;Connectivity Technology;SATA III
+Samsung 870 EVO 1TB;Capacity;1
+Samsung 870 EVO 1TB;Cache;1024
+Samsung 870 EVO 1TB;Maximum Read Speed;560
+Samsung 870 EVO 1TB;Maximum Write Speed;530
+Samsung 870 EVO 1TB;Connectivity Technology;SATA III
+Kingston FURY Renegade 2TB;Capacity;2
+Kingston FURY Renegade 2TB;Cache;2048
+Kingston FURY Renegade 2TB;Maximum Read Speed;7300
+Kingston FURY Renegade 2TB;Maximum Write Speed;7000
+Kingston FURY Renegade 2TB;Connectivity Technology;M.2 NVMe (Gen4)
+Crucial P3 Plus 1TB;Capacity;1
+Crucial P3 Plus 1TB;Cache;0
+Crucial P3 Plus 1TB;Maximum Read Speed;5000
+Crucial P3 Plus 1TB;Maximum Write Speed;3600
+Crucial P3 Plus 1TB;Connectivity Technology;M.2 NVMe (Gen4)
+Lexar NM790 2TB;Capacity;2
+Lexar NM790 2TB;Cache;0
+Lexar NM790 2TB;Maximum Read Speed;7400
+Lexar NM790 2TB;Maximum Write Speed;6500
+Lexar NM790 2TB;Connectivity Technology;M.2 NVMe (Gen4)
+Corsair MP700 PRO 2TB;Capacity;2
+Corsair MP700 PRO 2TB;Cache;4096
+Corsair MP700 PRO 2TB;Maximum Read Speed;12400
+Corsair MP700 PRO 2TB;Maximum Write Speed;11800
+Corsair MP700 PRO 2TB;Connectivity Technology;M.2 NVMe (Gen5)
+SK Hynix Platinum P41 2TB;Capacity;2
+SK Hynix Platinum P41 2TB;Cache;2048
+SK Hynix Platinum P41 2TB;Maximum Read Speed;7000
+SK Hynix Platinum P41 2TB;Maximum Write Speed;6500
+SK Hynix Platinum P41 2TB;Connectivity Technology;M.2 NVMe (Gen4)
+TeamGroup T-Force Cardea A440 Pro;Capacity;2
+TeamGroup T-Force Cardea A440 Pro;Cache;2048
+TeamGroup T-Force Cardea A440 Pro;Maximum Read Speed;7400
+TeamGroup T-Force Cardea A440 Pro;Maximum Write Speed;7000
+TeamGroup T-Force Cardea A440 Pro;Connectivity Technology;M.2 NVMe (Gen4)
+>>>>>>> 8cedbc3d7f6abfd6de399ccfa5f65926c2cb0d43
 
 Samsung Odyssey OLED G5 S27FG500SU;Type;OLED monitor
 Samsung Odyssey OLED G5 S27FG500SU;Screen Size;27 inch
@@ -1917,6 +1992,7 @@ be quiet! Silent Wings 4 PWM 140mm (BL096);Dimensions;140
 be quiet! Silent Wings 4 PWM 140mm (BL096);Weight;300
 be quiet! Silent Wings 4 PWM 140mm (BL096);Airflow;N/Aroprietary Link
 
+<<<<<<< HEAD
 Redragon Kumara RGB (K552RGB-1_BROWN_HU);Backlight;Yes
 Redragon Kumara RGB (K552RGB-1_BROWN_HU);Color;N/A
 Redragon Kumara RGB (K552RGB-1_BROWN_HU);Weight;N/A
@@ -2259,6 +2335,366 @@ SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Min. Frequency;N/A
 SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Max. Frequency;N/A
 SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Sensitivity;N/A
 SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Active Noise Cancelling;N/A
+=======
+Fractal Design Meshify 2;Side Panel;Tempered Glass
+Fractal Design Meshify 2;Type;ATX Mid
+Fractal Design Meshify 2;Max GPU Length;450
+Fractal Design Meshify 2;Drive Bays;6
+Fractal Design Meshify 2;Color;Black
+Fractal Design Meshify 2;Dimensions;542x240x474
+Fractal Design Meshify 2;Radiator Support;120 mm 140 mm 240 mm 280 mm 360 mm 420 mm
+Fractal Design Meshify 2;Motherboard Form Factor;ATX EATX Micro ATX Mini ITX
+Fractal Design Meshify 2;Warranty;2
+Lian Li O11 Vision;Side Panel;Triple Tempered Glass
+Lian Li O11 Vision;Type;ATX Mid Tower
+Lian Li O11 Vision;Max GPU Length;455
+Lian Li O11 Vision;Drive Bays;5
+Lian Li O11 Vision;Color;Chrome/White
+Lian Li O11 Vision;Dimensions;480x304x464
+Lian Li O11 Vision;Radiator Support;240 mm 280 mm 360 mm
+Lian Li O11 Vision;Motherboard Form Factor;EATX ATX Micro ATX Mini ITX
+Lian Li O11 Vision;Warranty;1
+NZXT H6 Flow;Side Panel;Tempered Glass
+NZXT H6 Flow;Type;Dual-Chamber Mid Tower
+NZXT H6 Flow;Max GPU Length;365
+NZXT H6 Flow;Drive Bays;3
+NZXT H6 Flow;Color;White
+NZXT H6 Flow;Dimensions;435x287x415
+NZXT H6 Flow;Radiator Support;120 mm 240 mm 280 mm 360 mm
+NZXT H6 Flow;Motherboard Form Factor;ATX Micro ATX Mini ITX
+NZXT H6 Flow;Warranty;2
+Corsair 2500D Airflow;Side Panel;Tempered Glass
+Corsair 2500D Airflow;Type;Small Form Factor Dual-Chamber
+Corsair 2500D Airflow;Max GPU Length;400
+Corsair 2500D Airflow;Drive Bays;4
+Corsair 2500D Airflow;Color;Black
+Corsair 2500D Airflow;Dimensions;304x479x376
+Corsair 2500D Airflow;Radiator Support;120 mm 140 mm 240 mm 280 mm 360 mm
+Corsair 2500D Airflow;Motherboard Form Factor;Micro ATX Mini ITX
+Corsair 2500D Airflow;Warranty;2
+Hyte Y70 Touch;Side Panel;Panoramic Glass
+Hyte Y70 Touch;Type;ATX Mid Tower
+Hyte Y70 Touch;Max GPU Length;422
+Hyte Y70 Touch;Drive Bays;4
+Hyte Y70 Touch;Color;Milk/Red
+Hyte Y70 Touch;Dimensions;470x320x470
+Hyte Y70 Touch;Radiator Support;120 mm 140 mm 240 mm 280 mm 360 mm
+Hyte Y70 Touch;Motherboard Form Factor;EATX ATX Micro ATX Mini ITX
+Hyte Y70 Touch;Warranty;3
+Fractal Design North;Side Panel;Mesh or TG
+Fractal Design North;Type;ATX Mid Tower
+Fractal Design North;Max GPU Length;355
+Fractal Design North;Drive Bays;2
+Fractal Design North;Color;Charcoal Black / Walnut
+Fractal Design North;Dimensions;447x215x469
+Fractal Design North;Radiator Support;120 mm 140 mm 240 mm 280 mm 360 mm
+Fractal Design North;Motherboard Form Factor;ATX Micro ATX Mini ITX
+Fractal Design North;Warranty;2
+NZXT H9 Flow;Side Panel;Dual Tempered Glass
+NZXT H9 Flow;Type;Dual-Chamber ATX Mid Tower
+NZXT H9 Flow;Max GPU Length;435
+NZXT H9 Flow;Drive Bays;6
+NZXT H9 Flow;Color;Black
+NZXT H9 Flow;Dimensions;495x290x466
+NZXT H9 Flow;Radiator Support;120 mm 240 mm 280 mm 360 mm
+NZXT H9 Flow;Motherboard Form Factor;ATX Micro ATX Mini ITX
+NZXT H9 Flow;Warranty;2
+Lian Li PC-O11 Dynamic EVO;Side Panel;Tempered Glass
+Lian Li PC-O11 Dynamic EVO;Type;ATX Mid Tower
+Lian Li PC-O11 Dynamic EVO;Max GPU Length;422
+Lian Li PC-O11 Dynamic EVO;Drive Bays;9
+Lian Li PC-O11 Dynamic EVO;Color;Grey
+Lian Li PC-O11 Dynamic EVO;Dimensions;465x285x459
+Lian Li PC-O11 Dynamic EVO;Radiator Support;120 mm 240 mm 280 mm 360 mm
+Lian Li PC-O11 Dynamic EVO;Motherboard Form Factor;EATX ATX Micro ATX Mini ITX
+Lian Li PC-O11 Dynamic EVO;Warranty;1
+Phanteks NV7;Side Panel;Panoramic Glass
+Phanteks NV7;Type;Full Tower
+Phanteks NV7;Max GPU Length;450
+Phanteks NV7;Drive Bays;6
+Phanteks NV7;Color;White
+Phanteks NV7;Dimensions;532x253x586
+Phanteks NV7;Radiator Support;120 mm 240 mm 280 mm 360 mm
+Phanteks NV7;Motherboard Form Factor;EATX ATX Micro ATX Mini ITX
+Phanteks NV7;Warranty;5
+Cooler Master NR200P V2;Side Panel;Glass / Vented
+Cooler Master NR200P V2;Type;SFF Mini-ITX
+Cooler Master NR200P V2;Max GPU Length;356
+Cooler Master NR200P V2;Drive Bays;2
+Cooler Master NR200P V2;Color;Black
+Cooler Master NR200P V2;Dimensions;372x185x292
+Cooler Master NR200P V2;Radiator Support;120 mm 240 mm 280 mm
+Cooler Master NR200P V2;Motherboard Form Factor;Mini ITX
+Cooler Master NR200P V2;Warranty;2
+
+Lian Li UNI SL120 INF;Color;White
+Lian Li UNI SL120 INF;Fan Size;120
+Lian Li UNI SL120 INF;Fan height;25
+Lian Li UNI SL120 INF;Fan RPM;2100
+Lian Li UNI SL120 INF;Noise Level;32
+Lian Li UNI SL120 INF;Fan Connectors;4
+Lian Li UNI SL120 INF;Warranty;2
+Arctic P12 PWM PST;Color;Black
+Arctic P12 PWM PST;Fan Size;120
+Arctic P12 PWM PST;Fan height;25
+Arctic P12 PWM PST;Fan RPM;1800
+Arctic P12 PWM PST;Noise Level;22.5
+Arctic P12 PWM PST;Fan Connectors;4
+Arctic P12 PWM PST;Warranty;6
+Noctua NF-A14 PWM chromax.black;Color;Black
+Noctua NF-A14 PWM chromax.black;Fan Size;140
+Noctua NF-A14 PWM chromax.black;Fan height;25
+Noctua NF-A14 PWM chromax.black;Fan RPM;1500
+Noctua NF-A14 PWM chromax.black;Noise Level;24.6
+Noctua NF-A14 PWM chromax.black;Fan Connectors;4
+Noctua NF-A14 PWM chromax.black;Warranty;6
+Be Quiet! Silent Wings 4 Pro;Color;Black
+Be Quiet! Silent Wings 4 Pro;Fan Size;120
+Be Quiet! Silent Wings 4 Pro;Fan height;25
+Be Quiet! Silent Wings 4 Pro;Fan RPM;3000
+Be Quiet! Silent Wings 4 Pro;Noise Level;36.9
+Be Quiet! Silent Wings 4 Pro;Fan Connectors;4
+Be Quiet! Silent Wings 4 Pro;Warranty;5
+Corsair iCUE Link QX120 RGB;Color;Black
+Corsair iCUE Link QX120 RGB;Fan Size;120
+Corsair iCUE Link QX120 RGB;Fan height;25
+Corsair iCUE Link QX120 RGB;Fan RPM;2400
+Corsair iCUE Link QX120 RGB;Noise Level;37
+Corsair iCUE Link QX120 RGB;Fan Connectors;Proprietary Link
+Corsair iCUE Link QX120 RGB;Warranty;5
+Noctua NF-A12x25 PWM;Color;Brown/Beige
+Noctua NF-A12x25 PWM;Fan Size;120
+Noctua NF-A12x25 PWM;Fan height;25
+Noctua NF-A12x25 PWM;Fan RPM;2000
+Noctua NF-A12x25 PWM;Noise Level;22.6
+Noctua NF-A12x25 PWM;Fan Connectors;4
+Noctua NF-A12x25 PWM;Warranty;6
+Lian Li UNI FAN TL LCD 120;Color;Black
+Lian Li UNI FAN TL LCD 120;Fan Size;120
+Lian Li UNI FAN TL LCD 120;Fan height;28
+Lian Li UNI FAN TL LCD 120;Fan RPM;1900
+Lian Li UNI FAN TL LCD 120;Noise Level;27
+Lian Li UNI FAN TL LCD 120;Fan Connectors;Proprietary
+Lian Li UNI FAN TL LCD 120;Warranty;3
+Phanteks T30-120;Color;Grey
+Phanteks T30-120;Fan Size;120
+Phanteks T30-120;Fan height;30
+Phanteks T30-120;Fan RPM;3000
+Phanteks T30-120;Noise Level;39.7
+Phanteks T30-120;Fan Connectors;4
+Phanteks T30-120;Warranty;6
+Arctic P14 PWM PST White;Color;White
+Arctic P14 PWM PST White;Fan Size;140
+Arctic P14 PWM PST White;Fan height;25
+Arctic P14 PWM PST White;Fan RPM;1700
+Arctic P14 PWM PST White;Noise Level;23
+Arctic P14 PWM PST White;Fan Connectors;4
+Arctic P14 PWM PST White;Warranty;6
+Thermaltake SWAFAN EX12 RGB;Color;Black
+Thermaltake SWAFAN EX12 RGB;Fan Size;120
+Thermaltake SWAFAN EX12 RGB;Fan height;25
+Thermaltake SWAFAN EX12 RGB;Fan RPM;2000
+Thermaltake SWAFAN EX12 RGB;Noise Level;30.6
+Thermaltake SWAFAN EX12 RGB;Fan Connectors;5-pin Magnetic
+Thermaltake SWAFAN EX12 RGB;Warranty;2
+
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Color;Black
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Switch Type;Linear White Jade Switch
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Mounting Type;Upgraded Gasket
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Weight;900
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Battery Capacity;5000
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Backlight;RGB
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Key Amounts;81
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Compatible;PC,Mac,Smartphone,Tablet
+ATTACK SHARK X85 Wireless Mechanical Keyboard;Connectivity Technology;2.4G Wireless/Bluetooth 5.0/USB-C Wired
+Wooting 60HE+;Color;Black
+Wooting 60HE+;Switch Type;Lekker Magnetic (Hall Effect)
+Wooting 60HE+;Mounting Type;Tray Mount
+Wooting 60HE+;Weight;605
+Wooting 60HE+;Battery Capacity;0
+Wooting 60HE+;Backlight;RGB
+Wooting 60HE+;Key Amounts;61
+Wooting 60HE+;Compatible;PC,Mac,Xbox,PS5
+Wooting 60HE+;Connectivity Technology;USB-C Wired
+Keychron Q1 Max;Color;Shell White
+Keychron Q1 Max;Switch Type;Gateron Jupiter Banana (Tactile)
+Keychron Q1 Max;Mounting Type;Double-Gasket
+Keychron Q1 Max;Weight;1724
+Keychron Q1 Max;Battery Capacity;4000
+Keychron Q1 Max;Backlight;RGB
+Keychron Q1 Max;Key Amounts;81
+Keychron Q1 Max;Compatible;PC,Mac,Linux
+Keychron Q1 Max;Connectivity Technology;2.4G Wireless/Bluetooth 5.1/Wired
+Razer BlackWidow V4 Pro;Color;Black
+Razer BlackWidow V4 Pro;Switch Type;Razer Green (Clicky)
+Razer BlackWidow V4 Pro;Mounting Type;Top Mount
+Razer BlackWidow V4 Pro;Weight;1640
+Razer BlackWidow V4 Pro;Battery Capacity;0
+Razer BlackWidow V4 Pro;Backlight;RGB
+Razer BlackWidow V4 Pro;Key Amounts;104
+Razer BlackWidow V4 Pro;Compatible;PC
+Razer BlackWidow V4 Pro;Connectivity Technology;USB-C Wired
+ASUS ROG Azoth;Color;Moonlight White
+ASUS ROG Azoth;Switch Type;ROG NX Snow (Linear)
+ASUS ROG Azoth;Mounting Type;Gasket Mount
+ASUS ROG Azoth;Weight;1186
+ASUS ROG Azoth;Battery Capacity;4000
+ASUS ROG Azoth;Backlight;RGB
+ASUS ROG Azoth;Key Amounts;81
+ASUS ROG Azoth;Compatible;PC,Mac
+ASUS ROG Azoth;Connectivity Technology;2.4G Wireless/Bluetooth 5.1/Wired
+Logitech G915 LIGHTSPEED;Color;Carbon Black
+Logitech G915 LIGHTSPEED;Switch Type;GL Tactile (Low Profile)
+Logitech G915 LIGHTSPEED;Mounting Type;Low Profile Case
+Logitech G915 LIGHTSPEED;Weight;1025
+Logitech G915 LIGHTSPEED;Battery Capacity;1500
+Logitech G915 LIGHTSPEED;Backlight;RGB
+Logitech G915 LIGHTSPEED;Key Amounts;104
+Logitech G915 LIGHTSPEED;Compatible;PC,Mac
+Logitech G915 LIGHTSPEED;Connectivity Technology;2.4G Wireless/Bluetooth/Wired
+Razer Huntsman V3 Pro TKL;Color;Black
+Razer Huntsman V3 Pro TKL;Switch Type;Razer Analog Optical Gen-2
+Razer Huntsman V3 Pro TKL;Mounting Type;Top Mount
+Razer Huntsman V3 Pro TKL;Weight;920
+Razer Huntsman V3 Pro TKL;Battery Capacity;0
+Razer Huntsman V3 Pro TKL;Backlight;RGB
+Razer Huntsman V3 Pro TKL;Key Amounts;87
+Razer Huntsman V3 Pro TKL;Compatible;PC,PS5
+Razer Huntsman V3 Pro TKL;Connectivity Technology;USB-C Wired
+ATTACK SHARK K85;Color;White
+ATTACK SHARK K85;Switch Type;Magnetic Switches (Hall Effect)
+ATTACK SHARK K85;Mounting Type;Gasket Mount
+ATTACK SHARK K85;Weight;850
+ATTACK SHARK K85;Battery Capacity;4000
+ATTACK SHARK K85;Backlight;RGB
+ATTACK SHARK K85;Key Amounts;82
+ATTACK SHARK K85;Compatible;PC,Mac
+ATTACK SHARK K85;Connectivity Technology;2.4G Wireless/Bluetooth/Wired
+SteelSeries Apex Pro TKL (2023);Color;Black
+SteelSeries Apex Pro TKL (2023);Switch Type;OmniPoint 2.0 Adjustable
+SteelSeries Apex Pro TKL (2023);Mounting Type;Tray Mount
+SteelSeries Apex Pro TKL (2023);Weight;960
+SteelSeries Apex Pro TKL (2023);Battery Capacity;0
+SteelSeries Apex Pro TKL (2023);Backlight;RGB
+SteelSeries Apex Pro TKL (2023);Key Amounts;87
+SteelSeries Apex Pro TKL (2023);Compatible;PC,Mac,Xbox,PS5
+SteelSeries Apex Pro TKL (2023);Connectivity Technology;USB-C Wired
+Ducky One 3 TKL;Color;Daybreak (Blue/Grey)
+Ducky One 3 TKL;Switch Type;Cherry MX Brown (Tactile)
+Ducky One 3 TKL;Mounting Type;Tray Mount
+Ducky One 3 TKL;Weight;908
+Ducky One 3 TKL;Battery Capacity;0
+Ducky One 3 TKL;Backlight;RGB
+Ducky One 3 TKL;Key Amounts;87
+Ducky One 3 TKL;Compatible;PC,Mac
+Ducky One 3 TKL;Connectivity Technology;USB-C Wired
+Attack Shark K75;Color;Black/Grey
+Attack Shark K75;Switch Type;Linear Switches
+Attack Shark K75;Mounting Type;Gasket Mount
+Attack Shark K75;Weight;780
+Attack Shark K75;Battery Capacity;3000
+Attack Shark K75;Backlight;RGB
+Attack Shark K75;Key Amounts;82
+Attack Shark K75;Compatible;PC,Mac
+Attack Shark K75;Connectivity Technology;2.4G Wireless/Bluetooth/Wired
+
+Elgato Facecam Pro Webcam;Resolution;4k,1080p,720p
+Elgato Facecam Pro Webcam;Connectivity Technology;USB 3.2 Gen 1 Type-C
+Elgato Facecam Pro Webcam;Focus Type;Auto
+Elgato Facecam Pro Webcam;FOV Angle Type;90
+Logitech MX Brio;Resolution;4k,1080p,720p
+Logitech MX Brio;Connectivity Technology;USB-C
+Logitech MX Brio;Focus Type;Auto
+Logitech MX Brio;FOV Angle Type;90
+Insta360 Link 2;Resolution;4k,1080p,720p
+Insta360 Link 2;Connectivity Technology;USB-C
+Insta360 Link 2;Focus Type;PDAF (Phase Detection)
+Insta360 Link 2;FOV Angle Type;79.5
+Razer Kiyo Pro Ultra;Resolution;4k,1080p,720p
+Razer Kiyo Pro Ultra;Connectivity Technology;USB 3.0
+Razer Kiyo Pro Ultra;Focus Type;Auto
+Razer Kiyo Pro Ultra;FOV Angle Type;82
+AnkerPowerConf C200;Resolution;2k,1080p,720p
+AnkerPowerConf C200;Connectivity Technology;USB-A
+AnkerPowerConf C200;Focus Type;Auto
+AnkerPowerConf C200;FOV Angle Type;95
+Logitech Brio 500;Resolution;1080p,720p
+Logitech Brio 500;Connectivity Technology;USB-C
+Logitech Brio 500;Focus Type;Auto
+Logitech Brio 500;FOV Angle Type;90
+Logitech StreamCam;Resolution;1080p (60fps),720p
+Logitech StreamCam;Connectivity Technology;USB-C 3.1
+Logitech StreamCam;Focus Type;Smart Auto-Focus
+Logitech StreamCam;FOV Angle Type;78
+Logitech C920s Pro HD;Resolution;1080p,720p
+Logitech C920s Pro HD;Connectivity Technology;USB-A
+Logitech C920s Pro HD;Focus Type;Auto
+Logitech C920s Pro HD;FOV Angle Type;78
+OBSBOT Tiny 2;Resolution;4k,1080p,720p
+OBSBOT Tiny 2;Connectivity Technology;USB-C
+OBSBOT Tiny 2;Focus Type;All-Pixel Auto Focus
+OBSBOT Tiny 2;FOV Angle Type;85.5
+Creative Live! Cam Sync 4K;Resolution;4k,1080p,720p
+Creative Live! Cam Sync 4K;Connectivity Technology;USB-A 2.0
+Creative Live! Cam Sync 4K;Focus Type;Fixed
+Creative Live! Cam Sync 4K;FOV Angle Type;95
+
+Razer BlackShark V2 Pro (2023);Color;Black
+Razer BlackShark V2 Pro (2023);Frequency Range;12-28
+Razer BlackShark V2 Pro (2023);Microphone;Yes
+Razer BlackShark V2 Pro (2023);Active Noise Cancelling;No
+Razer BlackShark V2 Pro (2023);Impedance;32
+HyperX Cloud III Wireless;Color;Black-Red
+HyperX Cloud III Wireless;Frequency Range;10-21
+HyperX Cloud III Wireless;Microphone;Yes
+HyperX Cloud III Wireless;Active Noise Cancelling;No
+HyperX Cloud III Wireless;Impedance;64
+SteelSeries Arctis Nova Pro Wireless;Color;Black
+SteelSeries Arctis Nova Pro Wireless;Frequency Range;10-40
+SteelSeries Arctis Nova Pro Wireless;Microphone;Yes
+SteelSeries Arctis Nova Pro Wireless;Active Noise Cancelling;Yes
+SteelSeries Arctis Nova Pro Wireless;Impedance;38
+Logitech G Pro X 2 LIGHTSPEED;Color;White
+Logitech G Pro X 2 LIGHTSPEED;Frequency Range;20-20
+Logitech G Pro X 2 LIGHTSPEED;Microphone;Yes
+Logitech G Pro X 2 LIGHTSPEED;Active Noise Cancelling;No
+Logitech G Pro X 2 LIGHTSPEED;Impedance;38
+Corsair Virtuoso RGB Wireless XT;Color;Slate
+Corsair Virtuoso RGB Wireless XT;Frequency Range;20-40
+Corsair Virtuoso RGB Wireless XT;Microphone;Yes
+Corsair Virtuoso RGB Wireless XT;Active Noise Cancelling;No
+Corsair Virtuoso RGB Wireless XT;Impedance;32
+Audeze Maxwell;Color;Black
+Audeze Maxwell;Frequency Range;10-50
+Audeze Maxwell;Microphone;Yes
+Audeze Maxwell;Active Noise Cancelling;No
+Audeze Maxwell;Impedance;32
+Logitech G733 LIGHTSPEED;Color;Lilac/Purple
+Logitech G733 LIGHTSPEED;Frequency Range;20-20
+Logitech G733 LIGHTSPEED;Microphone;Yes
+Logitech G733 LIGHTSPEED;Active Noise Cancelling;No
+Logitech G733 LIGHTSPEED;Impedance;39
+Razer Barracuda Pro;Color;Black
+Razer Barracuda Pro;Frequency Range;20-20
+Razer Barracuda Pro;Microphone;Yes (Built-in)
+Razer Barracuda Pro;Active Noise Cancelling;Yes
+Razer Barracuda Pro;Impedance;32
+Sennheiser PC38X;Color;Yellow/Black
+Sennheiser PC38X;Frequency Range;10-30
+Sennheiser PC38X;Microphone;Yes
+Sennheiser PC38X;Active Noise Cancelling;No
+Sennheiser PC38X;Impedance;28
+HyperX Cloud Alpha Wireless;Color;Black-Red
+HyperX Cloud Alpha Wireless;Frequency Range;15-21
+HyperX Cloud Alpha Wireless;Microphone;Yes
+HyperX Cloud Alpha Wireless;Active Noise Cancelling;No
+HyperX Cloud Alpha Wireless;Impedance;62
+Turtle Beach Stealth Pro;Color;Black
+Turtle Beach Stealth Pro;Frequency Range;10-22
+Turtle Beach Stealth Pro;Microphone;Yes
+Turtle Beach Stealth Pro;Active Noise Cancelling;Yes
+Turtle Beach Stealth Pro;Impedance;32
+>>>>>>> 8cedbc3d7f6abfd6de399ccfa5f65926c2cb0d43
 
 Yamaha HS8 120 W Speakers;Color;Black
 Yamaha HS8 120 W Speakers;Frequency Range;30-38
