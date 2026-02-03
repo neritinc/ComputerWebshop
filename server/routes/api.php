@@ -106,6 +106,8 @@ Route::post('product-parameters', [ProductParameterController::class, 'store'])
 Route::get('pics', [PicController::class, 'index']);
 Route::post('pics', [PicController::class, 'store'])
     ->middleware(['auth:sanctum', 'ability:admin']);
+Route::patch('pics/{id}', [PicController::class, 'update'])
+    ->middleware(['auth:sanctum', 'ability:admin']);
 Route::delete('pics/{id}', [PicController::class, 'destroy'])
     ->middleware(['auth:sanctum', 'ability:admin']);
 
@@ -114,8 +116,12 @@ Route::delete('pics/{id}', [PicController::class, 'destroy'])
 Route::get('comments', [CommentController::class, 'index']);
 Route::post('comments', [CommentController::class, 'store'])
     ->middleware(['auth:sanctum', 'ability:customer']); // Csak vásárlóknak
+Route::get('comments/{id}', [CommentController::class, 'show'])
+    ->middleware(['auth:sanctum', 'ability:admin']);
+Route::patch('comments/{id}', [CommentController::class, 'update'])
+    ->middleware(['auth:sanctum', 'ability:customer']);
 Route::delete('comments/{id}', [CommentController::class, 'destroy'])
-    ->middleware(['auth:sanctum']); // Admin vagy a sajátját a tulajdonos
+    ->middleware(['auth:sanctum', 'ability:customer']); // Admin vagy a sajátját a tulajdonos
 
 
 // --- REGION: CART & CART ITEMS ---

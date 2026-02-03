@@ -32,7 +32,9 @@ class CommentController extends Controller
     {
         return $this->apiResponse(function () use ($request) {
             $this->authorize('create', CurrentModel::class);
-            return CurrentModel::create($request->validated());
+            $data = $request->validated();
+            $data['user_id'] = $request->user()->id;
+            return CurrentModel::create($data);
         });
     }
 

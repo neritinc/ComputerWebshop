@@ -57,29 +57,16 @@ class UserController extends Controller
         $name = "1day-role:$role";
         switch ($role) {
             case 1:
-                //Admin
-                $abilities = ['*'];
+                // Admin: minden jog + explicit admin/customer ability a middleware-ekhez
+                $abilities = ['admin', 'customer'];
                 break;
             case 2:
-                //tanar
-                $abilities = [
-                    'students:post',
-                    'students:patch',
-                    'students:delete',
-                    'usersme:get',
-                    'usersme:patch',
-                    'usersme:updatePassword',
-                    'usersme:delete',
-                ];
+                // Vásárló / customer
+                $abilities = ['customer'];
                 break;
             default:
-                //Diak
-                $abilities = [
-                    'usersme:get',
-                    'usersme:patch',
-                    'usersme:updatePassword',
-                    'usersme:delete',
-                ];
+                // Alapértelmezett: kapjon customer jogot
+                $abilities = ['customer'];
                 break;
         }
 

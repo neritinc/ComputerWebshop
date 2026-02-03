@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
         $usersAdmin = [
             'name' => 'Admin',
             'email' => 'admin@example.com',
-            'password' => Hash::make('123'), // Így már titkosítva kerül be!
+            'password' => '123', // Így már titkosítva kerül be!
             'role' => 1,
             'phone' => '+36301234567',
             'city' => 'Budapest',
@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
         $usersVasarlo1 = [
             'name' => 'Vásárló1',
             'email' => 'vasarlo1@example.com',
-            'password' => Hash::make('ronaldo'), // Itt is titkosítunk
+            'password' => 'ronaldo', // Itt is titkosítunk
             'role' => 3,
             'phone' => '+36301111111',
             'city' => 'Debrecen',
@@ -38,7 +38,7 @@ class UserSeeder extends Seeder
         ];
         User::updateOrCreate(['email' => $usersVasarlo1['email']], $usersVasarlo1);
 
-        $usersCount = 8;
+        $usersCount = 20;
         User::factory()->count($usersCount)->create();
     }
 }
