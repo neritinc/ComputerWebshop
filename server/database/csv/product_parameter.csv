@@ -1,936 +1,2264 @@
 product_name;parameter_name;value
-AMD Ryzen 7 7700X;Clock Speed;4500
-AMD Ryzen 7 7700X;Turbo Clock Speed;5400
-AMD Ryzen 7 7700X;Core Count;8
-AMD Ryzen 7 7700X;Thread Count;16
-AMD Ryzen 7 7700X;L2 Cache Size;8
-AMD Ryzen 7 7700X;L3 Cache Size;32
-AMD Ryzen 7 7700X;Thermal Design Power (TDP);105
-AMD Ryzen 7 7700X;Architecture;Zen 4
-AMD Ryzen 7 9800X3D;Clock Speed;4700
-AMD Ryzen 7 9800X3D;Turbo Clock Speed;5200
-AMD Ryzen 7 9800X3D;Core Count;8
-AMD Ryzen 7 9800X3D;Thread Count;16
-AMD Ryzen 7 9800X3D;L2 Cache Size;8
-AMD Ryzen 7 9800X3D;L3 Cache Size;96
-AMD Ryzen 7 9800X3D;Thermal Design Power (TDP);120
-AMD Ryzen 7 9800X3D;Architecture;Zen 5
-AMD Ryzen 9 9950X;Clock Speed;4300
-AMD Ryzen 9 9950X;Turbo Clock Speed;5700
-AMD Ryzen 9 9950X;Core Count;16
-AMD Ryzen 9 9950X;Thread Count;32
-AMD Ryzen 9 9950X;L2 Cache Size;16
-AMD Ryzen 9 9950X;L3 Cache Size;64
-AMD Ryzen 9 9950X;Thermal Design Power (TDP);170
-AMD Ryzen 9 9950X;Architecture;Zen 5
-Intel Core Ultra 9 285K;Clock Speed;3700
-Intel Core Ultra 9 285K;Turbo Clock Speed;5700
-Intel Core Ultra 9 285K;Core Count;24
-Intel Core Ultra 9 285K;Thread Count;24
-Intel Core Ultra 9 285K;L2 Cache Size;40
-Intel Core Ultra 9 285K;L3 Cache Size;36
-Intel Core Ultra 9 285K;Thermal Design Power (TDP);125
-Intel Core Ultra 9 285K;Architecture;Arrow Lake
-Intel Core Ultra 5 245K;Clock Speed;4200
-Intel Core Ultra 5 245K;Turbo Clock Speed;5200
-Intel Core Ultra 5 245K;Core Count;14
-Intel Core Ultra 5 245K;Thread Count;14
-Intel Core Ultra 5 245K;L2 Cache Size;26
-Intel Core Ultra 5 245K;L3 Cache Size;24
-Intel Core Ultra 5 245K;Thermal Design Power (TDP);125
-Intel Core Ultra 5 245K;Architecture;Arrow Lake
-AMD Ryzen 7 5800X3D;Clock Speed;3400
-AMD Ryzen 7 5800X3D;Turbo Clock Speed;4500
-AMD Ryzen 7 5800X3D;Core Count;8
-AMD Ryzen 7 5800X3D;Thread Count;16
-AMD Ryzen 7 5800X3D;L2 Cache Size;4
-AMD Ryzen 7 5800X3D;L3 Cache Size;96
-AMD Ryzen 7 5800X3D;Thermal Design Power (TDP);105
-AMD Ryzen 7 5800X3D;Architecture;Zen 3 (AM4)
-AMD Ryzen 5 7600X;Clock Speed;4700
-AMD Ryzen 5 7600X;Turbo Clock Speed;5300
-AMD Ryzen 5 7600X;Core Count;6
-AMD Ryzen 5 7600X;Thread Count;12
-AMD Ryzen 5 7600X;L2 Cache Size;6
-AMD Ryzen 5 7600X;L3 Cache Size;32
-AMD Ryzen 5 7600X;Thermal Design Power (TDP);105
-AMD Ryzen 5 7600X;Architecture;Zen 4 (AM5)
-AMD Ryzen 9 7950X3D;Clock Speed;4200
-AMD Ryzen 9 7950X3D;Turbo Clock Speed;5700
-AMD Ryzen 9 7950X3D;Core Count;16
-AMD Ryzen 9 7950X3D;Thread Count;32
-AMD Ryzen 9 7950X3D;L2 Cache Size;16
-AMD Ryzen 9 7950X3D;L3 Cache Size;128
-AMD Ryzen 9 7950X3D;Thermal Design Power (TDP);120
-AMD Ryzen 9 7950X3D;Architecture;Zen 4 (AM5)
-AMD Ryzen 5 5600X;Clock Speed;3700
-AMD Ryzen 5 5600X;Turbo Clock Speed;4600
-AMD Ryzen 5 5600X;Core Count;6
-AMD Ryzen 5 5600X;Thread Count;12
-AMD Ryzen 5 5600X;L2 Cache Size;3
-AMD Ryzen 5 5600X;L3 Cache Size;32
-AMD Ryzen 5 5600X;Thermal Design Power (TDP);65
-AMD Ryzen 5 5600X;Architecture;Zen 3 (AM4)
-AMD Ryzen 7 9700X;Clock Speed;3800
-AMD Ryzen 7 9700X;Turbo Clock Speed;5500
-AMD Ryzen 7 9700X;Core Count;8
-AMD Ryzen 7 9700X;Thread Count;16
-AMD Ryzen 7 9700X;L2 Cache Size;8
-AMD Ryzen 7 9700X;L3 Cache Size;32
-AMD Ryzen 7 9700X;Thermal Design Power (TDP);65
-AMD Ryzen 7 9700X;Architecture;Zen 5 (AM5)
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);Type;AMD Ryzen 7
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);Core Count;8
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);Thread Count;16
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);Socket;AMD Socket AM5
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);Clock Speed;4700
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);Turbo Clock Speed;5200
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);Manufacturing Process;4
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);Integrated Graphics;AMD Radeon Graphics
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);L2 Cache Size;8
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);L3 Cache Size;96
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);Thermal Design Power (TDP);120
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);Package;Dobozos
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);Type;AMD Ryzen 7
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);Core Count;8
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);Thread Count;16
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);Socket;AMD Socket AM5
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);Clock Speed;4200
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);Turbo Clock Speed;5000
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);Manufacturing Process;5
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);Integrated Graphics;AMD Radeon Graphics
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);L2 Cache Size;8
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);L3 Cache Size;96
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);Thermal Design Power (TDP);120
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);Package;Dobozos
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);Type;AMD Ryzen 7
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);Core Count;8
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);Thread Count;16
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);Socket;AMD Socket AM4
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);Clock Speed;3800
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);Turbo Clock Speed;4700
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);Manufacturing Process;7
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);Integrated Graphics;No
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);L2 Cache Size;4
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);L3 Cache Size;32
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);Thermal Design Power (TDP);105
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);Package;Dobozos, hűtő és hűtőborda nélkül
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);Type;AMD Ryzen 5
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);Core Count;6
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);Thread Count;12
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);Socket;AMD Socket AM4
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);Clock Speed;3700
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);Turbo Clock Speed;4600
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);Manufacturing Process;7
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);Integrated Graphics;No
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);L2 Cache Size;3
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);L3 Cache Size;32
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);Thermal Design Power (TDP);65
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);Package;Dobozos, hűtővel és hűtőbordával
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);Type;AMD Ryzen 9
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);Core Count;16
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);Thread Count;32
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);Socket;AMD Socket AM4
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);Clock Speed;3400
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);Turbo Clock Speed;4900
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);Manufacturing Process;7
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);Integrated Graphics;No
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);L2 Cache Size;8
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);L3 Cache Size;64
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);Thermal Design Power (TDP);105
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);Package;Dobozos, hűtő és hűtőborda nélkül
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);Type;AMD Ryzen 7
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);Core Count;8
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);Thread Count;16
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);Socket;AMD Socket AM4
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);Clock Speed;3400
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);Turbo Clock Speed;4600
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);Manufacturing Process;7
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);Integrated Graphics;No
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);L2 Cache Size;4
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);L3 Cache Size;32
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);Thermal Design Power (TDP);65
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);Package;Dobozos
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);Type;AMD Ryzen 5
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);Core Count;6
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);Thread Count;12
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);Socket;AMD Socket AM5
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);Clock Speed;3900
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);Turbo Clock Speed;5400
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);Manufacturing Process;4
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);Integrated Graphics;AMD Radeon Graphics
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);L2 Cache Size;6
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);L3 Cache Size;32
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);Thermal Design Power (TDP);65
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);Package;Dobozos
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);Type;AMD Ryzen 7
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);Core Count;8
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);Thread Count;16
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);Socket;AMD Socket AM5
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);Clock Speed;4200
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);Turbo Clock Speed;5000
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);Manufacturing Process;5
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);Integrated Graphics;AMD Radeon Graphics
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);L2 Cache Size;8
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);L3 Cache Size;96
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);Thermal Design Power (TDP);120
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);Package;Tálcás
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);Type;AMD Ryzen 9
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);Core Count;16
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);Thread Count;32
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);Socket;AMD Socket AM5
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);Clock Speed;4300
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);Turbo Clock Speed;5700
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);Manufacturing Process;4
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);Integrated Graphics;AMD Radeon Graphics
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);L2 Cache Size;16
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);L3 Cache Size;128
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);Thermal Design Power (TDP);170
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);Package;Dobozos
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);Type;AMD Ryzen 5
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);Core Count;6
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);Thread Count;12
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);Socket;AMD Socket AM4
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);Clock Speed;3500
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);Turbo Clock Speed;4400
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);Manufacturing Process;7
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);Integrated Graphics;No
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);L2 Cache Size;3
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);L3 Cache Size;32
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);Thermal Design Power (TDP);65
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);Package;Dobozos
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);Type;AMD Ryzen 7
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);Core Count;8
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);Thread Count;16
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);Socket;AMD Socket AM4
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);Clock Speed;3400
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);Turbo Clock Speed;4600
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);Manufacturing Process;7
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);Integrated Graphics;No
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);L2 Cache Size;4
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);L3 Cache Size;32
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);Thermal Design Power (TDP);65
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);Package;Tálcás
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);Type;AMD Ryzen 5
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);Core Count;6
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);Thread Count;12
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);Socket;AMD Socket AM4
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);Clock Speed;3600
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);Turbo Clock Speed;4200
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);Manufacturing Process;7
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);Integrated Graphics;No
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);L2 Cache Size;3
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);L3 Cache Size;16
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);Thermal Design Power (TDP);65
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);Package;Dobozos
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);Type;Intel Core i5
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);Core Count;6
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);Thread Count;12
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);Socket;Intel Socket 1700
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);Clock Speed;2500
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);Turbo Clock Speed;4400
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);Manufacturing Process;10
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);Integrated Graphics;No
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);L2 Cache Size;7.5
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);L3 Cache Size;18
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);Thermal Design Power (TDP);65
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);Package;Dobozos
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);Type;Intel Core i5
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);Core Count;10
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);Thread Count;16
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);Socket;Intel Socket 1700
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);Clock Speed;1800
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);Turbo Clock Speed;4700
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);Manufacturing Process;10
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);Integrated Graphics;No
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);L2 Cache Size;9.5
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);L3 Cache Size;20
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);Thermal Design Power (TDP);65
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);Package;Dobozos
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);Type;AMD Ryzen 5
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);Core Count;6
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);Thread Count;12
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);Socket;AMD Socket AM5
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);Clock Speed;4700
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);Turbo Clock Speed;5300
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);Manufacturing Process;5
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);Integrated Graphics;AMD Radeon Graphics
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);L2 Cache Size;6
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);L3 Cache Size;32
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);Thermal Design Power (TDP);105
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);Package;Dobozos
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);Type;AMD Ryzen 7
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);Core Count;8
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);Thread Count;16
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);Socket;AMD Socket AM4
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);Clock Speed;3700
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);Turbo Clock Speed;4600
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);Manufacturing Process;7
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);Integrated Graphics;No
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);L2 Cache Size;4
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);L3 Cache Size;16
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);Thermal Design Power (TDP);65
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);Package;Dobozos
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);Type;AMD Ryzen 5
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);Core Count;6
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);Thread Count;12
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);Socket;AMD Socket AM4
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);Clock Speed;3600
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);Turbo Clock Speed;4200
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);Manufacturing Process;7
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);Integrated Graphics;No
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);L2 Cache Size;3
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);L3 Cache Size;32
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);Thermal Design Power (TDP);65
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);Package;Dobozos, hűtővel és hűtőbordával
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);Type;Intel Core i5
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);Core Count;14
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);Thread Count;20
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);Socket;Intel Socket 1700
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);Clock Speed;2600
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);Turbo Clock Speed;5300
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);Manufacturing Process;10
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);Integrated Graphics;Intel UHD Graphics 770
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);L2 Cache Size;20
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);L3 Cache Size;24
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);Thermal Design Power (TDP);125
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);Package;Dobozos
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);Type;AMD Ryzen 7
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);Core Count;8
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);Thread Count;16
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);Socket;AMD Socket AM5
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);Clock Speed;3800
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);Turbo Clock Speed;5500
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);Manufacturing Process;4
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);Integrated Graphics;AMD Radeon Graphics
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);L2 Cache Size;8
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);L3 Cache Size;32
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);Thermal Design Power (TDP);65
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);Package;Dobozos
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);Type;AMD Ryzen 5
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);Core Count;6
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);Thread Count;12
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);Socket;AMD Socket AM4
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);Clock Speed;3500
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);Turbo Clock Speed;4400
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);Manufacturing Process;7
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);Integrated Graphics;No
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);L2 Cache Size;3
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);L3 Cache Size;32
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);Thermal Design Power (TDP);65
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);Package;Tálcás
 
-Kingston Fury Beast 16GB DDR5;Memory Capacity;2x8
-Kingston Fury Beast 16GB DDR5;Memory Type;DDR5
-Kingston Fury Beast 16GB DDR5;Bus Speed;5600
-Kingston Fury Beast 16GB DDR5;CAS Latency;36
-G.Skill Trident Z5 RGB 32GB DDR5;Memory Capacity;2x16
-G.Skill Trident Z5 RGB 32GB DDR5;Memory Type;DDR5
-G.Skill Trident Z5 RGB 32GB DDR5;Bus Speed;6400
-G.Skill Trident Z5 RGB 32GB DDR5;CAS Latency;32
-Corsair Vengeance RGB 32GB DDR5;Memory Capacity;2x16
-Corsair Vengeance RGB 32GB DDR5;Memory Type;DDR5
-Corsair Vengeance RGB 32GB DDR5;Bus Speed;6000
-Corsair Vengeance RGB 32GB DDR5;CAS Latency;30
-Crucial Pro 32GB DDR5;Memory Capacity;2x16
-Crucial Pro 32GB DDR5;Memory Type;DDR5
-Crucial Pro 32GB DDR5;Bus Speed;5600
-Crucial Pro 32GB DDR5;CAS Latency;46
-TeamGroup T-Force Delta RGB 32GB DDR5;Memory Capacity;2x16
-TeamGroup T-Force Delta RGB 32GB DDR5;Memory Type;DDR5
-TeamGroup T-Force Delta RGB 32GB DDR5;Bus Speed;7200
-TeamGroup T-Force Delta RGB 32GB DDR5;CAS Latency;34
-Corsair Vengeance LPX 16GB DDR4;Memory Capacity;2x8
-Corsair Vengeance LPX 16GB DDR4;Memory Type;DDR4
-Corsair Vengeance LPX 16GB DDR4;Bus Speed;3200
-Corsair Vengeance LPX 16GB DDR4;CAS Latency;16
-G.Skill Trident Z Neo 32GB DDR4;Memory Capacity;2x16
-G.Skill Trident Z Neo 32GB DDR4;Memory Type;DDR4
-G.Skill Trident Z Neo 32GB DDR4;Bus Speed;3600
-G.Skill Trident Z Neo 32GB DDR4;CAS Latency;16
-Kingston FURY Renegade 64GB DDR5;Memory Capacity;2x32
-Kingston FURY Renegade 64GB DDR5;Memory Type;DDR5
-Kingston FURY Renegade 64GB DDR5;Bus Speed;6000
-Kingston FURY Renegade 64GB DDR5;CAS Latency;32
-G.Skill Ripjaws S5 64GB DDR5;Memory Capacity;2x32
-G.Skill Ripjaws S5 64GB DDR5;Memory Type;DDR5
-G.Skill Ripjaws S5 64GB DDR5;Bus Speed;5600
-G.Skill Ripjaws S5 64GB DDR5;CAS Latency;28
-Corsair Dominator Titanium 64GB DDR5;Memory Capacity;2x32
-Corsair Dominator Titanium 64GB DDR5;Memory Type;DDR5
-Corsair Dominator Titanium 64GB DDR5;Bus Speed;6600
-Corsair Dominator Titanium 64GB DDR5;CAS Latency;32
-TeamGroup T-Create Expert 32GB DDR5;Memory Capacity;2x16
-TeamGroup T-Create Expert 32GB DDR5;Memory Type;DDR5
-TeamGroup T-Create Expert 32GB DDR5;Bus Speed;6000
-TeamGroup T-Create Expert 32GB DDR5;CAS Latency;30
-Patriot Viper Venom 16GB DDR5;Memory Capacity;2x8
-Patriot Viper Venom 16GB DDR5;Memory Type;DDR5
-Patriot Viper Venom 16GB DDR5;Bus Speed;5200
-Patriot Viper Venom 16GB DDR5;CAS Latency;36
-Crucial Classic 8GB DDR4;Memory Capacity;1x8
-Crucial Classic 8GB DDR4;Memory Type;DDR4
-Crucial Classic 8GB DDR4;Bus Speed;2666
-Crucial Classic 8GB DDR4;CAS Latency;19
+Kingston FURY Beast 32GB (2x16GB) DDR5 6000MHz KF560C30BBEK2-32;Capacity;32
+Kingston FURY Beast 32GB (2x16GB) DDR5 6000MHz KF560C30BBEK2-32;Package;2x16GB
+Kingston FURY Beast 32GB (2x16GB) DDR5 6000MHz KF560C30BBEK2-32;Memory Type;DDR5
+Kingston FURY Beast 32GB (2x16GB) DDR5 6000MHz KF560C30BBEK2-32;Speed;6000
+Kingston FURY Beast 32GB (2x16GB) DDR5 6000MHz KF560C30BBEK2-32;Multi-channel Package;Dual-channel kiszerelés
+Kingston FURY Beast 32GB (2x16GB) DDR5 6000MHz KF560C30BBEK2-32;Memory Latency;30
+Kingston FURY Beast 32GB (2x16GB) DDR5 6000MHz KF560C30BBEK2-32;LED Lighting;No
+Kingston FURY Beast 16GB (2x8GB) DDR4 3200MHz KF432C16BBK2/16;Capacity;16
+Kingston FURY Beast 16GB (2x8GB) DDR4 3200MHz KF432C16BBK2/16;Package;2x8GB
+Kingston FURY Beast 16GB (2x8GB) DDR4 3200MHz KF432C16BBK2/16;Memory Type;DDR4
+Kingston FURY Beast 16GB (2x8GB) DDR4 3200MHz KF432C16BBK2/16;Speed;3200
+Kingston FURY Beast 16GB (2x8GB) DDR4 3200MHz KF432C16BBK2/16;Multi-channel Package;Dual-channel kiszerelés
+Kingston FURY Beast 16GB (2x8GB) DDR4 3200MHz KF432C16BBK2/16;Memory Latency;16
+Kingston FURY Beast 16GB (2x8GB) DDR4 3200MHz KF432C16BBK2/16;LED Lighting;N/A
+Kingston FURY Beast 64GB (2x32GB) DDR5 6000MHz KF560C30BBEK2-64;Capacity;64
+Kingston FURY Beast 64GB (2x32GB) DDR5 6000MHz KF560C30BBEK2-64;Package;2x32GB
+Kingston FURY Beast 64GB (2x32GB) DDR5 6000MHz KF560C30BBEK2-64;Memory Type;DDR5
+Kingston FURY Beast 64GB (2x32GB) DDR5 6000MHz KF560C30BBEK2-64;Speed;6000
+Kingston FURY Beast 64GB (2x32GB) DDR5 6000MHz KF560C30BBEK2-64;Multi-channel Package;Dual-channel kiszerelés
+Kingston FURY Beast 64GB (2x32GB) DDR5 6000MHz KF560C30BBEK2-64;Memory Latency;30
+Kingston FURY Beast 64GB (2x32GB) DDR5 6000MHz KF560C30BBEK2-64;LED Lighting;No
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BBK2/32;Capacity;32
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BBK2/32;Package;2x16GB
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BBK2/32;Memory Type;DDR4
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BBK2/32;Speed;3200
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BBK2/32;Multi-channel Package;Dual-channel kiszerelés
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BBK2/32;Memory Latency;16
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BBK2/32;LED Lighting;N/A
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C30BBEAK2-32;Capacity;32
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C30BBEAK2-32;Package;2x16GB
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C30BBEAK2-32;Memory Type;DDR5
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C30BBEAK2-32;Speed;6000
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C30BBEAK2-32;Multi-channel Package;Dual-channel kiszerelés
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C30BBEAK2-32;Memory Latency;30
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C30BBEAK2-32;LED Lighting;Yes
+Kingston FURY Beast 32GB (2x16GB) DDR5 5200MHz KF552C40BBK2-32;Capacity;32
+Kingston FURY Beast 32GB (2x16GB) DDR5 5200MHz KF552C40BBK2-32;Package;2x16GB
+Kingston FURY Beast 32GB (2x16GB) DDR5 5200MHz KF552C40BBK2-32;Memory Type;DDR5
+Kingston FURY Beast 32GB (2x16GB) DDR5 5200MHz KF552C40BBK2-32;Speed;5200
+Kingston FURY Beast 32GB (2x16GB) DDR5 5200MHz KF552C40BBK2-32;Multi-channel Package;Dual-channel kiszerelés
+Kingston FURY Beast 32GB (2x16GB) DDR5 5200MHz KF552C40BBK2-32;Memory Latency;40
+Kingston FURY Beast 32GB (2x16GB) DDR5 5200MHz KF552C40BBK2-32;LED Lighting;No
+Kingston FURY Beast 8GB DDR4 3200MHz KF432C16BB/8;Capacity;8
+Kingston FURY Beast 8GB DDR4 3200MHz KF432C16BB/8;Package;1x8GB
+Kingston FURY Beast 8GB DDR4 3200MHz KF432C16BB/8;Memory Type;DDR4
+Kingston FURY Beast 8GB DDR4 3200MHz KF432C16BB/8;Speed;3200
+Kingston FURY Beast 8GB DDR4 3200MHz KF432C16BB/8;Multi-channel Package;Single-channel kiszerelés
+Kingston FURY Beast 8GB DDR4 3200MHz KF432C16BB/8;Memory Latency;16
+Kingston FURY Beast 8GB DDR4 3200MHz KF432C16BB/8;LED Lighting;No
+Kingston FURY Beast 16GB (2x8GB) DDR5 6000MHz KF560C36BBEK2-16;Capacity;16
+Kingston FURY Beast 16GB (2x8GB) DDR5 6000MHz KF560C36BBEK2-16;Package;2x8GB
+Kingston FURY Beast 16GB (2x8GB) DDR5 6000MHz KF560C36BBEK2-16;Memory Type;DDR5
+Kingston FURY Beast 16GB (2x8GB) DDR5 6000MHz KF560C36BBEK2-16;Speed;6000
+Kingston FURY Beast 16GB (2x8GB) DDR5 6000MHz KF560C36BBEK2-16;Multi-channel Package;Dual-channel kiszerelés
+Kingston FURY Beast 16GB (2x8GB) DDR5 6000MHz KF560C36BBEK2-16;Memory Latency;36
+Kingston FURY Beast 16GB (2x8GB) DDR5 6000MHz KF560C36BBEK2-16;LED Lighting;No
+Patriot Viper Venom 32GB (2x16GB) DDR5 6000MHz PVV532G600C30K;Capacity;32
+Patriot Viper Venom 32GB (2x16GB) DDR5 6000MHz PVV532G600C30K;Package;2x16GB
+Patriot Viper Venom 32GB (2x16GB) DDR5 6000MHz PVV532G600C30K;Memory Type;DDR5
+Patriot Viper Venom 32GB (2x16GB) DDR5 6000MHz PVV532G600C30K;Speed;6000
+Patriot Viper Venom 32GB (2x16GB) DDR5 6000MHz PVV532G600C30K;Multi-channel Package;Dual-channel kiszerelés
+Patriot Viper Venom 32GB (2x16GB) DDR5 6000MHz PVV532G600C30K;Memory Latency;30
+Patriot Viper Venom 32GB (2x16GB) DDR5 6000MHz PVV532G600C30K;LED Lighting;No
+G.SKILL Aegis 16GB (2x8GB) DDR4 3200MHz F4-3200C16D-16GIS;Capacity;16
+G.SKILL Aegis 16GB (2x8GB) DDR4 3200MHz F4-3200C16D-16GIS;Package;2x8GB
+G.SKILL Aegis 16GB (2x8GB) DDR4 3200MHz F4-3200C16D-16GIS;Memory Type;DDR4
+G.SKILL Aegis 16GB (2x8GB) DDR4 3200MHz F4-3200C16D-16GIS;Speed;3200
+G.SKILL Aegis 16GB (2x8GB) DDR4 3200MHz F4-3200C16D-16GIS;Multi-channel Package;Dual-channel kiszerelés
+G.SKILL Aegis 16GB (2x8GB) DDR4 3200MHz F4-3200C16D-16GIS;Memory Latency;16
+G.SKILL Aegis 16GB (2x8GB) DDR4 3200MHz F4-3200C16D-16GIS;LED Lighting;No
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C36BBE-16;Capacity;16
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C36BBE-16;Package;1x16GB
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C36BBE-16;Memory Type;DDR5
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C36BBE-16;Speed;5600
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C36BBE-16;Multi-channel Package;Single-channel kiszerelés
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C36BBE-16;Memory Latency;40
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C36BBE-16;LED Lighting;No
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BB1K2/32;Capacity;32
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BB1K2/32;Package;2x16GB
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BB1K2/32;Memory Type;DDR4
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BB1K2/32;Speed;3200
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BB1K2/32;Multi-channel Package;Dual-channel kiszerelés
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BB1K2/32;Memory Latency;16
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BB1K2/32;LED Lighting;N/A
+G.SKILL Trident Z5 Royal RGB 96GB (2x48GB) DDR5 6800MHz F5-6800J3446F48GX2-TR5S;Capacity;96
+G.SKILL Trident Z5 Royal RGB 96GB (2x48GB) DDR5 6800MHz F5-6800J3446F48GX2-TR5S;Memory Type;DDR5
+G.SKILL Trident Z5 Royal RGB 96GB (2x48GB) DDR5 6800MHz F5-6800J3446F48GX2-TR5S;Speed;6800
+G.SKILL Trident Z5 Royal RGB 96GB (2x48GB) DDR5 6800MHz F5-6800J3446F48GX2-TR5S;Memory Latency;34
+G.SKILL Trident Z5 Royal RGB 96GB (2x48GB) DDR5 6800MHz F5-6800J3446F48GX2-TR5S;Package;N/A
+G.SKILL Trident Z5 Royal RGB 96GB (2x48GB) DDR5 6800MHz F5-6800J3446F48GX2-TR5S;Multi-channel Package;N/A
+G.SKILL Trident Z5 Royal RGB 96GB (2x48GB) DDR5 6800MHz F5-6800J3446F48GX2-TR5S;LED Lighting;N/A
+G.SKILL Aegis 32GB (2x16GB) DDR4 3200MHz F4-3200C16D-32GIS;Capacity;32
+G.SKILL Aegis 32GB (2x16GB) DDR4 3200MHz F4-3200C16D-32GIS;Package;2x16GB
+G.SKILL Aegis 32GB (2x16GB) DDR4 3200MHz F4-3200C16D-32GIS;Memory Type;DDR4
+G.SKILL Aegis 32GB (2x16GB) DDR4 3200MHz F4-3200C16D-32GIS;Speed;3200
+G.SKILL Aegis 32GB (2x16GB) DDR4 3200MHz F4-3200C16D-32GIS;Multi-channel Package;Dual-channel kiszerelés
+G.SKILL Aegis 32GB (2x16GB) DDR4 3200MHz F4-3200C16D-32GIS;Memory Latency;16
+G.SKILL Aegis 32GB (2x16GB) DDR4 3200MHz F4-3200C16D-32GIS;LED Lighting;No
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C40BB-16;Capacity;16
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C40BB-16;Package;1x16GB
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C40BB-16;Memory Type;DDR5
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C40BB-16;Speed;5600
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C40BB-16;Multi-channel Package;Single-channel kiszerelés
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C40BB-16;Memory Latency;40
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C40BB-16;LED Lighting;No
+Corsair VENGEANCE 24GB DDR5 5200MHz CMSX24GX5M1A5200C44;Capacity;N/A
+Corsair VENGEANCE 24GB DDR5 5200MHz CMSX24GX5M1A5200C44;Package;N/A
+Corsair VENGEANCE 24GB DDR5 5200MHz CMSX24GX5M1A5200C44;Memory Type;N/A
+Corsair VENGEANCE 24GB DDR5 5200MHz CMSX24GX5M1A5200C44;Speed;N/A
+Corsair VENGEANCE 24GB DDR5 5200MHz CMSX24GX5M1A5200C44;Multi-channel Package;N/A
+Corsair VENGEANCE 24GB DDR5 5200MHz CMSX24GX5M1A5200C44;Memory Latency;N/A
+Corsair VENGEANCE 24GB DDR5 5200MHz CMSX24GX5M1A5200C44;LED Lighting;N/A
+G.SKILL Trident Z5 Neo RGB 32GB (2x16GB) DDR5 6000MHz F5-6000J3038F16GX2-TZ5NR;Capacity;32
+G.SKILL Trident Z5 Neo RGB 32GB (2x16GB) DDR5 6000MHz F5-6000J3038F16GX2-TZ5NR;Package;2x16GB
+G.SKILL Trident Z5 Neo RGB 32GB (2x16GB) DDR5 6000MHz F5-6000J3038F16GX2-TZ5NR;Memory Type;DDR5
+G.SKILL Trident Z5 Neo RGB 32GB (2x16GB) DDR5 6000MHz F5-6000J3038F16GX2-TZ5NR;Speed;6000
+G.SKILL Trident Z5 Neo RGB 32GB (2x16GB) DDR5 6000MHz F5-6000J3038F16GX2-TZ5NR;Multi-channel Package;Dual-channel kiszerelés
+G.SKILL Trident Z5 Neo RGB 32GB (2x16GB) DDR5 6000MHz F5-6000J3038F16GX2-TZ5NR;Memory Latency;30
+G.SKILL Trident Z5 Neo RGB 32GB (2x16GB) DDR5 6000MHz F5-6000J3038F16GX2-TZ5NR;LED Lighting;Yes
+Kingston FURY Beast 32GB (2x16GB) DDR5 5600MHz KF556C40BBK2-32;Capacity;32
+Kingston FURY Beast 32GB (2x16GB) DDR5 5600MHz KF556C40BBK2-32;Package;2x16GB
+Kingston FURY Beast 32GB (2x16GB) DDR5 5600MHz KF556C40BBK2-32;Memory Type;DDR5
+Kingston FURY Beast 32GB (2x16GB) DDR5 5600MHz KF556C40BBK2-32;Speed;5600
+Kingston FURY Beast 32GB (2x16GB) DDR5 5600MHz KF556C40BBK2-32;Multi-channel Package;Dual-channel kiszerelés
+Kingston FURY Beast 32GB (2x16GB) DDR5 5600MHz KF556C40BBK2-32;Memory Latency;40
+Kingston FURY Beast 32GB (2x16GB) DDR5 5600MHz KF556C40BBK2-32;LED Lighting;No
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C36BBE2AK2-32;Capacity;32
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C36BBE2AK2-32;Package;2x16GB
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C36BBE2AK2-32;Memory Type;DDR5
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C36BBE2AK2-32;Speed;6000
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C36BBE2AK2-32;Multi-channel Package;Dual-channel kiszerelés
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C36BBE2AK2-32;Memory Latency;36
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C36BBE2AK2-32;LED Lighting;Yes
 
-ASUS TUF B650-PLUS;Color;Black
-ASUS TUF B650-PLUS;Socket;AM5
-ASUS TUF B650-PLUS;Chipset;B650
-ASUS TUF B650-PLUS;Form Factor;ATX
-ASUS TUF B650-PLUS;Memory Slots;4
-ASUS TUF B650-PLUS;M.2 Slots;2
-ASUS TUF B650-PLUS;Max Memory;128
-ASUS TUF B650-PLUS;PCIe Slots;3
-ASUS TUF B650-PLUS;Memory Type;DDR5
-ASUS TUF B650-PLUS;Wireless Networking;Wi-Fi 6E
-ASUS TUF B650-PLUS;RAID Support;Yes
-MSI MAG Z790 TOMAHAWK WIFI;Color;Black
-MSI MAG Z790 TOMAHAWK WIFI;Socket;LGA1700
-MSI MAG Z790 TOMAHAWK WIFI;Chipset;Z790
-MSI MAG Z790 TOMAHAWK WIFI;Form Factor;ATX
-MSI MAG Z790 TOMAHAWK WIFI;Memory Slots;4
-MSI MAG Z790 TOMAHAWK WIFI;M.2 Slots;4
-MSI MAG Z790 TOMAHAWK WIFI;Max Memory;192
-MSI MAG Z790 TOMAHAWK WIFI;PCIe Slots;3
-MSI MAG Z790 TOMAHAWK WIFI;Memory Type;DDR5
-MSI MAG Z790 TOMAHAWK WIFI;Wireless Networking;Wi-Fi 6E
-MSI MAG Z790 TOMAHAWK WIFI;RAID Support;Yes
-Gigabyte B650I AX;Color;Black
-Gigabyte B650I AX;Socket;AM5
-Gigabyte B650I AX;Chipset;B650
-Gigabyte B650I AX;Form Factor;Mini-ITX
-Gigabyte B650I AX;Memory Slots;2
-Gigabyte B650I AX;M.2 Slots;2
-Gigabyte B650I AX;Max Memory;96
-Gigabyte B650I AX;PCIe Slots;1
-Gigabyte B650I AX;Memory Type;DDR5
-Gigabyte B650I AX;Wireless Networking;Wi-Fi 6E
-Gigabyte B650I AX;RAID Support;No
-ASRock X670E Taichi;Color;Black/Gold
-ASRock X670E Taichi;Socket;AM5
-ASRock X670E Taichi;Chipset;X670E
-ASRock X670E Taichi;Form Factor;E-ATX
-ASRock X670E Taichi;Memory Slots;4
-ASRock X670E Taichi;M.2 Slots;5
-ASRock X670E Taichi;Max Memory;192
-ASRock X670E Taichi;PCIe Slots;2
-ASRock X670E Taichi;Memory Type;DDR5
-ASRock X670E Taichi;Wireless Networking;Wi-Fi 7
-ASRock X670E Taichi;RAID Support;Yes
-MSI PRO Z890-P WIFI;Color;Black/Silver
-MSI PRO Z890-P WIFI;Socket;LGA1851
-MSI PRO Z890-P WIFI;Chipset;Z890
-MSI PRO Z890-P WIFI;Form Factor;ATX
-MSI PRO Z890-P WIFI;Memory Slots;4
-MSI PRO Z890-P WIFI;M.2 Slots;4
-MSI PRO Z890-P WIFI;Max Memory;256
-MSI PRO Z890-P WIFI;PCIe Slots;3
-MSI PRO Z890-P WIFI;Memory Type;DDR5
-MSI PRO Z890-P WIFI;Wireless Networking;Wi-Fi 7
-MSI PRO Z890-P WIFI;RAID Support;Yes
-ASUS ROG STRIX Z790-A GAMING WIFI II;Color;White
-ASUS ROG STRIX Z790-A GAMING WIFI II;Socket;LGA1700
-ASUS ROG STRIX Z790-A GAMING WIFI II;Chipset;Z790
-ASUS ROG STRIX Z790-A GAMING WIFI II;Form Factor;ATX
-ASUS ROG STRIX Z790-A GAMING WIFI II;Memory Slots;4
-ASUS ROG STRIX Z790-A GAMING WIFI II;M.2 Slots;5
-ASUS ROG STRIX Z790-A GAMING WIFI II;Max Memory;192
-ASUS ROG STRIX Z790-A GAMING WIFI II;Memory Type;DDR5
-ASUS ROG STRIX Z790-A GAMING WIFI II;Wireless Networking;Wi-Fi 7
-MSI MPG B650 EDGE WIFI;Color;White
-MSI MPG B650 EDGE WIFI;Socket;AM5
-MSI MPG B650 EDGE WIFI;Chipset;B650
-MSI MPG B650 EDGE WIFI;Form Factor;ATX
-MSI MPG B650 EDGE WIFI;Memory Slots;4
-MSI MPG B650 EDGE WIFI;M.2 Slots;3
-MSI MPG B650 EDGE WIFI;Max Memory;192
-MSI MPG B650 EDGE WIFI;Memory Type;DDR5
-MSI MPG B650 EDGE WIFI;Wireless Networking;Wi-Fi 6E
-Gigabyte X670E AORUS PRO X;Color;White
-Gigabyte X670E AORUS PRO X;Socket;AM5
-Gigabyte X670E AORUS PRO X;Chipset;X670E
-Gigabyte X670E AORUS PRO X;Form Factor;ATX
-Gigabyte X670E AORUS PRO X;Memory Slots;4
-Gigabyte X670E AORUS PRO X;M.2 Slots;4
-Gigabyte X670E AORUS PRO X;Max Memory;192
-Gigabyte X670E AORUS PRO X;Memory Type;DDR5
-Gigabyte X670E AORUS PRO X;Wireless Networking;Wi-Fi 7
-ASRock B550 Steel Legend;Color;White/Silver
-ASRock B550 Steel Legend;Socket;AM4
-ASRock B550 Steel Legend;Chipset;B550
-ASRock B550 Steel Legend;Form Factor;ATX
-ASRock B550 Steel Legend;Memory Slots;4
-ASRock B550 Steel Legend;M.2 Slots;2
-ASRock B550 Steel Legend;Max Memory;128
-ASRock B550 Steel Legend;Memory Type;DDR4
-ASRock B550 Steel Legend;Wireless Networking;No
-ASUS ROG CROSSHAIR X870E HERO;Color;Black
-ASUS ROG CROSSHAIR X870E HERO;Socket;AM5
-ASUS ROG CROSSHAIR X870E HERO;Chipset;X870E
-ASUS ROG CROSSHAIR X870E HERO;Form Factor;ATX
-ASUS ROG CROSSHAIR X870E HERO;Memory Slots;4
-ASUS ROG CROSSHAIR X870E HERO;M.2 Slots;5
-ASUS ROG CROSSHAIR X870E HERO;Max Memory;192
+MSI MPG B550 GAMING PLUS;Socket;Socket AM4
+MSI MPG B550 GAMING PLUS;Chipset;AMD B550
+MSI MPG B550 GAMING PLUS;CPU Manufacturer;AMD
+MSI MPG B550 GAMING PLUS;Memory Type;DDR4
+MSI MPG B550 GAMING PLUS;Memory Slots;4
+MSI MPG B550 GAMING PLUS;SATA 3 Ports;6
+MSI MPG B550 GAMING PLUS;M.2 Slots;2
+MSI MPG B550 GAMING PLUS;USB Ports;12
+MSI MPG B550 GAMING PLUS;Form Factor;ATX
+ASUS TUF Gaming A520M-PLUS II;Socket;Socket AM4
+ASUS TUF Gaming A520M-PLUS II;Chipset;AMD A520
+ASUS TUF Gaming A520M-PLUS II;CPU Manufacturer;AMD
+ASUS TUF Gaming A520M-PLUS II;Memory Type;DDR4
+ASUS TUF Gaming A520M-PLUS II;Memory Slots;4
+ASUS TUF Gaming A520M-PLUS II;SATA 3 Ports;4
+ASUS TUF Gaming A520M-PLUS II;M.2 Slots;1
+ASUS TUF Gaming A520M-PLUS II;USB Ports;9
+ASUS TUF Gaming A520M-PLUS II;Form Factor;microATX
+MSI PRO B760-P DDR4 II;Socket;Socket 1700
+MSI PRO B760-P DDR4 II;Chipset;Intel B760
+MSI PRO B760-P DDR4 II;CPU Manufacturer;Intel
+MSI PRO B760-P DDR4 II;Memory Type;DDR4
+MSI PRO B760-P DDR4 II;Memory Slots;4
+MSI PRO B760-P DDR4 II;SATA 3 Ports;4
+MSI PRO B760-P DDR4 II;M.2 Slots;2
+MSI PRO B760-P DDR4 II;USB Ports;5
+MSI PRO B760-P DDR4 II;Form Factor;ATX
+ASUS ROG STRIX B550-F GAMING;Socket;Socket AM4
+ASUS ROG STRIX B550-F GAMING;Chipset;AMD B550
+ASUS ROG STRIX B550-F GAMING;CPU Manufacturer;AMD
+ASUS ROG STRIX B550-F GAMING;Memory Type;DDR4
+ASUS ROG STRIX B550-F GAMING;Memory Slots;4
+ASUS ROG STRIX B550-F GAMING;SATA 3 Ports;6
+ASUS ROG STRIX B550-F GAMING;M.2 Slots;2
+ASUS ROG STRIX B550-F GAMING;USB Ports;9
+ASUS ROG STRIX B550-F GAMING;Form Factor;ATX
+MSI MAG B850 TOMAHAWK MAX WIFI;Socket;Socket AM5
+MSI MAG B850 TOMAHAWK MAX WIFI;Chipset;AMD B850
+MSI MAG B850 TOMAHAWK MAX WIFI;CPU Manufacturer;AMD
+MSI MAG B850 TOMAHAWK MAX WIFI;Memory Type;DDR5
+MSI MAG B850 TOMAHAWK MAX WIFI;Memory Slots;4
+MSI MAG B850 TOMAHAWK MAX WIFI;SATA 3 Ports;4
+MSI MAG B850 TOMAHAWK MAX WIFI;M.2 Slots;4
+MSI MAG B850 TOMAHAWK MAX WIFI;USB Ports;7
+MSI MAG B850 TOMAHAWK MAX WIFI;Form Factor;ATX
+MSI B550-A PRO;Socket;Socket AM4
+MSI B550-A PRO;Chipset;AMD B550
+MSI B550-A PRO;CPU Manufacturer;AMD
+MSI B550-A PRO;Memory Type;DDR4
+MSI B550-A PRO;Memory Slots;4
+MSI B550-A PRO;SATA 3 Ports;6
+MSI B550-A PRO;M.2 Slots;2
+MSI B550-A PRO;USB Ports;3
+MSI B550-A PRO;Form Factor;ATX
+GIGABYTE B650 EAGLE AX;Socket;Socket AM5
+GIGABYTE B650 EAGLE AX;Chipset;AMD B650
+GIGABYTE B650 EAGLE AX;CPU Manufacturer;AMD
+GIGABYTE B650 EAGLE AX;Memory Type;DDR5
+GIGABYTE B650 EAGLE AX;Memory Slots;4
+GIGABYTE B650 EAGLE AX;SATA 3 Ports;4
+GIGABYTE B650 EAGLE AX;M.2 Slots;3
+GIGABYTE B650 EAGLE AX;USB Ports;9
+GIGABYTE B650 EAGLE AX;Form Factor;ATX
+GIGABYTE B550M AORUS ELITE;Socket;Socket AM4
+GIGABYTE B550M AORUS ELITE;Chipset;AMD B550
+GIGABYTE B550M AORUS ELITE;CPU Manufacturer;AMD
+GIGABYTE B550M AORUS ELITE;Memory Type;DDR4
+GIGABYTE B550M AORUS ELITE;Memory Slots;4
+GIGABYTE B550M AORUS ELITE;SATA 3 Ports;4
+GIGABYTE B550M AORUS ELITE;M.2 Slots;1
+GIGABYTE B550M AORUS ELITE;USB Ports;8
+GIGABYTE B550M AORUS ELITE;Form Factor;microATX
+ASRock B450M-HDV R4.0;Socket;Socket AM4
+ASRock B450M-HDV R4.0;Chipset;AMD B450
+ASRock B450M-HDV R4.0;CPU Manufacturer;AMD
+ASRock B450M-HDV R4.0;Memory Type;DDR4
+ASRock B450M-HDV R4.0;Memory Slots;2
+ASRock B450M-HDV R4.0;SATA 3 Ports;4
+ASRock B450M-HDV R4.0;M.2 Slots;1
+ASRock B450M-HDV R4.0;USB Ports;6
+ASRock B450M-HDV R4.0;Form Factor;microATX
+GIGABYTE B760M DS3H DDR4;Socket;Socket 1700
+GIGABYTE B760M DS3H DDR4;Chipset;Intel B760
+GIGABYTE B760M DS3H DDR4;CPU Manufacturer;Intel
+GIGABYTE B760M DS3H DDR4;Memory Type;DDR4
+GIGABYTE B760M DS3H DDR4;Memory Slots;4
+GIGABYTE B760M DS3H DDR4;SATA 3 Ports;4
+GIGABYTE B760M DS3H DDR4;M.2 Slots;2
+GIGABYTE B760M DS3H DDR4;USB Ports;6
+GIGABYTE B760M DS3H DDR4;Form Factor;microATX
+MSI PRO B760M-B DDR4;Socket;Socket 1700
+MSI PRO B760M-B DDR4;Chipset;Intel B760
+MSI PRO B760M-B DDR4;CPU Manufacturer;Intel
+MSI PRO B760M-B DDR4;Memory Type;DDR4
+MSI PRO B760M-B DDR4;Memory Slots;2
+MSI PRO B760M-B DDR4;SATA 3 Ports;4
+MSI PRO B760M-B DDR4;M.2 Slots;1
+MSI PRO B760M-B DDR4;USB Ports;6
+MSI PRO B760M-B DDR4;Form Factor;microATX
+ASUS ROG STRIX B550-F GAMING WIFI II;Socket;Socket AM4
+ASUS ROG STRIX B550-F GAMING WIFI II;Chipset;AMD B550
+ASUS ROG STRIX B550-F GAMING WIFI II;CPU Manufacturer;AMD
+ASUS ROG STRIX B550-F GAMING WIFI II;Memory Type;DDR4
+ASUS ROG STRIX B550-F GAMING WIFI II;Memory Slots;4
+ASUS ROG STRIX B550-F GAMING WIFI II;SATA 3 Ports;6
+ASUS ROG STRIX B550-F GAMING WIFI II;M.2 Slots;2
+ASUS ROG STRIX B550-F GAMING WIFI II;USB Ports;9
+ASUS ROG STRIX B550-F GAMING WIFI II;Form Factor;ATX
+ASUS TUF Gaming B550-PLUS;Socket;Socket AM4
+ASUS TUF Gaming B550-PLUS;Chipset;AMD B550
+ASUS TUF Gaming B550-PLUS;CPU Manufacturer;AMD
+ASUS TUF Gaming B550-PLUS;Memory Type;DDR4
+ASUS TUF Gaming B550-PLUS;Memory Slots;4
+ASUS TUF Gaming B550-PLUS;SATA 3 Ports;6
+ASUS TUF Gaming B550-PLUS;M.2 Slots;2
+ASUS TUF Gaming B550-PLUS;USB Ports;2
+ASUS TUF Gaming B550-PLUS;Form Factor;ATX
+ASRock B550 Phantom Gaming 4;Socket;Socket AM4
+ASRock B550 Phantom Gaming 4;Chipset;AMD B550
+ASRock B550 Phantom Gaming 4;CPU Manufacturer;AMD
+ASRock B550 Phantom Gaming 4;Memory Type;DDR4
+ASRock B550 Phantom Gaming 4;Memory Slots;4
+ASRock B550 Phantom Gaming 4;SATA 3 Ports;6
+ASRock B550 Phantom Gaming 4;M.2 Slots;2
+ASRock B550 Phantom Gaming 4;USB Ports;6
+ASRock B550 Phantom Gaming 4;Form Factor;ATX
+ASUS ROG CROSSHAIR X870E HERO;Socket;Socket AM5
+ASUS ROG CROSSHAIR X870E HERO;Chipset;AMD X870E
+ASUS ROG CROSSHAIR X870E HERO;CPU Manufacturer;AMD
 ASUS ROG CROSSHAIR X870E HERO;Memory Type;DDR5
-ASUS ROG CROSSHAIR X870E HERO;Wireless Networking;Wi-Fi 7
-MSI MAG B550 TOMAHAWK;Color;Black
-MSI MAG B550 TOMAHAWK;Socket;AM4
-MSI MAG B550 TOMAHAWK;Chipset;B550
-MSI MAG B550 TOMAHAWK;Form Factor;ATX
-MSI MAG B550 TOMAHAWK;Memory Slots;4
-MSI MAG B550 TOMAHAWK;M.2 Slots;2
-MSI MAG B550 TOMAHAWK;Max Memory;128
-MSI MAG B550 TOMAHAWK;Memory Type;DDR4
-MSI MAG B550 TOMAHAWK;Wireless Networking;No
-Gigabyte Z790 D AC;Color;Black
-Gigabyte Z790 D AC;Socket;LGA1700
-Gigabyte Z790 D AC;Chipset;Z790
-Gigabyte Z790 D AC;Form Factor;ATX
-Gigabyte Z790 D AC;Memory Slots;4
-Gigabyte Z790 D AC;M.2 Slots;3
-Gigabyte Z790 D AC;Max Memory;192
-Gigabyte Z790 D AC;Memory Type;DDR5
-Gigabyte Z790 D AC;Wireless Networking;Wi-Fi 5
-ASUS Prime Z890-A WiFi;Color;White/Silver
-ASUS Prime Z890-A WiFi;Socket;LGA1851
-ASUS Prime Z890-A WiFi;Chipset;Z890
-ASUS Prime Z890-A WiFi;Form Factor;ATX
-ASUS Prime Z890-A WiFi;Memory Slots;4
-ASUS Prime Z890-A WiFi;M.2 Slots;4
-ASUS Prime Z890-A WiFi;Max Memory;256
-ASUS Prime Z890-A WiFi;Memory Type;DDR5
-ASUS Prime Z890-A WiFi;Wireless Networking;Wi-Fi 7
-NZXT N7 B650E;Color;White
-NZXT N7 B650E;Socket;AM5
-NZXT N7 B650E;Chipset;B650E
-NZXT N7 B650E;Form Factor;ATX
-NZXT N7 B650E;Memory Slots;4
-NZXT N7 B650E;M.2 Slots;3
-NZXT N7 B650E;Max Memory;128
-NZXT N7 B650E;Memory Type;DDR5
-NZXT N7 B650E;Wireless Networking;Wi-Fi 6E
+ASUS ROG CROSSHAIR X870E HERO;Memory Slots;4
+ASUS ROG CROSSHAIR X870E HERO;SATA 3 Ports;4
+ASUS ROG CROSSHAIR X870E HERO;M.2 Slots;5
+ASUS ROG CROSSHAIR X870E HERO;USB Ports;10
+ASUS ROG CROSSHAIR X870E HERO;Form Factor;ATX
+ASUS ROG STRIX B650E-F GAMING WIFI;Socket;Socket AM5
+ASUS ROG STRIX B650E-F GAMING WIFI;Chipset;AMD B650
+ASUS ROG STRIX B650E-F GAMING WIFI;CPU Manufacturer;AMD
+ASUS ROG STRIX B650E-F GAMING WIFI;Memory Type;DDR5
+ASUS ROG STRIX B650E-F GAMING WIFI;Memory Slots;4
+ASUS ROG STRIX B650E-F GAMING WIFI;SATA 3 Ports;4
+ASUS ROG STRIX B650E-F GAMING WIFI;M.2 Slots;3
+ASUS ROG STRIX B650E-F GAMING WIFI;USB Ports;12
+ASUS ROG STRIX B650E-F GAMING WIFI;Form Factor;ATX
+MSI MAG B650 Tomahawk WIFI;Socket;Socket AM5
+MSI MAG B650 Tomahawk WIFI;Chipset;AMD B650
+MSI MAG B650 Tomahawk WIFI;CPU Manufacturer;AMD
+MSI MAG B650 Tomahawk WIFI;Memory Type;DDR5
+MSI MAG B650 Tomahawk WIFI;Memory Slots;4
+MSI MAG B650 Tomahawk WIFI;SATA 3 Ports;3
+MSI MAG B650 Tomahawk WIFI;M.2 Slots;3
+MSI MAG B650 Tomahawk WIFI;USB Ports;17
+MSI MAG B650 Tomahawk WIFI;Form Factor;ATX
+ASUS TUF Gaming B550M-PLUS;Socket;Socket AM4
+ASUS TUF Gaming B550M-PLUS;Chipset;AMD B550
+ASUS TUF Gaming B550M-PLUS;CPU Manufacturer;AMD
+ASUS TUF Gaming B550M-PLUS;Memory Type;DDR4
+ASUS TUF Gaming B550M-PLUS;Memory Slots;4
+ASUS TUF Gaming B550M-PLUS;SATA 3 Ports;4
+ASUS TUF Gaming B550M-PLUS;M.2 Slots;2
+ASUS TUF Gaming B550M-PLUS;USB Ports;14
+ASUS TUF Gaming B550M-PLUS;Form Factor;microATX
+irány a bolt - pcland.hu;Socket;N/A
+irány a bolt - pcland.hu;Chipset;N/A
+irány a bolt - pcland.hu;CPU Manufacturer;N/A
+irány a bolt - pcland.hu;Memory Type;N/A
+irány a bolt - pcland.hu;Memory Slots;N/A
+irány a bolt - pcland.hu;SATA 3 Ports;N/A
+irány a bolt - pcland.hu;M.2 Slots;N/A
+irány a bolt - pcland.hu;USB Ports;N/A
+irány a bolt - pcland.hu;Form Factor;N/A
+ASUS ROG Strix B850-F GAMING WIFI (90MB1J70-M0EAY0);Socket;Socket AM5
+ASUS ROG Strix B850-F GAMING WIFI (90MB1J70-M0EAY0);Chipset;AMD B850
+ASUS ROG Strix B850-F GAMING WIFI (90MB1J70-M0EAY0);CPU Manufacturer;AMD
+ASUS ROG Strix B850-F GAMING WIFI (90MB1J70-M0EAY0);Memory Type;DDR5
+ASUS ROG Strix B850-F GAMING WIFI (90MB1J70-M0EAY0);Memory Slots;4
+ASUS ROG Strix B850-F GAMING WIFI (90MB1J70-M0EAY0);SATA 3 Ports;2
+ASUS ROG Strix B850-F GAMING WIFI (90MB1J70-M0EAY0);M.2 Slots;4
+ASUS ROG Strix B850-F GAMING WIFI (90MB1J70-M0EAY0);USB Ports;8
+ASUS ROG Strix B850-F GAMING WIFI (90MB1J70-M0EAY0);Form Factor;ATX
 
-NVIDIA GeForce RTX 4070;Color;Black
-NVIDIA GeForce RTX 4070;VRAM;12
-NVIDIA GeForce RTX 4070;Core Clock;1920
-NVIDIA GeForce RTX 4070;Boost Clock;2480
-NVIDIA GeForce RTX 4070;Memory Clock;21000
-NVIDIA GeForce RTX 4070;CUDA Cores;5888
-NVIDIA GeForce RTX 4070;DirectX Version;12
-NVIDIA GeForce RTX 4070;Thermal Design Power (TDP);200
-NVIDIA GeForce RTX 4070;Length;244
-NVIDIA GeForce RTX 4070;Cooling Fans;2
-AMD Radeon RX 8800 XT;Color;Black
-AMD Radeon RX 8800 XT;VRAM;16
-AMD Radeon RX 8800 XT;Core Clock;2200
-AMD Radeon RX 8800 XT;Boost Clock;2550
-AMD Radeon RX 8800 XT;Memory Clock;20000
-AMD Radeon RX 8800 XT;Stream Processors;4096
-AMD Radeon RX 8800 XT;DirectX Version;12
-AMD Radeon RX 8800 XT;Thermal Design Power (TDP);220
-AMD Radeon RX 8800 XT;Length;267
-AMD Radeon RX 8800 XT;Cooling Fans;3
-AMD Radeon RX 7900 XTX;Color;Black
-AMD Radeon RX 7900 XTX;VRAM;24
-AMD Radeon RX 7900 XTX;Core Clock;1900
-AMD Radeon RX 7900 XTX;Boost Clock;2500
-AMD Radeon RX 7900 XTX;Memory Clock;20000
-AMD Radeon RX 7900 XTX;Stream Processors;6144
-AMD Radeon RX 7900 XTX;DirectX Version;12
-AMD Radeon RX 7900 XTX;Thermal Design Power (TDP);355
-AMD Radeon RX 7900 XTX;Length;287
-AMD Radeon RX 7900 XTX;Cooling Fans;3
-NVIDIA GeForce RTX 5080;Color;Black/Silver
-NVIDIA GeForce RTX 5080;VRAM;16
-NVIDIA GeForce RTX 5080;Core Clock;2295
-NVIDIA GeForce RTX 5080;Boost Clock;2617
-NVIDIA GeForce RTX 5080;Memory Clock;30000
-NVIDIA GeForce RTX 5080;CUDA Cores;10752
-NVIDIA GeForce RTX 5080;DirectX Version;12
-NVIDIA GeForce RTX 5080;Thermal Design Power (TDP);360
-NVIDIA GeForce RTX 5080;Length;304
-NVIDIA GeForce RTX 5080;Cooling Fans;3
-AMD Radeon RX 8700 XT;Color;Black
-AMD Radeon RX 8700 XT;VRAM;12
-AMD Radeon RX 8700 XT;Core Clock;2100
-AMD Radeon RX 8700 XT;Boost Clock;2450
-AMD Radeon RX 8700 XT;Memory Clock;19000
-AMD Radeon RX 8700 XT;Stream Processors;3584
-AMD Radeon RX 8700 XT;DirectX Version;12
-AMD Radeon RX 8700 XT;Thermal Design Power (TDP);190
-AMD Radeon RX 8700 XT;Length;240
-AMD Radeon RX 8700 XT;Cooling Fans;2
-NVIDIA GeForce RTX 4070 Ti Super;Color;White
-NVIDIA GeForce RTX 4070 Ti Super;VRAM;16
-NVIDIA GeForce RTX 4070 Ti Super;Core Clock;2340
-NVIDIA GeForce RTX 4070 Ti Super;Boost Clock;2610
-NVIDIA GeForce RTX 4070 Ti Super;Memory Clock;21000
-NVIDIA GeForce RTX 4070 Ti Super;CUDA Cores;8448
-NVIDIA GeForce RTX 4070 Ti Super;Thermal Design Power (TDP);285
-NVIDIA GeForce RTX 4070 Ti Super;Length;300
-NVIDIA GeForce RTX 4070 Ti Super;Cooling Fans;3
-NVIDIA GeForce RTX 4080 Super;Color;Black
-NVIDIA GeForce RTX 4080 Super;VRAM;16
-NVIDIA GeForce RTX 4080 Super;Core Clock;2295
-NVIDIA GeForce RTX 4080 Super;Boost Clock;2550
-NVIDIA GeForce RTX 4080 Super;CUDA Cores;10240
-NVIDIA GeForce RTX 4080 Super;Thermal Design Power (TDP);320
-NVIDIA GeForce RTX 4080 Super;Length;310
-NVIDIA GeForce RTX 4080 Super;Cooling Fans;3
-NVIDIA GeForce RTX 4090;Color;White
-NVIDIA GeForce RTX 4090;VRAM;24
-NVIDIA GeForce RTX 4090;Core Clock;2230
-NVIDIA GeForce RTX 4090;Boost Clock;2520
-NVIDIA GeForce RTX 4090;CUDA Cores;16384
-NVIDIA GeForce RTX 4090;Thermal Design Power (TDP);450
-NVIDIA GeForce RTX 4090;Length;336
-NVIDIA GeForce RTX 4090;Cooling Fans;3
-NVIDIA GeForce RTX 4060 Ti;Color;White
-NVIDIA GeForce RTX 4060 Ti;VRAM;16
-NVIDIA GeForce RTX 4060 Ti;Core Clock;2310
-NVIDIA GeForce RTX 4060 Ti;Boost Clock;2535
-NVIDIA GeForce RTX 4060 Ti;CUDA Cores;4352
-NVIDIA GeForce RTX 4060 Ti;Thermal Design Power (TDP);165
-NVIDIA GeForce RTX 4060 Ti;Length;240
-NVIDIA GeForce RTX 4060 Ti;Cooling Fans;2
-AMD Radeon RX 7900 GRE;Color;White
-AMD Radeon RX 7900 GRE;VRAM;16
-AMD Radeon RX 7900 GRE;Core Clock;1880
-AMD Radeon RX 7900 GRE;Boost Clock;2245
-AMD Radeon RX 7900 GRE;Stream Processors;5120
-AMD Radeon RX 7900 GRE;Thermal Design Power (TDP);260
-AMD Radeon RX 7900 GRE;Length;280
-AMD Radeon RX 7900 GRE;Cooling Fans;3
-AMD Radeon RX 7800 XT;Color;Black
-AMD Radeon RX 7800 XT;VRAM;16
-AMD Radeon RX 7800 XT;Core Clock;2124
-AMD Radeon RX 7800 XT;Boost Clock;2430
-AMD Radeon RX 7800 XT;Stream Processors;3840
-AMD Radeon RX 7800 XT;Thermal Design Power (TDP);263
-AMD Radeon RX 7800 XT;Length;267
-AMD Radeon RX 7800 XT;Cooling Fans;2
-NVIDIA GeForce RTX 5090;Color;Black/Gold
-NVIDIA GeForce RTX 5090;VRAM;32
-NVIDIA GeForce RTX 5090;Core Clock;2400
-NVIDIA GeForce RTX 5090;Boost Clock;2800
-NVIDIA GeForce RTX 5090;CUDA Cores;21760
-NVIDIA GeForce RTX 5090;Thermal Design Power (TDP);500
-NVIDIA GeForce RTX 5090;Length;350
-NVIDIA GeForce RTX 5090;Cooling Fans;3
-AMD Radeon RX 7600 XT;Color;Black
-AMD Radeon RX 7600 XT;VRAM;16
-AMD Radeon RX 7600 XT;Core Clock;2470
-AMD Radeon RX 7600 XT;Boost Clock;2755
-AMD Radeon RX 7600 XT;Stream Processors;2048
-AMD Radeon RX 7600 XT;Thermal Design Power (TDP);190
-AMD Radeon RX 7600 XT;Length;241
-AMD Radeon RX 7600 XT;Cooling Fans;2
+ASUS GeForce RTX 5070 PRIME OC 12GB GDDR7 192bit (PRIME-RTX5070-O12G);PCIe Generation;5.0
+ASUS GeForce RTX 5070 PRIME OC 12GB GDDR7 192bit (PRIME-RTX5070-O12G);Cooling Fans;3
+ASUS GeForce RTX 5070 PRIME OC 12GB GDDR7 192bit (PRIME-RTX5070-O12G);Core Clock;2587
+ASUS GeForce RTX 5070 PRIME OC 12GB GDDR7 192bit (PRIME-RTX5070-O12G);Memory Clock;28000
+ASUS GeForce RTX 5070 PRIME OC 12GB GDDR7 192bit (PRIME-RTX5070-O12G);VRAM;12
+ASUS GeForce RTX 5070 PRIME OC 12GB GDDR7 192bit (PRIME-RTX5070-O12G);Memory Type;GDDR7
+ASUS GeForce RTX 5070 PRIME OC 12GB GDDR7 192bit (PRIME-RTX5070-O12G);Memory Bus;192 bit
+ASUS GeForce RTX 5070 PRIME OC 12GB GDDR7 192bit (PRIME-RTX5070-O12G);Max Resolution;7680 x 4320 pixel
+ASUS GeForce RTX 5070 PRIME OC 12GB GDDR7 192bit (PRIME-RTX5070-O12G);Recommended PSU;750 W
+ASUS GeForce RTX 5070 PRIME OC 12GB GDDR7 192bit (PRIME-RTX5070-O12G);HDMI Ports;1 db
+ASUS GeForce RTX 5070 PRIME OC 12GB GDDR7 192bit (PRIME-RTX5070-O12G);DisplayPort Ports;3 db
+GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N507TWF3OC-16GD);PCIe Generation;5.0
+GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N507TWF3OC-16GD);Cooling Fans;3
+GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N507TWF3OC-16GD);Core Clock;2497
+GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N507TWF3OC-16GD);Memory Clock;28000
+GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N507TWF3OC-16GD);VRAM;16
+GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N507TWF3OC-16GD);Memory Type;GDDR7
+GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N507TWF3OC-16GD);Memory Bus;256 bit
+GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N507TWF3OC-16GD);Max Resolution;7680 x 4320 pixel
+GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N507TWF3OC-16GD);Recommended PSU;750 W
+GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N507TWF3OC-16GD);HDMI Ports;1 db
+GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N507TWF3OC-16GD);DisplayPort Ports;3 db
+SAPPHIRE Radeon RX 9060 XT Pulse OC 16GB GDDR6 128bit (11350-03-20G);PCIe Generation;5.0
+SAPPHIRE Radeon RX 9060 XT Pulse OC 16GB GDDR6 128bit (11350-03-20G);Cooling Fans;2
+SAPPHIRE Radeon RX 9060 XT Pulse OC 16GB GDDR6 128bit (11350-03-20G);Core Clock;3290
+SAPPHIRE Radeon RX 9060 XT Pulse OC 16GB GDDR6 128bit (11350-03-20G);Memory Clock;20000
+SAPPHIRE Radeon RX 9060 XT Pulse OC 16GB GDDR6 128bit (11350-03-20G);VRAM;16
+SAPPHIRE Radeon RX 9060 XT Pulse OC 16GB GDDR6 128bit (11350-03-20G);Memory Type;GDDR6
+SAPPHIRE Radeon RX 9060 XT Pulse OC 16GB GDDR6 128bit (11350-03-20G);Memory Bus;128 bit
+SAPPHIRE Radeon RX 9060 XT Pulse OC 16GB GDDR6 128bit (11350-03-20G);Max Resolution;7680 x 4320 pixel
+SAPPHIRE Radeon RX 9060 XT Pulse OC 16GB GDDR6 128bit (11350-03-20G);Recommended PSU;450 W
+SAPPHIRE Radeon RX 9060 XT Pulse OC 16GB GDDR6 128bit (11350-03-20G);HDMI Ports;2 db
+SAPPHIRE Radeon RX 9060 XT Pulse OC 16GB GDDR6 128bit (11350-03-20G);DisplayPort Ports;1 db
+XFX Radeon RX 9070 XT Swift Triple Fan Gaming Edition 16GB GDDR6 256bit (RX-97TSWF3B9);PCIe Generation;5.0
+XFX Radeon RX 9070 XT Swift Triple Fan Gaming Edition 16GB GDDR6 256bit (RX-97TSWF3B9);Cooling Fans;3
+XFX Radeon RX 9070 XT Swift Triple Fan Gaming Edition 16GB GDDR6 256bit (RX-97TSWF3B9);Core Clock;2970
+XFX Radeon RX 9070 XT Swift Triple Fan Gaming Edition 16GB GDDR6 256bit (RX-97TSWF3B9);Memory Clock;20000
+XFX Radeon RX 9070 XT Swift Triple Fan Gaming Edition 16GB GDDR6 256bit (RX-97TSWF3B9);VRAM;16
+XFX Radeon RX 9070 XT Swift Triple Fan Gaming Edition 16GB GDDR6 256bit (RX-97TSWF3B9);Memory Type;GDDR6
+XFX Radeon RX 9070 XT Swift Triple Fan Gaming Edition 16GB GDDR6 256bit (RX-97TSWF3B9);Memory Bus;256 bit
+XFX Radeon RX 9070 XT Swift Triple Fan Gaming Edition 16GB GDDR6 256bit (RX-97TSWF3B9);Max Resolution;7680 x 4320 pixel
+XFX Radeon RX 9070 XT Swift Triple Fan Gaming Edition 16GB GDDR6 256bit (RX-97TSWF3B9);Recommended PSU;800 W
+XFX Radeon RX 9070 XT Swift Triple Fan Gaming Edition 16GB GDDR6 256bit (RX-97TSWF3B9);HDMI Ports;1 db
+XFX Radeon RX 9070 XT Swift Triple Fan Gaming Edition 16GB GDDR6 256bit (RX-97TSWF3B9);DisplayPort Ports;3 db
+ASUS GeForce RTX 5060 Ti Dual OC 16GB GDDR7 128bit (DUAL-RTX5060TI-O16G/90YV0MH0-M0NA00);PCIe Generation;5.0
+ASUS GeForce RTX 5060 Ti Dual OC 16GB GDDR7 128bit (DUAL-RTX5060TI-O16G/90YV0MH0-M0NA00);Cooling Fans;2
+ASUS GeForce RTX 5060 Ti Dual OC 16GB GDDR7 128bit (DUAL-RTX5060TI-O16G/90YV0MH0-M0NA00);Core Clock;2632
+ASUS GeForce RTX 5060 Ti Dual OC 16GB GDDR7 128bit (DUAL-RTX5060TI-O16G/90YV0MH0-M0NA00);Memory Clock;28000
+ASUS GeForce RTX 5060 Ti Dual OC 16GB GDDR7 128bit (DUAL-RTX5060TI-O16G/90YV0MH0-M0NA00);VRAM;16
+ASUS GeForce RTX 5060 Ti Dual OC 16GB GDDR7 128bit (DUAL-RTX5060TI-O16G/90YV0MH0-M0NA00);Memory Type;GDDR7
+ASUS GeForce RTX 5060 Ti Dual OC 16GB GDDR7 128bit (DUAL-RTX5060TI-O16G/90YV0MH0-M0NA00);Memory Bus;128 bit
+ASUS GeForce RTX 5060 Ti Dual OC 16GB GDDR7 128bit (DUAL-RTX5060TI-O16G/90YV0MH0-M0NA00);Max Resolution;7680 x 4320 pixel
+ASUS GeForce RTX 5060 Ti Dual OC 16GB GDDR7 128bit (DUAL-RTX5060TI-O16G/90YV0MH0-M0NA00);Recommended PSU;550 W
+ASUS GeForce RTX 5060 Ti Dual OC 16GB GDDR7 128bit (DUAL-RTX5060TI-O16G/90YV0MH0-M0NA00);HDMI Ports;1 db
+ASUS GeForce RTX 5060 Ti Dual OC 16GB GDDR7 128bit (DUAL-RTX5060TI-O16G/90YV0MH0-M0NA00);DisplayPort Ports;3 db
+ASUS GeForce RTX 5060 Dual OC 8GB GDDR7 128bit (DUAL-RTX5060-O8G/90YV0N12-M0NA00);PCIe Generation;5.0
+ASUS GeForce RTX 5060 Dual OC 8GB GDDR7 128bit (DUAL-RTX5060-O8G/90YV0N12-M0NA00);Cooling Fans;2
+ASUS GeForce RTX 5060 Dual OC 8GB GDDR7 128bit (DUAL-RTX5060-O8G/90YV0N12-M0NA00);Core Clock;2565
+ASUS GeForce RTX 5060 Dual OC 8GB GDDR7 128bit (DUAL-RTX5060-O8G/90YV0N12-M0NA00);Memory Clock;28000
+ASUS GeForce RTX 5060 Dual OC 8GB GDDR7 128bit (DUAL-RTX5060-O8G/90YV0N12-M0NA00);VRAM;8
+ASUS GeForce RTX 5060 Dual OC 8GB GDDR7 128bit (DUAL-RTX5060-O8G/90YV0N12-M0NA00);Memory Type;GDDR7
+ASUS GeForce RTX 5060 Dual OC 8GB GDDR7 128bit (DUAL-RTX5060-O8G/90YV0N12-M0NA00);Memory Bus;128 bit
+ASUS GeForce RTX 5060 Dual OC 8GB GDDR7 128bit (DUAL-RTX5060-O8G/90YV0N12-M0NA00);Max Resolution;7680 x 4320 pixel
+ASUS GeForce RTX 5060 Dual OC 8GB GDDR7 128bit (DUAL-RTX5060-O8G/90YV0N12-M0NA00);Recommended PSU;550 W
+ASUS GeForce RTX 5060 Dual OC 8GB GDDR7 128bit (DUAL-RTX5060-O8G/90YV0N12-M0NA00);HDMI Ports;1 db
+ASUS GeForce RTX 5060 Dual OC 8GB GDDR7 128bit (DUAL-RTX5060-O8G/90YV0N12-M0NA00);DisplayPort Ports;3 db
+GIGABYTE RADEON RX 9060 XT GAMING OC 16GB GDDR6 128bit (GV-R9060XTGAMING OC-16GD);PCIe Generation;5.0
+GIGABYTE RADEON RX 9060 XT GAMING OC 16GB GDDR6 128bit (GV-R9060XTGAMING OC-16GD);Cooling Fans;3
+GIGABYTE RADEON RX 9060 XT GAMING OC 16GB GDDR6 128bit (GV-R9060XTGAMING OC-16GD);Core Clock;3320
+GIGABYTE RADEON RX 9060 XT GAMING OC 16GB GDDR6 128bit (GV-R9060XTGAMING OC-16GD);Memory Clock;20000
+GIGABYTE RADEON RX 9060 XT GAMING OC 16GB GDDR6 128bit (GV-R9060XTGAMING OC-16GD);VRAM;16
+GIGABYTE RADEON RX 9060 XT GAMING OC 16GB GDDR6 128bit (GV-R9060XTGAMING OC-16GD);Memory Type;GDDR6
+GIGABYTE RADEON RX 9060 XT GAMING OC 16GB GDDR6 128bit (GV-R9060XTGAMING OC-16GD);Memory Bus;128 bit
+GIGABYTE RADEON RX 9060 XT GAMING OC 16GB GDDR6 128bit (GV-R9060XTGAMING OC-16GD);Max Resolution;7680 x 4320 pixel
+GIGABYTE RADEON RX 9060 XT GAMING OC 16GB GDDR6 128bit (GV-R9060XTGAMING OC-16GD);Recommended PSU;450 W
+GIGABYTE RADEON RX 9060 XT GAMING OC 16GB GDDR6 128bit (GV-R9060XTGAMING OC-16GD);HDMI Ports;1 db
+GIGABYTE RADEON RX 9060 XT GAMING OC 16GB GDDR6 128bit (GV-R9060XTGAMING OC-16GD);DisplayPort Ports;2 db
+ASUS GeForce RTX 5090 ROG ASTRAL OC 32GB GDDR7 512bit (ROG-ASTRAL-RTX5090-O32G-GAMING/90YV0LW0-M0NA00);PCIe Generation;5.0
+ASUS GeForce RTX 5090 ROG ASTRAL OC 32GB GDDR7 512bit (ROG-ASTRAL-RTX5090-O32G-GAMING/90YV0LW0-M0NA00);Cooling Fans;4
+ASUS GeForce RTX 5090 ROG ASTRAL OC 32GB GDDR7 512bit (ROG-ASTRAL-RTX5090-O32G-GAMING/90YV0LW0-M0NA00);Core Clock;2610
+ASUS GeForce RTX 5090 ROG ASTRAL OC 32GB GDDR7 512bit (ROG-ASTRAL-RTX5090-O32G-GAMING/90YV0LW0-M0NA00);Memory Clock;28000
+ASUS GeForce RTX 5090 ROG ASTRAL OC 32GB GDDR7 512bit (ROG-ASTRAL-RTX5090-O32G-GAMING/90YV0LW0-M0NA00);VRAM;32
+ASUS GeForce RTX 5090 ROG ASTRAL OC 32GB GDDR7 512bit (ROG-ASTRAL-RTX5090-O32G-GAMING/90YV0LW0-M0NA00);Memory Type;GDDR7
+ASUS GeForce RTX 5090 ROG ASTRAL OC 32GB GDDR7 512bit (ROG-ASTRAL-RTX5090-O32G-GAMING/90YV0LW0-M0NA00);Memory Bus;512 bit
+ASUS GeForce RTX 5090 ROG ASTRAL OC 32GB GDDR7 512bit (ROG-ASTRAL-RTX5090-O32G-GAMING/90YV0LW0-M0NA00);Max Resolution;7680 x 4320 pixel
+ASUS GeForce RTX 5090 ROG ASTRAL OC 32GB GDDR7 512bit (ROG-ASTRAL-RTX5090-O32G-GAMING/90YV0LW0-M0NA00);Recommended PSU;1000 W
+ASUS GeForce RTX 5090 ROG ASTRAL OC 32GB GDDR7 512bit (ROG-ASTRAL-RTX5090-O32G-GAMING/90YV0LW0-M0NA00);HDMI Ports;2 db
+ASUS GeForce RTX 5090 ROG ASTRAL OC 32GB GDDR7 512bit (ROG-ASTRAL-RTX5090-O32G-GAMING/90YV0LW0-M0NA00);DisplayPort Ports;3 db
+MSI GeForce RTX 5070 VENTUS 2X OC 12GB GDDR7 192bit (GeForce RTX 5070 12G VENTUS 2X OC);PCIe Generation;5.0
+MSI GeForce RTX 5070 VENTUS 2X OC 12GB GDDR7 192bit (GeForce RTX 5070 12G VENTUS 2X OC);Cooling Fans;2
+MSI GeForce RTX 5070 VENTUS 2X OC 12GB GDDR7 192bit (GeForce RTX 5070 12G VENTUS 2X OC);Core Clock;2557
+MSI GeForce RTX 5070 VENTUS 2X OC 12GB GDDR7 192bit (GeForce RTX 5070 12G VENTUS 2X OC);Memory Clock;28000
+MSI GeForce RTX 5070 VENTUS 2X OC 12GB GDDR7 192bit (GeForce RTX 5070 12G VENTUS 2X OC);VRAM;12
+MSI GeForce RTX 5070 VENTUS 2X OC 12GB GDDR7 192bit (GeForce RTX 5070 12G VENTUS 2X OC);Memory Type;GDDR7
+MSI GeForce RTX 5070 VENTUS 2X OC 12GB GDDR7 192bit (GeForce RTX 5070 12G VENTUS 2X OC);Memory Bus;192 bit
+MSI GeForce RTX 5070 VENTUS 2X OC 12GB GDDR7 192bit (GeForce RTX 5070 12G VENTUS 2X OC);Max Resolution;7680 x 4320 pixel
+MSI GeForce RTX 5070 VENTUS 2X OC 12GB GDDR7 192bit (GeForce RTX 5070 12G VENTUS 2X OC);Recommended PSU;650 W
+MSI GeForce RTX 5070 VENTUS 2X OC 12GB GDDR7 192bit (GeForce RTX 5070 12G VENTUS 2X OC);HDMI Ports;1 db
+MSI GeForce RTX 5070 VENTUS 2X OC 12GB GDDR7 192bit (GeForce RTX 5070 12G VENTUS 2X OC);DisplayPort Ports;3 db
+SAPPHIRE Radeon RX 9070 XT NITRO+ 16GB GDDR6 256bit (11348-01-20G);PCIe Generation;5.0
+SAPPHIRE Radeon RX 9070 XT NITRO+ 16GB GDDR6 256bit (11348-01-20G);Cooling Fans;3
+SAPPHIRE Radeon RX 9070 XT NITRO+ 16GB GDDR6 256bit (11348-01-20G);Core Clock;3060
+SAPPHIRE Radeon RX 9070 XT NITRO+ 16GB GDDR6 256bit (11348-01-20G);Memory Clock;20000
+SAPPHIRE Radeon RX 9070 XT NITRO+ 16GB GDDR6 256bit (11348-01-20G);VRAM;16
+SAPPHIRE Radeon RX 9070 XT NITRO+ 16GB GDDR6 256bit (11348-01-20G);Memory Type;GDDR6
+SAPPHIRE Radeon RX 9070 XT NITRO+ 16GB GDDR6 256bit (11348-01-20G);Memory Bus;256 bit
+SAPPHIRE Radeon RX 9070 XT NITRO+ 16GB GDDR6 256bit (11348-01-20G);Max Resolution;7680 x 4320 pixel
+SAPPHIRE Radeon RX 9070 XT NITRO+ 16GB GDDR6 256bit (11348-01-20G);Recommended PSU;750 W
+SAPPHIRE Radeon RX 9070 XT NITRO+ 16GB GDDR6 256bit (11348-01-20G);HDMI Ports;2 db
+SAPPHIRE Radeon RX 9070 XT NITRO+ 16GB GDDR6 256bit (11348-01-20G);DisplayPort Ports;2 db
+ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (TUF-RTX5070TI-O16G-GAMING);PCIe Generation;5.0
+ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (TUF-RTX5070TI-O16G-GAMING);Cooling Fans;3
+ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (TUF-RTX5070TI-O16G-GAMING);Core Clock;2610
+ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (TUF-RTX5070TI-O16G-GAMING);Memory Clock;28000
+ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (TUF-RTX5070TI-O16G-GAMING);VRAM;16
+ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (TUF-RTX5070TI-O16G-GAMING);Memory Type;GDDR7
+ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (TUF-RTX5070TI-O16G-GAMING);Memory Bus;256 bit
+ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (TUF-RTX5070TI-O16G-GAMING);Max Resolution;7680 x 4320 pixel
+ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (TUF-RTX5070TI-O16G-GAMING);Recommended PSU;850 W
+ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (TUF-RTX5070TI-O16G-GAMING);HDMI Ports;2 db
+ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (TUF-RTX5070TI-O16G-GAMING);DisplayPort Ports;3 db
+Intel Arc B580 Limited Edition (31P06HB0BA);PCIe Generation;4.0
+Intel Arc B580 Limited Edition (31P06HB0BA);Cooling Fans;2
+Intel Arc B580 Limited Edition (31P06HB0BA);Core Clock;2670
+Intel Arc B580 Limited Edition (31P06HB0BA);Memory Clock;19000
+Intel Arc B580 Limited Edition (31P06HB0BA);VRAM;12
+Intel Arc B580 Limited Edition (31P06HB0BA);Memory Type;GDDR6
+Intel Arc B580 Limited Edition (31P06HB0BA);Memory Bus;192 bit
+Intel Arc B580 Limited Edition (31P06HB0BA);Max Resolution;7680 x 4320 pixel
+Intel Arc B580 Limited Edition (31P06HB0BA);Recommended PSU;600 W
+Intel Arc B580 Limited Edition (31P06HB0BA);HDMI Ports;1 db
+Intel Arc B580 Limited Edition (31P06HB0BA);DisplayPort Ports;3 db
+GIGABYTE GeForce RTX 5080 WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N5080WF3OC-16GD);PCIe Generation;5.0
+GIGABYTE GeForce RTX 5080 WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N5080WF3OC-16GD);Cooling Fans;3
+GIGABYTE GeForce RTX 5080 WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N5080WF3OC-16GD);Core Clock;2670
+GIGABYTE GeForce RTX 5080 WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N5080WF3OC-16GD);Memory Clock;30000
+GIGABYTE GeForce RTX 5080 WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N5080WF3OC-16GD);VRAM;16
+GIGABYTE GeForce RTX 5080 WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N5080WF3OC-16GD);Memory Type;GDDR7
+GIGABYTE GeForce RTX 5080 WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N5080WF3OC-16GD);Memory Bus;256 bit
+GIGABYTE GeForce RTX 5080 WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N5080WF3OC-16GD);Max Resolution;7680 x 4320 pixel
+GIGABYTE GeForce RTX 5080 WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N5080WF3OC-16GD);Recommended PSU;850 W
+GIGABYTE GeForce RTX 5080 WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N5080WF3OC-16GD);HDMI Ports;1 db
+GIGABYTE GeForce RTX 5080 WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N5080WF3OC-16GD);DisplayPort Ports;3 db
+ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (ROG-STRIX-RTX5070TI-O16G-GAMING);PCIe Generation;5.0
+ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (ROG-STRIX-RTX5070TI-O16G-GAMING);Cooling Fans;3
+ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (ROG-STRIX-RTX5070TI-O16G-GAMING);Core Clock;2625
+ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (ROG-STRIX-RTX5070TI-O16G-GAMING);Memory Clock;28000
+ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (ROG-STRIX-RTX5070TI-O16G-GAMING);VRAM;16
+ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (ROG-STRIX-RTX5070TI-O16G-GAMING);Memory Type;GDDR7
+ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (ROG-STRIX-RTX5070TI-O16G-GAMING);Memory Bus;256 bit
+ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (ROG-STRIX-RTX5070TI-O16G-GAMING);Max Resolution;7680 x 4320 pixel
+ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (ROG-STRIX-RTX5070TI-O16G-GAMING);Recommended PSU;850 W
+ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (ROG-STRIX-RTX5070TI-O16G-GAMING);HDMI Ports;1 db
+ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB GDDR7 256bit (ROG-STRIX-RTX5070TI-O16G-GAMING);DisplayPort Ports;3 db
+GIGABYTE Radeon RX 9070 XT GAMING OC 16GB GDDR6 256bit (GV-R9070XTGAMING OC-16GD);PCIe Generation;5.0
+GIGABYTE Radeon RX 9070 XT GAMING OC 16GB GDDR6 256bit (GV-R9070XTGAMING OC-16GD);Cooling Fans;3
+GIGABYTE Radeon RX 9070 XT GAMING OC 16GB GDDR6 256bit (GV-R9070XTGAMING OC-16GD);Core Clock;3060
+GIGABYTE Radeon RX 9070 XT GAMING OC 16GB GDDR6 256bit (GV-R9070XTGAMING OC-16GD);Memory Clock;20000
+GIGABYTE Radeon RX 9070 XT GAMING OC 16GB GDDR6 256bit (GV-R9070XTGAMING OC-16GD);VRAM;16
+GIGABYTE Radeon RX 9070 XT GAMING OC 16GB GDDR6 256bit (GV-R9070XTGAMING OC-16GD);Memory Type;GDDR6
+GIGABYTE Radeon RX 9070 XT GAMING OC 16GB GDDR6 256bit (GV-R9070XTGAMING OC-16GD);Memory Bus;256 bit
+GIGABYTE Radeon RX 9070 XT GAMING OC 16GB GDDR6 256bit (GV-R9070XTGAMING OC-16GD);Max Resolution;7680 x 4320 pixel
+GIGABYTE Radeon RX 9070 XT GAMING OC 16GB GDDR6 256bit (GV-R9070XTGAMING OC-16GD);Recommended PSU;850 W
+GIGABYTE Radeon RX 9070 XT GAMING OC 16GB GDDR6 256bit (GV-R9070XTGAMING OC-16GD);HDMI Ports;2 db
+GIGABYTE Radeon RX 9070 XT GAMING OC 16GB GDDR6 256bit (GV-R9070XTGAMING OC-16GD);DisplayPort Ports;2 db
+MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 128bit (G5060-8V2C);PCIe Generation;5.0
+MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 128bit (G5060-8V2C);Cooling Fans;2
+MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 128bit (G5060-8V2C);Core Clock;2535
+MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 128bit (G5060-8V2C);Memory Clock;28000
+MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 128bit (G5060-8V2C);VRAM;8
+MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 128bit (G5060-8V2C);Memory Type;GDDR7
+MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 128bit (G5060-8V2C);Memory Bus;128 bit
+MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 128bit (G5060-8V2C);Max Resolution;7680 x 4320 pixel
+MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 128bit (G5060-8V2C);Recommended PSU;550 W
+MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 128bit (G5060-8V2C);HDMI Ports;1 db
+MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 128bit (G5060-8V2C);DisplayPort Ports;3 db
+ASUS Radeon RX 9060 XT Dual 16GB GDDR6 128bit (DUAL-RX9060XT-16G);PCIe Generation;5.0
+ASUS Radeon RX 9060 XT Dual 16GB GDDR6 128bit (DUAL-RX9060XT-16G);Cooling Fans;2
+ASUS Radeon RX 9060 XT Dual 16GB GDDR6 128bit (DUAL-RX9060XT-16G);Core Clock;3250
+ASUS Radeon RX 9060 XT Dual 16GB GDDR6 128bit (DUAL-RX9060XT-16G);Memory Clock;20000
+ASUS Radeon RX 9060 XT Dual 16GB GDDR6 128bit (DUAL-RX9060XT-16G);VRAM;16
+ASUS Radeon RX 9060 XT Dual 16GB GDDR6 128bit (DUAL-RX9060XT-16G);Memory Type;GDDR6
+ASUS Radeon RX 9060 XT Dual 16GB GDDR6 128bit (DUAL-RX9060XT-16G);Memory Bus;128 bit
+ASUS Radeon RX 9060 XT Dual 16GB GDDR6 128bit (DUAL-RX9060XT-16G);Max Resolution;7680 x 4320 pixel
+ASUS Radeon RX 9060 XT Dual 16GB GDDR6 128bit (DUAL-RX9060XT-16G);Recommended PSU;550 W
+ASUS Radeon RX 9060 XT Dual 16GB GDDR6 128bit (DUAL-RX9060XT-16G);HDMI Ports;1 db
+ASUS Radeon RX 9060 XT Dual 16GB GDDR6 128bit (DUAL-RX9060XT-16G);DisplayPort Ports;2 db
+ASRock Radeon RX 9060 XT Challenger OC 16GB GDDR6 128bit (90-GA5QZZ-00UANF);PCIe Generation;5.0
+ASRock Radeon RX 9060 XT Challenger OC 16GB GDDR6 128bit (90-GA5QZZ-00UANF);Cooling Fans;2
+ASRock Radeon RX 9060 XT Challenger OC 16GB GDDR6 128bit (90-GA5QZZ-00UANF);Core Clock;3290
+ASRock Radeon RX 9060 XT Challenger OC 16GB GDDR6 128bit (90-GA5QZZ-00UANF);Memory Clock;20000
+ASRock Radeon RX 9060 XT Challenger OC 16GB GDDR6 128bit (90-GA5QZZ-00UANF);VRAM;16
+ASRock Radeon RX 9060 XT Challenger OC 16GB GDDR6 128bit (90-GA5QZZ-00UANF);Memory Type;GDDR6
+ASRock Radeon RX 9060 XT Challenger OC 16GB GDDR6 128bit (90-GA5QZZ-00UANF);Memory Bus;128 bit
+ASRock Radeon RX 9060 XT Challenger OC 16GB GDDR6 128bit (90-GA5QZZ-00UANF);Max Resolution;7680 x 4320 pixel
+ASRock Radeon RX 9060 XT Challenger OC 16GB GDDR6 128bit (90-GA5QZZ-00UANF);Recommended PSU;550 W
+ASRock Radeon RX 9060 XT Challenger OC 16GB GDDR6 128bit (90-GA5QZZ-00UANF);HDMI Ports;1 db
+ASRock Radeon RX 9060 XT Challenger OC 16GB GDDR6 128bit (90-GA5QZZ-00UANF);DisplayPort Ports;2 db
+ASUS GeForce RTX 5070 Ti PRIME OC 16GB GDDR7 256bit (PRIME-RTX5070TI-O16G);PCIe Generation;5.0
+ASUS GeForce RTX 5070 Ti PRIME OC 16GB GDDR7 256bit (PRIME-RTX5070TI-O16G);Cooling Fans;3
+ASUS GeForce RTX 5070 Ti PRIME OC 16GB GDDR7 256bit (PRIME-RTX5070TI-O16G);Core Clock;2527
+ASUS GeForce RTX 5070 Ti PRIME OC 16GB GDDR7 256bit (PRIME-RTX5070TI-O16G);Memory Clock;28000
+ASUS GeForce RTX 5070 Ti PRIME OC 16GB GDDR7 256bit (PRIME-RTX5070TI-O16G);VRAM;16
+ASUS GeForce RTX 5070 Ti PRIME OC 16GB GDDR7 256bit (PRIME-RTX5070TI-O16G);Memory Type;GDDR7
+ASUS GeForce RTX 5070 Ti PRIME OC 16GB GDDR7 256bit (PRIME-RTX5070TI-O16G);Memory Bus;256 bit
+ASUS GeForce RTX 5070 Ti PRIME OC 16GB GDDR7 256bit (PRIME-RTX5070TI-O16G);Max Resolution;7680 x 4320 pixel
+ASUS GeForce RTX 5070 Ti PRIME OC 16GB GDDR7 256bit (PRIME-RTX5070TI-O16G);Recommended PSU;750 W
+ASUS GeForce RTX 5070 Ti PRIME OC 16GB GDDR7 256bit (PRIME-RTX5070TI-O16G);HDMI Ports;1 db
+ASUS GeForce RTX 5070 Ti PRIME OC 16GB GDDR7 256bit (PRIME-RTX5070TI-O16G);DisplayPort Ports;3 db
+GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);PCIe Generation;5.0
+GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);Cooling Fans;3
+GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);Core Clock;2588
+GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);Memory Clock;28000
+GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);VRAM;16
+GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);Memory Type;GDDR7
+GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);Memory Bus;256 bit
+GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);Max Resolution;7680 x 4320 pixel
+GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);Recommended PSU;750 W
+GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);HDMI Ports;1 db
+GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);DisplayPort Ports;3 db
 
-Megértettem, leszűkítettem a listát kizárólag az SSD-kre, és bővítettem további 8 variációval. Most már szerepelnek benne a belépő szintű Kingstonok, a népszerű középkategóriás darabok és a professzionális munkaállomásokba szánt meghajtók is.
+Kingston NV3 1TB (SNV3S/1000G);Capacity;1
+Kingston NV3 1TB (SNV3S/1000G);Maximum Read Speed;6000 MB/s
+Kingston NV3 1TB (SNV3S/1000G);Maximum Write Speed;4000 MB/s
+Kingston NV3 1TB (SNV3S/1000G);Connectivity Technology;PCI-e
+Kingston NV3 1TB (SNV3S/1000G);Cache;N/A
+Samsung 990 PRO 2TB M.2 (MZ-V9P2T0BW);Capacity;2
+Samsung 990 PRO 2TB M.2 (MZ-V9P2T0BW);Maximum Read Speed;7450 MB/s
+Samsung 990 PRO 2TB M.2 (MZ-V9P2T0BW);Maximum Write Speed;6900 MB/s
+Samsung 990 PRO 2TB M.2 (MZ-V9P2T0BW);Connectivity Technology;PCI-e
+Samsung 990 PRO 2TB M.2 (MZ-V9P2T0BW);Cache;N/A
+Samsung 990 PRO 1TB M.2 NVMe (MZ-V9P1T0BW);Capacity;1
+Samsung 990 PRO 1TB M.2 NVMe (MZ-V9P1T0BW);Maximum Read Speed;7450 MB/s
+Samsung 990 PRO 1TB M.2 NVMe (MZ-V9P1T0BW);Maximum Write Speed;6900 MB/s
+Samsung 990 PRO 1TB M.2 NVMe (MZ-V9P1T0BW);Connectivity Technology;PCI-e
+Samsung 990 PRO 1TB M.2 NVMe (MZ-V9P1T0BW);Cache;N/A
+Samsung 2.5 870 EVO 1TB SATA3 (MZ-77E1T0B);Capacity;1
+Samsung 2.5 870 EVO 1TB SATA3 (MZ-77E1T0B);Maximum Read Speed;560 MB/s
+Samsung 2.5 870 EVO 1TB SATA3 (MZ-77E1T0B);Maximum Write Speed;530 MB/s
+Samsung 2.5 870 EVO 1TB SATA3 (MZ-77E1T0B);Connectivity Technology;SATA3
+Samsung 2.5 870 EVO 1TB SATA3 (MZ-77E1T0B);Cache;N/A
+Samsung 990 EVO Plus 2TB (MZ-V9S2T0BW);Capacity;2
+Samsung 990 EVO Plus 2TB (MZ-V9S2T0BW);Maximum Read Speed;7250 MB/s
+Samsung 990 EVO Plus 2TB (MZ-V9S2T0BW);Maximum Write Speed;6300 MB/s
+Samsung 990 EVO Plus 2TB (MZ-V9S2T0BW);Connectivity Technology;PCI-e
+Samsung 990 EVO Plus 2TB (MZ-V9S2T0BW);Cache;N/A
+ADATA Ultimate SU650 2.5 1TB SATA3 (ASU650SS-1TT-R);Capacity;1
+ADATA Ultimate SU650 2.5 1TB SATA3 (ASU650SS-1TT-R);Maximum Read Speed;520 MB/s
+ADATA Ultimate SU650 2.5 1TB SATA3 (ASU650SS-1TT-R);Maximum Write Speed;450 MB/s
+ADATA Ultimate SU650 2.5 1TB SATA3 (ASU650SS-1TT-R);Connectivity Technology;SATA3
+ADATA Ultimate SU650 2.5 1TB SATA3 (ASU650SS-1TT-R);Cache;N/A
+Samsung 2.5 870 EVO 500GB SATA3 (MZ-77E500B);Capacity;0.5
+Samsung 2.5 870 EVO 500GB SATA3 (MZ-77E500B);Maximum Read Speed;560 MB/s
+Samsung 2.5 870 EVO 500GB SATA3 (MZ-77E500B);Maximum Write Speed;530 MB/s
+Samsung 2.5 870 EVO 500GB SATA3 (MZ-77E500B);Connectivity Technology;SATA3
+Samsung 2.5 870 EVO 500GB SATA3 (MZ-77E500B);Cache;N/A
+Samsung 990 EVO Plus 1TB (MZ-V9S1T0BW);Capacity;1
+Samsung 990 EVO Plus 1TB (MZ-V9S1T0BW);Maximum Read Speed;7250 MB/s
+Samsung 990 EVO Plus 1TB (MZ-V9S1T0BW);Maximum Write Speed;6300 MB/s
+Samsung 990 EVO Plus 1TB (MZ-V9S1T0BW);Connectivity Technology;PCI-e
+Samsung 990 EVO Plus 1TB (MZ-V9S1T0BW);Cache;N/A
+Kingston A400 2.5 480GB SATA3 (SA400S37/480G);Capacity;0.48
+Kingston A400 2.5 480GB SATA3 (SA400S37/480G);Maximum Read Speed;500 MB/s
+Kingston A400 2.5 480GB SATA3 (SA400S37/480G);Maximum Write Speed;450 MB/s
+Kingston A400 2.5 480GB SATA3 (SA400S37/480G);Connectivity Technology;SATA3
+Kingston A400 2.5 480GB SATA3 (SA400S37/480G);Cache;N/A
+Kingston NV3 500GB (SNV3S/500G);Capacity;0.5
+Kingston NV3 500GB (SNV3S/500G);Maximum Read Speed;5000 MB/s
+Kingston NV3 500GB (SNV3S/500G);Maximum Write Speed;3000 MB/s
+Kingston NV3 500GB (SNV3S/500G);Connectivity Technology;PCI-e
+Kingston NV3 500GB (SNV3S/500G);Cache;N/A
+Samsung 990 PRO 4TB (MZ-V9P4T0BW);Capacity;4
+Samsung 990 PRO 4TB (MZ-V9P4T0BW);Maximum Read Speed;7450 MB/s
+Samsung 990 PRO 4TB (MZ-V9P4T0BW);Maximum Write Speed;6900 MB/s
+Samsung 990 PRO 4TB (MZ-V9P4T0BW);Connectivity Technology;PCI-e
+Samsung 990 PRO 4TB (MZ-V9P4T0BW);Cache;N/A
+Crucial BX500 2.5 1TB SATA3 (CT1000BX500SSD1);Capacity;1
+Crucial BX500 2.5 1TB SATA3 (CT1000BX500SSD1);Maximum Read Speed;540 MB/s
+Crucial BX500 2.5 1TB SATA3 (CT1000BX500SSD1);Maximum Write Speed;500 MB/s
+Crucial BX500 2.5 1TB SATA3 (CT1000BX500SSD1);Connectivity Technology;SATA3
+Crucial BX500 2.5 1TB SATA3 (CT1000BX500SSD1);Cache;N/A
+Samsung 9100 PRO 2TB (MZ-VAP2T0BW);Capacity;2
+Samsung 9100 PRO 2TB (MZ-VAP2T0BW);Maximum Read Speed;14700 MB/s
+Samsung 9100 PRO 2TB (MZ-VAP2T0BW);Maximum Write Speed;13400 MB/s
+Samsung 9100 PRO 2TB (MZ-VAP2T0BW);Connectivity Technology;PCI-e
+Samsung 9100 PRO 2TB (MZ-VAP2T0BW);Cache;N/A
+Samsung 980 500GB M.2 PCIe (MZ-V8V500BW);Capacity;0.5
+Samsung 980 500GB M.2 PCIe (MZ-V8V500BW);Maximum Read Speed;3100 MB/s
+Samsung 980 500GB M.2 PCIe (MZ-V8V500BW);Maximum Write Speed;2600 MB/s
+Samsung 980 500GB M.2 PCIe (MZ-V8V500BW);Connectivity Technology;PCI-e
+Samsung 980 500GB M.2 PCIe (MZ-V8V500BW);Cache;N/A
+Kingston NV3 2TB (SNV3S/2000G);Capacity;2
+Kingston NV3 2TB (SNV3S/2000G);Maximum Read Speed;6000 MB/s
+Kingston NV3 2TB (SNV3S/2000G);Maximum Write Speed;5000 MB/s
+Kingston NV3 2TB (SNV3S/2000G);Connectivity Technology;PCI-e
+Kingston NV3 2TB (SNV3S/2000G);Cache;N/A
+Kingston A400 2.5 240GB SATA3 (SA400S37/240G);Capacity;0.24
+Kingston A400 2.5 240GB SATA3 (SA400S37/240G);Maximum Read Speed;500 MB/s
+Kingston A400 2.5 240GB SATA3 (SA400S37/240G);Maximum Write Speed;350 MB/s
+Kingston A400 2.5 240GB SATA3 (SA400S37/240G);Connectivity Technology;SATA3
+Kingston A400 2.5 240GB SATA3 (SA400S37/240G);Cache;N/A
+Samsung 990 EVO Plus 4TB (MZ-V9S4T0BW);Capacity;4
+Samsung 990 EVO Plus 4TB (MZ-V9S4T0BW);Maximum Read Speed;7250 MB/s
+Samsung 990 EVO Plus 4TB (MZ-V9S4T0BW);Maximum Write Speed;6300 MB/s
+Samsung 990 EVO Plus 4TB (MZ-V9S4T0BW);Connectivity Technology;PCI-e
+Samsung 990 EVO Plus 4TB (MZ-V9S4T0BW);Cache;N/A
+Kingston KC3000 1TB M 2 NVMe PCIe (SKC3000S/1024G);Capacity;1
+Kingston KC3000 1TB M 2 NVMe PCIe (SKC3000S/1024G);Maximum Read Speed;7000 MB/s
+Kingston KC3000 1TB M 2 NVMe PCIe (SKC3000S/1024G);Maximum Write Speed;6000 MB/s
+Kingston KC3000 1TB M 2 NVMe PCIe (SKC3000S/1024G);Connectivity Technology;PCI-e
+Kingston KC3000 1TB M 2 NVMe PCIe (SKC3000S/1024G);Cache;N/A
+Samsung 870 EVO 2.5 2TB SATA3 (MZ-77E2T0B);Capacity;2
+Samsung 870 EVO 2.5 2TB SATA3 (MZ-77E2T0B);Maximum Read Speed;560 MB/s
+Samsung 870 EVO 2.5 2TB SATA3 (MZ-77E2T0B);Maximum Write Speed;530 MB/s
+Samsung 870 EVO 2.5 2TB SATA3 (MZ-77E2T0B);Connectivity Technology;SATA3
+Samsung 870 EVO 2.5 2TB SATA3 (MZ-77E2T0B);Cache;N/A
+Kingston A400 2.5 960GB SATA3 (SA400S37/960G);Capacity;0.96
+Kingston A400 2.5 960GB SATA3 (SA400S37/960G);Maximum Read Speed;500 MB/s
+Kingston A400 2.5 960GB SATA3 (SA400S37/960G);Maximum Write Speed;450 MB/s
+Kingston A400 2.5 960GB SATA3 (SA400S37/960G);Connectivity Technology;SATA3
+Kingston A400 2.5 960GB SATA3 (SA400S37/960G);Cache;N/A
 
-Code snippet
+Seasonic Focus GX 850W 80 PLUS Gold V4 (GX-850-V4);PSU Type;Moduláris tápegység
+Seasonic Focus GX 850W 80 PLUS Gold V4 (GX-850-V4);Wattage;850
+Seasonic Focus GX 850W 80 PLUS Gold V4 (GX-850-V4);Efficiency Rating;80+ Gold
+Seasonic Focus GX 850W 80 PLUS Gold V4 (GX-850-V4);Fan Size;135
+Seasonic Focus GX 850W 80 PLUS Gold V4 (GX-850-V4);SATA Connectors;8
+Seasonic Focus GX 850W 80 PLUS Gold V4 (GX-850-V4);PCIe Connectors;3
+ASUS TUF GAMING 750B 80 PLUS Bronze;PSU Type;Fix kábelezésű tápegység
+ASUS TUF GAMING 750B 80 PLUS Bronze;Wattage;750
+ASUS TUF GAMING 750B 80 PLUS Bronze;Efficiency Rating;80+ Bronze
+ASUS TUF GAMING 750B 80 PLUS Bronze;Fan Size;135
+ASUS TUF GAMING 750B 80 PLUS Bronze;SATA Connectors;8
+ASUS TUF GAMING 750B 80 PLUS Bronze;PCIe Connectors;4
+Seasonic Focus GX-1000 (2024) 1000W 80 PLUS Gold (SS-PS-SSR-1000-FX4);PSU Type;Moduláris tápegység
+Seasonic Focus GX-1000 (2024) 1000W 80 PLUS Gold (SS-PS-SSR-1000-FX4);Wattage;1000
+Seasonic Focus GX-1000 (2024) 1000W 80 PLUS Gold (SS-PS-SSR-1000-FX4);Efficiency Rating;80+ Gold
+Seasonic Focus GX-1000 (2024) 1000W 80 PLUS Gold (SS-PS-SSR-1000-FX4);Fan Size;135
+Seasonic Focus GX-1000 (2024) 1000W 80 PLUS Gold (SS-PS-SSR-1000-FX4);SATA Connectors;8
+Seasonic Focus GX-1000 (2024) 1000W 80 PLUS Gold (SS-PS-SSR-1000-FX4);PCIe Connectors;3
+be quiet! Pure Power 13 M 850W (BP027EU);PSU Type;Moduláris tápegység
+be quiet! Pure Power 13 M 850W (BP027EU);Wattage;850
+be quiet! Pure Power 13 M 850W (BP027EU);Efficiency Rating;80+ Gold
+be quiet! Pure Power 13 M 850W (BP027EU);Fan Size;120
+be quiet! Pure Power 13 M 850W (BP027EU);SATA Connectors;6
+be quiet! Pure Power 13 M 850W (BP027EU);PCIe Connectors;N/A
+Seasonic Focus Gold 750W 80 PLUS Gold (SSR-750FM);Wattage;750
+Seasonic Focus Gold 750W 80 PLUS Gold (SSR-750FM);Efficiency Rating;80+ Gold
+Seasonic Focus Gold 750W 80 PLUS Gold (SSR-750FM);PSU Type;N/A
+Seasonic Focus Gold 750W 80 PLUS Gold (SSR-750FM);Fan Size;N/A
+Seasonic Focus Gold 750W 80 PLUS Gold (SSR-750FM);SATA Connectors;N/A
+Seasonic Focus Gold 750W 80 PLUS Gold (SSR-750FM);PCIe Connectors;N/A
+Corsair RMe 2025 RM650e 80 PLUS Gold 650W (CP-9020302-EU);PSU Type;Moduláris tápegység
+Corsair RMe 2025 RM650e 80 PLUS Gold 650W (CP-9020302-EU);Wattage;650
+Corsair RMe 2025 RM650e 80 PLUS Gold 650W (CP-9020302-EU);Efficiency Rating;80+ Gold
+Corsair RMe 2025 RM650e 80 PLUS Gold 650W (CP-9020302-EU);Fan Size;120
+Corsair RMe 2025 RM650e 80 PLUS Gold 650W (CP-9020302-EU);SATA Connectors;6
+Corsair RMe 2025 RM650e 80 PLUS Gold 650W (CP-9020302-EU);PCIe Connectors;4
+CHIEFTEC A-90 750W 80 PLUS Gold (GDP-750C);PSU Type;Fél moduláris tápegység
+CHIEFTEC A-90 750W 80 PLUS Gold (GDP-750C);Wattage;750
+CHIEFTEC A-90 750W 80 PLUS Gold (GDP-750C);Efficiency Rating;80+ Gold
+CHIEFTEC A-90 750W 80 PLUS Gold (GDP-750C);Fan Size;140
+CHIEFTEC A-90 750W 80 PLUS Gold (GDP-750C);SATA Connectors;8
+CHIEFTEC A-90 750W 80 PLUS Gold (GDP-750C);PCIe Connectors;4
+Corsair RMx Series RM850x 850W 80 PLUS Gold (CP-9020270-EU);PSU Type;Moduláris tápegység
+Corsair RMx Series RM850x 850W 80 PLUS Gold (CP-9020270-EU);Wattage;850
+Corsair RMx Series RM850x 850W 80 PLUS Gold (CP-9020270-EU);Efficiency Rating;80+ Gold
+Corsair RMx Series RM850x 850W 80 PLUS Gold (CP-9020270-EU);Fan Size;135
+Corsair RMx Series RM850x 850W 80 PLUS Gold (CP-9020270-EU);SATA Connectors;14
+Corsair RMx Series RM850x 850W 80 PLUS Gold (CP-9020270-EU);PCIe Connectors;4
+be quiet! Power Zone 2 1000W 80 PLUS Platinum (BP008EU);PSU Type;Moduláris tápegység
+be quiet! Power Zone 2 1000W 80 PLUS Platinum (BP008EU);Wattage;1000
+be quiet! Power Zone 2 1000W 80 PLUS Platinum (BP008EU);Efficiency Rating;80+ Platinum
+be quiet! Power Zone 2 1000W 80 PLUS Platinum (BP008EU);Fan Size;140
+be quiet! Power Zone 2 1000W 80 PLUS Platinum (BP008EU);SATA Connectors;7
+be quiet! Power Zone 2 1000W 80 PLUS Platinum (BP008EU);PCIe Connectors;4
+FSP VITA GM 850W 80 PLUS Gold (PPA8504202);PSU Type;Moduláris tápegység
+FSP VITA GM 850W 80 PLUS Gold (PPA8504202);Wattage;850
+FSP VITA GM 850W 80 PLUS Gold (PPA8504202);Efficiency Rating;80+ Gold
+FSP VITA GM 850W 80 PLUS Gold (PPA8504202);Fan Size;120
+FSP VITA GM 850W 80 PLUS Gold (PPA8504202);SATA Connectors;8
+FSP VITA GM 850W 80 PLUS Gold (PPA8504202);PCIe Connectors;5
+Seasonic Focus GX-750 (2024) 750W 80 PLUS Gold (SS-PS-SSR-750-FX4);PSU Type;Moduláris tápegység
+Seasonic Focus GX-750 (2024) 750W 80 PLUS Gold (SS-PS-SSR-750-FX4);Wattage;750
+Seasonic Focus GX-750 (2024) 750W 80 PLUS Gold (SS-PS-SSR-750-FX4);Efficiency Rating;80+ Gold
+Seasonic Focus GX-750 (2024) 750W 80 PLUS Gold (SS-PS-SSR-750-FX4);Fan Size;135
+Seasonic Focus GX-750 (2024) 750W 80 PLUS Gold (SS-PS-SSR-750-FX4);SATA Connectors;8
+Seasonic Focus GX-750 (2024) 750W 80 PLUS Gold (SS-PS-SSR-750-FX4);PCIe Connectors;2
+MSI MAG A650BN 650W 80 PLUS Bronze (306-7ZP2B11-CE0);PSU Type;Fix kábelezésű tápegység
+MSI MAG A650BN 650W 80 PLUS Bronze (306-7ZP2B11-CE0);Wattage;650
+MSI MAG A650BN 650W 80 PLUS Bronze (306-7ZP2B11-CE0);Efficiency Rating;80+ Bronze
+MSI MAG A650BN 650W 80 PLUS Bronze (306-7ZP2B11-CE0);Fan Size;120
+MSI MAG A650BN 650W 80 PLUS Bronze (306-7ZP2B11-CE0);SATA Connectors;5
+MSI MAG A650BN 650W 80 PLUS Bronze (306-7ZP2B11-CE0);PCIe Connectors;2
+ASUS TUF Gaming 850W 80 PLUS Gold (90YE00S2-B0NA00);PSU Type;Moduláris tápegység
+ASUS TUF Gaming 850W 80 PLUS Gold (90YE00S2-B0NA00);Wattage;850
+ASUS TUF Gaming 850W 80 PLUS Gold (90YE00S2-B0NA00);Efficiency Rating;80+ Gold
+ASUS TUF Gaming 850W 80 PLUS Gold (90YE00S2-B0NA00);Fan Size;135
+ASUS TUF Gaming 850W 80 PLUS Gold (90YE00S2-B0NA00);SATA Connectors;5
+ASUS TUF Gaming 850W 80 PLUS Gold (90YE00S2-B0NA00);PCIe Connectors;3
+GIGABYTE GP-P550SS 550W 80 PLUS Silver;PSU Type;Fix kábelezésű tápegység
+GIGABYTE GP-P550SS 550W 80 PLUS Silver;Wattage;550
+GIGABYTE GP-P550SS 550W 80 PLUS Silver;Efficiency Rating;80+ Silver
+GIGABYTE GP-P550SS 550W 80 PLUS Silver;Fan Size;120
+GIGABYTE GP-P550SS 550W 80 PLUS Silver;SATA Connectors;5
+GIGABYTE GP-P550SS 550W 80 PLUS Silver;PCIe Connectors;2
+Seasonic Core GX-650 650W 80 PLUS Gold;PSU Type;Moduláris tápegység
+Seasonic Core GX-650 650W 80 PLUS Gold;Wattage;650
+Seasonic Core GX-650 650W 80 PLUS Gold;Efficiency Rating;80+ Gold
+Seasonic Core GX-650 650W 80 PLUS Gold;Fan Size;120
+Seasonic Core GX-650 650W 80 PLUS Gold;SATA Connectors;6
+Seasonic Core GX-650 650W 80 PLUS Gold;PCIe Connectors;2
+GIGABYTE GP-P650SS;PSU Type;Fix kábelezésű tápegység
+GIGABYTE GP-P650SS;Wattage;650
+GIGABYTE GP-P650SS;Efficiency Rating;80+ Silver
+GIGABYTE GP-P650SS;Fan Size;120
+GIGABYTE GP-P650SS;SATA Connectors;5
+GIGABYTE GP-P650SS;PCIe Connectors;2
+Corsair RMx Series RM1000x 1000W 80 PLUS Gold (CP-9020271-EU);PSU Type;Moduláris tápegység
+Corsair RMx Series RM1000x 1000W 80 PLUS Gold (CP-9020271-EU);Wattage;1000
+Corsair RMx Series RM1000x 1000W 80 PLUS Gold (CP-9020271-EU);Efficiency Rating;80+ Gold
+Corsair RMx Series RM1000x 1000W 80 PLUS Gold (CP-9020271-EU);Fan Size;135
+Corsair RMx Series RM1000x 1000W 80 PLUS Gold (CP-9020271-EU);SATA Connectors;16
+Corsair RMx Series RM1000x 1000W 80 PLUS Gold (CP-9020271-EU);PCIe Connectors;3
+be quiet! Pure Power 13 M 750W (BP026EU);PSU Type;Moduláris tápegység
+be quiet! Pure Power 13 M 750W (BP026EU);Wattage;750
+be quiet! Pure Power 13 M 750W (BP026EU);Efficiency Rating;80+ Gold
+be quiet! Pure Power 13 M 750W (BP026EU);Fan Size;120
+be quiet! Pure Power 13 M 750W (BP026EU);SATA Connectors;6
+be quiet! Pure Power 13 M 750W (BP026EU);PCIe Connectors;N/A
+be quiet! Dark Power 14 1000W (BP020EU);PSU Type;Moduláris tápegység
+be quiet! Dark Power 14 1000W (BP020EU);Wattage;1000
+be quiet! Dark Power 14 1000W (BP020EU);SATA Connectors;13
+be quiet! Dark Power 14 1000W (BP020EU);Efficiency Rating;N/A
+be quiet! Dark Power 14 1000W (BP020EU);Fan Size;N/A
+be quiet! Dark Power 14 1000W (BP020EU);PCIe Connectors;N/A
+GIGABYTE P850GM 850W 80 PLUS Gold (GP-P850GM);PSU Type;Moduláris tápegység
+GIGABYTE P850GM 850W 80 PLUS Gold (GP-P850GM);Wattage;850
+GIGABYTE P850GM 850W 80 PLUS Gold (GP-P850GM);Efficiency Rating;80+ Gold
+GIGABYTE P850GM 850W 80 PLUS Gold (GP-P850GM);Fan Size;120
+GIGABYTE P850GM 850W 80 PLUS Gold (GP-P850GM);SATA Connectors;8
+GIGABYTE P850GM 850W 80 PLUS Gold (GP-P850GM);PCIe Connectors;4
 
-product_name;parameter_name;value
-Samsung 990 Pro 2 TB;Capacity;2
-Samsung 990 Pro 2 TB;Cache;2048
-Samsung 990 Pro 2 TB;Maximum Read Speed;7450
-Samsung 990 Pro 2 TB;Maximum Write Speed;6900
-Samsung 990 Pro 2 TB;Connectivity Technology;M.2 NVMe (Gen4)
-Crucial T705 2TB;Capacity;2
-Crucial T705 2TB;Cache;4096
-Crucial T705 2TB;Maximum Read Speed;14500
-Crucial T705 2TB;Maximum Write Speed;12700
-Crucial T705 2TB;Connectivity Technology;M.2 NVMe (Gen5)
-WD Black SN850X 2TB;Capacity;2
-WD Black SN850X 2TB;Cache;2048
-WD Black SN850X 2TB;Maximum Read Speed;7300
-WD Black SN850X 2TB;Maximum Write Speed;6600
-WD Black SN850X 2TB;Connectivity Technology;M.2 NVMe (Gen4)
-Kingston KC3000 2TB;Capacity;2
-Kingston KC3000 2TB;Cache;2048
-Kingston KC3000 2TB;Maximum Read Speed;7000
-Kingston KC3000 2TB;Maximum Write Speed;7000
-Kingston KC3000 2TB;Connectivity Technology;M.2 NVMe (Gen4)
-Sabrent Rocket 5 4TB;Capacity;4
-Sabrent Rocket 5 4TB;Cache;8192
-Sabrent Rocket 5 4TB;Maximum Read Speed;14000
-Sabrent Rocket 5 4TB;Maximum Write Speed;12000
-Sabrent Rocket 5 4TB;Connectivity Technology;M.2 NVMe (Gen5)
-Kingston NV2 1TB;Capacity;1
-Kingston NV2 1TB;Cache;0
-Kingston NV2 1TB;Maximum Read Speed;3500
-Kingston NV2 1TB;Maximum Write Speed;2100
-Kingston NV2 1TB;Connectivity Technology;M.2 NVMe (Gen4)
-Kingston A400 480GB;Capacity;0.48
-Kingston A400 480GB;Cache;0
-Kingston A400 480GB;Maximum Read Speed;500
-Kingston A400 480GB;Maximum Write Speed;450
-Kingston A400 480GB;Connectivity Technology;SATA III
-Samsung 870 EVO 1TB;Capacity;1
-Samsung 870 EVO 1TB;Cache;1024
-Samsung 870 EVO 1TB;Maximum Read Speed;560
-Samsung 870 EVO 1TB;Maximum Write Speed;530
-Samsung 870 EVO 1TB;Connectivity Technology;SATA III
-Kingston FURY Renegade 2TB;Capacity;2
-Kingston FURY Renegade 2TB;Cache;2048
-Kingston FURY Renegade 2TB;Maximum Read Speed;7300
-Kingston FURY Renegade 2TB;Maximum Write Speed;7000
-Kingston FURY Renegade 2TB;Connectivity Technology;M.2 NVMe (Gen4)
-Crucial P3 Plus 1TB;Capacity;1
-Crucial P3 Plus 1TB;Cache;0
-Crucial P3 Plus 1TB;Maximum Read Speed;5000
-Crucial P3 Plus 1TB;Maximum Write Speed;3600
-Crucial P3 Plus 1TB;Connectivity Technology;M.2 NVMe (Gen4)
-Lexar NM790 2TB;Capacity;2
-Lexar NM790 2TB;Cache;0
-Lexar NM790 2TB;Maximum Read Speed;7400
-Lexar NM790 2TB;Maximum Write Speed;6500
-Lexar NM790 2TB;Connectivity Technology;M.2 NVMe (Gen4)
-Corsair MP700 PRO 2TB;Capacity;2
-Corsair MP700 PRO 2TB;Cache;4096
-Corsair MP700 PRO 2TB;Maximum Read Speed;12400
-Corsair MP700 PRO 2TB;Maximum Write Speed;11800
-Corsair MP700 PRO 2TB;Connectivity Technology;M.2 NVMe (Gen5)
-SK Hynix Platinum P41 2TB;Capacity;2
-SK Hynix Platinum P41 2TB;Cache;2048
-SK Hynix Platinum P41 2TB;Maximum Read Speed;7000
-SK Hynix Platinum P41 2TB;Maximum Write Speed;6500
-SK Hynix Platinum P41 2TB;Connectivity Technology;M.2 NVMe (Gen4)
-TeamGroup T-Force Cardea A440 Pro;Capacity;2
-TeamGroup T-Force Cardea A440 Pro;Cache;2048
-TeamGroup T-Force Cardea A440 Pro;Maximum Read Speed;7400
-TeamGroup T-Force Cardea A440 Pro;Maximum Write Speed;7000
-TeamGroup T-Force Cardea A440 Pro;Connectivity Technology;M.2 NVMe (Gen4)
+ARCTIC Liquid Freezer III Pro 360 A-RGB (ACFRE00184A);Type;Folyadékhűtés
+ARCTIC Liquid Freezer III Pro 360 A-RGB (ACFRE00184A);Type;Processzor
+ARCTIC Liquid Freezer III Pro 360 A-RGB (ACFRE00184A);Fan Diameter;120
+ARCTIC Liquid Freezer III Pro 360 A-RGB (ACFRE00184A);Fan RPM;2800
+ARCTIC Liquid Freezer III Pro 360 A-RGB (ACFRE00184A);LED Lighting;Yes
+ARCTIC Liquid Freezer III Pro 360 A-RGB (ACFRE00184A);Dimensions;398
+ARCTIC Liquid Freezer III Pro 360 A-RGB (ACFRE00184A);Weight;2005
+Thermalright Peerless Assassin 120 SE;Type;Aktív hűtő
+Thermalright Peerless Assassin 120 SE;Type;Processzor
+Thermalright Peerless Assassin 120 SE;Fan Diameter;120
+Thermalright Peerless Assassin 120 SE;Fan RPM;1550
+Thermalright Peerless Assassin 120 SE;Dimensions;125
+Thermalright Peerless Assassin 120 SE;Weight;730
+Thermalright Peerless Assassin 120 SE;LED Lighting;N/A
+be quiet! Pure Rock Pro 3 (BK042);Type;Aktív hűtő
+be quiet! Pure Rock Pro 3 (BK042);Type;Processzor
+be quiet! Pure Rock Pro 3 (BK042);Fan Diameter;120
+be quiet! Pure Rock Pro 3 (BK042);Fan RPM;2000
+be quiet! Pure Rock Pro 3 (BK042);LED Lighting;Yes
+be quiet! Pure Rock Pro 3 (BK042);Dimensions;139
+be quiet! Pure Rock Pro 3 (BK042);Weight;1007
+ARCTIC Cooler Liquid Freezer III Pro 360 (ACFRE00180A);Type;Folyadékhűtés
+ARCTIC Cooler Liquid Freezer III Pro 360 (ACFRE00180A);Type;Processzor
+ARCTIC Cooler Liquid Freezer III Pro 360 (ACFRE00180A);Fan Diameter;120
+ARCTIC Cooler Liquid Freezer III Pro 360 (ACFRE00180A);Fan RPM;3000
+ARCTIC Cooler Liquid Freezer III Pro 360 (ACFRE00180A);LED Lighting;No
+ARCTIC Cooler Liquid Freezer III Pro 360 (ACFRE00180A);Dimensions;398
+ARCTIC Cooler Liquid Freezer III Pro 360 (ACFRE00180A);Weight;2020
+be quiet! Pure Rock 3 (BK039);Type;Aktív hűtő
+be quiet! Pure Rock 3 (BK039);Type;Processzor
+be quiet! Pure Rock 3 (BK039);Fan Diameter;120
+be quiet! Pure Rock 3 (BK039);Fan RPM;2000
+be quiet! Pure Rock 3 (BK039);LED Lighting;No
+be quiet! Pure Rock 3 (BK039);Dimensions;71
+be quiet! Pure Rock 3 (BK039);Weight;570
+Thermalright Phantom Spirit 120 SE;Type;Aktív hűtő
+Thermalright Phantom Spirit 120 SE;Type;Processzor
+Thermalright Phantom Spirit 120 SE;Fan Diameter;120
+Thermalright Phantom Spirit 120 SE;Fan RPM;1500
+Thermalright Phantom Spirit 120 SE;LED Lighting;No
+Thermalright Phantom Spirit 120 SE;Dimensions;110
+Thermalright Phantom Spirit 120 SE;Weight;900
+be quiet! DARK ROCK PRO 5 (BK036);Type;Aktív hűtő
+be quiet! DARK ROCK PRO 5 (BK036);Type;Processzor
+be quiet! DARK ROCK PRO 5 (BK036);Fan Diameter;135
+be quiet! DARK ROCK PRO 5 (BK036);Fan RPM;1700
+be quiet! DARK ROCK PRO 5 (BK036);LED Lighting;No
+be quiet! DARK ROCK PRO 5 (BK036);Dimensions;145
+be quiet! DARK ROCK PRO 5 (BK036);Weight;1290
+Noctua NH-D15 (NOCTUA-FAN-NH-D15);Type;Aktív hűtő
+Noctua NH-D15 (NOCTUA-FAN-NH-D15);Type;Processzor
+Noctua NH-D15 (NOCTUA-FAN-NH-D15);Fan Diameter;140
+Noctua NH-D15 (NOCTUA-FAN-NH-D15);Fan RPM;1500
+Noctua NH-D15 (NOCTUA-FAN-NH-D15);LED Lighting;No
+Noctua NH-D15 (NOCTUA-FAN-NH-D15);Dimensions;165
+Noctua NH-D15 (NOCTUA-FAN-NH-D15);Weight;1320
+ARCTIC Freezer 36 ACFRE00123A;Type;Aktív hűtő
+ARCTIC Freezer 36 ACFRE00123A;Type;Processzor
+ARCTIC Freezer 36 ACFRE00123A;Fan Diameter;120
+ARCTIC Freezer 36 ACFRE00123A;Fan RPM;1800
+ARCTIC Freezer 36 ACFRE00123A;LED Lighting;No
+ARCTIC Freezer 36 ACFRE00123A;Dimensions;104
+ARCTIC Freezer 36 ACFRE00123A;Weight;890
+Thermalright Water Cooling Aqua Elite 360 Black A-RGB V3 (AQUA-ELITE-360-BK-ARGB-V3);Type;Folyadékhűtés
+Thermalright Water Cooling Aqua Elite 360 Black A-RGB V3 (AQUA-ELITE-360-BK-ARGB-V3);Type;Processzor
+Thermalright Water Cooling Aqua Elite 360 Black A-RGB V3 (AQUA-ELITE-360-BK-ARGB-V3);Fan Diameter;120
+Thermalright Water Cooling Aqua Elite 360 Black A-RGB V3 (AQUA-ELITE-360-BK-ARGB-V3);Fan RPM;1500
+Thermalright Water Cooling Aqua Elite 360 Black A-RGB V3 (AQUA-ELITE-360-BK-ARGB-V3);LED Lighting;Yes
+Thermalright Water Cooling Aqua Elite 360 Black A-RGB V3 (AQUA-ELITE-360-BK-ARGB-V3);Dimensions;396
+Thermalright Water Cooling Aqua Elite 360 Black A-RGB V3 (AQUA-ELITE-360-BK-ARGB-V3);Weight;135
+Deepcool AK620 DIGITAL SE Black (R-AK620-BKADMN-GJD);Type;Aktív hűtő
+Deepcool AK620 DIGITAL SE Black (R-AK620-BKADMN-GJD);Type;Processzor
+Deepcool AK620 DIGITAL SE Black (R-AK620-BKADMN-GJD);Fan Diameter;120
+Deepcool AK620 DIGITAL SE Black (R-AK620-BKADMN-GJD);Fan RPM;1850
+Deepcool AK620 DIGITAL SE Black (R-AK620-BKADMN-GJD);LED Lighting;Yes
+Deepcool AK620 DIGITAL SE Black (R-AK620-BKADMN-GJD);Dimensions;129
+Deepcool AK620 DIGITAL SE Black (R-AK620-BKADMN-GJD);Weight;1400
+ARCTIC Cooler Liquid Freezer III Pro 360 A-RGB (ACFRE00188A);Type;Folyadékhűtés
+ARCTIC Cooler Liquid Freezer III Pro 360 A-RGB (ACFRE00188A);Type;Processzor
+ARCTIC Cooler Liquid Freezer III Pro 360 A-RGB (ACFRE00188A);Fan Diameter;120
+ARCTIC Cooler Liquid Freezer III Pro 360 A-RGB (ACFRE00188A);Fan RPM;3000
+ARCTIC Cooler Liquid Freezer III Pro 360 A-RGB (ACFRE00188A);LED Lighting;Yes
+ARCTIC Cooler Liquid Freezer III Pro 360 A-RGB (ACFRE00188A);Dimensions;398
+ARCTIC Cooler Liquid Freezer III Pro 360 A-RGB (ACFRE00188A);Weight;2020
+be quiet! Pure Rock Pro 3 LX (BK043);Type;Aktív hűtő
+be quiet! Pure Rock Pro 3 LX (BK043);Type;Processzor
+be quiet! Pure Rock Pro 3 LX (BK043);Fan Diameter;120
+be quiet! Pure Rock Pro 3 LX (BK043);Fan RPM;2000
+be quiet! Pure Rock Pro 3 LX (BK043);LED Lighting;Yes
+be quiet! Pure Rock Pro 3 LX (BK043);Dimensions;139
+be quiet! Pure Rock Pro 3 LX (BK043);Weight;1008
+Noctua NH-D15-G2;Type;Aktív hűtő
+Noctua NH-D15-G2;Type;Processzor
+Noctua NH-D15-G2;Fan Diameter;140
+Noctua NH-D15-G2;Fan RPM;1500
+Noctua NH-D15-G2;LED Lighting;No
+Noctua NH-D15-G2;Dimensions;168
+Noctua NH-D15-G2;Weight;1525
+ASUS ROG Ryuo IV SLC 360 ARGB (90RC0151-B0EAY0);Type;Folyadékhűtés
+ASUS ROG Ryuo IV SLC 360 ARGB (90RC0151-B0EAY0);Type;Processzor
+ASUS ROG Ryuo IV SLC 360 ARGB (90RC0151-B0EAY0);Fan Diameter;120
+ASUS ROG Ryuo IV SLC 360 ARGB (90RC0151-B0EAY0);Fan RPM;2650
+ASUS ROG Ryuo IV SLC 360 ARGB (90RC0151-B0EAY0);LED Lighting;Yes
+ASUS ROG Ryuo IV SLC 360 ARGB (90RC0151-B0EAY0);Dimensions;120
+ASUS ROG Ryuo IV SLC 360 ARGB (90RC0151-B0EAY0);Weight;N/A
+Deepcool AK620 Digital Pro (R-AK620-BKAPMN-G);Type;Aktív hűtő
+Deepcool AK620 Digital Pro (R-AK620-BKAPMN-G);Type;Processzor
+Deepcool AK620 Digital Pro (R-AK620-BKAPMN-G);Fan Diameter;120
+Deepcool AK620 Digital Pro (R-AK620-BKAPMN-G);Fan RPM;1850
+Deepcool AK620 Digital Pro (R-AK620-BKAPMN-G);LED Lighting;Yes
+Deepcool AK620 Digital Pro (R-AK620-BKAPMN-G);Dimensions;163
+Deepcool AK620 Digital Pro (R-AK620-BKAPMN-G);Weight;1491
+ARCTIC Liquid Freezer III 240 Pro Black (ACFRE00178A);Type;Folyadékhűtés
+ARCTIC Liquid Freezer III 240 Pro Black (ACFRE00178A);Type;Processzor
+ARCTIC Liquid Freezer III 240 Pro Black (ACFRE00178A);Fan Diameter;120
+ARCTIC Liquid Freezer III 240 Pro Black (ACFRE00178A);Fan RPM;3000
+ARCTIC Liquid Freezer III 240 Pro Black (ACFRE00178A);LED Lighting;No
+ARCTIC Liquid Freezer III 240 Pro Black (ACFRE00178A);Dimensions;277
+ARCTIC Liquid Freezer III 240 Pro Black (ACFRE00178A);Weight;65
+Thermalright Burst Assassin 120 SE;Type;Aktív hűtő
+Thermalright Burst Assassin 120 SE;Type;Processzor
+Thermalright Burst Assassin 120 SE;Fan Diameter;120
+Thermalright Burst Assassin 120 SE;Fan RPM;1550
+Thermalright Burst Assassin 120 SE;Weight;510
+Thermalright Burst Assassin 120 SE;LED Lighting;N/A
+Thermalright Burst Assassin 120 SE;Dimensions;N/A
+Lian Li Galahad II Trinity 240mm White (GA2T24W);Type;Folyadékhűtés
+Lian Li Galahad II Trinity 240mm White (GA2T24W);Type;Processzor
+Lian Li Galahad II Trinity 240mm White (GA2T24W);Fan Diameter;120
+Lian Li Galahad II Trinity 240mm White (GA2T24W);Fan RPM;3200
+Lian Li Galahad II Trinity 240mm White (GA2T24W);LED Lighting;Yes
+Lian Li Galahad II Trinity 240mm White (GA2T24W);Dimensions;277.5
+Lian Li Galahad II Trinity 240mm White (GA2T24W);Weight;1000
+be quiet! Dark Rock Elite RGB (BK037);Type;Aktív hűtő
+be quiet! Dark Rock Elite RGB (BK037);Type;Processzor
+be quiet! Dark Rock Elite RGB (BK037);Fan Diameter;135
+be quiet! Dark Rock Elite RGB (BK037);Fan RPM;2000
+be quiet! Dark Rock Elite RGB (BK037);LED Lighting;Yes
+be quiet! Dark Rock Elite RGB (BK037);Dimensions;145
+be quiet! Dark Rock Elite RGB (BK037);Weight;1770
 
-MSI MAG A750GL PCIE5;Wattage;750
-MSI MAG A750GL PCIE5;Efficiency Rating;80+ Gold
-MSI MAG A750GL PCIE5;Modular;Full
-MSI MAG A750GL PCIE5;Color;Black
-Deepcool PX1000G;Wattage;1000
-Deepcool PX1000G;Efficiency Rating;80+ Gold
-Deepcool PX1000G;Modular;Full
-Deepcool PX1000G;Color;Black
-Deepcool DQ750-M-V2L;Wattage;750
-Deepcool DQ750-M-V2L;Efficiency Rating;80+ Gold
-Deepcool DQ750-M-V2L;Modular;Full
-Deepcool DQ750-M-V2L;Color;White
-Corsair RM850x Shift;Wattage;850
-Corsair RM850x Shift;Efficiency Rating;80+ Gold
-Corsair RM850x Shift;Modular;Full
-Corsair RM850x Shift;Color;Black
-Seasonic PRIME TX-1300;Wattage;1300
-Seasonic PRIME TX-1300;Efficiency Rating;80+ Titanium
-Seasonic PRIME TX-1300;Modular;Full
-Seasonic PRIME TX-1300;Color;Black
-Be Quiet! Straight Power 12;Wattage;1200
-Be Quiet! Straight Power 12;Efficiency Rating;80+ Platinum
-Be Quiet! Straight Power 12;Modular;Full
-Be Quiet! Straight Power 12;Color;Black
-Corsair RM750e;Wattage;750
-Corsair RM750e;Efficiency Rating;80+ Gold
-Corsair RM750e;Modular;Full
-Corsair RM750e;Color;Black
-ASUS ROG Thor 1200W Platinum II;Wattage;1200
-ASUS ROG Thor 1200W Platinum II;Efficiency Rating;80+ Platinum
-ASUS ROG Thor 1200W Platinum II;Modular;Full
-ASUS ROG Thor 1200W Platinum II;Color;Black/OLED
-Cooler Master V850 Gold-V2;Wattage;850
-Cooler Master V850 Gold-V2;Efficiency Rating;80+ Gold
-Cooler Master V850 Gold-V2;Modular;Full
-Cooler Master V850 Gold-V2;Color;White
-EVGA SuperNOVA 850 G7;Wattage;850
-EVGA SuperNOVA 850 G7;Efficiency Rating;80+ Gold
-EVGA SuperNOVA 850 G7;Modular;Full
-EVGA SuperNOVA 850 G7;Color;Black
-Phanteks AMP GH 1000W;Wattage;1000
-Phanteks AMP GH 1000W;Efficiency Rating;80+ Platinum
-Phanteks AMP GH 1000W;Modular;Full
-Phanteks AMP GH 1000W;Color;White
-Seasonic Focus GX-850 White;Wattage;850
-Seasonic Focus GX-850 White;Efficiency Rating;80+ Gold
-Seasonic Focus GX-850 White;Modular;Full
-Seasonic Focus GX-850 White;Color;White
-Thermaltake Toughpower GF3 1350W;Wattage;1350
-Thermaltake Toughpower GF3 1350W;Efficiency Rating;80+ Gold
-Thermaltake Toughpower GF3 1350W;Modular;Full
-Thermaltake Toughpower GF3 1350W;Color;Black
-Be Quiet! Dark Power Pro 13;Wattage;1600
-Be Quiet! Dark Power Pro 13;Efficiency Rating;80+ Titanium
-Be Quiet! Dark Power Pro 13;Modular;Full
-Be Quiet! Dark Power Pro 13;Color;Black
+Samsung Odyssey OLED G5 S27FG500SU;Type;OLED monitor
+Samsung Odyssey OLED G5 S27FG500SU;Screen Size;27 inch
+Samsung Odyssey OLED G5 S27FG500SU;Aspect Ratio;16:9
+Samsung Odyssey OLED G5 S27FG500SU;Resolution;2560 x 1440
+Samsung Odyssey OLED G5 S27FG500SU;Response Time;0.03 ms
+Samsung Odyssey OLED G5 S27FG500SU;Refresh Rate;180
+Samsung Odyssey OLED G5 S27FG500SU;Speakers;No
+Samsung Odyssey OLED G5 S27FG500SU;AMD FreeSync;Yes
+Samsung Odyssey OLED G5 S27FG500SU;Nvidia G-Sync;Yes
+Samsung Odyssey G5 C34G55TWWP;Type;LED monitor
+Samsung Odyssey G5 C34G55TWWP;Type;VA
+Samsung Odyssey G5 C34G55TWWP;Screen Size;34 inch
+Samsung Odyssey G5 C34G55TWWP;Aspect Ratio;21:9
+Samsung Odyssey G5 C34G55TWWP;Resolution;3440 x 1440
+Samsung Odyssey G5 C34G55TWWP;Response Time;1 ms
+Samsung Odyssey G5 C34G55TWWP;Refresh Rate;165
+Samsung Odyssey G5 C34G55TWWP;Speakers;N/A
+Samsung Odyssey G5 C34G55TWWP;AMD FreeSync;N/A
+Samsung Odyssey G5 C34G55TWWP;Nvidia G-Sync;N/A
+Samsung Odyssey G5 S27CG552EU;Type;LED monitor
+Samsung Odyssey G5 S27CG552EU;Type;VA
+Samsung Odyssey G5 S27CG552EU;Screen Size;26.9 inch
+Samsung Odyssey G5 S27CG552EU;Aspect Ratio;16:9
+Samsung Odyssey G5 S27CG552EU;Resolution;2560 x 1440
+Samsung Odyssey G5 S27CG552EU;Response Time;1 ms
+Samsung Odyssey G5 S27CG552EU;Refresh Rate;165
+Samsung Odyssey G5 S27CG552EU;Speakers;N/A
+Samsung Odyssey G5 S27CG552EU;AMD FreeSync;N/A
+Samsung Odyssey G5 S27CG552EU;Nvidia G-Sync;N/A
+Samsung Odyssey G3 S24DG300EU;Type;LED monitor
+Samsung Odyssey G3 S24DG300EU;Type;VA
+Samsung Odyssey G3 S24DG300EU;Screen Size;24 inch
+Samsung Odyssey G3 S24DG300EU;Aspect Ratio;16:9
+Samsung Odyssey G3 S24DG300EU;Resolution;1920 x 1080
+Samsung Odyssey G3 S24DG300EU;Response Time;1 ms
+Samsung Odyssey G3 S24DG300EU;Refresh Rate;180
+Samsung Odyssey G3 S24DG300EU;Speakers;No
+Samsung Odyssey G3 S24DG300EU;AMD FreeSync;Yes
+Samsung Odyssey G3 S24DG300EU;Nvidia G-Sync;No
+AOC Q27G41ZDF;Type;OLED monitor
+AOC Q27G41ZDF;Screen Size;26.5 inch
+AOC Q27G41ZDF;Aspect Ratio;16:9
+AOC Q27G41ZDF;Resolution;2560 x 1440
+AOC Q27G41ZDF;Response Time;0.03 ms
+AOC Q27G41ZDF;Refresh Rate;240
+AOC Q27G41ZDF;Speakers;No
+AOC Q27G41ZDF;AMD FreeSync;Yes
+AOC Q27G41ZDF;Nvidia G-Sync;No
+AOC AGON Q27G3XMN;Type;Mini LED monitor
+AOC AGON Q27G3XMN;Type;VA
+AOC AGON Q27G3XMN;Screen Size;27 inch
+AOC AGON Q27G3XMN;Aspect Ratio;16:9
+AOC AGON Q27G3XMN;Resolution;2560 x 1440
+AOC AGON Q27G3XMN;Response Time;1 ms
+AOC AGON Q27G3XMN;Refresh Rate;180
+AOC AGON Q27G3XMN;Speakers;No
+AOC AGON Q27G3XMN;AMD FreeSync;Yes
+AOC AGON Q27G3XMN;Nvidia G-Sync;Yes
+ASUS ROG Strix OLED XG27AQDMGR;Type;OLED monitor
+ASUS ROG Strix OLED XG27AQDMGR;Screen Size;26.5 inch
+ASUS ROG Strix OLED XG27AQDMGR;Aspect Ratio;16:9
+ASUS ROG Strix OLED XG27AQDMGR;Resolution;2560 x 1440
+ASUS ROG Strix OLED XG27AQDMGR;Response Time;0.03 ms
+ASUS ROG Strix OLED XG27AQDMGR;Refresh Rate;240
+ASUS ROG Strix OLED XG27AQDMGR;Speakers;No
+ASUS ROG Strix OLED XG27AQDMGR;AMD FreeSync;Yes
+ASUS ROG Strix OLED XG27AQDMGR;Nvidia G-Sync;Yes
+irány a bolt - oaziscomputer.hu;Type;N/A
+irány a bolt - oaziscomputer.hu;Screen Size;N/A
+irány a bolt - oaziscomputer.hu;Aspect Ratio;N/A
+irány a bolt - oaziscomputer.hu;Resolution;N/A
+irány a bolt - oaziscomputer.hu;Response Time;N/A
+irány a bolt - oaziscomputer.hu;Refresh Rate;N/A
+irány a bolt - oaziscomputer.hu;Speakers;N/A
+irány a bolt - oaziscomputer.hu;AMD FreeSync;N/A
+irány a bolt - oaziscomputer.hu;Nvidia G-Sync;N/A
+ASUS ROG Strix XG27ACS;Type;LED monitor
+ASUS ROG Strix XG27ACS;Type;IPS
+ASUS ROG Strix XG27ACS;Screen Size;27 inch
+ASUS ROG Strix XG27ACS;Aspect Ratio;16:9
+ASUS ROG Strix XG27ACS;Resolution;2560 x 1440
+ASUS ROG Strix XG27ACS;Response Time;1 ms
+ASUS ROG Strix XG27ACS;Refresh Rate;180
+ASUS ROG Strix XG27ACS;Speakers;N/A
+ASUS ROG Strix XG27ACS;AMD FreeSync;N/A
+ASUS ROG Strix XG27ACS;Nvidia G-Sync;N/A
+Samsung Odyssey G4 S25BG400EU;Type;LED monitor
+Samsung Odyssey G4 S25BG400EU;Type;IPS
+Samsung Odyssey G4 S25BG400EU;Screen Size;25 inch
+Samsung Odyssey G4 S25BG400EU;Aspect Ratio;16:9
+Samsung Odyssey G4 S25BG400EU;Resolution;1920 x 1080
+Samsung Odyssey G4 S25BG400EU;Response Time;1 ms
+Samsung Odyssey G4 S25BG400EU;Refresh Rate;240
+Samsung Odyssey G4 S25BG400EU;Speakers;N/A
+Samsung Odyssey G4 S25BG400EU;AMD FreeSync;N/A
+Samsung Odyssey G4 S25BG400EU;Nvidia G-Sync;N/A
+AOC AGON PRO AG276QZD2;Type;OLED monitor
+AOC AGON PRO AG276QZD2;Screen Size;26.7 inch
+AOC AGON PRO AG276QZD2;Aspect Ratio;16:9
+AOC AGON PRO AG276QZD2;Resolution;2560 x 1440
+AOC AGON PRO AG276QZD2;Response Time;0.03 ms
+AOC AGON PRO AG276QZD2;Refresh Rate;240
+AOC AGON PRO AG276QZD2;Speakers;Yes
+AOC AGON PRO AG276QZD2;Speakers;2 x 5 W
+AOC AGON PRO AG276QZD2;AMD FreeSync;Yes
+AOC AGON PRO AG276QZD2;Nvidia G-Sync;No
+LG UltraGear 27GX704A-B;Type;OLED monitor
+LG UltraGear 27GX704A-B;Screen Size;26.5 inch
+LG UltraGear 27GX704A-B;Aspect Ratio;16:9
+LG UltraGear 27GX704A-B;Resolution;2560 x 1440
+LG UltraGear 27GX704A-B;Response Time;0.03 ms
+LG UltraGear 27GX704A-B;Refresh Rate;240
+LG UltraGear 27GX704A-B;Speakers;No
+LG UltraGear 27GX704A-B;AMD FreeSync;Yes
+LG UltraGear 27GX704A-B;Nvidia G-Sync;Yes
+Xiaomi G Pro 27i;Type;Mini LED monitor
+Xiaomi G Pro 27i;Type;IPS
+Xiaomi G Pro 27i;Screen Size;27 inch
+Xiaomi G Pro 27i;Aspect Ratio;16:9
+Xiaomi G Pro 27i;Resolution;2560 x 1440
+Xiaomi G Pro 27i;Response Time;1 ms
+Xiaomi G Pro 27i;Refresh Rate;180
+Xiaomi G Pro 27i;Speakers;No
+Xiaomi G Pro 27i;AMD FreeSync;No
+Xiaomi G Pro 27i;Nvidia G-Sync;No
+Philips 27E2N1500L/00;Type;LED monitor
+Philips 27E2N1500L/00;Type;IPS
+Philips 27E2N1500L/00;Screen Size;27 inch
+Philips 27E2N1500L/00;Aspect Ratio;16:9
+Philips 27E2N1500L/00;Resolution;2560 x 1440
+Philips 27E2N1500L/00;Response Time;4 ms
+Philips 27E2N1500L/00;Refresh Rate;75
+Philips 27E2N1500L/00;Speakers;No
+Philips 27E2N1500L/00;AMD FreeSync;Yes
+Philips 27E2N1500L/00;Nvidia G-Sync;No
+Samsung Odyssey G5 S32DG500EU;Type;LED monitor
+Samsung Odyssey G5 S32DG500EU;Type;IPS
+Samsung Odyssey G5 S32DG500EU;Screen Size;32 inch
+Samsung Odyssey G5 S32DG500EU;Aspect Ratio;16:9
+Samsung Odyssey G5 S32DG500EU;Resolution;2560 x 1440
+Samsung Odyssey G5 S32DG500EU;Response Time;1 ms
+Samsung Odyssey G5 S32DG500EU;Refresh Rate;180
+Samsung Odyssey G5 S32DG500EU;Speakers;No
+Samsung Odyssey G5 S32DG500EU;AMD FreeSync;Yes
+Samsung Odyssey G5 S32DG500EU;Nvidia G-Sync;No
+LG UltraGear 27GS85Q-B;Type;LED monitor
+LG UltraGear 27GS85Q-B;Type;IPS
+LG UltraGear 27GS85Q-B;Screen Size;27 inch
+LG UltraGear 27GS85Q-B;Aspect Ratio;16:9
+LG UltraGear 27GS85Q-B;Resolution;2560 x 1440
+LG UltraGear 27GS85Q-B;Response Time;1 ms
+LG UltraGear 27GS85Q-B;Refresh Rate;200
+LG UltraGear 27GS85Q-B;Speakers;N/A
+LG UltraGear 27GS85Q-B;AMD FreeSync;N/A
+LG UltraGear 27GS85Q-B;Nvidia G-Sync;N/A
+ASUS ROG Strix XG27ACDNG;Type;OLED monitor
+ASUS ROG Strix XG27ACDNG;Screen Size;26.5 inch
+ASUS ROG Strix XG27ACDNG;Aspect Ratio;16:9
+ASUS ROG Strix XG27ACDNG;Resolution;2560 x 1440
+ASUS ROG Strix XG27ACDNG;Response Time;0.03 ms
+ASUS ROG Strix XG27ACDNG;Refresh Rate;360
+ASUS ROG Strix XG27ACDNG;Speakers;No
+ASUS ROG Strix XG27ACDNG;AMD FreeSync;Yes
+ASUS ROG Strix XG27ACDNG;Nvidia G-Sync;Yes
+AOC 27G4X;Type;LED monitor
+AOC 27G4X;Type;IPS
+AOC 27G4X;Screen Size;27 inch
+AOC 27G4X;Aspect Ratio;16:9
+AOC 27G4X;Resolution;1920 x 1080
+AOC 27G4X;Response Time;1 ms
+AOC 27G4X;Refresh Rate;180
+AOC 27G4X;Speakers;Yes
+AOC 27G4X;Speakers;2 x 2 W
+AOC 27G4X;AMD FreeSync;Yes
+AOC 27G4X;Nvidia G-Sync;Yes
+AOC Q27G4XF;Type;LED monitor
+AOC Q27G4XF;Type;IPS
+AOC Q27G4XF;Screen Size;27 inch
+AOC Q27G4XF;Aspect Ratio;16:9
+AOC Q27G4XF;Resolution;2560 x 1440
+AOC Q27G4XF;Response Time;0.5 ms
+AOC Q27G4XF;Refresh Rate;180
+AOC Q27G4XF;Speakers;No
+AOC Q27G4XF;AMD FreeSync;Yes
+AOC Q27G4XF;Nvidia G-Sync;Yes
+Samsung Odyssey OLED G6 S27DG610SU;Type;OLED monitor
+Samsung Odyssey OLED G6 S27DG610SU;Screen Size;27 inch
+Samsung Odyssey OLED G6 S27DG610SU;Aspect Ratio;16:9
+Samsung Odyssey OLED G6 S27DG610SU;Resolution;2560 x 1440
+Samsung Odyssey OLED G6 S27DG610SU;Response Time;0.03 ms
+Samsung Odyssey OLED G6 S27DG610SU;Refresh Rate;240
+Samsung Odyssey OLED G6 S27DG610SU;Speakers;No
+Samsung Odyssey OLED G6 S27DG610SU;AMD FreeSync;Yes
+Samsung Odyssey OLED G6 S27DG610SU;Nvidia G-Sync;No
 
-Corsair NAUTILUS 360 RS ARGB;Color;Black
-Corsair NAUTILUS 360 RS ARGB;Lighting;RGB
-Corsair NAUTILUS 360 RS ARGB;Cooling;Water
-Corsair NAUTILUS 360 RS ARGB;Radiator Size;360
-Corsair NAUTILUS 360 RS ARGB;FAN RPM;2100
-Corsair NAUTILUS 360 RS ARGB;Noise Level;34
-Corsair NAUTILUS 360 RS ARGB;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
-Arctic Liquid Freezer III 360;Color;Black
-Arctic Liquid Freezer III 360;Lighting;None
-Arctic Liquid Freezer III 360;Cooling;Water
-Arctic Liquid Freezer III 360;Radiator Size;360
-Arctic Liquid Freezer III 360;FAN RPM;1800
-Arctic Liquid Freezer III 360;Noise Level;23
-Arctic Liquid Freezer III 360;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
-Noctua NH-D15 G2;Color;Brown
-Noctua NH-D15 G2;Lighting;None
-Noctua NH-D15 G2;Cooling;Air
-Noctua NH-D15 G2;Radiator Size;0
-Noctua NH-D15 G2;FAN RPM;1500
-Noctua NH-D15 G2;Noise Level;24.8
-Noctua NH-D15 G2;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
-Deepcool AK620 Digital;Color;Black
-Deepcool AK620 Digital;Lighting;ARGB
-Deepcool AK620 Digital;Cooling;Air
-Deepcool AK620 Digital;Radiator Size;0
-Deepcool AK620 Digital;FAN RPM;1850
-Deepcool AK620 Digital;Noise Level;28
-Deepcool AK620 Digital;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
-NZXT Kraken Elite 360;Color;White
-NZXT Kraken Elite 360;Lighting;RGB/LCD Screen
-NZXT Kraken Elite 360;Cooling;Water
-NZXT Kraken Elite 360;Radiator Size;360
-NZXT Kraken Elite 360;FAN RPM;1800
-NZXT Kraken Elite 360;Noise Level;30
-NZXT Kraken Elite 360;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
-Lian Li Galahad II Trinity Performance;Color;Black
-Lian Li Galahad II Trinity Performance;Lighting;ARGB
-Lian Li Galahad II Trinity Performance;Cooling;Water
-Lian Li Galahad II Trinity Performance;Radiator Size;360
-Lian Li Galahad II Trinity Performance;FAN RPM;3000
-Lian Li Galahad II Trinity Performance;Noise Level;39.9
-Lian Li Galahad II Trinity Performance;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
-Arctic Liquid Freezer III 240 White;Color;White
-Arctic Liquid Freezer III 240 White;Lighting;ARGB
-Arctic Liquid Freezer III 240 White;Cooling;Water
-Arctic Liquid Freezer III 240 White;Radiator Size;240
-Arctic Liquid Freezer III 240 White;FAN RPM;2000
-Arctic Liquid Freezer III 240 White;Noise Level;23
-Arctic Liquid Freezer III 240 White;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
-ASUS ROG Ryujin III 360 ARGB;Color;White
-ASUS ROG Ryujin III 360 ARGB;Lighting;ARGB/LCD Screen
-ASUS ROG Ryujin III 360 ARGB;Cooling;Water
-ASUS ROG Ryujin III 360 ARGB;Radiator Size;360
-ASUS ROG Ryujin III 360 ARGB;FAN RPM;2200
-ASUS ROG Ryujin III 360 ARGB;Noise Level;36
-ASUS ROG Ryujin III 360 ARGB;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
-Deepcool LT520 White;Color;White
-Deepcool LT520 White;Lighting;Infinity Mirror RGB
-Deepcool LT520 White;Cooling;Water
-Deepcool LT520 White;Radiator Size;240
-Deepcool LT520 White;FAN RPM;2250
-Deepcool LT520 White;Noise Level;32.9
-Deepcool LT520 White;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
-Be Quiet! Pure Loop 2 280;Color;Black
-Be Quiet! Pure Loop 2 280;Lighting;ARGB
-Be Quiet! Pure Loop 2 280;Cooling;Water
-Be Quiet! Pure Loop 2 280;Radiator Size;280
-Be Quiet! Pure Loop 2 280;FAN RPM;1900
-Be Quiet! Pure Loop 2 280;Noise Level;33.8
-Be Quiet! Pure Loop 2 280;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
-Cooler Master MasterLiquid 360L Core;Color;White
-Cooler Master MasterLiquid 360L Core;Lighting;ARGB
-Cooler Master MasterLiquid 360L Core;Cooling;Water
-Cooler Master MasterLiquid 360L Core;Radiator Size;360
-Cooler Master MasterLiquid 360L Core;FAN RPM;1750
-Cooler Master MasterLiquid 360L Core;Noise Level;27.2
-Cooler Master MasterLiquid 360L Core;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
-Thermalright Peerless Assassin 120 SE;Color;White
-Thermalright Peerless Assassin 120 SE;Lighting;ARGB
-Thermalright Peerless Assassin 120 SE;Cooling;Air
-Thermalright Peerless Assassin 120 SE;Radiator Size;0
-Thermalright Peerless Assassin 120 SE;FAN RPM;1550
-Thermalright Peerless Assassin 120 SE;Noise Level;25.6
-Thermalright Peerless Assassin 120 SE;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
-Noctua NH-U12A chromax.black;Color;Black
-Noctua NH-U12A chromax.black;Lighting;None
-Noctua NH-U12A chromax.black;Cooling;Air
-Noctua NH-U12A chromax.black;Radiator Size;0
-Noctua NH-U12A chromax.black;FAN RPM;2000
-Noctua NH-U12A chromax.black;Noise Level;22.6
-Noctua NH-U12A chromax.black;CPU SOCKET;AM4 AM5 LGA1700 LGA1851
+Logitech G305 Lightspeed Black (910-005282);Signal;Vezeték nélküli
+Logitech G305 Lightspeed Black (910-005282);Connectivity Technology;Rádiófrekvenciás
+Logitech G305 Lightspeed Black (910-005282);DPI;12000
+Logitech G305 Lightspeed Black (910-005282);Key Amounts;6
+Logitech G305 Lightspeed Black (910-005282);Color;Black
+Logitech G305 Lightspeed Black (910-005282);Weight;99
+Logitech G Pro X Superlight 2 (910-006630);Signal;Vezeték nélküli
+Logitech G Pro X Superlight 2 (910-006630);Connectivity Technology;Rádiófrekvenciás
+Logitech G Pro X Superlight 2 (910-006630);DPI;32000
+Logitech G Pro X Superlight 2 (910-006630);Key Amounts;5
+Logitech G Pro X Superlight 2 (910-006630);Color;Black
+Logitech G Pro X Superlight 2 (910-006630);Weight;60
+Logitech G502 Hero (910-005470);Signal;Vezetékes
+Logitech G502 Hero (910-005470);Connectivity Technology;USB
+Logitech G502 Hero (910-005470);DPI;25600
+Logitech G502 Hero (910-005470);Key Amounts;11
+Logitech G502 Hero (910-005470);Color;Black
+Logitech G502 Hero (910-005470);Weight;121
+Logitech MX Master 3S Performance (910-006559);Signal;Vezeték nélküli
+Logitech MX Master 3S Performance (910-006559);Connectivity Technology;Bluetooth
+Logitech MX Master 3S Performance (910-006559);DPI;8000
+Logitech MX Master 3S Performance (910-006559);Key Amounts;7
+Logitech MX Master 3S Performance (910-006559);Color;Black
+Logitech MX Master 3S Performance (910-006559);Weight;141
+Logitech G Pro X Superlight (910-005880);Signal;Vezeték nélküli
+Logitech G Pro X Superlight (910-005880);Connectivity Technology;Rádiófrekvenciás
+Logitech G Pro X Superlight (910-005880);DPI;25600
+Logitech G Pro X Superlight (910-005880);Key Amounts;5
+Logitech G Pro X Superlight (910-005880);Color;Black
+Logitech G Pro X Superlight (910-005880);Weight;63
+Razer Viper V3 Pro (RZ01-05120100-R3G1);Signal;Vezeték nélküli
+Razer Viper V3 Pro (RZ01-05120100-R3G1);Connectivity Technology;Bluetooth
+Razer Viper V3 Pro (RZ01-05120100-R3G1);DPI;35000
+Razer Viper V3 Pro (RZ01-05120100-R3G1);Key Amounts;6
+Razer Viper V3 Pro (RZ01-05120100-R3G1);Color;Black
+Razer Viper V3 Pro (RZ01-05120100-R3G1);Weight;54
+Razer Viper V3 HyperSpeed (RZ01-04910100-R3M1);Signal;Vezeték nélküli
+Razer Viper V3 HyperSpeed (RZ01-04910100-R3M1);Connectivity Technology;Bluetooth
+Razer Viper V3 HyperSpeed (RZ01-04910100-R3M1);DPI;30000
+Razer Viper V3 HyperSpeed (RZ01-04910100-R3M1);Key Amounts;6
+Razer Viper V3 HyperSpeed (RZ01-04910100-R3M1);Color;Black
+Razer Viper V3 HyperSpeed (RZ01-04910100-R3M1);Weight;82
+Razer Basilisk V3 (RZ01-04000100-R3M1);Signal;Vezetékes
+Razer Basilisk V3 (RZ01-04000100-R3M1);Connectivity Technology;USB
+Razer Basilisk V3 (RZ01-04000100-R3M1);DPI;26000
+Razer Basilisk V3 (RZ01-04000100-R3M1);Key Amounts;11
+Razer Basilisk V3 (RZ01-04000100-R3M1);Color;Black
+Razer Basilisk V3 (RZ01-04000100-R3M1);Weight;101
+Logitech G502 X Black (910-006138);Signal;Vezetékes
+Logitech G502 X Black (910-006138);Connectivity Technology;USB
+Logitech G502 X Black (910-006138);DPI;25600
+Logitech G502 X Black (910-006138);Key Amounts;13
+Logitech G502 X Black (910-006138);Color;Black
+Logitech G502 X Black (910-006138);Weight;89
+Logitech MX Master 4 Graphite (910-007562);Signal;Vezeték nélküli
+Logitech MX Master 4 Graphite (910-007562);Connectivity Technology;Bluetooth
+Logitech MX Master 4 Graphite (910-007562);DPI;8000
+Logitech MX Master 4 Graphite (910-007562);Key Amounts;8
+Logitech MX Master 4 Graphite (910-007562);Color;Sötétszürke
+Logitech MX Master 4 Graphite (910-007562);Weight;150
+SteelSeries Rival 3 Wireless Gen 2 (62523);Signal;Vezeték nélküli
+SteelSeries Rival 3 Wireless Gen 2 (62523);Connectivity Technology;Bluetooth/Radio Frequency
+SteelSeries Rival 3 Wireless Gen 2 (62523);DPI;18000
+SteelSeries Rival 3 Wireless Gen 2 (62523);Key Amounts;6
+SteelSeries Rival 3 Wireless Gen 2 (62523);Color;Black
+SteelSeries Rival 3 Wireless Gen 2 (62523);Weight;83.5
+Logitech M330 Silent (910-004909);Signal;Vezeték nélküli
+Logitech M330 Silent (910-004909);Connectivity Technology;Rádiófrekvenciás
+Logitech M330 Silent (910-004909);DPI;1000
+Logitech M330 Silent (910-004909);Key Amounts;3
+Logitech M330 Silent (910-004909);Color;Black
+Logitech M330 Silent (910-004909);Weight;91
+Logitech G102 Lightsync Black (910-005823);Signal;Vezetékes
+Logitech G102 Lightsync Black (910-005823);Connectivity Technology;USB
+Logitech G102 Lightsync Black (910-005823);DPI;8000
+Logitech G102 Lightsync Black (910-005823);Key Amounts;6
+Logitech G102 Lightsync Black (910-005823);Color;Black
+Logitech G102 Lightsync Black (910-005823);Weight;85
+Logitech Signature M650 L (910-006236);Signal;Vezeték nélküli
+Logitech Signature M650 L (910-006236);Connectivity Technology;Bluetooth/Radio Frequency
+Logitech Signature M650 L (910-006236);DPI;2000
+Logitech Signature M650 L (910-006236);Key Amounts;5
+Logitech Signature M650 L (910-006236);Color;Gray
+Logitech Signature M650 L (910-006236);Weight;111.2
+Apple Magic Mouse 2024 (MXK53ZM/A);Signal;Vezeték nélküli
+Apple Magic Mouse 2024 (MXK53ZM/A);Connectivity Technology;Bluetooth/Radio Frequency
+Apple Magic Mouse 2024 (MXK53ZM/A);DPI;1000
+Apple Magic Mouse 2024 (MXK53ZM/A);Key Amounts;2
+Apple Magic Mouse 2024 (MXK53ZM/A);Color;White
+Apple Magic Mouse 2024 (MXK53ZM/A);Weight;99
+Logitech G502 X Lightspeed Black (910-006180);Signal;Vezeték nélküli
+Logitech G502 X Lightspeed Black (910-006180);Connectivity Technology;Rádiófrekvenciás
+Logitech G502 X Lightspeed Black (910-006180);DPI;25600
+Logitech G502 X Lightspeed Black (910-006180);Key Amounts;13
+Logitech G502 X Lightspeed Black (910-006180);Color;Black
+Logitech G502 X Lightspeed Black (910-006180);Weight;102
+Logitech G Pro 2 Lightspeed (910-007295);Signal;Vezeték nélküli
+Logitech G Pro 2 Lightspeed (910-007295);Connectivity Technology;USB
+Logitech G Pro 2 Lightspeed (910-007295);DPI;32000
+Logitech G Pro 2 Lightspeed (910-007295);Key Amounts;8
+Logitech G Pro 2 Lightspeed (910-007295);Color;Black
+Logitech G Pro 2 Lightspeed (910-007295);Weight;80
+Logitech G203 LightSync Black (910-005796);Signal;Vezetékes
+Logitech G203 LightSync Black (910-005796);Connectivity Technology;USB
+Logitech G203 LightSync Black (910-005796);DPI;8000
+Logitech G203 LightSync Black (910-005796);Key Amounts;6
+Logitech G203 LightSync Black (910-005796);Color;Black
+Logitech G203 LightSync Black (910-005796);Weight;85
+Logitech MX Vertical Advanced Ergonomic Graphite (910-005448);Signal;Vezeték nélküli
+Logitech MX Vertical Advanced Ergonomic Graphite (910-005448);Connectivity Technology;Bluetooth/Radio Frequency
+Logitech MX Vertical Advanced Ergonomic Graphite (910-005448);DPI;4000
+Logitech MX Vertical Advanced Ergonomic Graphite (910-005448);Key Amounts;4
+Logitech MX Vertical Advanced Ergonomic Graphite (910-005448);Color;Black
+Logitech MX Vertical Advanced Ergonomic Graphite (910-005448);Weight;135
+Razer DeathAdder Essential (RZ01-02540100-R3M1);Signal;Vezetékes
+Razer DeathAdder Essential (RZ01-02540100-R3M1);Connectivity Technology;USB
+Razer DeathAdder Essential (RZ01-02540100-R3M1);DPI;6400
+Razer DeathAdder Essential (RZ01-02540100-R3M1);Key Amounts;5
+Razer DeathAdder Essential (RZ01-02540100-R3M1);Color;Black
+Razer DeathAdder Essential (RZ01-02540100-R3M1);Weight;N/A
 
-Samsung Odyssey G5;Screen Size;32
-Samsung Odyssey G5;Resolution;2560x1440
-Samsung Odyssey G5;Refresh Rate;165
-Samsung Odyssey G5;Panel Type;VA
-Samsung Odyssey G5;Brightness;300
-Samsung Odyssey G5;Response Time;1
-Samsung Odyssey G5;Contrast Ratio;2500:1
-Alienware AW2524H;Screen Size;24.5
-Alienware AW2524H;Resolution;1920x1080
-Alienware AW2524H;Refresh Rate;500
-Alienware AW2524H;Panel Type;Fast IPS
-Alienware AW2524H;Brightness;400
-Alienware AW2524H;Response Time;0.5
-Alienware AW2524H;Contrast Ratio;1000:1
-ASUS ROG Swift Pro PG248QB;Screen Size;24.1
-ASUS ROG Swift Pro PG248QB;Resolution;1920x1080
-ASUS ROG Swift Pro PG248QB;Refresh Rate;540
-ASUS ROG Swift Pro PG248QB;Panel Type;E-TN
-ASUS ROG Swift Pro PG248QB;Brightness;400
-ASUS ROG Swift Pro PG248QB;Response Time;0.2
-ASUS ROG Swift Pro PG248QB;Contrast Ratio;1000:1
-LG UltraGear 32GS95UE;Screen Size;31.5
-LG UltraGear 32GS95UE;Resolution;3840x2160
-LG UltraGear 32GS95UE;Refresh Rate;240
-LG UltraGear 32GS95UE;Panel Type;OLED
-LG UltraGear 32GS95UE;Brightness;450
-LG UltraGear 32GS95UE;Response Time;0.03
-LG UltraGear 32GS95UE;Contrast Ratio;1500000:1
-MSI MPG 271QRX QD-OLED;Screen Size;27
-MSI MPG 271QRX QD-OLED;Resolution;2560x1440
-MSI MPG 271QRX QD-OLED;Refresh Rate;360
-MSI MPG 271QRX QD-OLED;Panel Type;QD-OLED
-MSI MPG 271QRX QD-OLED;Brightness;250
-MSI MPG 271QRX QD-OLED;Response Time;0.03
-MSI MPG 271QRX QD-OLED;Contrast Ratio;1500000:1
-BenQ Zowie XL2566K;Screen Size;24.5
-BenQ Zowie XL2566K;Resolution;1920x1080
-BenQ Zowie XL2566K;Refresh Rate;360
-BenQ Zowie XL2566K;Panel Type;Fast TN
-BenQ Zowie XL2566K;Brightness;320
-BenQ Zowie XL2566K;Response Time;0.5
-BenQ Zowie XL2566K;Contrast Ratio;1000:1
-Samsung Odyssey OLED G9;Screen Size;49
-Samsung Odyssey OLED G9;Resolution;5120x1440
-Samsung Odyssey OLED G9;Refresh Rate;240
-Samsung Odyssey OLED G9;Panel Type;QD-OLED
-Samsung Odyssey OLED G9;Brightness;250
-Samsung Odyssey OLED G9;Response Time;0.03
-Samsung Odyssey OLED G9;Contrast Ratio;1000000:1
-Alienware AW3423DWF;Screen Size;34.1
-Alienware AW3423DWF;Resolution;3440x1440
-Alienware AW3423DWF;Refresh Rate;165
-Alienware AW3423DWF;Panel Type;QD-OLED
-Alienware AW3423DWF;Brightness;250
-Alienware AW3423DWF;Response Time;0.1
-Alienware AW3423DWF;Contrast Ratio;1000000:1
-ASUS ROG Swift OLED PG42UQ;Screen Size;41.5
-ASUS ROG Swift OLED PG42UQ;Resolution;3840x2160
-ASUS ROG Swift OLED PG42UQ;Refresh Rate;138
-ASUS ROG Swift OLED PG42UQ;Panel Type;OLED
-ASUS ROG Swift OLED PG42UQ;Brightness;450
-ASUS ROG Swift OLED PG42UQ;Response Time;0.1
-ASUS ROG Swift OLED PG42UQ;Contrast Ratio;1500000:1
-Dell UltraSharp U4025QW;Screen Size;39.7
-Dell UltraSharp U4025QW;Resolution;5120x2160
-Dell UltraSharp U4025QW;Refresh Rate;120
-Dell UltraSharp U4025QW;Panel Type;IPS Black
-Dell UltraSharp U4025QW;Brightness;450
-Dell UltraSharp U4025QW;Response Time;5
-Dell UltraSharp U4025QW;Contrast Ratio;2000:1
-Gigabyte M27Q P;Screen Size;27
-Gigabyte M27Q P;Resolution;2560x1440
-Gigabyte M27Q P;Refresh Rate;170
-Gigabyte M27Q P;Panel Type;IPS
-Gigabyte M27Q P;Brightness;400
-Gigabyte M27Q P;Response Time;1
-Gigabyte M27Q P;Contrast Ratio;1000:1
-AOC AGON Pro AG276QSG;Screen Size;27
-AOC AGON Pro AG276QSG;Resolution;2560x1440
-AOC AGON Pro AG276QSG;Refresh Rate;240
-AOC AGON Pro AG276QSG;Panel Type;G-Sync IPS
-AOC AGON Pro AG276QSG;Brightness;400
-AOC AGON Pro AG276QSG;Response Time;1
-AOC AGON Pro AG276QSG;Contrast Ratio;1000:1
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);Type;MidiTower
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);2.5" Bays;1
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);3.5" Bays;2
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);Width;215 mm
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);Height;483 mm
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);Depth;432 mm
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);Weight;7200
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);ATX Support;Yes
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);Micro ATX Support;Yes
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);Extended ATX Support;No
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);Mini ITX Support;Yes
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);USB Ports;2
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);Transparent Side Panel;Yes
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);Color;Black
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);Type;MidiTower
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);2.5" Bays;5
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);3.5" Bays;2
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);Width;238 mm
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);Height;482 mm
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);Depth;503 mm
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);Weight;13450
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);ATX Support;Yes
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);Micro ATX Support;Yes
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);Extended ATX Support;Yes
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);Mini ITX Support;Yes
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);USB Ports;3
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);Transparent Side Panel;Yes
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);Color;Black
+Lian Li Vector V100 RGB White (G99.V100RW.00);Type;MiddleTower
+Lian Li Vector V100 RGB White (G99.V100RW.00);2.5" Bays;1
+Lian Li Vector V100 RGB White (G99.V100RW.00);3.5" Bays;1
+Lian Li Vector V100 RGB White (G99.V100RW.00);Width;235.5 mm
+Lian Li Vector V100 RGB White (G99.V100RW.00);Height;446 mm
+Lian Li Vector V100 RGB White (G99.V100RW.00);Depth;484.6 mm
+Lian Li Vector V100 RGB White (G99.V100RW.00);ATX Support;Yes
+Lian Li Vector V100 RGB White (G99.V100RW.00);Micro ATX Support;Yes
+Lian Li Vector V100 RGB White (G99.V100RW.00);Extended ATX Support;No
+Lian Li Vector V100 RGB White (G99.V100RW.00);Mini ITX Support;Yes
+Lian Li Vector V100 RGB White (G99.V100RW.00);USB Ports;3
+Lian Li Vector V100 RGB White (G99.V100RW.00);Transparent Side Panel;Yes
+Lian Li Vector V100 RGB White (G99.V100RW.00);Color;White
+Lian Li Vector V100 RGB White (G99.V100RW.00);Weight;N/A
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);Type;MicroTower
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);2.5" Bays;2
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);3.5" Bays;1
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);Width;194 mm
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);Height;321.5 mm
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);Depth;443 mm
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);Weight;5000
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);ATX Support;No
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);Micro ATX Support;Yes
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);Extended ATX Support;No
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);Mini ITX Support;Yes
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);USB Ports;3
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);Transparent Side Panel;No
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);Color;N/A
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);Type;MiddleTower
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);2.5" Bays;2
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);3.5" Bays;2
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);Width;285 mm
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);Height;440 mm
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);Depth;399 mm
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);Weight;2000
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);ATX Support;Yes
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);Micro ATX Support;Yes
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);Extended ATX Support;No
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);Mini ITX Support;Yes
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);USB Ports;3
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);Transparent Side Panel;Yes
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);Color;Black
+irány a bolt - bluechip.hu;Type;N/A
+irány a bolt - bluechip.hu;Width;N/A
+irány a bolt - bluechip.hu;Height;N/A
+irány a bolt - bluechip.hu;Depth;N/A
+irány a bolt - bluechip.hu;Weight;N/A
+irány a bolt - bluechip.hu;2.5" Bays;N/A
+irány a bolt - bluechip.hu;3.5" Bays;N/A
+irány a bolt - bluechip.hu;USB Ports;N/A
+irány a bolt - bluechip.hu;Transparent Side Panel;N/A
+irány a bolt - bluechip.hu;Color;N/A
+irány a bolt - bluechip.hu;ATX Support;N/A
+irány a bolt - bluechip.hu;Micro ATX Support;N/A
+irány a bolt - bluechip.hu;Extended ATX Support;N/A
+irány a bolt - bluechip.hu;Mini ITX Support;N/A
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);Type;MidiTower
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);2.5" Bays;1
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);3.5" Bays;2
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);Width;285 mm
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);Height;399 mm
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);Depth;440 mm
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);Weight;7000
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);ATX Support;Yes
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);Micro ATX Support;Yes
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);Extended ATX Support;No
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);Mini ITX Support;Yes
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);USB Ports;3
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);Transparent Side Panel;Yes
+Deepcool CG530 4F Black ( R-CG530-BKADA4-G-1);Color;Black
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);Type;MiddleTower
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);2.5" Bays;1
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);3.5" Bays;1
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);Width;219 mm
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);Height;456 mm
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);Depth;455.6 mm
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);Weight;4900
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);ATX Support;Yes
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);Micro ATX Support;Yes
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);Extended ATX Support;No
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);Mini ITX Support;Yes
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);USB Ports;3
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);Transparent Side Panel;Yes
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);Color;Black
+Lian Li O11 Vision Compact Black (O11VPX);Type;MiddleTower
+Lian Li O11 Vision Compact Black (O11VPX);2.5" Bays;2
+Lian Li O11 Vision Compact Black (O11VPX);3.5" Bays;2
+Lian Li O11 Vision Compact Black (O11VPX);Width;287.5 mm
+Lian Li O11 Vision Compact Black (O11VPX);Height;446.4 mm
+Lian Li O11 Vision Compact Black (O11VPX);Depth;447.5 mm
+Lian Li O11 Vision Compact Black (O11VPX);Weight;6900
+Lian Li O11 Vision Compact Black (O11VPX);ATX Support;Yes
+Lian Li O11 Vision Compact Black (O11VPX);Micro ATX Support;Yes
+Lian Li O11 Vision Compact Black (O11VPX);Extended ATX Support;No
+Lian Li O11 Vision Compact Black (O11VPX);Mini ITX Support;Yes
+Lian Li O11 Vision Compact Black (O11VPX);USB Ports;3
+Lian Li O11 Vision Compact Black (O11VPX);Transparent Side Panel;Yes
+Lian Li O11 Vision Compact Black (O11VPX);Color;Black
+Lian Li O11 Vision Compact White (O11VPW);Type;MiddleTower
+Lian Li O11 Vision Compact White (O11VPW);2.5" Bays;2
+Lian Li O11 Vision Compact White (O11VPW);3.5" Bays;2
+Lian Li O11 Vision Compact White (O11VPW);Width;287.5 mm
+Lian Li O11 Vision Compact White (O11VPW);Height;446.4 mm
+Lian Li O11 Vision Compact White (O11VPW);Depth;447.5 mm
+Lian Li O11 Vision Compact White (O11VPW);Weight;6900
+Lian Li O11 Vision Compact White (O11VPW);ATX Support;Yes
+Lian Li O11 Vision Compact White (O11VPW);Micro ATX Support;Yes
+Lian Li O11 Vision Compact White (O11VPW);Extended ATX Support;No
+Lian Li O11 Vision Compact White (O11VPW);Mini ITX Support;Yes
+Lian Li O11 Vision Compact White (O11VPW);USB Ports;3
+Lian Li O11 Vision Compact White (O11VPW);Transparent Side Panel;Yes
+Lian Li O11 Vision Compact White (O11VPW);Color;White
+Lian Li LANCOOL 216 RGB Black;Type;MidiTower
+Lian Li LANCOOL 216 RGB Black;2.5" Bays;6
+Lian Li LANCOOL 216 RGB Black;3.5" Bays;2
+Lian Li LANCOOL 216 RGB Black;Width;235 mm
+Lian Li LANCOOL 216 RGB Black;Height;480.9 mm
+Lian Li LANCOOL 216 RGB Black;Depth;491.7 mm
+Lian Li LANCOOL 216 RGB Black;Weight;11200
+Lian Li LANCOOL 216 RGB Black;ATX Support;Yes
+Lian Li LANCOOL 216 RGB Black;Micro ATX Support;Yes
+Lian Li LANCOOL 216 RGB Black;Extended ATX Support;Yes
+Lian Li LANCOOL 216 RGB Black;Mini ITX Support;Yes
+Lian Li LANCOOL 216 RGB Black;USB Ports;3
+Lian Li LANCOOL 216 RGB Black;Transparent Side Panel;Yes
+Lian Li LANCOOL 216 RGB Black;Color;Black
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);Type;MidiTower
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);2.5" Bays;4
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);3.5" Bays;2
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);Width;320 mm
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);Height;470 mm
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);Depth;470 mm
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);Weight;11000
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);ATX Support;Yes
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);Micro ATX Support;Yes
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);Extended ATX Support;Yes
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);Mini ITX Support;Yes
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);USB Ports;3
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);Transparent Side Panel;Yes
+HYTE Y70 Touch TG Black /White (CS-HYTE-Y70-BW-L);Color;Gray
+darkFlash M305 black;Type;MiniTower
+darkFlash M305 black;2.5" Bays;2
+darkFlash M305 black;3.5" Bays;2
+darkFlash M305 black;Width;195 mm
+darkFlash M305 black;Height;387 mm
+darkFlash M305 black;Depth;325 mm
+darkFlash M305 black;Weight;5000
+darkFlash M305 black;ATX Support;No
+darkFlash M305 black;Micro ATX Support;Yes
+darkFlash M305 black;Extended ATX Support;No
+darkFlash M305 black;Mini ITX Support;Yes
+darkFlash M305 black;USB Ports;3
+darkFlash M305 black;Transparent Side Panel;Yes
+darkFlash M305 black;Color;Black
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);Type;MidiTower
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);2.5" Bays;1
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);3.5" Bays;1
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);Width;238 mm
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);Height;435 mm
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);Depth;511 mm
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);Weight;9100
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);ATX Support;Yes
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);Micro ATX Support;Yes
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);Extended ATX Support;No
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);Mini ITX Support;Yes
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);USB Ports;3
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);Transparent Side Panel;Yes
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);Color;Black
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);Type;MidiTower
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);2.5" Bays;2
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);3.5" Bays;1
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);Width;225 mm
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);Height;465 mm
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);Depth;430 mm
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);Weight;7200
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);ATX Support;Yes
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);Micro ATX Support;Yes
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);Extended ATX Support;No
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);Mini ITX Support;Yes
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);USB Ports;2
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);Transparent Side Panel;Yes
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);Color;Black
+Aigo B350;Type;MidiTower
+Aigo B350;2.5" Bays;2
+Aigo B350;3.5" Bays;2
+Aigo B350;Width;200 mm
+Aigo B350;Weight;5500
+Aigo B350;ATX Support;Yes
+Aigo B350;Micro ATX Support;No
+Aigo B350;Extended ATX Support;No
+Aigo B350;Mini ITX Support;No
+Aigo B350;USB Ports;3
+Aigo B350;Transparent Side Panel;No
+Aigo B350;Height;N/A
+Aigo B350;Depth;N/A
+Aigo B350;Color;N/A
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);Type;MiddleTower
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);2.5" Bays;4
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);3.5" Bays;2
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);Width;214 mm
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);Height;482 mm
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);Depth;426 mm
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);Weight;7200
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);ATX Support;Yes
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);Micro ATX Support;Yes
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);Extended ATX Support;No
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);Mini ITX Support;Yes
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);USB Ports;2
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);Transparent Side Panel;Yes
+ASUS TUF Gaming GT301 АRGB (90DC0040-B49000);Color;N/A
+darkFlash FT418 PRO + 7 ARGB Black;Type;Full Tower
+darkFlash FT418 PRO + 7 ARGB Black;2.5" Bays;3
+darkFlash FT418 PRO + 7 ARGB Black;3.5" Bays;2
+darkFlash FT418 PRO + 7 ARGB Black;Width;280 mm
+darkFlash FT418 PRO + 7 ARGB Black;Height;435 mm
+darkFlash FT418 PRO + 7 ARGB Black;Depth;418 mm
+darkFlash FT418 PRO + 7 ARGB Black;Weight;5400
+darkFlash FT418 PRO + 7 ARGB Black;ATX Support;Yes
+darkFlash FT418 PRO + 7 ARGB Black;Micro ATX Support;Yes
+darkFlash FT418 PRO + 7 ARGB Black;Extended ATX Support;No
+darkFlash FT418 PRO + 7 ARGB Black;Mini ITX Support;Yes
+darkFlash FT418 PRO + 7 ARGB Black;USB Ports;2
+darkFlash FT418 PRO + 7 ARGB Black;Transparent Side Panel;Yes
+darkFlash FT418 PRO + 7 ARGB Black;Color;Black
+darkFlash DS900WD black;Type;MidiTower
+darkFlash DS900WD black;2.5" Bays;2
+darkFlash DS900WD black;3.5" Bays;2
+darkFlash DS900WD black;Width;217 mm
+darkFlash DS900WD black;Height;454 mm
+darkFlash DS900WD black;Depth;470 mm
+darkFlash DS900WD black;Weight;6530
+darkFlash DS900WD black;ATX Support;Yes
+darkFlash DS900WD black;Micro ATX Support;Yes
+darkFlash DS900WD black;Extended ATX Support;No
+darkFlash DS900WD black;Mini ITX Support;Yes
+darkFlash DS900WD black;USB Ports;3
+darkFlash DS900WD black;Transparent Side Panel;Yes
+darkFlash DS900WD black;Color;Black
+JONSBO C6 Black;2.5" Bays;2
+JONSBO C6 Black;3.5" Bays;1
+JONSBO C6 Black;Width;202 mm
+JONSBO C6 Black;Height;266 mm
+JONSBO C6 Black;Depth;295.2 mm
+JONSBO C6 Black;Weight;2300
+JONSBO C6 Black;ATX Support;No
+JONSBO C6 Black;Micro ATX Support;Yes
+JONSBO C6 Black;Extended ATX Support;No
+JONSBO C6 Black;Mini ITX Support;Yes
+JONSBO C6 Black;USB Ports;2
+JONSBO C6 Black;Transparent Side Panel;No
+JONSBO C6 Black;Color;Black
+JONSBO C6 Black;Type;N/A
 
-Logitech MX Master 3S (Wireless);Color;Graphite
-Logitech MX Master 3S (Wireless);DPI;8000
-Logitech MX Master 3S (Wireless);Wireless;Yes
-Logitech MX Master 3S (Wireless);Battery Life;70
-Logitech MX Master 3S (Wireless);Weight;141
-Logitech MX Master 3S (Wireless);Connectivity Technology;Wireless
-Razer Viper V3 Pro;Color;White
-Razer Viper V3 Pro;DPI;35000
-Razer Viper V3 Pro;Wireless;Yes
-Razer Viper V3 Pro;Battery Life;95
-Razer Viper V3 Pro;Weight;54
-Razer Viper V3 Pro;Connectivity Technology;HyperPolling Wireless (8K)
-Logitech G Pro X Superlight 2;Color;Magenta
-Logitech G Pro X Superlight 2;DPI;32000
-Logitech G Pro X Superlight 2;Wireless;Yes
-Logitech G Pro X Superlight 2;Battery Life;95
-Logitech G Pro X Superlight 2;Weight;60
-Logitech G Pro X Superlight 2;Connectivity Technology;Lightspeed Wireless
-SteelSeries Aerox 9 Wireless;Color;Black
-SteelSeries Aerox 9 Wireless;DPI;18000
-SteelSeries Aerox 9 Wireless;Wireless;Yes
-SteelSeries Aerox 9 Wireless;Battery Life;180
-SteelSeries Aerox 9 Wireless;Weight;89
-SteelSeries Aerox 9 Wireless;Connectivity Technology;2.4GHz / Bluetooth
-Finalmouse UltralightX;Color;Guardian (Gold)
-Finalmouse UltralightX;DPI;26000
-Finalmouse UltralightX;Wireless;Yes
-Finalmouse UltralightX;Battery Life;40
-Finalmouse UltralightX;Weight;29
-Finalmouse UltralightX;Connectivity Technology;Wireless
-Attack Shark X3;Color;White
-Attack Shark X3;DPI;26000
-Attack Shark X3;Wireless;Yes
-Attack Shark X3;Battery Life;200
-Attack Shark X3;Weight;49
-Attack Shark X3;Connectivity Technology;2.4GHz / BT / Wired
-VGN Dragonfly F1 Pro Max;Color;Black
-VGN Dragonfly F1 Pro Max;DPI;26000
-VGN Dragonfly F1 Pro Max;Wireless;Yes
-VGN Dragonfly F1 Pro Max;Battery Life;130
-VGN Dragonfly F1 Pro Max;Weight;55
-VGN Dragonfly F1 Pro Max;Connectivity Technology;Lightspeed Wireless
-Zowie EC2-C;Color;Black
-Zowie EC2-C;DPI;3200)
-Zowie EC2-C;Wireless;No
-Zowie EC2-C;Battery Life;0
-Zowie EC2-C;Weight;73
-Zowie EC2-C;Connectivity Technology;Wired
-Glorious Model O 2 Wireless;Color;White
-Glorious Model O 2 Wireless;DPI;26000
-Glorious Model O 2 Wireless;Wireless;Yes
-Glorious Model O 2 Wireless;Battery Life;210
-Glorious Model O 2 Wireless;Weight;68
-Glorious Model O 2 Wireless;Connectivity Technology;2.4GHz / Bluetooth
-Pulsar X2V2;Color;Red
-Pulsar X2V2;DPI;26000
-Pulsar X2V2;Wireless;Yes
-Pulsar X2V2;Battery Life;70
-Pulsar X2V2;Weight;52
-Pulsar X2V2;Connectivity Technology;Wireless
+ARCTIC P12 Pro (ACFAN00305A);Fan Diameter;120
+ARCTIC P12 Pro (ACFAN00305A);Fan RPM;3000
+ARCTIC P12 Pro (ACFAN00305A);Noise Level;25 dB
+ARCTIC P12 Pro (ACFAN00305A);PWM;Yes
+ARCTIC P12 Pro (ACFAN00305A);Connector;4 tűs
+ARCTIC P12 Pro (ACFAN00305A);LED Lighting;No
+ARCTIC P12 Pro (ACFAN00305A);Dimensions;120
+ARCTIC P12 Pro (ACFAN00305A);Weight;200
+ARCTIC P12 Pro (ACFAN00305A);Airflow;N/A
+ARCTIC P12 120mm 1800rpm (ACFAN00118A);Fan Diameter;120
+ARCTIC P12 120mm 1800rpm (ACFAN00118A);Fan RPM;1800
+ARCTIC P12 120mm 1800rpm (ACFAN00118A);Noise Level;23 dB
+ARCTIC P12 120mm 1800rpm (ACFAN00118A);Connector;3 tűs
+ARCTIC P12 120mm 1800rpm (ACFAN00118A);Dimensions;120
+ARCTIC P12 120mm 1800rpm (ACFAN00118A);Weight;139
+ARCTIC P12 120mm 1800rpm (ACFAN00118A);Airflow;N/A
+ARCTIC P12 120mm 1800rpm (ACFAN00118A);PWM;N/A
+ARCTIC P12 120mm 1800rpm (ACFAN00118A);LED Lighting;N/A
+ARCTIC P12 Value Pack (ACFAN00135A);Fan Diameter;120
+ARCTIC P12 Value Pack (ACFAN00135A);Fan RPM;1800
+ARCTIC P12 Value Pack (ACFAN00135A);Noise Level;22 dB
+ARCTIC P12 Value Pack (ACFAN00135A);PWM;No
+ARCTIC P12 Value Pack (ACFAN00135A);Connector;3 tűs
+ARCTIC P12 Value Pack (ACFAN00135A);LED Lighting;No
+ARCTIC P12 Value Pack (ACFAN00135A);Dimensions;120
+ARCTIC P12 Value Pack (ACFAN00135A);Weight;139
+ARCTIC P12 Value Pack (ACFAN00135A);Airflow;N/A
+Lian Li UNI Fan SL Infinity ARGB PWM 120mm 3-pack black (UF-SLIN120-3B/LL-FAN-LULI-028);Fan Diameter;120
+Lian Li UNI Fan SL Infinity ARGB PWM 120mm 3-pack black (UF-SLIN120-3B/LL-FAN-LULI-028);Fan RPM;2100
+Lian Li UNI Fan SL Infinity ARGB PWM 120mm 3-pack black (UF-SLIN120-3B/LL-FAN-LULI-028);Noise Level;29 dB
+Lian Li UNI Fan SL Infinity ARGB PWM 120mm 3-pack black (UF-SLIN120-3B/LL-FAN-LULI-028);PWM;Yes
+Lian Li UNI Fan SL Infinity ARGB PWM 120mm 3-pack black (UF-SLIN120-3B/LL-FAN-LULI-028);Connector;3 tűs/4 tűs
+Lian Li UNI Fan SL Infinity ARGB PWM 120mm 3-pack black (UF-SLIN120-3B/LL-FAN-LULI-028);LED Lighting;Yes
+Lian Li UNI Fan SL Infinity ARGB PWM 120mm 3-pack black (UF-SLIN120-3B/LL-FAN-LULI-028);Dimensions;120
+Lian Li UNI Fan SL Infinity ARGB PWM 120mm 3-pack black (UF-SLIN120-3B/LL-FAN-LULI-028);Weight;550
+Lian Li UNI Fan SL Infinity ARGB PWM 120mm 3-pack black (UF-SLIN120-3B/LL-FAN-LULI-028);Airflow;N/A
+ARCTIC P14 Pro PST CO 140mm PWM 5-Pack (ACFAN00319A);Fan Diameter;140
+ARCTIC P14 Pro PST CO 140mm PWM 5-Pack (ACFAN00319A);Fan RPM;2500
+ARCTIC P14 Pro PST CO 140mm PWM 5-Pack (ACFAN00319A);Noise Level;25 dB
+ARCTIC P14 Pro PST CO 140mm PWM 5-Pack (ACFAN00319A);PWM;Yes
+ARCTIC P14 Pro PST CO 140mm PWM 5-Pack (ACFAN00319A);Connector;4 tűs
+ARCTIC P14 Pro PST CO 140mm PWM 5-Pack (ACFAN00319A);LED Lighting;No
+ARCTIC P14 Pro PST CO 140mm PWM 5-Pack (ACFAN00319A);Dimensions;140
+ARCTIC P14 Pro PST CO 140mm PWM 5-Pack (ACFAN00319A);Weight;242
+ARCTIC P14 Pro PST CO 140mm PWM 5-Pack (ACFAN00319A);Airflow;N/A
+Arctic P12 Slim PWM PST (ACFAN00187A);Fan Diameter;120
+Arctic P12 Slim PWM PST (ACFAN00187A);Fan RPM;2100
+Arctic P12 Slim PWM PST (ACFAN00187A);Noise Level;24.5 dB
+Arctic P12 Slim PWM PST (ACFAN00187A);PWM;Yes
+Arctic P12 Slim PWM PST (ACFAN00187A);Connector;4 tűs
+Arctic P12 Slim PWM PST (ACFAN00187A);LED Lighting;No
+Arctic P12 Slim PWM PST (ACFAN00187A);Dimensions;120
+Arctic P12 Slim PWM PST (ACFAN00187A);Weight;85
+Arctic P12 Slim PWM PST (ACFAN00187A);Airflow;N/A
+Noctua NF-A12x25-PWM;Fan Diameter;120
+Noctua NF-A12x25-PWM;Fan RPM;2000
+Noctua NF-A12x25-PWM;Noise Level;22.6 dB
+Noctua NF-A12x25-PWM;PWM;Yes
+Noctua NF-A12x25-PWM;Connector;4 tűs
+Noctua NF-A12x25-PWM;LED Lighting;No
+Noctua NF-A12x25-PWM;Dimensions;120
+Noctua NF-A12x25-PWM;Weight;300
+Noctua NF-A12x25-PWM;Airflow;N/A
+ARCTIC P12 Pro A-RGB 120mm PWM 3-Pack (ACFAN00310A);Fan Diameter;120
+ARCTIC P12 Pro A-RGB 120mm PWM 3-Pack (ACFAN00310A);Fan RPM;3000
+ARCTIC P12 Pro A-RGB 120mm PWM 3-Pack (ACFAN00310A);PWM;Yes
+ARCTIC P12 Pro A-RGB 120mm PWM 3-Pack (ACFAN00310A);Connector;3 tűs/4 tűs
+ARCTIC P12 Pro A-RGB 120mm PWM 3-Pack (ACFAN00310A);LED Lighting;Yes
+ARCTIC P12 Pro A-RGB 120mm PWM 3-Pack (ACFAN00310A);Dimensions;120
+ARCTIC P12 Pro A-RGB 120mm PWM 3-Pack (ACFAN00310A);Weight;185
+ARCTIC P12 Pro A-RGB 120mm PWM 3-Pack (ACFAN00310A);Noise Level;N/A
+ARCTIC P12 Pro A-RGB 120mm PWM 3-Pack (ACFAN00310A);Airflow;N/A
+be quiet! Silent Wings 4 PWM High-speed 120mm (BL094);Fan Diameter;120
+be quiet! Silent Wings 4 PWM High-speed 120mm (BL094);Fan RPM;2500
+be quiet! Silent Wings 4 PWM High-speed 120mm (BL094);Noise Level;31.2 dB
+be quiet! Silent Wings 4 PWM High-speed 120mm (BL094);PWM;Yes
+be quiet! Silent Wings 4 PWM High-speed 120mm (BL094);Connector;4 tűs
+be quiet! Silent Wings 4 PWM High-speed 120mm (BL094);LED Lighting;No
+be quiet! Silent Wings 4 PWM High-speed 120mm (BL094);Dimensions;120
+be quiet! Silent Wings 4 PWM High-speed 120mm (BL094);Weight;300
+be quiet! Silent Wings 4 PWM High-speed 120mm (BL094);Airflow;N/A
+ARCTIC P14 Pro PST 140mm PWM (ACFAN00314A);Fan Diameter;140
+ARCTIC P14 Pro PST 140mm PWM (ACFAN00314A);Fan RPM;2500
+ARCTIC P14 Pro PST 140mm PWM (ACFAN00314A);Noise Level;25 dB
+ARCTIC P14 Pro PST 140mm PWM (ACFAN00314A);PWM;Yes
+ARCTIC P14 Pro PST 140mm PWM (ACFAN00314A);Connector;4 tűs
+ARCTIC P14 Pro PST 140mm PWM (ACFAN00314A);LED Lighting;No
+ARCTIC P14 Pro PST 140mm PWM (ACFAN00314A);Dimensions;140
+ARCTIC P14 Pro PST 140mm PWM (ACFAN00314A);Weight;242
+ARCTIC P14 Pro PST 140mm PWM (ACFAN00314A);Airflow;N/A
+Noctua NF-P12 redux-1700 PWM;Fan Diameter;120
+Noctua NF-P12 redux-1700 PWM;Fan RPM;1700
+Noctua NF-P12 redux-1700 PWM;Noise Level;25.1 dB
+Noctua NF-P12 redux-1700 PWM;PWM;Yes
+Noctua NF-P12 redux-1700 PWM;Connector;4 tűs
+Noctua NF-P12 redux-1700 PWM;LED Lighting;No
+Noctua NF-P12 redux-1700 PWM;Dimensions;120
+Noctua NF-P12 redux-1700 PWM;Weight;300
+Noctua NF-P12 redux-1700 PWM;Airflow;N/A
+Iceberg Thermal IceGALE Silent PWM 120mm 3 pack (ICEGALE12P-BBT-3A);Fan Diameter;120
+Iceberg Thermal IceGALE Silent PWM 120mm 3 pack (ICEGALE12P-BBT-3A);Fan RPM;1600
+Iceberg Thermal IceGALE Silent PWM 120mm 3 pack (ICEGALE12P-BBT-3A);Noise Level;21.8 dB
+Iceberg Thermal IceGALE Silent PWM 120mm 3 pack (ICEGALE12P-BBT-3A);PWM;Yes
+Iceberg Thermal IceGALE Silent PWM 120mm 3 pack (ICEGALE12P-BBT-3A);Connector;4 tűs
+Iceberg Thermal IceGALE Silent PWM 120mm 3 pack (ICEGALE12P-BBT-3A);LED Lighting;No
+Iceberg Thermal IceGALE Silent PWM 120mm 3 pack (ICEGALE12P-BBT-3A);Weight;490
+Iceberg Thermal IceGALE Silent PWM 120mm 3 pack (ICEGALE12P-BBT-3A);Airflow;N/A
+Iceberg Thermal IceGALE Silent PWM 120mm 3 pack (ICEGALE12P-BBT-3A);Dimensions;N/A
+Noctua NF-A14X25 G2 PWM;Fan Diameter;140
+Noctua NF-A14X25 G2 PWM;Fan RPM;1500
+Noctua NF-A14X25 G2 PWM;Noise Level;24.8 dB
+Noctua NF-A14X25 G2 PWM;PWM;Yes
+Noctua NF-A14X25 G2 PWM;Connector;4 tűs
+Noctua NF-A14X25 G2 PWM;LED Lighting;No
+Noctua NF-A14X25 G2 PWM;Dimensions;140
+Noctua NF-A14X25 G2 PWM;Weight;360
+Noctua NF-A14X25 G2 PWM;Airflow;N/A
+Deepcool FL12 SE 3in1 (R-FL12SE-BKAPN3-G);Fan Diameter;120
+Deepcool FL12 SE 3in1 (R-FL12SE-BKAPN3-G);Fan RPM;2150
+Deepcool FL12 SE 3in1 (R-FL12SE-BKAPN3-G);Noise Level;28.67 dB
+Deepcool FL12 SE 3in1 (R-FL12SE-BKAPN3-G);PWM;Yes
+Deepcool FL12 SE 3in1 (R-FL12SE-BKAPN3-G);Connector;3 tűs/4 tűs
+Deepcool FL12 SE 3in1 (R-FL12SE-BKAPN3-G);LED Lighting;Yes
+Deepcool FL12 SE 3in1 (R-FL12SE-BKAPN3-G);Dimensions;120
+Deepcool FL12 SE 3in1 (R-FL12SE-BKAPN3-G);Weight;516
+Deepcool FL12 SE 3in1 (R-FL12SE-BKAPN3-G);Airflow;N/A
+darkFlash DR12 Pro 5-Pack;Fan Diameter;120
+darkFlash DR12 Pro 5-Pack;Fan RPM;1200
+darkFlash DR12 Pro 5-Pack;Noise Level;16 dB
+darkFlash DR12 Pro 5-Pack;PWM;No
+darkFlash DR12 Pro 5-Pack;Connector;6 tűs
+darkFlash DR12 Pro 5-Pack;LED Lighting;Yes
+darkFlash DR12 Pro 5-Pack;Weight;920
+darkFlash DR12 Pro 5-Pack;Airflow;N/A
+darkFlash DR12 Pro 5-Pack;Dimensions;N/A
+ARCTIC P12 Silent 120mm black (ACFAN00130A);Fan Diameter;120
+ARCTIC P12 Silent 120mm black (ACFAN00130A);Fan RPM;1050
+ARCTIC P12 Silent 120mm black (ACFAN00130A);Noise Level;16.9 dB
+ARCTIC P12 Silent 120mm black (ACFAN00130A);PWM;No
+ARCTIC P12 Silent 120mm black (ACFAN00130A);Connector;3 tűs
+ARCTIC P12 Silent 120mm black (ACFAN00130A);LED Lighting;No
+ARCTIC P12 Silent 120mm black (ACFAN00130A);Dimensions;120
+ARCTIC P12 Silent 120mm black (ACFAN00130A);Weight;139
+ARCTIC P12 Silent 120mm black (ACFAN00130A);Airflow;N/A
+ARCTIC P14 Pro A-RGB (ACFAN00315A);Fan Diameter;140
+ARCTIC P14 Pro A-RGB (ACFAN00315A);Fan RPM;2500
+ARCTIC P14 Pro A-RGB (ACFAN00315A);Noise Level;25 dB
+ARCTIC P14 Pro A-RGB (ACFAN00315A);PWM;Yes
+ARCTIC P14 Pro A-RGB (ACFAN00315A);Connector;3 tűs/4 tűs
+ARCTIC P14 Pro A-RGB (ACFAN00315A);LED Lighting;Yes
+ARCTIC P14 Pro A-RGB (ACFAN00315A);Dimensions;140
+ARCTIC P14 Pro A-RGB (ACFAN00315A);Weight;237
+ARCTIC P14 Pro A-RGB (ACFAN00315A);Airflow;N/A
+ARCTIC P14 Pro A-RGB 140mm PWM 3-Pack (ACFAN00320A);Fan Diameter;140
+ARCTIC P14 Pro A-RGB 140mm PWM 3-Pack (ACFAN00320A);Fan RPM;2500
+ARCTIC P14 Pro A-RGB 140mm PWM 3-Pack (ACFAN00320A);Noise Level;25 dB
+ARCTIC P14 Pro A-RGB 140mm PWM 3-Pack (ACFAN00320A);PWM;Yes
+ARCTIC P14 Pro A-RGB 140mm PWM 3-Pack (ACFAN00320A);Connector;3 tűs/4 tűs
+ARCTIC P14 Pro A-RGB 140mm PWM 3-Pack (ACFAN00320A);LED Lighting;Yes
+ARCTIC P14 Pro A-RGB 140mm PWM 3-Pack (ACFAN00320A);Dimensions;140
+ARCTIC P14 Pro A-RGB 140mm PWM 3-Pack (ACFAN00320A);Weight;237
+ARCTIC P14 Pro A-RGB 140mm PWM 3-Pack (ACFAN00320A);Airflow;N/A
+Noctua NF-A12x25 PWM Chromax (NF-A12x25-PWM.CH.BK.S);Fan Diameter;120
+Noctua NF-A12x25 PWM Chromax (NF-A12x25-PWM.CH.BK.S);Fan RPM;2000
+Noctua NF-A12x25 PWM Chromax (NF-A12x25-PWM.CH.BK.S);Noise Level;22.6 dB
+Noctua NF-A12x25 PWM Chromax (NF-A12x25-PWM.CH.BK.S);PWM;Yes
+Noctua NF-A12x25 PWM Chromax (NF-A12x25-PWM.CH.BK.S);Connector;4 tűs
+Noctua NF-A12x25 PWM Chromax (NF-A12x25-PWM.CH.BK.S);LED Lighting;No
+Noctua NF-A12x25 PWM Chromax (NF-A12x25-PWM.CH.BK.S);Dimensions;120
+Noctua NF-A12x25 PWM Chromax (NF-A12x25-PWM.CH.BK.S);Weight;300
+Noctua NF-A12x25 PWM Chromax (NF-A12x25-PWM.CH.BK.S);Airflow;N/A
+be quiet! Silent Wings 4 PWM 140mm (BL096);Fan Diameter;140
+be quiet! Silent Wings 4 PWM 140mm (BL096);Fan RPM;1100
+be quiet! Silent Wings 4 PWM 140mm (BL096);Noise Level;13.6 dB
+be quiet! Silent Wings 4 PWM 140mm (BL096);PWM;Yes
+be quiet! Silent Wings 4 PWM 140mm (BL096);Connector;4 tűs
+be quiet! Silent Wings 4 PWM 140mm (BL096);LED Lighting;No
+be quiet! Silent Wings 4 PWM 140mm (BL096);Dimensions;140
+be quiet! Silent Wings 4 PWM 140mm (BL096);Weight;300
+be quiet! Silent Wings 4 PWM 140mm (BL096);Airflow;N/Aroprietary Link
 
-Fractal Design Meshify 2;Side Panel;Tempered Glass
-Fractal Design Meshify 2;Type;ATX Mid
-Fractal Design Meshify 2;Max GPU Length;450
-Fractal Design Meshify 2;Drive Bays;6
-Fractal Design Meshify 2;Color;Black
-Fractal Design Meshify 2;Dimensions;542x240x474
-Fractal Design Meshify 2;Radiator Support;120 mm 140 mm 240 mm 280 mm 360 mm 420 mm
-Fractal Design Meshify 2;Motherboard Form Factor;ATX EATX Micro ATX Mini ITX
-Fractal Design Meshify 2;Warranty;2
-Lian Li O11 Vision;Side Panel;Triple Tempered Glass
-Lian Li O11 Vision;Type;ATX Mid Tower
-Lian Li O11 Vision;Max GPU Length;455
-Lian Li O11 Vision;Drive Bays;5
-Lian Li O11 Vision;Color;Chrome/White
-Lian Li O11 Vision;Dimensions;480x304x464
-Lian Li O11 Vision;Radiator Support;240 mm 280 mm 360 mm
-Lian Li O11 Vision;Motherboard Form Factor;EATX ATX Micro ATX Mini ITX
-Lian Li O11 Vision;Warranty;1
-NZXT H6 Flow;Side Panel;Tempered Glass
-NZXT H6 Flow;Type;Dual-Chamber Mid Tower
-NZXT H6 Flow;Max GPU Length;365
-NZXT H6 Flow;Drive Bays;3
-NZXT H6 Flow;Color;White
-NZXT H6 Flow;Dimensions;435x287x415
-NZXT H6 Flow;Radiator Support;120 mm 240 mm 280 mm 360 mm
-NZXT H6 Flow;Motherboard Form Factor;ATX Micro ATX Mini ITX
-NZXT H6 Flow;Warranty;2
-Corsair 2500D Airflow;Side Panel;Tempered Glass
-Corsair 2500D Airflow;Type;Small Form Factor Dual-Chamber
-Corsair 2500D Airflow;Max GPU Length;400
-Corsair 2500D Airflow;Drive Bays;4
-Corsair 2500D Airflow;Color;Black
-Corsair 2500D Airflow;Dimensions;304x479x376
-Corsair 2500D Airflow;Radiator Support;120 mm 140 mm 240 mm 280 mm 360 mm
-Corsair 2500D Airflow;Motherboard Form Factor;Micro ATX Mini ITX
-Corsair 2500D Airflow;Warranty;2
-Hyte Y70 Touch;Side Panel;Panoramic Glass
-Hyte Y70 Touch;Type;ATX Mid Tower
-Hyte Y70 Touch;Max GPU Length;422
-Hyte Y70 Touch;Drive Bays;4
-Hyte Y70 Touch;Color;Milk/Red
-Hyte Y70 Touch;Dimensions;470x320x470
-Hyte Y70 Touch;Radiator Support;120 mm 140 mm 240 mm 280 mm 360 mm
-Hyte Y70 Touch;Motherboard Form Factor;EATX ATX Micro ATX Mini ITX
-Hyte Y70 Touch;Warranty;3
+Redragon Kumara RGB (K552RGB-1_BROWN_HU);Backlight;Yes
+Redragon Kumara RGB (K552RGB-1_BROWN_HU);Color;N/A
+Redragon Kumara RGB (K552RGB-1_BROWN_HU);Weight;N/A
+Redragon Kumara RGB (K552RGB-1_BROWN_HU);Key Amounts;N/A
+Redragon Kumara RGB (K552RGB-1_BROWN_HU);Compatible;N/A
+Keychron C3 Pro 8K QMK Super Brown (C3PX-H4Z-HU);Backlight;Yes
+Keychron C3 Pro 8K QMK Super Brown (C3PX-H4Z-HU);Color;N/A
+Keychron C3 Pro 8K QMK Super Brown (C3PX-H4Z-HU);Weight;N/A
+Keychron C3 Pro 8K QMK Super Brown (C3PX-H4Z-HU);Key Amounts;N/A
+Keychron C3 Pro 8K QMK Super Brown (C3PX-H4Z-HU);Compatible;N/A
+Logitech MX Keys S (920-011587-HU);Backlight;Yes
+Logitech MX Keys S (920-011587-HU);Color;Sötétszürke
+Logitech MX Keys S (920-011587-HU);Weight;N/A
+Logitech MX Keys S (920-011587-HU);Key Amounts;N/A
+Logitech MX Keys S (920-011587-HU);Compatible;N/A
+ASUS ROG Strix Scope II 96;Backlight;Yes
+ASUS ROG Strix Scope II 96;Color;N/A
+ASUS ROG Strix Scope II 96;Weight;N/A
+ASUS ROG Strix Scope II 96;Key Amounts;N/A
+ASUS ROG Strix Scope II 96;Compatible;N/A
+Logitech K400 Plus HU (920-007157);Backlight;No
+Logitech K400 Plus HU (920-007157);Color;Black
+Logitech K400 Plus HU (920-007157);Weight;N/A
+Logitech K400 Plus HU (920-007157);Key Amounts;N/A
+Logitech K400 Plus HU (920-007157);Compatible;N/A
+Keychron B6 Pro HU (B6P-K1-HG);Backlight;No
+Keychron B6 Pro HU (B6P-K1-HG);Color;N/A
+Keychron B6 Pro HU (B6P-K1-HG);Weight;N/A
+Keychron B6 Pro HU (B6P-K1-HG);Key Amounts;N/A
+Keychron B6 Pro HU (B6P-K1-HG);Compatible;N/A
+ASUS TUF Gaming K1 HU (90MP01X0-BKHA00);Backlight;Yes
+ASUS TUF Gaming K1 HU (90MP01X0-BKHA00);Color;Black
+ASUS TUF Gaming K1 HU (90MP01X0-BKHA00);Weight;N/A
+ASUS TUF Gaming K1 HU (90MP01X0-BKHA00);Key Amounts;N/A
+ASUS TUF Gaming K1 HU (90MP01X0-BKHA00);Compatible;N/A
+Spirit Of Gamer Elite K70 HU (CLA-EK70HU);Backlight;Yes
+Spirit Of Gamer Elite K70 HU (CLA-EK70HU);Color;N/A
+Spirit Of Gamer Elite K70 HU (CLA-EK70HU);Weight;N/A
+Spirit Of Gamer Elite K70 HU (CLA-EK70HU);Key Amounts;N/A
+Spirit Of Gamer Elite K70 HU (CLA-EK70HU);Compatible;N/A
+Logitech Prodigy G213 HU (920-010739);Color;N/A
+Logitech Prodigy G213 HU (920-010739);Weight;N/A
+Logitech Prodigy G213 HU (920-010739);Backlight;N/A
+Logitech Prodigy G213 HU (920-010739);Key Amounts;N/A
+Logitech Prodigy G213 HU (920-010739);Compatible;N/A
+Hama Exodus 600 HU (217832/13217832);Backlight;Yes
+Hama Exodus 600 HU (217832/13217832);Color;Black
+Hama Exodus 600 HU (217832/13217832);Weight;N/A
+Hama Exodus 600 HU (217832/13217832);Key Amounts;N/A
+Hama Exodus 600 HU (217832/13217832);Compatible;N/A
+AVAX GM03 PRO 98 Gasket RGB (5999574480835);Backlight;Yes
+AVAX GM03 PRO 98 Gasket RGB (5999574480835);Color;N/A
+AVAX GM03 PRO 98 Gasket RGB (5999574480835);Weight;N/A
+AVAX GM03 PRO 98 Gasket RGB (5999574480835);Key Amounts;N/A
+AVAX GM03 PRO 98 Gasket RGB (5999574480835);Compatible;N/A
+ASUS ROG Falchion RX Low Profile (90MP03EC-BKHA10);Backlight;Yes
+ASUS ROG Falchion RX Low Profile (90MP03EC-BKHA10);Color;N/A
+ASUS ROG Falchion RX Low Profile (90MP03EC-BKHA10);Weight;N/A
+ASUS ROG Falchion RX Low Profile (90MP03EC-BKHA10);Key Amounts;N/A
+ASUS ROG Falchion RX Low Profile (90MP03EC-BKHA10);Compatible;N/A
+SteelSeries Apex 3 (64810);Backlight;Yes
+SteelSeries Apex 3 (64810);Color;N/A
+SteelSeries Apex 3 (64810);Weight;N/A
+SteelSeries Apex 3 (64810);Key Amounts;N/A
+SteelSeries Apex 3 (64810);Compatible;N/A
+Keychron C3 Pro 8K QMK Super Red (C3PX-H1Z-HU);Backlight;Yes
+Keychron C3 Pro 8K QMK Super Red (C3PX-H1Z-HU);Color;N/A
+Keychron C3 Pro 8K QMK Super Red (C3PX-H1Z-HU);Weight;N/A
+Keychron C3 Pro 8K QMK Super Red (C3PX-H1Z-HU);Key Amounts;N/A
+Keychron C3 Pro 8K QMK Super Red (C3PX-H1Z-HU);Compatible;N/A
+Redragon Mitra K551 (K551_BLUE_ HU);Backlight;Yes
+Redragon Mitra K551 (K551_BLUE_ HU);Color;Black
+Redragon Mitra K551 (K551_BLUE_ HU);Weight;N/A
+Redragon Mitra K551 (K551_BLUE_ HU);Key Amounts;N/A
+Redragon Mitra K551 (K551_BLUE_ HU);Compatible;N/A
+ASUS ROG Azoth NX Red (90MP0316-BKHA00/AZOTH/NXRD/HU);Backlight;Yes
+ASUS ROG Azoth NX Red (90MP0316-BKHA00/AZOTH/NXRD/HU);Color;N/A
+ASUS ROG Azoth NX Red (90MP0316-BKHA00/AZOTH/NXRD/HU);Weight;N/A
+ASUS ROG Azoth NX Red (90MP0316-BKHA00/AZOTH/NXRD/HU);Key Amounts;N/A
+ASUS ROG Azoth NX Red (90MP0316-BKHA00/AZOTH/NXRD/HU);Compatible;N/A
+Logitech K120 HU (920-002491);Backlight;No
+Logitech K120 HU (920-002491);Color;Black
+Logitech K120 HU (920-002491);Weight;N/A
+Logitech K120 HU (920-002491);Key Amounts;N/A
+Logitech K120 HU (920-002491);Compatible;N/A
+Razer Huntsman Mini Red Switch US (RZ03-03390200-R3M1);Backlight;Yes
+Razer Huntsman Mini Red Switch US (RZ03-03390200-R3M1);Color;Black
+Razer Huntsman Mini Red Switch US (RZ03-03390200-R3M1);Weight;N/A
+Razer Huntsman Mini Red Switch US (RZ03-03390200-R3M1);Key Amounts;N/A
+Razer Huntsman Mini Red Switch US (RZ03-03390200-R3M1);Compatible;N/A
+SteelSeries Apex 3 TKL RGB UK (64836);Backlight;Yes
+SteelSeries Apex 3 TKL RGB UK (64836);Color;Black
+SteelSeries Apex 3 TKL RGB UK (64836);Weight;N/A
+SteelSeries Apex 3 TKL RGB UK (64836);Key Amounts;N/A
+SteelSeries Apex 3 TKL RGB UK (64836);Compatible;N/A
+Logitech MX Keys S (920-011589);Backlight;Yes
+Logitech MX Keys S (920-011589);Color;Sötétszürke
+Logitech MX Keys S (920-011589);Weight;N/A
+Logitech MX Keys S (920-011589);Key Amounts;N/A
+Logitech MX Keys S (920-011589);Compatible;N/A
 
-Lian Li UNI SL120 INF;Color;White
-Lian Li UNI SL120 INF;Fan Size;120
-Lian Li UNI SL120 INF;Fan height;25
-Lian Li UNI SL120 INF;Fan RPM;2100
-Lian Li UNI SL120 INF;Noise Level;32
-Lian Li UNI SL120 INF;Fan Connectors;4
-Lian Li UNI SL120 INF;Warranty;2
-Arctic P12 PWM PST;Color;Black
-Arctic P12 PWM PST;Fan Size;120
-Arctic P12 PWM PST;Fan height;25
-Arctic P12 PWM PST;Fan RPM;1800
-Arctic P12 PWM PST;Noise Level;22.5
-Arctic P12 PWM PST;Fan Connectors;4
-Arctic P12 PWM PST;Warranty;6
-Noctua NF-A14 PWM chromax.black;Color;Black
-Noctua NF-A14 PWM chromax.black;Fan Size;140
-Noctua NF-A14 PWM chromax.black;Fan height;25
-Noctua NF-A14 PWM chromax.black;Fan RPM;1500
-Noctua NF-A14 PWM chromax.black;Noise Level;24.6
-Noctua NF-A14 PWM chromax.black;Fan Connectors;4
-Noctua NF-A14 PWM chromax.black;Warranty;6
-Be Quiet! Silent Wings 4 Pro;Color;Black
-Be Quiet! Silent Wings 4 Pro;Fan Size;120
-Be Quiet! Silent Wings 4 Pro;Fan height;25
-Be Quiet! Silent Wings 4 Pro;Fan RPM;3000
-Be Quiet! Silent Wings 4 Pro;Noise Level;36.9
-Be Quiet! Silent Wings 4 Pro;Fan Connectors;4
-Be Quiet! Silent Wings 4 Pro;Warranty;5
-Corsair iCUE Link QX120 RGB;Color;Black
-Corsair iCUE Link QX120 RGB;Fan Size;120
-Corsair iCUE Link QX120 RGB;Fan height;25
-Corsair iCUE Link QX120 RGB;Fan RPM;2400
-Corsair iCUE Link QX120 RGB;Noise Level;37
-Corsair iCUE Link QX120 RGB;Fan Connectors;Proprietary Link
-Corsair iCUE Link QX120 RGB;Warranty;5
+Logitech Brio 105 (960-001592);Microphone;Yes
+Logitech Brio 105 (960-001592);Max FPS;30 fps
+Logitech Brio 105 (960-001592);Video Resolution;1920 x 1080
+Logitech C922 Pro Stream (960-001088);Max FPS;60 fps
+Logitech C922 Pro Stream (960-001088);Video Resolution;1920 x 1080
+Logitech C922 Pro Stream (960-001088);Microphone;N/A
+Logitech C920 (960-001055);Max FPS;30 fps
+Logitech C920 (960-001055);Video Resolution;1920 x 1080
+Logitech C920 (960-001055);Microphone;N/A
+Logitech Brio 500 EMEA28 (960-001421/2/8);Microphone;Yes
+Logitech Brio 500 EMEA28 (960-001421/2/8);Max FPS;60 fps
+Logitech Brio 500 EMEA28 (960-001421/2/8);Video Resolution;1920 x 1080
+Logitech Streamcam C980 (960-001281/960-001297);Max FPS;60 fps
+Logitech Streamcam C980 (960-001281/960-001297);Video Resolution;1920 x 1080
+Logitech Streamcam C980 (960-001281/960-001297);Microphone;N/A
+Logitech Brio 100 (960-001585/960-001617/23);Max FPS;30 fps
+Logitech Brio 100 (960-001585/960-001617/23);Video Resolution;1920 x 1080
+Logitech Brio 100 (960-001585/960-001617/23);Microphone;N/A
+ProXtend X301 (PX-CAM001);Microphone;Yes
+ProXtend X301 (PX-CAM001);Max FPS;30 fps
+ProXtend X301 (PX-CAM001);Video Resolution;2592 x 1944
+Logitech C270 (960-000999);Max FPS;30 fps
+Logitech C270 (960-000999);Video Resolution;1280 x 720
+Logitech C270 (960-000999);Microphone;N/A
+Logitech MX Brio (960-001554/960-001559);Max FPS;60 fps
+Logitech MX Brio (960-001554/960-001559);Video Resolution;3840 x 2160
+Logitech MX Brio (960-001554/960-001559);Microphone;N/A
+OBSBOT Meet 2 4K (OWW-2311-CE);Microphone;Yes
+OBSBOT Meet 2 4K (OWW-2311-CE);Max FPS;60 fps
+OBSBOT Meet 2 4K (OWW-2311-CE);Video Resolution;3840 x 2160
+IMILAB W88S (XIA039/CMSXJ22A);Microphone;Yes
+IMILAB W88S (XIA039/CMSXJ22A);Max FPS;30 fps
+IMILAB W88S (XIA039/CMSXJ22A);Video Resolution;1920 x 1080
+Logitech C920s (960-001252);Max FPS;30 fps
+Logitech C920s (960-001252);Video Resolution;1920 x 1080
+Logitech C920s (960-001252);Microphone;N/A
+OBSBOT Tiny 2 Lite (OWB-2210-CE);Microphone;Yes
+OBSBOT Tiny 2 Lite (OWB-2210-CE);Max FPS;60 fps
+OBSBOT Tiny 2 Lite (OWB-2210-CE);Video Resolution;3840 x 2160
+Logitech Brio 4k (960-001746);Microphone;Yes
+Logitech Brio 4k (960-001746);Max FPS;30 fps
+Logitech Brio 4k (960-001746);Video Resolution;3840 x 2160
+Logitech BRIO 505 Graphite (960-001459);Microphone;Yes
+Logitech BRIO 505 Graphite (960-001459);Max FPS;60 fps
+Logitech BRIO 505 Graphite (960-001459);Video Resolution;1920 x 1080
+Logitech 960-001063/UO;Microphone;Yes
+Logitech 960-001063/UO;Max FPS;30 fps
+Logitech 960-001063/UO;Video Resolution;1280 x 720
+Logitech C925e (960-001076);Microphone;Yes
+Logitech C925e (960-001076);Max FPS;30 fps
+Logitech C925e (960-001076);Video Resolution;1920 x 1080
+Logitech BRIO (960-001106);Microphone;Yes
+Logitech BRIO (960-001106);Max FPS;60 fps
+Logitech BRIO (960-001106);Video Resolution;4096 x 2160
+Lenovo 500 Performance FHD 4XC1D66055 (GXC0X89769);Microphone;Yes
+Lenovo 500 Performance FHD 4XC1D66055 (GXC0X89769);Max FPS;60 fps
+Lenovo 500 Performance FHD 4XC1D66055 (GXC0X89769);Video Resolution;1920 x 1080
+Logitech BRIO 300 (960-001442);Max FPS;30 fps
+Logitech BRIO 300 (960-001442);Video Resolution;1920 x 1080
+Logitech BRIO 300 (960-001442);Microphone;N/A
 
-ATTACK SHARK X85 Wireless Mechanical Keyboard;Color;Black
-ATTACK SHARK X85 Wireless Mechanical Keyboard;Switch Type;Linear White Jade Switch
-ATTACK SHARK X85 Wireless Mechanical Keyboard;Mounting Type;Upgraded Gasket
-ATTACK SHARK X85 Wireless Mechanical Keyboard;Weight;900
-ATTACK SHARK X85 Wireless Mechanical Keyboard;Battery Capacity;5000
-ATTACK SHARK X85 Wireless Mechanical Keyboard;Backlight;RGB
-ATTACK SHARK X85 Wireless Mechanical Keyboard;Key Amounts;81
-ATTACK SHARK X85 Wireless Mechanical Keyboard;Compatible;PC,Mac,Smartphone,Tablet
-ATTACK SHARK X85 Wireless Mechanical Keyboard;Connectivity Technology;2.4G Wireless/Bluetooth 5.0/USB-C Wired
-Wooting 60HE+;Color;Black
-Wooting 60HE+;Switch Type;Lekker Magnetic (Hall Effect)
-Wooting 60HE+;Mounting Type;Tray Mount
-Wooting 60HE+;Weight;605
-Wooting 60HE+;Battery Capacity;0
-Wooting 60HE+;Backlight;RGB
-Wooting 60HE+;Key Amounts;61
-Wooting 60HE+;Compatible;PC,Mac,Xbox,PS5
-Wooting 60HE+;Connectivity Technology;USB-C Wired
-Keychron Q1 Max;Color;Shell White
-Keychron Q1 Max;Switch Type;Gateron Jupiter Banana (Tactile)
-Keychron Q1 Max;Mounting Type;Double-Gasket
-Keychron Q1 Max;Weight;1724
-Keychron Q1 Max;Battery Capacity;4000
-Keychron Q1 Max;Backlight;RGB
-Keychron Q1 Max;Key Amounts;81
-Keychron Q1 Max;Compatible;PC,Mac,Linux
-Keychron Q1 Max;Connectivity Technology;2.4G Wireless/Bluetooth 5.1/Wired
-Razer BlackWidow V4 Pro;Color;Black
-Razer BlackWidow V4 Pro;Switch Type;Razer Green (Clicky)
-Razer BlackWidow V4 Pro;Mounting Type;Top Mount
-Razer BlackWidow V4 Pro;Weight;1640
-Razer BlackWidow V4 Pro;Battery Capacity;0
-Razer BlackWidow V4 Pro;Backlight;RGB
-Razer BlackWidow V4 Pro;Key Amounts;104
-Razer BlackWidow V4 Pro;Compatible;PC
-Razer BlackWidow V4 Pro;Connectivity Technology;USB-C Wired
-ASUS ROG Azoth;Color;Moonlight White
-ASUS ROG Azoth;Switch Type;ROG NX Snow (Linear)
-ASUS ROG Azoth;Mounting Type;Gasket Mount
-ASUS ROG Azoth;Weight;1186
-ASUS ROG Azoth;Battery Capacity;4000
-ASUS ROG Azoth;Backlight;RGB
-ASUS ROG Azoth;Key Amounts;81
-ASUS ROG Azoth;Compatible;PC,Mac
-ASUS ROG Azoth;Connectivity Technology;2.4G Wireless/Bluetooth 5.1/Wired
-
-Elgato Facecam Pro Webcam;Resolution;4k,1080p,720p
-Elgato Facecam Pro Webcam;Connectivity Technology;USB 3.2 Gen 1 Type-C
-Elgato Facecam Pro Webcam;Focus Type;Auto
-Elgato Facecam Pro Webcam;FOV Angle Type;90
-Logitech MX Brio;Resolution;4k,1080p,720p
-Logitech MX Brio;Connectivity Technology;USB-C
-Logitech MX Brio;Focus Type;Auto
-Logitech MX Brio;FOV Angle Type;90
-Insta360 Link 2;Resolution;4k,1080p,720p
-Insta360 Link 2;Connectivity Technology;USB-C
-Insta360 Link 2;Focus Type;PDAF (Phase Detection)
-Insta360 Link 2;FOV Angle Type;79.5
-Razer Kiyo Pro Ultra;Resolution;4k,1080p,720p
-Razer Kiyo Pro Ultra;Connectivity Technology;USB 3.0
-Razer Kiyo Pro Ultra;Focus Type;Auto
-Razer Kiyo Pro Ultra;FOV Angle Type;82
-AnkerPowerConf C200;Resolution;2k,1080p,720p
-AnkerPowerConf C200;Connectivity Technology;USB-A
-AnkerPowerConf C200;Focus Type;Auto
-AnkerPowerConf C200;FOV Angle Type;95
-
-Razer BlackShark V2 Pro (2023);Color;Black
-Razer BlackShark V2 Pro (2023);Frequency Range;12-28
-Razer BlackShark V2 Pro (2023);Microphone;Yes
-Razer BlackShark V2 Pro (2023);Active Noise Cancelling;No
-Razer BlackShark V2 Pro (2023);Impedance;32
-HyperX Cloud III Wireless;Color;Black-Red
-HyperX Cloud III Wireless;Frequency Range;10-21
-HyperX Cloud III Wireless;Microphone;Yes
-HyperX Cloud III Wireless;Active Noise Cancelling;No
-HyperX Cloud III Wireless;Impedance;64
-SteelSeries Arctis Nova Pro Wireless;Color;Black
-SteelSeries Arctis Nova Pro Wireless;Frequency Range;10-40
-SteelSeries Arctis Nova Pro Wireless;Microphone;Yes
-SteelSeries Arctis Nova Pro Wireless;Active Noise Cancelling;Yes
-SteelSeries Arctis Nova Pro Wireless;Impedance;38
-Logitech G Pro X 2 LIGHTSPEED;Color;White
-Logitech G Pro X 2 LIGHTSPEED;Frequency Range;20-20
-Logitech G Pro X 2 LIGHTSPEED;Microphone;Yes
-Logitech G Pro X 2 LIGHTSPEED;Active Noise Cancelling;No
-Logitech G Pro X 2 LIGHTSPEED;Impedance;38
-Corsair Virtuoso RGB Wireless XT;Color;Slate
-Corsair Virtuoso RGB Wireless XT;Frequency Range;20-40
-Corsair Virtuoso RGB Wireless XT;Microphone;Yes
-Corsair Virtuoso RGB Wireless XT;Active Noise Cancelling;No
-Corsair Virtuoso RGB Wireless XT;Impedance;32
+Apple AirPods 4 gen. (MXP63ZM/A);Coldor;N/A
+Apple AirPods 4 gen. (MXP63ZM/A);Data transfer;N/A
+Apple AirPods 4 gen. (MXP63ZM/A);Connection;N/A
+Apple AirPods 4 gen. (MXP63ZM/A);Min. Frequency;N/A
+Apple AirPods 4 gen. (MXP63ZM/A);Max. Frequency;N/A
+Apple AirPods 4 gen. (MXP63ZM/A);Sensitivity;N/A
+Apple AirPods 4 gen. (MXP63ZM/A);Microphone;N/A
+Apple AirPods 4 gen. (MXP63ZM/A);Active Noise Cancelling;N/A
+Apple AirPods 4 gen. (MXP63ZM/A);Impedance;N/A
+Apple AirPods Pro 3 (MFHP4ZM);Coldor;N/A
+Apple AirPods Pro 3 (MFHP4ZM);Data transfer;N/A
+Apple AirPods Pro 3 (MFHP4ZM);Connection;N/A
+Apple AirPods Pro 3 (MFHP4ZM);Min. Frequency;N/A
+Apple AirPods Pro 3 (MFHP4ZM);Max. Frequency;N/A
+Apple AirPods Pro 3 (MFHP4ZM);Sensitivity;N/A
+Apple AirPods Pro 3 (MFHP4ZM);Microphone;N/A
+Apple AirPods Pro 3 (MFHP4ZM);Active Noise Cancelling;N/A
+Apple AirPods Pro 3 (MFHP4ZM);Impedance;N/A
+Samsung Galaxy Buds3 Pro (SM-R630NZ);Coldor;N/A
+Samsung Galaxy Buds3 Pro (SM-R630NZ);Data transfer;N/A
+Samsung Galaxy Buds3 Pro (SM-R630NZ);Connection;N/A
+Samsung Galaxy Buds3 Pro (SM-R630NZ);Min. Frequency;N/A
+Samsung Galaxy Buds3 Pro (SM-R630NZ);Max. Frequency;N/A
+Samsung Galaxy Buds3 Pro (SM-R630NZ);Sensitivity;N/A
+Samsung Galaxy Buds3 Pro (SM-R630NZ);Microphone;N/A
+Samsung Galaxy Buds3 Pro (SM-R630NZ);Active Noise Cancelling;N/A
+Samsung Galaxy Buds3 Pro (SM-R630NZ);Impedance;N/A
+Apple AirPods Pro 2 (MTJV3ZM/A/MTJV3TY/A);Coldor;N/A
+Apple AirPods Pro 2 (MTJV3ZM/A/MTJV3TY/A);Data transfer;N/A
+Apple AirPods Pro 2 (MTJV3ZM/A/MTJV3TY/A);Connection;N/A
+Apple AirPods Pro 2 (MTJV3ZM/A/MTJV3TY/A);Min. Frequency;N/A
+Apple AirPods Pro 2 (MTJV3ZM/A/MTJV3TY/A);Max. Frequency;N/A
+Apple AirPods Pro 2 (MTJV3ZM/A/MTJV3TY/A);Sensitivity;N/A
+Apple AirPods Pro 2 (MTJV3ZM/A/MTJV3TY/A);Microphone;N/A
+Apple AirPods Pro 2 (MTJV3ZM/A/MTJV3TY/A);Active Noise Cancelling;N/A
+Apple AirPods Pro 2 (MTJV3ZM/A/MTJV3TY/A);Impedance;N/A
+Xiaomi Redmi Buds 6 Play;Impedance;16
+Xiaomi Redmi Buds 6 Play;Microphone;Yes
+Xiaomi Redmi Buds 6 Play;Coldor;N/A
+Xiaomi Redmi Buds 6 Play;Data transfer;N/A
+Xiaomi Redmi Buds 6 Play;Connection;N/A
+Xiaomi Redmi Buds 6 Play;Min. Frequency;N/A
+Xiaomi Redmi Buds 6 Play;Max. Frequency;N/A
+Xiaomi Redmi Buds 6 Play;Sensitivity;N/A
+Xiaomi Redmi Buds 6 Play;Active Noise Cancelling;N/A
+Apple AirPods 4 gen. ANC (MXP93ZM/A);Coldor;N/A
+Apple AirPods 4 gen. ANC (MXP93ZM/A);Data transfer;N/A
+Apple AirPods 4 gen. ANC (MXP93ZM/A);Connection;N/A
+Apple AirPods 4 gen. ANC (MXP93ZM/A);Min. Frequency;N/A
+Apple AirPods 4 gen. ANC (MXP93ZM/A);Max. Frequency;N/A
+Apple AirPods 4 gen. ANC (MXP93ZM/A);Sensitivity;N/A
+Apple AirPods 4 gen. ANC (MXP93ZM/A);Microphone;N/A
+Apple AirPods 4 gen. ANC (MXP93ZM/A);Active Noise Cancelling;N/A
+Apple AirPods 4 gen. ANC (MXP93ZM/A);Impedance;N/A
+JBL Tune 720BT;Impedance;32
+JBL Tune 720BT;Coldor;N/A
+JBL Tune 720BT;Data transfer;N/A
+JBL Tune 720BT;Connection;N/A
+JBL Tune 720BT;Min. Frequency;N/A
+JBL Tune 720BT;Max. Frequency;N/A
+JBL Tune 720BT;Sensitivity;N/A
+JBL Tune 720BT;Microphone;N/A
+JBL Tune 720BT;Active Noise Cancelling;N/A
+Samsung Galaxy Buds3 (SM-R530);Coldor;N/A
+Samsung Galaxy Buds3 (SM-R530);Data transfer;N/A
+Samsung Galaxy Buds3 (SM-R530);Connection;N/A
+Samsung Galaxy Buds3 (SM-R530);Min. Frequency;N/A
+Samsung Galaxy Buds3 (SM-R530);Max. Frequency;N/A
+Samsung Galaxy Buds3 (SM-R530);Sensitivity;N/A
+Samsung Galaxy Buds3 (SM-R530);Microphone;N/A
+Samsung Galaxy Buds3 (SM-R530);Active Noise Cancelling;N/A
+Samsung Galaxy Buds3 (SM-R530);Impedance;N/A
+Sony WH-CH720N;Impedance;32
+Sony WH-CH720N;Coldor;N/A
+Sony WH-CH720N;Data transfer;N/A
+Sony WH-CH720N;Connection;N/A
+Sony WH-CH720N;Min. Frequency;N/A
+Sony WH-CH720N;Max. Frequency;N/A
+Sony WH-CH720N;Sensitivity;N/A
+Sony WH-CH720N;Microphone;N/A
+Sony WH-CH720N;Active Noise Cancelling;N/A
+Xiaomi Redmi Buds 6 Pro;Microphone;Yes
+Xiaomi Redmi Buds 6 Pro;Coldor;N/A
+Xiaomi Redmi Buds 6 Pro;Data transfer;N/A
+Xiaomi Redmi Buds 6 Pro;Connection;N/A
+Xiaomi Redmi Buds 6 Pro;Min. Frequency;N/A
+Xiaomi Redmi Buds 6 Pro;Max. Frequency;N/A
+Xiaomi Redmi Buds 6 Pro;Sensitivity;N/A
+Xiaomi Redmi Buds 6 Pro;Active Noise Cancelling;N/A
+Xiaomi Redmi Buds 6 Pro;Impedance;N/A
+Samsung Galaxy Buds3 FE (SM-R420);Coldor;N/A
+Samsung Galaxy Buds3 FE (SM-R420);Data transfer;N/A
+Samsung Galaxy Buds3 FE (SM-R420);Connection;N/A
+Samsung Galaxy Buds3 FE (SM-R420);Min. Frequency;N/A
+Samsung Galaxy Buds3 FE (SM-R420);Max. Frequency;N/A
+Samsung Galaxy Buds3 FE (SM-R420);Sensitivity;N/A
+Samsung Galaxy Buds3 FE (SM-R420);Microphone;N/A
+Samsung Galaxy Buds3 FE (SM-R420);Active Noise Cancelling;N/A
+Samsung Galaxy Buds3 FE (SM-R420);Impedance;N/A
+Sennheiser Momentum 4 (700382/3/6);Impedance;60
+Sennheiser Momentum 4 (700382/3/6);Coldor;N/A
+Sennheiser Momentum 4 (700382/3/6);Data transfer;N/A
+Sennheiser Momentum 4 (700382/3/6);Connection;N/A
+Sennheiser Momentum 4 (700382/3/6);Min. Frequency;N/A
+Sennheiser Momentum 4 (700382/3/6);Max. Frequency;N/A
+Sennheiser Momentum 4 (700382/3/6);Sensitivity;N/A
+Sennheiser Momentum 4 (700382/3/6);Microphone;N/A
+Sennheiser Momentum 4 (700382/3/6);Active Noise Cancelling;N/A
+Xiaomi Redmi Buds 6 Active (BHR839GL);Coldor;N/A
+Xiaomi Redmi Buds 6 Active (BHR839GL);Data transfer;N/A
+Xiaomi Redmi Buds 6 Active (BHR839GL);Connection;N/A
+Xiaomi Redmi Buds 6 Active (BHR839GL);Min. Frequency;N/A
+Xiaomi Redmi Buds 6 Active (BHR839GL);Max. Frequency;N/A
+Xiaomi Redmi Buds 6 Active (BHR839GL);Sensitivity;N/A
+Xiaomi Redmi Buds 6 Active (BHR839GL);Microphone;N/A
+Xiaomi Redmi Buds 6 Active (BHR839GL);Active Noise Cancelling;N/A
+Xiaomi Redmi Buds 6 Active (BHR839GL);Impedance;N/A
+Xiaomi Redmi Buds 6;Microphone;Yes
+Xiaomi Redmi Buds 6;Coldor;N/A
+Xiaomi Redmi Buds 6;Data transfer;N/A
+Xiaomi Redmi Buds 6;Connection;N/A
+Xiaomi Redmi Buds 6;Min. Frequency;N/A
+Xiaomi Redmi Buds 6;Max. Frequency;N/A
+Xiaomi Redmi Buds 6;Sensitivity;N/A
+Xiaomi Redmi Buds 6;Active Noise Cancelling;N/A
+Xiaomi Redmi Buds 6;Impedance;N/A
+HP HyperX Cloud III (727A9AA/727A8AA);Impedance;64
+HP HyperX Cloud III (727A9AA/727A8AA);Coldor;N/A
+HP HyperX Cloud III (727A9AA/727A8AA);Data transfer;N/A
+HP HyperX Cloud III (727A9AA/727A8AA);Connection;N/A
+HP HyperX Cloud III (727A9AA/727A8AA);Min. Frequency;N/A
+HP HyperX Cloud III (727A9AA/727A8AA);Max. Frequency;N/A
+HP HyperX Cloud III (727A9AA/727A8AA);Sensitivity;N/A
+HP HyperX Cloud III (727A9AA/727A8AA);Microphone;N/A
+HP HyperX Cloud III (727A9AA/727A8AA);Active Noise Cancelling;N/A
+Xiaomi Redmi Buds 8 Lite;Impedance;32
+Xiaomi Redmi Buds 8 Lite;Microphone;Yes
+Xiaomi Redmi Buds 8 Lite;Coldor;N/A
+Xiaomi Redmi Buds 8 Lite;Data transfer;N/A
+Xiaomi Redmi Buds 8 Lite;Connection;N/A
+Xiaomi Redmi Buds 8 Lite;Min. Frequency;N/A
+Xiaomi Redmi Buds 8 Lite;Max. Frequency;N/A
+Xiaomi Redmi Buds 8 Lite;Sensitivity;N/A
+Xiaomi Redmi Buds 8 Lite;Active Noise Cancelling;N/A
+Sony WH-1000XM6;Impedance;48
+Sony WH-1000XM6;Microphone;Yes
+Sony WH-1000XM6;Coldor;N/A
+Sony WH-1000XM6;Data transfer;N/A
+Sony WH-1000XM6;Connection;N/A
+Sony WH-1000XM6;Min. Frequency;N/A
+Sony WH-1000XM6;Max. Frequency;N/A
+Sony WH-1000XM6;Sensitivity;N/A
+Sony WH-1000XM6;Active Noise Cancelling;N/A
+JBL Tune 770NC;Impedance;32
+JBL Tune 770NC;Coldor;N/A
+JBL Tune 770NC;Data transfer;N/A
+JBL Tune 770NC;Connection;N/A
+JBL Tune 770NC;Min. Frequency;N/A
+JBL Tune 770NC;Max. Frequency;N/A
+JBL Tune 770NC;Sensitivity;N/A
+JBL Tune 770NC;Microphone;N/A
+JBL Tune 770NC;Active Noise Cancelling;N/A
+Sony WH-CH520 (WHCH520);Impedance;32
+Sony WH-CH520 (WHCH520);Coldor;N/A
+Sony WH-CH520 (WHCH520);Data transfer;N/A
+Sony WH-CH520 (WHCH520);Connection;N/A
+Sony WH-CH520 (WHCH520);Min. Frequency;N/A
+Sony WH-CH520 (WHCH520);Max. Frequency;N/A
+Sony WH-CH520 (WHCH520);Sensitivity;N/A
+Sony WH-CH520 (WHCH520);Microphone;N/A
+Sony WH-CH520 (WHCH520);Active Noise Cancelling;N/A
+SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Impedance;36
+SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Microphone;Yes
+SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Coldor;N/A
+SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Data transfer;N/A
+SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Connection;N/A
+SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Min. Frequency;N/A
+SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Max. Frequency;N/A
+SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Sensitivity;N/A
+SteelSeries Arctis Nova 3X wireless (61689/90/1/3));Active Noise Cancelling;N/A
 
 Yamaha HS8 120 W Speakers;Color;Black
 Yamaha HS8 120 W Speakers;Frequency Range;30-38

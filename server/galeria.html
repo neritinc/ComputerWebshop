@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Nagyított Termékgaléria</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #121212; color: #eee; padding: 20px; margin: 0; }
+        .header { position: sticky; top: 0; background: #1a1a1a; padding: 20px; border-bottom: 2px solid #00ffcc; z-index: 100; margin-bottom: 20px; }
+        h1 { margin: 0; color: #00ffcc; font-size: 24px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 15px; }
+        
+        .card { background: #1e1e1e; border: 1px solid #333; border-radius: 8px; padding: 12px; text-align: center; overflow: hidden; }
+        .id-badge { background: #00ffcc; color: #000; font-weight: bold; padding: 2px 8px; border-radius: 4px; font-size: 14px; }
+        
+        /* Nagyított konténer */
+        .img-container { 
+            background: #252525; /* Sötétebb háttér, hogy a fehér dobozok kiugorjanak */
+            margin: 10px 0; 
+            border-radius: 4px; 
+            height: 180px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            overflow: hidden; 
+            position: relative;
+        }
+
+        /* Itt történik a belenagyítás */
+    /* Alapállapot: a kép kényelmesen elfér a keretben */
+        img { 
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            transform: scale(1); /* Alapméret */
+            transition: transform 0.1s ease-in-out; /* Sima mozgás */
+        }
+
+        /* Hover állapot: belenagyítás, ha rámutatsz */
+        .card:hover img {
+            transform: scale(2); /* Itt nagyít bele kétszeresen */
+        }
+        .file-name { font-size: 10px; color: #777; word-break: break-all; margin-top: 8px; line-height: 1.2; }
+        .error-msg { position: absolute; color: #ff4444; font-weight: bold; font-size: 14px; background: rgba(0,0,0,0.8); width: 100%; height: 100%; display: none; align-items: center; justify-content: center; top: 0; left: 0; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Nagyított Galéria Ellenőrzés</h1>
+        <p style="color: #888; font-size: 13px;">Útvonal: <code>public/images/products/</code></p>
+    </div>
+    
+    <div class="grid" id="main-gallery"></div>
+
+    <script>
+        const basePath = "public/images/products/";
+
+const products = [
+    // PROCESSZOROK (CPU)
+    {id: 1, img: "amd_ryzen_7_9800x3d_box_100_100001084wof_1.jpg"},
+    {id: 1, img: "amd_ryzen_7_9800x3d_box_100_100001084wof_2.jpg"},
+    {id: 1, img: "amd_ryzen_7_9800x3d_box_100_100001084wof_3.jpg"},
+    {id: 2, img: "amd_ryzen_7_7800x3d_8_core_4_2ghz_am5_box_100_100000910wof_1.jpg"},
+    {id: 3, img: "amd_ryzen_7_5800x_8_core_3_8ghz_am4_box_100_100000063wof_1.jpg"},
+    {id: 4, img: "amd_ryzen_5_5600x_6_core_3_7ghz_am4_box_100_100000065box_1.jpg"},
+    {id: 5, img: "amd_ryzen_9_5950x_16_core_3_4ghz_am4_box_100_100000059wof_1.jpg"},
+    {id: 6, img: "amd_ryzen_7_5700x_8_core_3_4_ghz_am4_box_100_100000926wof_1.jpg"},
+    {id: 7, img: "amd_ryzen_5_9600x_6_core_3_9ghz_am5_box_100_100001405wof_1.jpg"},
+    {id: 8, img: "amd_ryzen_7_7800x3d_8_core_4_2ghz_am5_tray_100_000000910_1.jpg"},
+    {id: 9, img: "amd_ryzen_9_9950x3d_16_core_4_3ghz_am5_box_100_100000719wof_1.jpg"},
+    {id: 10, img: "amd_ryzen_5_5600_6_core_3_5ghz_am4_box_100_100000927box_1.jpg"},
+    {id: 11, img: "amd_ryzen_7_5700x_8_core_3_4ghz_am4_tray_100_000000926_1.jpg"},
+    {id: 12, img: "amd_ryzen_5_5500_6_core_3_6ghz_am4_box_100_100000457box_1.jpg"},
+    {id: 13, img: "intel_core_i5_12400f_6_core_2_5ghz_lga1700_box_bx8071512400f_1.jpg"},
+    {id: 14, img: "intel_core_i5_14400f_10_core_2_5ghz_lga1700_box_bx8071514400f_1.jpg"},
+    {id: 17, img: "amd_ryzen_5_3600_6_core_3_6ghz_am4_box_100_100000031box_1.jpg"},
+
+    // MEMÓRIÁK (RAM)
+    {id: 21, img: "kingston_fury_beast_32gb_2x16gb_ddr5_6000mhz_kf560c30bbek2_32_1.jpg"},
+    {id: 22, img: "kingston_fury_beast_16gb_2x8gb_ddr4_3200mhz_kf432c16bbk2_16_1.jpg"},
+    {id: 33, img: "g_skill_trident_z5_royal_rgb_96gb_2x48gb_ddr5_6800mhz_f5_6800j3446f48gx2_tr5s_1.jpg"},
+
+    // ALAPLAPOK
+    {id: 41, img: "msi_mpg_b550_gaming_plus_1.jpg"},
+    {id: 45, img: "msi_mag_b850_tomahawk_max_wifi_1.jpg"},
+    {id: 57, img: "msi_mag_b650_tomahawk_wifi_1.jpg"},
+
+    // VIDEÓKÁRTYÁK (GPU)
+    {id: 61, img: "asus_geforce_rtx_5070_prime_oc_12gb_gddr7_192bit_prime_rtx5070_o12g_1.jpg"},
+    {id: 62, img: "gigabyte_geforce_rtx_5070_ti_windforce_oc_sff_16gb_gddr7_256bit_gv_n507twf3oc_16gd_1.jpg"},
+    {id: 68, img: "asus_geforce_rtx_5090_rog_astral_oc_32gb_gddr7_512bit_rog_astral_rtx5090_o32g_gaming_90yv0lw0_m0na00_1.jpg"},
+    {id: 72, img: "intel_arc_b580_limited_edition_31p06hb0ba_1.jpg"},
+
+    // TÁROLÓK (SSD)
+    {id: 81, img: "kingston_nv3_1tb_snv3s_1000g_1.jpg"},
+    {id: 82, img: "samsung_990_pro_2tb_m_2_mz_v9p2t0bw_1.jpg"},
+    {id: 86, img: "adata_ultimate_su650_2_5_1tb_sata3_asu650ss_1tt_r_1.jpg"},
+    {id: 86, img: "adata_ultimate_su650_2_5_1tb_sata3_asu650ss_1tt_r_2.jpg"},
+    {id: 86, img: "adata_ultimate_su650_2_5_1tb_sata3_asu650ss_1tt_r_3.jpg"},
+
+    // TÁPEGYSÉGEK (PSU)
+    {id: 101, img: "seasonic_focus_gx_850w_80_plus_gold_v4_gx_850_v4_1.jpg"},
+    {id: 112, img: "msi_mag_a650bn_650w_80_plus_bronze_306_7zp2b11_ce0_1.jpg"},
+
+    // HŰTÉS
+    {id: 121, img: "arctic_liquid_freezer_iii_pro_360_a_rgb_acfre00184a_1.jpg"},
+    {id: 122, img: "thermalright_peerless_assassin_120_se_1.jpg"},
+
+    // MONITOROK
+    {id: 141, img: "samsung_odyssey_oled_g5_s27fg500su_1.jpg"},
+    {id: 153, img: "xiaomi_g_pro_27i_1.jpg"},
+    {id: 160, img: "samsung_odyssey_oled_g6_s27dg610su_1.jpg"},
+
+    // PERIFÉRIÁK (EGÉR, BILLENTYŰZET)
+    {id: 161, img: "logitech_g305_lightspeed_black_910_005282_1.jpg"},
+    {id: 162, img: "logitech_g_pro_x_superlight_2_910_006630_1.jpg"},
+    {id: 221, img: "redragon_kumara_rgb_k552rgb_1_brown_hu_1.jpg"},
+    {id: 223, img: "logitech_mx_keys_s_920_011587_hu_1.jpg"},
+
+    // HÁZAK
+    {id: 181, img: "deepcool_cc560_v2_black_r_cc560_bkgaa4_g_2_1.jpg"},
+    {id: 196, img: "aigo_b350_1.jpg"},
+    {id: 196, img: "aigo_b350_2.jpg"},
+    {id: 196, img: "aigo_b350_3.jpg"},
+
+    // AUDIO & EGYÉB
+    {id: 261, img: "apple_airpods_4_gen_mxp63zm_a_1.jpg"},
+    {id: 283, img: "acoustic_energy_ae100_mkii_1.jpg"},
+    {id: 283, img: "acoustic_energy_ae100_mkii_2.jpg"},
+    {id: 283, img: "acoustic_energy_ae100_mkii_3.jpg"}
+];
+
+        const container = document.getElementById('main-gallery');
+
+        products.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <span class="id-badge">ID: ${p.id}</span>
+                <div class="img-container">
+                    <div class="error-msg">NEM TALÁLHATÓ</div>
+                    <img src="${basePath}${p.img}" alt="${p.img}" onerror="showError(this)">
+                </div>
+                <div class="file-name">${p.img}</div>
+            `;
+            container.appendChild(card);
+        });
+
+        function showError(img) {
+            img.style.display = 'none';
+            img.previousElementSibling.style.display = 'flex';
+        }
+    </script>
+</body>
+</html>

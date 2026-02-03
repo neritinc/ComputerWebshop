@@ -1,75 +1,278 @@
 name;price;pcs;category_name;company_name;description
-AMD Ryzen 7 7700X;299;45;Processor;AMD;High-performance 8-core Zen 4 CPU with 5.4GHz boost, ideal for gaming and productivity.
-AMD Ryzen 7 9800X3D;479;12;Processor;AMD;The ultimate gaming processor featuring 3D V-Cache technology for massive L3 capacity.
-AMD Ryzen 9 9950X;649;28;Processor;AMD;Flagship 16-core workstation CPU for extreme multitasking and professional rendering.
-Intel Core Ultra 9 285K;589;34;Processor;Intel;New Arrow Lake flagship with 24 cores, high efficiency, and AI-boosted performance.
-Intel Core Ultra 5 245K;309;56;Processor;Intel;Mid-range performance king with 14 cores, optimized for modern gaming and streaming.
-Kingston Fury Beast 16GB DDR5;65;142;Memory Module;Kingston;Reliable 5600MHz DDR5 RAM kit with low-profile heat spreaders and Intel XMP support.
-G.Skill Trident Z5 RGB 32GB;145;112;Memory Module;G.Skill;High-speed 6400MHz DDR5 memory with premium RGB lighting and low CL32 latency.
-Corsair Vengeance RGB 32GB;125;89;Memory Module;Corsair;Performance 6000MHz DDR5 memory optimized for high-end builds and iCUE control.
-Crucial Pro 32GB DDR5;110;156;Memory Module;Crucial;Professional-grade 5600MHz memory modules designed for high stability and efficiency.
-TeamGroup T-Force Delta RGB;135;94;Memory Module;TeamGroup;Aggressive 7200MHz DDR5 speed with a unique 120-degree ultra-wide RGB bar.
-ASUS TUF B650-PLUS;210;67;Motherboard;ASUS;Durable AM5 motherboard featuring PCIe 5.0 M.2 and military-grade thermal solution.
-MSI MAG Z790 TOMAHAWK WIFI;259;41;Motherboard;MSI;High-end LGA1700 board with DDR5 support, Wi-Fi 6E, and robust power delivery.
-Gigabyte B650I AX;189;22;Motherboard;Gigabyte;Compact Mini-ITX AM5 motherboard with Wi-Fi 6E, perfect for powerful small form factor builds.
-ASRock X670E Taichi;499;18;Motherboard;ASRock;Premium E-ATX board with PCIe 5.0 support, Wi-Fi 7, and enthusiast-grade VRM.
-MSI PRO Z890-P WIFI;280;39;Motherboard;MSI;Next-gen LGA1851 motherboard for Intel Arrow Lake with Wi-Fi 7 and dual-chasing power.
-NVIDIA GeForce RTX 4070;549;82;Graphics Card;NVIDIA;Versatile 1440p GPU with 12GB VRAM and DLSS 3 support for high-end gaming.
-AMD Radeon RX 8800 XT;549;63;Graphics Card;AMD;Efficient RDNA 4 architecture card with 16GB VRAM and massive raytracing improvements.
-AMD Radeon RX 7900 XTX;929;39;Graphics Card;AMD;High-end RDNA 3 flagship with 24GB VRAM for 4K gaming and heavy productivity.
-NVIDIA GeForce RTX 5080;999;27;Graphics Card;NVIDIA;Next-gen powerhouse with 16GB GDDR7 memory and superior Blackwell architecture.
-AMD Radeon RX 8700 XT;449;72;Graphics Card;AMD;Value-focused RDNA 4 card for ultra-fast 1440p gaming and low energy consumption.
-Samsung 990 Pro 2 TB;170;95;Storage;Samsung;Flagship PCIe 4.0 NVMe SSD with 7450MB/s read speeds and reliable DRAM cache.
-Crucial T705 2TB;280;48;Storage;Crucial;Blazing fast PCIe 5.0 SSD reaching up to 14500MB/s for instant load times and transfers.
-WD Black SN850X 2TB;160;114;Storage;Western Digital;Gaming-optimized NVMe SSD with a dedicated game mode and 7300MB/s read speed.
-Kingston KC3000 2TB;145;130;Storage;Kingston;Professional NVMe SSD with high endurance and a graphene aluminum heat spreader.
-Sabrent Rocket 5 4TB;599;12;Storage;Sabrent;Extreme performance 4TB PCIe 5.0 SSD for professionals and power users.
-MSI MAG A750GL PCIE5;105;120;Power Supply;MSI;80+ Gold modular PSU with native PCIe 5.0 support for the latest graphics cards.
-Deepcool PX1000G;165;74;Power Supply;Deepcool;1000W ATX 3.0 certified gold power supply designed for high-end stable output.
-Deepcool DQ750-M-V2L;95;102;Power Supply;Deepcool;Reliable 750W 80+ Gold fully modular PSU with a sleek white finish.
-Corsair RM850x Shift;145;88;Power Supply;Corsair;Innovative modular PSU with side-mounted cable connectors for better case access.
-Seasonic PRIME TX-1300;520;31;Power Supply;Seasonic;Ultra-premium 1300W 80+ Titanium PSU with near-silent fan and 12-year warranty.
-Be Quiet! Straight Power 12;220;54;Power Supply;Be Quiet!;1200W Platinum efficiency PSU with virtually inaudible cooling and ATX 3.0 support.
-Corsair NAUTILUS 360 RS ARGB;110;68;Cooling;Corsair;Advanced 360mm AIO liquid cooler with high-density radiator and ARGB lighting.
-Arctic Liquid Freezer III 360;115;82;Cooling;Arctic;Award-winning AIO with an integrated VRM fan and superior pressure-optimized fans.
-Noctua NH-D15 G2;149;55;Cooling;Noctua;The legendary air cooler updated with improved heat pipes and fans for high TDP CPUs.
-Deepcool AK620 Digital;80;105;Cooling;Deepcool;High-performance air cooler featuring a real-time digital temperature display.
-NZXT Kraken Elite 360;280;25;Cooling;NZXT;High-end AIO with a customizable 2.36-inch LCD screen for stats and images.
-Samsung Odyssey G5;320;77;Monitor;Samsung;32-inch curved gaming monitor with 1440p resolution and 165Hz refresh rate.
-Alienware AW2524H;499;33;Monitor;Alienware;Esports-grade 500Hz refresh rate IPS monitor for competitive zero-latency gaming.
-ASUS ROG Swift Pro PG248QB;750;19;Monitor;ASUS;The world's fastest 540Hz gaming monitor designed for professional CS and Valorant.
-LG UltraGear 32GS95UE;1399;24;Monitor;LG;Dual-mode 32-inch OLED monitor capable of 4K 240Hz or FHD 480Hz output.
-MSI MPG 271QRX QD-OLED;799;29;Monitor;MSI;27-inch 360Hz QD-OLED display with infinite contrast and exceptional color accuracy.
-Logitech MX Master 3S;99;145;Mouse;Logitech;Ergonomic wireless mouse with an 8K sensor and MagSpeed scrolling for productivity.
-Razer Viper V3 Pro;159;98;Mouse;Razer;Ultra-light 54g wireless mouse with a 35K optical sensor and 8K polling support.
-Logitech G Pro X Superlight 2;159;110;Mouse;Logitech;The gold standard for pro gaming, featuring a 60g weight and HERO 2 sensor.
-SteelSeries Aerox 9 Wireless;149;56;Mouse;SteelSeries;Lightweight 18-button wireless mouse optimized for MMOs and MOBAs.
-Finalmouse UltralightX;189;15;Mouse;Finalmouse;Boutique carbon fiber composite mouse weighing just 29g for pure speed.
-Fractal Design Meshify 2;160;44;Case;Fractal Design;High-airflow ATX case with modular interior and tempered glass side panel.
-Lian Li O11 Vision;200;36;Case;Lian Li;Modern showcase case with three-sided tempered glass and dual-chamber design.
-NZXT H6 Flow;105;91;Case;NZXT;Innovative wrap-around glass case with dual-chamber layout for optimal cooling path.
-Corsair 2500D Airflow;150;42;Case;Corsair;Compact Micro-ATX dual-chamber case designed for high airflow and clean aesthetics.
-Hyte Y70 Touch;350;18;Case;Hyte;Boutique ATX case featuring a 4K resolution integrated touchscreen on the front glass.
-Lian Li UNI SL120 INF;30;165;Case Fan;Lian Li;Modular interlocking RGB fans with an infinity mirror effect and simplified wiring.
-Arctic P12 PWM PST;10;170;Case Fan;Arctic;High-performance, pressure-optimized 120mm fan with a focus on value and silence.
-Noctua NF-A14 chromax;28;140;Case Fan;Noctua;Premium 140mm black fan with superior static pressure for radiators and cases.
-Be Quiet! Silent Wings 4 Pro;32;95;Case Fan;Be Quiet!;Industrial-grade 120mm fan with extreme RPM and ultra-low noise levels.
-Corsair iCUE Link QX120;45;110;Case Fan;Corsair;Smart RGB fan featuring magnetic dome bearings and proprietary link connectivity.
-ATTACK SHARK X85;85;145;Keyboard;Attack Shark;Gasket-mount wireless mechanical keyboard with Linear White Jade switches.
-Wooting 60HE+;175;33;Keyboard;Wooting;Revolutionary analog mechanical keyboard with Rapid Trigger and Hall Effect switches.
-Keychron Q1 Max;210;42;Keyboard;Keychron;Premium wireless aluminum mechanical keyboard with hot-swap and gasket-mount.
-Razer BlackWidow V4 Pro;229;53;Keyboard;Razer;Full-size mechanical keyboard with macro keys, RGB, and a dedicated command dial.
-ASUS ROG Azoth;249;31;Keyboard;ASUS;Custom-grade 75% wireless keyboard with OLED display and pre-lubed switches.
-Elgato Facecam Pro;299;51;Webcam;Elgato;The first 4K60 webcam with a high-end lens for professional streaming and calls.
-Logitech MX Brio;199;62;Webcam;Logitech;Premium 4K webcam with a large sensor for better low-light detail and AI framing.
-Insta360 Link 2;199;37;Webcam;Insta360;4K webcam with a built-in 2-axis gimbal and AI tracking to keep you in focus.
-Razer Kiyo Pro Ultra;299;26;Webcam;Razer;Streaming webcam with a massive 1/1.2" sensor for natural bokeh and HDR.
-Anker PowerConf C200;60;134;Webcam;Anker;Budget-friendly 2K webcam with dual mics and built-in privacy shutter.
-Razer BlackShark V2 Pro (2023);199;88;Headset;Razer;Wireless esports headset with a high-fidelity mic and long 70h battery life.
-HyperX Cloud III Wireless;169;115;Headset;HyperX;Comfort-first wireless gaming headset with DTS Spatial Audio and 120h battery.
-SteelSeries Arctis Nova Pro;349;46;Headset;SteelSeries;Flagship wireless headset with dual-battery system and active noise cancelling.
-Logitech G Pro X 2 LIGHTSPEED;249;64;Headset;Logitech;Gaming headset with 50mm Graphene drivers for precise directional sound.
-Corsair Virtuoso RGB XT;269;38;Headset;Corsair;Hi-Res wireless headset with multi-device connectivity and premium build.
+AMD Ryzen 7 9800X3D Box (100-100001084WOF);479;12;Processor;AMD;The ultimate gaming processor featuring 2nd Gen 3D V-Cache technology.
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Box (100-100000910WOF);385;5;Processor;AMD;Efficient 8-core gaming CPU with massive L3 cache for elite performance.
+AMD Ryzen 7 5800X 8-Core 3.8GHz AM4 Box (100-100000063WOF);195;34;Processor;AMD;High-performance Zen 3 core architecture for AM4 sockets.
+AMD Ryzen 5 5600X 6-Core 3.7GHz AM4 Box (100-100000065BOX);145;48;Processor;AMD;The go-to 6-core processor for balanced gaming and productivity.
+AMD Ryzen 9 5950X 16-Core 3.4GHz AM4 Box (100-100000059WOF);359;18;Processor;AMD;16-core flagship for AM4, perfect for heavy multitasking and creative work.
+AMD Ryzen 7 5700X 8-Core 3.4 GHz AM4 Box (100-100000926WOF);165;42;Processor;AMD;Excellent 65W power-efficient 8-core CPU for versatile builds.
+AMD Ryzen 5 9600X 6-Core 3.9GHz AM5 Box (100-100001405WOF);279;25;Processor;AMD;New Zen 5 mid-range leader with high single-core clock speeds.
+AMD Ryzen 7 7800X3D 8-Core 4.2GHz AM5 Tray (100-000000910);369;8;Processor;AMD;High-end gaming performance in tray packaging without retail cooler.
+AMD Ryzen 9 9950X3D 16-Core 4.3GHz AM5 Box (100-100000719WOF);699;4;Processor;AMD;Extreme 16-core powerhouse with 3D V-Cache for the ultimate setup.
+AMD Ryzen 5 5600 6-Core 3.5GHz AM4 Box (100-100000927BOX);129;50;Processor;AMD;Best value 6-core CPU for budget-conscious gamers on AM4.
+AMD Ryzen 7 5700X 8-Core 3.4GHz AM4 Tray (100-000000926);155;31;Processor;AMD;Cost-effective 8-core Zen 3 processor in tray packaging.
+AMD Ryzen 5 5500 6-Core 3.6GHz AM4 Box (100-100000457BOX);95;49;Processor;AMD;Affordable 6-core entry-level Zen 3 processor.
+Intel Core i5-12400F 6-Core 2.5GHz LGA1700 Box (BX8071512400F);119;37;Processor;Intel;Consistent performance with 6 cores, great for entry-level gaming.
+Intel Core i5-14400F 10-Core 2.5GHz LGA1700 Box (BX8071514400F);205;22;Processor;Intel;Latest 14th gen mid-range CPU with hybrid core architecture.
+AMD Ryzen 5 7600X 6-Core 4.7GHz AM5 Box (100-100000593WOF);215;29;Processor;AMD;High-frequency Zen 4 starter for the AM5 platform.
+AMD Ryzen 7 5700 8-Core 3.7GHz AM4 Box (100-000000743BOX);160;15;Processor;AMD;Reliable 8-core performance for aging AM4 systems.
+AMD Ryzen 5 3600 6-Core 3.6GHz AM4 Box (100-100000031BOX);89;11;Processor;AMD;Legendary budget 6-core processor for reliable everyday use.
+Intel Core i5-14600K 14-Core 3.4GHz LGA1700 Box (BX8071514600K);319;27;Processor;Intel;Unlocked 14th gen powerhouse for high-end gaming and overclocking.
+AMD Ryzen 7 9700X 8-Core 3.8GHz AM5 Box (100-100001404WOF);355;19;Processor;AMD;Zen 5 performance with extreme efficiency at 4nm process.
+AMD Ryzen 5 5600 6-Core 3.5Ghz AM4 Tray (100-000000927);115;45;Processor;AMD;Reliable 6-core AM4 CPU in bulk tray packaging.
+Kingston FURY Beast 32GB (2x16GB) DDR5 6000MHz KF560C30BBEK2-32;125;42;Memory Module;Kingston;High-speed DDR5 kit with low CL30 latency, optimized for AMD Expo.
+Kingston FURY Beast 16GB (2x8GB) DDR4 3200MHz KF432C16BBK2/16;45;48;Memory Module;Kingston;Standard 16GB DDR4 kit, the reliable choice for AM4 and LGA1200 builds.
+Kingston FURY Beast 64GB (2x32GB) DDR5 6000MHz KF560C30BBEK2-64;235;12;Memory Module;Kingston;Massive 64GB capacity for workstations and extreme multitasking.
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BBK2/32;78;35;Memory Module;Kingston;Cost-effective 32GB DDR4 kit for gaming and content creation.
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C30BBEAK2-32;135;24;Memory Module;Kingston;Performance DDR5 with vibrant RGB lighting and Expo support.
+Kingston FURY Beast 32GB (2x16GB) DDR5 5200MHz KF552C40BBK2-32;105;19;Memory Module;Kingston;Entry-level DDR5 kit for stable everyday computing.
+Kingston FURY Beast 8GB DDR4 3200MHz KF432C16BB/8;25;50;Memory Module;Kingston;Single 8GB DDR4 stick, ideal for budget office PC upgrades.
+Kingston FURY Beast 16GB (2x8GB) DDR5 6000MHz KF560C36BBEK2-16;82;14;Memory Module;Kingston;Fast 16GB DDR5 kit for entry-level gaming on modern platforms.
+Patriot Viper Venom 32GB (2x16GB) DDR5 6000MHz PVV532G600C30K;118;28;Memory Module;Patriot;Aggressive styling and high-performance CL30 timings for enthusiasts.
+G.SKILL Aegis 16GB (2x8GB) DDR4 3200MHz F4-3200C16D-16GIS;39;41;Memory Module;G.SKILL;Best value DDR4 gaming memory with sleek heatshield stickers.
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C36BBE-16;62;22;Memory Module;Kingston;Single 16GB DDR5 module for flexible system expansion.
+Kingston FURY Beast 32GB (2x16GB) DDR4 3200MHz KF432C16BB1K2/32;76;31;Memory Module;Kingston;Reliable dual-channel DDR4 kit with updated heat spreader design.
+G.SKILL Trident Z5 Royal RGB 96GB (2x48GB) DDR5 6800MHz F5-6800J3446F48GX2-TR5S;415;6;Memory Module;G.SKILL;Ultra-premium 96GB kit with crystalline lighting and extreme speeds.
+G.SKILL Aegis 32GB (2x16GB) DDR4 3200MHz F4-3200C16D-32GIS;68;37;Memory Module;G.SKILL;Affordable 32GB DDR4 dual-channel kit for heavy workloads.
+Kingston FURY Beast 16GB DDR5 5600MHz KF556C40BB-16;58;18;Memory Module;Kingston;Standard 16GB DDR5 module for stable system performance.
+Corsair VENGEANCE 24GB DDR5 5200MHz CMSX24GX5M1A5200C44;89;9;Memory Module;Corsair;Unique 24GB capacity module for non-binary memory configurations.
+G.SKILL Trident Z5 Neo RGB 32GB (2x16GB) DDR5 6000MHz F5-6000J3038F16GX2-TZ5NR;142;21;Memory Module;G.SKILL;Premium Neo series, specifically tuned for AMD Ryzen 7000/9000.
+Kingston FURY Beast 32GB (2x16GB) DDR5 5600MHz KF556C40BBK2-32;108;15;Memory Module;Kingston;Balanced 32GB DDR5 kit for modern desktop PC builds.
+Kingston FURY Beast RGB 32GB (2x16GB) DDR5 6000MHz KF560C36BBE2AK2-32;132;11;Memory Module;Kingston;Vibrant RGB memory with high-speed performance and wide compatibility.
+MSI MPG B550 GAMING PLUS;135;42;Motherboard;MSI;Reliable AM4 board with extended heatsink design and Lightning Gen 4 support.
+ASUS TUF Gaming A520M-PLUS II;85;38;Motherboard;ASUS;Budget-friendly micro-ATX AM4 board with military-grade durability.
+MSI PRO B760-P DDR4 II;145;27;Motherboard;MSI;Professional LGA1700 board for Intel 12th/13th/14th gen with DDR4 support.
+ASUS ROG STRIX B550-F GAMING;175;15;Motherboard;ASUS;Premium AM4 gaming board with robust power delivery and AI noise canceling.
+MSI MAG B850 TOMAHAWK MAX WIFI;249;12;Motherboard;MSI;Next-gen AM5 board featuring the B850 chipset and ultra-fast Wi-Fi 7.
+MSI B550-A PRO;115;45;Motherboard;MSI;Versatile workstation-grade AM4 motherboard with M.2 Shield Frozr.
+GIGABYTE B650 EAGLE AX;185;22;Motherboard;Gigabyte;Modern AM5 board with integrated Wi-Fi 6E and triple M.2 connectors.
+GIGABYTE B550M AORUS ELITE;110;31;Motherboard;Gigabyte;Compact AM4 powerhouse with digital VRM and RGB Fusion 2.0.
+ASRock B450M-HDV R4.0;65;49;Motherboard;ASRock;Essential micro-ATX AM4 board for office and entry-level builds.
+GIGABYTE B760M DS3H DDR4;105;36;Motherboard;Gigabyte;Versatile Intel LGA1700 board with high-quality audio and DDR4 support.
+MSI PRO B760M-B DDR4;95;44;Motherboard;MSI;Business-oriented compact Intel board with Core Boost technology.
+ASUS ROG STRIX B550-F GAMING WIFI II;189;18;Motherboard;ASUS;Upgraded Strix B550 with improved Wi-Fi 6E connectivity.
+ASUS TUF Gaming B550-PLUS;155;29;Motherboard;ASUS;Rock-solid AM4 performance with dual M.2 and USB 3.2 Gen 2.
+ASRock B550 Phantom Gaming 4;105;20;Motherboard;ASRock;Affordable ATX AM4 board with support for DDR4 4733MHz (OC).
+ASUS ROG CROSSHAIR X870E HERO;649;5;Motherboard;ASUS;The absolute pinnacle for AM5 enthusiasts featuring USB4 and PCIe 5.0.
+ASUS ROG STRIX B650E-F GAMING WIFI;275;14;Motherboard;ASUS;Top-tier B650E board with PCIe 5.0 for the ultimate gaming experience.
+MSI MAG B650 Tomahawk WIFI;215;25;Motherboard;MSI;Award-winning AM5 board with heavy-duty VRM and premium thermal pads.
+ASUS TUF Gaming B550M-PLUS;139;19;Motherboard;ASUS;Proven AM4 micro-ATX reliability with BIOS Flashback support.
+ASUS GeForce RTX 5070 PRIME OC 12GB GDDR7 192bit (PRIME-RTX5070-O12G);599;24;Graphics Card;ASUS;Blackwell architecture with ultra-fast GDDR7 memory and sleek PRIME cooling.
+GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N507TWF3OC-16GD);749;15;Graphics Card;GIGABYTE;High-performance 16GB GDDR7 card in a Small Form Factor friendly design.
+SAPPHIRE Radeon RX 9060 XT Pulse OC 16GB GDDR6 128bit (11350-03-20G);349;42;Graphics Card;SAPPHIRE;Efficient RDNA 4 mid-range king with 16GB VRAM for 1080p/1440p gaming.
+XFX Radeon RX 9070 XT Swift Triple Fan 16GB GDDR6 256bit (RX-97TSWF3B9);549;19;Graphics Card;XFX;Triple-fan cooling for the new RDNA 4 high-end powerhouse.
+ASUS GeForce RTX 5060 Ti Dual OC 16GB GDDR7 128bit (DUAL-RTX5060TI-O16G);449;31;Graphics Card;ASUS;Modern 1440p card with increased 16GB GDDR7 capacity for long-term use.
+ASUS GeForce RTX 5060 Dual OC 8GB GDDR7 128bit (DUAL-RTX5060-O8G);299;50;Graphics Card;ASUS;Efficient entry-level Blackwell GPU with next-gen memory technology.
+GIGABYTE RADEON RX 9060 XT GAMING OC 16GB GDDR6 128bit (GV-R9060XTGAMING OC-16GD);369;28;Graphics Card;GIGABYTE;Triple-fan RX 9060 XT for superior cooling and overclocking headroom.
+ASUS GeForce RTX 5090 ROG ASTRAL OC 32GB GDDR7 512bit (ROG-ASTRAL-RTX5090-O32G);1999;3;Graphics Card;ASUS;The absolute flagship with 32GB GDDR7 and a massive 512-bit bus.
+MSI GeForce RTX 5070 VENTUS 2X OC 12GB GDDR7 192bit;589;33;Graphics Card;MSI;Compact dual-fan RTX 5070 ideal for smaller builds.
+SAPPHIRE Radeon RX 9070 XT NITRO+ 16GB GDDR6 256bit (11348-01-20G);599;12;Graphics Card;SAPPHIRE;Premium NITRO+ edition with elite cooling and high factory overclock.
+ASUS TUF Gaming GeForce RTX 5070 Ti OC 16GB GDDR7 256bit;799;21;Graphics Card;ASUS;Military-grade durability with superior thermal performance for 4K gaming.
+Intel Arc B580 Limited Edition (31P06HB0BA);249;45;Graphics Card;Intel;Intel's new Battlemage architecture offering great value in the budget segment.
+GIGABYTE GeForce RTX 5080 WINDFORCE OC SFF 16GB GDDR7 256bit (GV-N5080WF3OC-16GD);999;9;Graphics Card;GIGABYTE;Next-gen enthusiast performance in a refined triple-fan layout.
+ASUS ROG Strix GeForce RTX 5070 Ti OC 16GB GDDR7 256bit;849;7;Graphics Card;ASUS;Top-tier Strix cooling and aesthetics with extreme factory overclock.
+GIGABYTE Radeon RX 9070 XT GAMING OC 16GB GDDR6 256bit (GV-R9070XTGAMING OC-16GD);569;22;Graphics Card;GIGABYTE;Reliable GAMING OC version of the high-end RDNA 4 GPU.
+MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 128bit (G5060-8V2C);289;47;Graphics Card;MSI;Cost-effective entry into the RTX 50 series ecosystem.
+ASUS Radeon RX 9060 XT Dual 16GB GDDR6 128bit (DUAL-RX9060XT-16G);359;36;Graphics Card;ASUS;Simple and clean dual-fan design for the efficient RX 9060 XT.
+ASRock Radeon RX 9060 XT Challenger OC 16GB GDDR6 128bit;345;40;Graphics Card;ASRock;Great value Challenger series with solid performance for RDNA 4.
+ASUS GeForce RTX 5070 Ti PRIME OC 16GB GDDR7 256bit (PRIME-RTX5070TI-O16G);759;18;Graphics Card;ASUS;Balanced PRIME design with 16GB of ultra-fast GDDR7 memory.
+GIGABYTE GeForce RTX 5070 Ti GAMING OC 16GB GDDR7 256bit (GV-N507TGAMING OC-16GD);779;25;Graphics Card;GIGABYTE;Performance-oriented GAMING OC build for the RTX 5070 Ti.
+Kingston NV3 1TB (SNV3S/1000G);65;42;Storage;Kingston;Reliable PCIe 4.0 NVMe SSD for everyday computing and quick boot times.
+Samsung 990 PRO 2TB M.2 (MZ-V9P2T0BW);175;15;Storage;Samsung;Premium PCIe 4.0 storage with high endurance and top-tier read/write speeds.
+Samsung 990 PRO 1TB M.2 NVMe (MZ-V9P1T0BW);105;28;Storage;Samsung;The gold standard for PCIe 4.0 gaming and professional workloads.
+Samsung 2.5 870 EVO 1TB SATA3 (MZ-77E1T0B);85;33;Storage;Samsung;The most reliable SATA SSD for bulk storage and older system upgrades.
+Samsung 990 EVO Plus 2TB (MZ-V9S2T0BW);145;19;Storage;Samsung;Enhanced efficiency and performance over the standard EVO series.
+ADATA Ultimate SU650 2.5 1TB SATA3 (ASU650SS-1TT-R);55;47;Storage;ADATA;Budget-friendly SATA storage with SLC caching technology.
+Samsung 2.5 870 EVO 500GB SATA3 (MZ-77E500B);55;22;Storage;Samsung;Dependable 500GB SATA drive for office PCs and media storage.
+Samsung 990 EVO Plus 1TB (MZ-V9S1T0BW);89;31;Storage;Samsung;Balanced performance and power consumption for laptops and desktops.
+Kingston A400 2.5 480GB SATA3 (SA400S37/480G);32;50;Storage;Kingston;Ultra-affordable SATA SSD to breathe new life into old hardware.
+Kingston NV3 500GB (SNV3S/500G);42;39;Storage;Kingston;Compact and fast entry-level NVMe drive for budget builds.
+Samsung 990 PRO 4TB (MZ-V9P4T0BW);325;8;Storage;Samsung;Massive 4TB high-speed NVMe storage for extreme content creation.
+Crucial BX500 2.5 1TB SATA3 (CT1000BX500SSD1);58;25;Storage;Crucial;Simple and effective SATA upgrade for reliable daily use.
+Samsung 9100 PRO 2TB (MZ-VAP2T0BW);249;5;Storage;Samsung;Next-gen flagship NVMe SSD with groundbreaking IOPS and reliability.
+Samsung 980 500GB M.2 PCIe (MZ-V8V500BW);48;14;Storage;Samsung;DRAM-less PCIe 3.0 NVMe that offers great value and Samsung quality.
+Kingston NV3 2TB (SNV3S/2000G);115;21;Storage;Kingston;Spacious 2TB NVMe drive with solid Gen4 performance.
+Kingston A400 2.5 240GB SATA3 (SA400S37/240G);22;44;Storage;Kingston;Essential 240GB boot drive for basic computing needs.
+Samsung 990 EVO Plus 4TB (MZ-V9S4T0BW);285;11;Storage;Samsung;High-capacity NVMe drive for users who need both speed and space.
+Kingston KC3000 1TB M 2 NVMe PCIe (SKC3000S/1024G);95;27;Storage;Kingston;Elite Gen4 performance with a graphene heat spreader for cool operation.
+Samsung 870 EVO 2.5 2TB SATA3 (MZ-77E2T0B);155;12;Storage;Samsung;High-capacity SATA SSD for professional storage and reliability.
+Kingston A400 2.5 960GB SATA3 (SA400S37/960G);52;36;Storage;Kingston;Affordable near-1TB SATA storage for gamers and home users.
+Seasonic Focus GX 850W 80 PLUS Gold V4 (GX-850-V4);135;42;Power Supply;Seasonic;Latest ATX 3.1 revision with high efficiency and compact 140mm depth.
+ASUS TUF GAMING 750B 80 PLUS Bronze;79;31;Power Supply;ASUS;Robust budget power supply with military-grade components and a dual ball fan.
+Seasonic Focus GX-1000 (2024) 1000W 80 PLUS Gold (SS-PS-SSR-1000-FX4);169;15;Power Supply;Seasonic;High-capacity 2024 edition featuring ATX 3.1 and PCIe 5.1 support.
+be quiet! Pure Power 13 M 850W (BP027EU);130;28;Power Supply;be quiet!;Exceptionally quiet 850W PSU with ATX 3.0 compatibility and modular cables.
+Seasonic Focus Gold 750W 80 PLUS Gold (SSR-750FM);105;44;Power Supply;Seasonic;Semi-modular 750W classic known for extreme voltage stability.
+Corsair RMe 2025 RM650e 80 PLUS Gold 650W (CP-9020302-EU);95;39;Power Supply;Corsair;Compact 2025 series with tuned low-noise operation and full modularity.
+CHIEFTEC A-90 750W 80 PLUS Gold (GDP-750C);85;22;Power Supply;CHIEFTEC;Reliable semi-modular PSU with high efficiency at a competitive price point.
+Corsair RMx Series RM850x 850W 80 PLUS Gold (CP-9020270-EU);145;18;Power Supply;Corsair;Premium components and magnetic levitation fan for ultra-low noise levels.
+be quiet! Power Zone 2 1000W 80 PLUS Platinum (BP008EU);215;10;Power Supply;be quiet!;High-end Platinum efficiency PSU designed for heavy overclocking.
+FSP VITA GM 850W 80 PLUS Gold (PPA8504202);115;36;Power Supply;FSP Group;Modern 850W unit from a tier-1 manufacturer with ATX 3.0 support.
+Seasonic Focus GX-750 (2024) 750W 80 PLUS Gold (SS-PS-SSR-750-FX4);119;27;Power Supply;Seasonic;The updated 2024 standard for high-end 750W power delivery.
+MSI MAG A650BN 650W 80 PLUS Bronze (306-7ZP2B11-CE0);59;50;Power Supply;MSI;Entry-level 650W PSU with DC-to-DC circuit design for reliability.
+ASUS TUF Gaming 850W 80 PLUS Gold (90YE00S2-B0NA00);140;21;Power Supply;ASUS;Fully modular Gold unit with axial-tech fan and 10-year warranty.
+GIGABYTE GP-P550SS 550W 80 PLUS Silver;55;45;Power Supply;GIGABYTE;Silver efficiency 550W unit for energy-conscious budget builds.
+Seasonic Core GX-650 650W 80 PLUS Gold;89;33;Power Supply;Seasonic;Compact 80 PLUS Gold power with fixed and modular cable options.
+GIGABYTE GP-P650SS;65;38;Power Supply;GIGABYTE;Standard 650W power supply offering stable output for mid-range gaming.
+Corsair RMx Series RM1000x 1000W 80 PLUS Gold (CP-9020271-EU);185;12;Power Supply;Corsair;High-performance 1000W PSU for multi-GPU or extreme CPU setups.
+be quiet! Pure Power 13 M 750W (BP026EU);115;29;Power Supply;be quiet!;Silent 750W modular power supply with ATX 3.0 and PCIe 5.0 native cable.
+be quiet! Dark Power 14 1000W (BP020EU);259;8;Power Supply;be quiet!;Titanium-class efficiency and high-end silent wings fan for enthusiasts.
+GIGABYTE P850GM 850W 80 PLUS Gold (GP-P850GM);105;24;Power Supply;GIGABYTE;Compact 850W Gold modular unit with smart fan control.
+ARCTIC Liquid Freezer III Pro 360 A-RGB (ACFRE00184A);129;34;Cooling;ARCTIC;Top-tier 360mm AIO with premium A-RGB fans and integrated VRM cooling.
+Thermalright Peerless Assassin 120 SE;35;48;Cooling;Thermalright;The undisputed king of budget air coolers with dual-tower heat dissipation.
+be quiet! Pure Rock Pro 3 (BK042);55;22;Cooling;be quiet!;Silent and elegant air cooler with a high cooling capacity for mid-range builds.
+ARCTIC Cooler Liquid Freezer III Pro 360 (ACFRE00180A);115;41;Cooling;ARCTIC;Performance-focused 360mm liquid cooler without lighting for stealth builds.
+be quiet! Pure Rock 3 (BK039);42;36;Cooling;be quiet!;Compact and quiet single-tower cooler, ideal for small to mid-sized cases.
+Thermalright Phantom Spirit 120 SE;45;50;Cooling;Thermalright;Upgraded dual-tower cooler with 7 heat pipes for even better thermal headroom.
+be quiet! DARK ROCK PRO 5 (BK036);88;18;Cooling;be quiet!;Flagship air cooler with a speed switch and virtually inaudible Silent Wings fans.
+Noctua NH-D15 (NOCTUA-FAN-NH-D15);109;12;Cooling;Noctua;The original heavyweight champion of air cooling with unmatched reliability.
+ARCTIC Freezer 36 ACFRE00123A;32;45;Cooling;ARCTIC;Efficient single-tower cooler with push-pull fan configuration and easy mounting.
+Thermalright Water Cooling Aqua Elite 360 Black A-RGB V3 (AQUA-ELITE-360-BK-ARGB-V3);65;29;Cooling;Thermalright;Affordable 360mm AIO with vibrant lighting and solid performance.
+Deepcool AK620 DIGITAL SE Black (R-AK620-BKADMN-GJD);75;25;Cooling;Deepcool;Sleek dual-tower cooler with a magnetic digital display for real-time CPU stats.
+ARCTIC Cooler Liquid Freezer III Pro 360 A-RGB (ACFRE00188A);135;19;Cooling;ARCTIC;White edition 360mm A-RGB AIO for high-end aesthetic builds.
+be quiet! Pure Rock Pro 3 LX (BK043);69;14;Cooling;be quiet!;Luxury version of the Pure Rock Pro 3 with refined finish and improved airflow.
+Noctua NH-D15-G2;179;8;Cooling;Noctua;The next-gen legend with specialized base convexity and superior 140mm fans.
+ASUS ROG Ryuo IV SLC 360 ARGB (90RC0151-B0EAY0);459;5;Cooling;ASUS;Extreme AIO featuring a curved 6.67-inch AMOLED display and a powerful pump.
+Deepcool AK620 Digital Pro (R-AK620-BKAPMN-G);89;15;Cooling;Deepcool;Pro version of the AK620 Digital with enhanced heat pipe efficiency.
+ARCTIC Liquid Freezer III 240 Pro Black (ACFRE00178A);95;27;Cooling;ARCTIC;Compact 240mm liquid cooler with heavy-duty radiator for small form factors.
+Thermalright Burst Assassin 120 SE;28;50;Cooling;Thermalright;Slim single-tower cooler that punches way above its price class.
+Lian Li Galahad II Trinity 240mm White (GA2T24W);155;11;Cooling;Lian Li;Stylish white 240mm AIO with interchangeable pump caps for personalization.
+be quiet! Dark Rock Elite RGB (BK037);115;9;Cooling;be quiet!;High-end air cooler with integrated RGB and massive 280W TDP cooling power.
+Samsung Odyssey OLED G5 S27FG500SU;549;38;Monitor;Samsung;27-inch Flat QD-OLED with QHD resolution, 180Hz refresh rate, and 0.03ms response time.
+Samsung Odyssey G5 C34G55TWWP;399;25;Monitor;Samsung;34-inch 1000R curved ultra-wide monitor with WQHD resolution and 165Hz refresh rate.
+Samsung Odyssey G5 S27CG552EU;285;44;Monitor;Samsung;27-inch 1000R curved gaming display with QHD resolution and 165Hz for immersive play.
+Samsung Odyssey G3 S24DG300EU;145;50;Monitor;Samsung;Budget-friendly 24-inch FHD monitor with 180Hz refresh rate and ergonomic stand.
+AOC Q27G41ZDF;380;15;Monitor;AOC;High-performance 27-inch QD-OLED monitor with 240Hz refresh rate and infinite contrast.
+AOC AGON Q27G3XMN;310;22;Monitor;AOC;27-inch Mini-LED gaming monitor with 336 dimming zones and HDR1000 certification.
+ASUS ROG Strix OLED XG27AQDMGR;680;12;Monitor;ASUS;27-inch WOLED gaming monitor featuring 240Hz, glossy finish, and ASUS OLED Care.
+ASUS ROG Strix XG27ACS;299;33;Monitor;ASUS;27-inch 1440p Fast IPS gaming monitor with 180Hz and built-in mobile phone holder.
+Samsung Odyssey G4 S25BG400EU;215;28;Monitor;Samsung;25-inch FHD esports monitor with 240Hz refresh rate and G-Sync compatibility.
+AOC AGON PRO AG276QZD2;599;10;Monitor;AOC;Competitive 27-inch OLED display with 240Hz, low input lag, and sleek AGON design.
+LG UltraGear 27GX704A-B;650;18;Monitor;LG;27-inch WOLED display with MLA+ technology, 240Hz refresh rate, and 1300 nits peak brightness.
+Xiaomi G Pro 27i;349;40;Monitor;Xiaomi;27-inch Mini-LED gaming monitor with 1152 local dimming zones and 180Hz refresh rate.
+Philips 27E2N1500L/00;135;55;Monitor;Philips;Essential 27-inch business and light gaming monitor with 100Hz refresh rate and FHD.
+Samsung Odyssey G5 S32DG500EU;310;21;Monitor;Samsung;32-inch QHD gaming monitor with 180Hz refresh rate and HDR10 support.
+LG UltraGear 27GS85Q-B;340;30;Monitor;LG;27-inch Nano IPS display with QHD resolution, 180Hz, and ATW Polarizer for better angles.
+ASUS ROG Strix XG27ACDNG;750;8;Monitor;ASUS;27-inch 1440p QD-OLED gaming monitor with a blistering 360Hz refresh rate.
+AOC 27G4X;185;48;Monitor;AOC;Value-king 27-inch FHD monitor with Fast IPS panel and 180Hz refresh rate.
+AOC Q27G4XF;245;36;Monitor;AOC;27-inch QHD gaming monitor with 180Hz, HDR400, and excellent color accuracy.
+Logitech G305 Lightspeed Black (910-005282);39;45;Mouse;Logitech;Classic wireless gaming mouse with HERO sensor and long battery life.
+Logitech G Pro X Superlight 2 (910-006630);159;12;Mouse;Logitech;Elite 60g wireless mouse with 44K DPI HERO 2 sensor and USB-C.
+Logitech G502 Hero (910-005470);45;50;Mouse;Logitech;The legendary wired gaming mouse with 11 programmable buttons and tunable weights.
+Logitech MX Master 3S Performance (910-006559);99;28;Mouse;Logitech;Silent clicks and 8K DPI tracking, the ultimate productivity tool.
+Logitech G Pro X Superlight (910-005880);95;18;Mouse;Logitech;The original ultra-lightweight pro champion, still a top-tier choice.
+Razer Viper V3 Pro (RZ01-05120100-R3G1);159;15;Mouse;Razer;Symmetrical 54g wireless powerhouse with native 8K polling rate.
+Razer Viper V3 HyperSpeed (RZ01-04910100-R3M1);69;33;Mouse;Razer;Battery-powered high-performance mouse with Focus Pro 30K sensor.
+Razer Basilisk V3 (RZ01-04000100-R3M1);59;24;Mouse;Razer;Ergonomic gaming mouse with HyperScroll tilt wheel and 11 RGB zones.
+Logitech G502 X Black (910-006138);75;41;Mouse;Logitech;Redesigned G502 with LIGHTFORCE hybrid optical-mechanical switches.
+Logitech MX Master 4 Graphite (910-007562);119;9;Mouse;Logitech;Next-gen productivity mouse with AI-gesture support and improved haptics.
+SteelSeries Rival 3 Wireless Gen 2 (62523);49;37;Mouse;SteelSeries;Updated budget king with dual wireless connectivity and 400+ hour battery.
+Logitech M330 Silent (910-004909);25;48;Mouse;Logitech;Simple, reliable, and 90% quieter clicks for office environments.
+Logitech G102 Lightsync Black (910-005823);22;50;Mouse;Logitech;Affordable gaming mouse with vibrant RGB and gaming-grade sensor.
+Logitech Signature M650 L (910-006236);39;44;Mouse;Logitech;Large-sized ergonomic office mouse with SmartWheel scrolling.
+Apple Magic Mouse 2024 (MXK53ZM/A);79;21;Mouse;Apple;Updated with USB-C charging and improved Multi-Touch surface response.
+Logitech G502 X Lightspeed Black (910-006180);135;14;Mouse;Logitech;Wireless version of the G502 X, combining iconic shape with LIGHTSPEED tech.
+Logitech G Pro 2 Lightspeed (910-007295);129;11;Mouse;Logitech;The successor to the G Pro Wireless with improved switches and lighter build.
+Logitech G203 LightSync Black (910-005796);25;46;Mouse;Logitech;Entry-level gaming mouse with customizable 3-zone RGB lighting.
+Logitech MX Vertical Advanced Ergonomic (910-005448);89;19;Mouse;Logitech;57-degree vertical angle mouse designed to reduce muscle strain.
+Razer DeathAdder Essential (RZ01-02540100-R3M1);22;50;Mouse;Razer;The classic ergonomic shape with a proven 6400 DPI optical sensor.
+Deepcool CC560 V2 black (R-CC560-BKGAA4-G-2);65;48;Case;Deepcool;Value-oriented mid-tower with four pre-installed LED fans and improved airflow.
+Lian Li Lancool 217 Wood-Black (G99.LAN217X.00);145;22;Case;Lian Li;Elegant chassis with real wood front trim and large 170mm high-performance fans.
+Lian Li Vector V100 RGB White (G99.V100RW.00);210;12;Case;Lian Li;Futuristic showcase design with unique angles and seamless ARGB integration.
+Lian Li DAN A3 Wood edition Black (G99.A3X-WD.00);95;31;Case;Lian Li;Premium M-ATX collaboration with DAN Cases, featuring a walnut wood front panel.
+Deepcool CG530 Black (R-CG530-BKNDA0-G-1);75;40;Case;Deepcool;Sleek minimalist mid-tower with mesh front and tool-free side panels.
+Deepcool CG530 4F Black (R-CG530-BKADA4-G-1);89;35;Case;Deepcool;Performance version of the CG530 with four pre-installed ARGB fans.
+Lian Li Lancool 207RX Black (G99.LAN207RX.00);115;28;Case;Lian Li;Compact ATX case with exceptional GPU cooling and pre-installed ARGB fans.
+Lian Li O11 Vision Compact Black (O11VPX);165;19;Case;Lian Li;Three-sided tempered glass showcase in a desk-friendly compact form factor.
+Lian Li O11 Vision Compact White (O11VPW);175;14;Case;Lian Li;Pristine white version of the Vision Compact, perfect for all-white builds.
+Lian Li LANCOOL 216 RGB Black;105;50;Case;Lian Li;Versatile high-airflow case with two 160mm ARGB fans and modular backplate.
+HYTE Y70 Touch TG Black/White (CS-HYTE-Y70-BW-L);359;5;Case;HYTE;Flagship dual-chamber case with a built-in 4K touchscreen and panoramic view.
+darkFlash M305 black;55;42;Case;darkFlash;Budget-friendly compact chassis with high mesh density and modern I/O.
+ASUS A31 Plus TG ARGB Black (90DC00R0-B19000);79;33;Case;ASUS;Sturdy TUF-inspired mid-tower with integrated ARGB fans and easy cable management.
+NZXT H5 Flow 2024 All Black (CC-H52FB-01);95;47;Case;NZXT;Refreshed 2024 model with optimized thermal pathing and iconic minimal design.
+Aigo B350;45;50;Case;Aigo;Entry-level compact ATX case with simple aesthetics for office or budget builds.
+ASUS TUF Gaming GT301 ARGB (90DC0040-B49000);85;29;Case;ASUS;Compact battle-ready case with honeycomb front panel and AURA Sync lighting.
+darkFlash FT418 PRO + 7 ARGB Black;120;18;Case;darkFlash;Spacious chassis pre-loaded with seven ARGB fans for extreme cooling out of the box.
+darkFlash DS900WD black;70;36;Case;darkFlash;Panoramic glass design for budget-friendly showpiece builds.
+JONSBO C6 Black;50;25;Case;JONSBO;Ultra-compact M-ATX case with all-around mesh for maximum breathability.
+ARCTIC P12 Pro (ACFAN00305A);12;45;Case Fan;ARCTIC;Enhanced pressure-optimized 120mm fan with improved motor efficiency and lower vibration.
+ARCTIC P12 120mm 1800rpm (ACFAN00118A);8;50;Case Fan;ARCTIC;The classic value king for high static pressure and silent operation.
+ARCTIC P12 Value Pack (ACFAN00135A);35;30;Case Fan;ARCTIC;Bundle of five P12 fans, providing the best price-to-performance ratio for full case cooling.
+Lian Li UNI Fan SL Infinity ARGB 3-pack (UF-SLIN120-3B);95;18;Case Fan;Lian Li;Premium interlocking fans with infinity mirrors and simplified cable management.
+ARCTIC P14 Pro PST CO 140mm PWM 5-Pack (ACFAN00319A);55;12;Case Fan;ARCTIC;Continuous operation dual ball bearing 140mm fans for server-grade reliability.
+Arctic P12 Slim PWM PST (ACFAN00187A);10;38;Case Fan;ARCTIC;Ultra-thin 15mm profile 120mm fan, perfect for small form factor (SFF) builds.
+Noctua NF-A12x25-PWM;33;25;Case Fan;Noctua;Flagship 120mm fan using Sterrox liquid crystal polymer for unrivaled performance.
+ARCTIC P12 Pro A-RGB 120mm PWM 3-Pack (ACFAN00310A);42;22;Case Fan;ARCTIC;Triple pack of Pro series fans with vibrant addressable RGB lighting.
+be quiet! Silent Wings 4 PWM High-speed 120mm (BL094);25;36;Case Fan;be quiet!;High-speed 2500 RPM fan that maintains incredibly low noise levels.
+ARCTIC P14 Pro PST 140mm PWM (ACFAN00314A);15;40;Case Fan;ARCTIC;The new 140mm Pro standard with PWM sharing technology for easy daisy-chaining.
+Noctua NF-P12 redux-1700 PWM;15;48;Case Fan;Noctua;The streamlined Redux line offering classic Noctua performance at a lower price point.
+Iceberg Thermal IceGALE Silent PWM 3 pack (ICEGALE12P-BBT-3A);28;20;Case Fan;Iceberg Thermal;High-airflow silent fans with an industrial design and dual ball bearings.
+Noctua NF-A14X25 G2 PWM;39;15;Case Fan;Noctua;The next-generation 140mm king with optimized frame and superior cooling capacity.
+Deepcool FL12 SE 3in1 (R-FL12SE-BKAPN3-G);22;44;Case Fan;Deepcool;Budget-friendly triple pack with fixed LED lighting and balanced airflow.
+darkFlash DR12 Pro 5-Pack;45;19;Case Fan;darkFlash;Visual-focused 5-pack with dual-ring RGB and an included controller hub.
+ARCTIC P12 Silent 120mm black (ACFAN00130A);7;50;Case Fan;ARCTIC;Optimized for absolute silence with a fixed 1050 RPM speed.
+ARCTIC P14 Pro A-RGB (ACFAN00315A);18;33;Case Fan;ARCTIC;Single 140mm Pro fan with high-intensity A-RGB LEDs and PST support.
+ARCTIC P14 Pro A-RGB 140mm PWM 3-Pack (ACFAN00320A);49;14;Case Fan;ARCTIC;Triple pack of high-performance 140mm RGB fans for large radiators.
+Noctua NF-A12x25 PWM Chromax (NF-A12x25-PWM.CH.BK.S);35;21;Case Fan;Noctua;The legendary NF-A12x25 in an all-black aesthetic with swappable anti-vibration pads.
+be quiet! Silent Wings 4 PWM 140mm (BL096);26;27;Case Fan;be quiet!;Premium 140mm fan designed for high-end cases and maximum air volume.
+Redragon Kumara RGB (K552RGB-1_BROWN_HU);45;42;Keyboard;Redragon;Tenkeyless mechanical gaming keyboard with tactile brown switches and HU layout.
+Keychron C3 Pro 8K QMK Super Brown (C3PX-H4Z-HU);65;28;Keyboard;Keychron;High-performance 8000Hz polling rate mechanical keyboard with QMK/VIA support.
+Logitech MX Keys S (920-011587-HU);115;35;Keyboard;Logitech;Premium low-profile wireless keyboard with smart illumination and HU layout.
+ASUS ROG Strix Scope II 96;165;15;Keyboard;ASUS;96% layout mechanical keyboard with pre-lubed ROG NX Snow switches and dampening foam.
+Logitech K400 Plus HU (920-007157);35;50;Keyboard;Logitech;Wireless HTPC keyboard with integrated touchpad for comfortable living room control.
+Keychron B6 Pro HU (B6P-K1-HG);55;22;Keyboard;Keychron;Ultra-slim wireless keyboard with Bluetooth 5.2 and ZMK support for multi-device workflows.
+ASUS TUF Gaming K1 HU (90MP01X0-BKHA00);48;38;Keyboard;ASUS;Durable gaming keyboard with dedicated volume knob and spill-resistance.
+Spirit Of Gamer Elite K70 HU (CLA-EK70HU);59;19;Keyboard;Spirit Of Gamer;Full-sized mechanical keyboard with blue switches and customizable RGB backlight.
+Logitech Prodigy G213 HU (920-010739);55;44;Keyboard;Logitech;Gaming-grade membrane keyboard with Mech-Dome keys and palm rest.
+Hama Exodus 600 HU (217832/13217832);42;31;Keyboard;Hama;Semi-mechanical gaming keyboard with 12 programmable macro keys.
+AVAX GM03 PRO 98 Gasket RGB (5999574480835);79;25;Keyboard;AVAX;Gasket-mount 98-key mechanical keyboard with hot-swappable switches and RGB.
+ASUS ROG Falchion RX Low Profile (90MP03EC-BKHA10);185;12;Keyboard;ASUS;65% wireless keyboard with ROG RX low-profile optical switches and touch bar.
+SteelSeries Apex 3 (64810);65;29;Keyboard;SteelSeries;Water-resistant gaming keyboard with 10-zone RGB and magnetic wrist rest.
+Keychron C3 Pro 8K QMK Super Red (C3PX-H1Z-HU);65;26;Keyboard;Keychron;Competitive 8K polling keyboard with smooth linear red switches.
+Redragon Mitra K551 (K551_BLUE_HU);49;47;Keyboard;Redragon;Full-sized mechanical keyboard with dust-proof blue switches and solid build.
+ASUS ROG Azoth NX Red (90MP0316-BKHA00);245;10;Keyboard;ASUS;Flagship 75% wireless DIY-style keyboard with OLED display and tri-mode connection.
+Logitech K120 HU (920-002491);12;100;Keyboard;Logitech;The reliable industry standard for simple, durable, and quiet office typing.
+Razer Huntsman Mini Red Switch US (RZ03-03390200-R3M1);110;18;Keyboard;Razer;60% optical gaming keyboard with linear red switches for ultra-fast actuation.
+SteelSeries Apex 3 TKL RGB UK (64836);55;14;Keyboard;SteelSeries;Compact tenkeyless design with whisper-quiet switches and IP32 water resistance.
+Logitech MX Keys S (920-011589);115;21;Keyboard;Logitech;Business-grade wireless keyboard in Graphite, featuring Logi Bolt technology.
+Logitech Brio 105 (960-001592);49;45;Webcam;Logitech;Reliable 1080p business webcam with integrated privacy shutter and mounting clip.
+Logitech C922 Pro Stream (960-001088);85;33;Webcam;Logitech;The streamer's favorite with 1080p 30fps or 720p 60fps and background removal.
+Logitech C920 (960-001055);65;50;Webcam;Logitech;Legendary Full HD webcam known for its crisp video and dual stereo microphones.
+Logitech Brio 500 EMEA28 (960-001421);119;28;Webcam;Logitech;Modern 1080p webcam with auto-framing and Show Mode for physical presentations.
+Logitech Streamcam C980 (960-001281);135;22;Webcam;Logitech;Versatile USB-C webcam optimized for vertical video and high-frame-rate streaming.
+Logitech Brio 100 (960-001585);39;55;Webcam;Logitech;Entry-level Full HD webcam with bright colors and easy-to-use privacy cover.
+ProXtend X301 (PX-CAM001);29;40;Webcam;ProXtend;Budget-friendly HD webcam with built-in mic for standard office use.
+Logitech C270 (960-000999);25;60;Webcam;Logitech;The essential 720p webcam for simple video calls and basic computing.
+Logitech MX Brio (960-001554);199;15;Webcam;Logitech;Premium 4K Ultra HD webcam with advanced image sensors and AI enhancements.
+OBSBOT Meet 2 4K (OWW-2311-CE);159;12;Webcam;OBSBOT;Compact 4K AI-powered webcam with auto-focus and virtual background support.
+IMILAB W88S (XIA039/CMSXJ22A);22;48;Webcam;IMILAB;Affordable Full HD webcam with a wide-angle lens and simple plug-and-play setup.
+Logitech C920s (960-001252);75;31;Webcam;Logitech;Pro-quality 1080p webcam with an included privacy shutter for added security.
+OBSBOT Tiny 2 Lite (OWB-2210-CE);179;10;Webcam;OBSBOT;Advanced AI-tracking webcam with 2-axis gimbal and 4K sensor in a small form factor.
+Logitech Brio 4k (960-001746);165;19;Webcam;Logitech;Business-grade 4K webcam with HDR support and Windows Hello facial recognition.
+Logitech BRIO 505 Graphite (960-001459);125;24;Webcam;Logitech;Refined business version of the Brio 500 with TAA compliance.
+Logitech 960-001063/UO;55;36;Webcam;Logitech;Bulk-packaged C920 variant specifically designed for enterprise deployments.
+Logitech C925e (960-001076);95;27;Webcam;Logitech;High-quality HD video for large offices with H.264 video compression.
+Logitech BRIO (960-001106);185;14;Webcam;Logitech;The original 4K Ultra HD champion for professional conferencing and streaming.
+Lenovo 500 Performance FHD (GXC0X89769);55;39;Webcam;Lenovo;Windows Hello compatible FHD webcam with dual-array noise-canceling mics.
+Logitech BRIO 300 (960-001442);65;44;Webcam;Logitech;Stylish 1080p webcam with auto-light correction and sustainable design.
+Apple AirPods 4 gen. (MXP63ZM/A);129;45;Headset;Apple;The latest standard AirPods with H2 chip and improved acoustic architecture.
+Apple AirPods Pro 3 (MFHP4ZM);249;22;Headset;Apple;Next-gen flagship earbuds with twice the ANC power and health-tracking sensors.
+Samsung Galaxy Buds3 Pro (SM-R630NZ);199;31;Headset;Samsung;Premium dual-driver earbuds with adaptive ANC and high-fidelity 24-bit audio.
+Apple AirPods Pro 2 (MTJV3ZM/A);185;50;Headset;Apple;The reliable pro choice with USB-C charging case and exceptional transparency mode.
+Xiaomi Redmi Buds 6 Play;25;85;Headset;Xiaomi;Ultra-budget wireless earbuds with 10mm drivers and 30-hour total battery life.
+Apple AirPods 4 gen. ANC (MXP93ZM/A);179;28;Headset;Apple;The first non-Pro AirPods to feature Active Noise Cancellation and Find My speaker.
+JBL Tune 720BT;75;40;Headset;JBL;Powerful over-ear wireless headphones with JBL Pure Bass sound and 76h battery.
+Samsung Galaxy Buds3 (SM-R530);149;36;Headset;Samsung;Open-type design with AI-powered sound optimization and seamless ecosystem switching.
+Sony WH-CH720N;115;29;Headset;Sony;Lightweight over-ear noise-canceling headphones with V1 processor for clear sound.
+Xiaomi Redmi Buds 6 Pro;65;44;Headset;Xiaomi;Affordable Pro model with triple-mic noise reduction and Hi-Res Audio wireless.
+Samsung Galaxy Buds3 FE (SM-R420);89;55;Headset;Samsung;Essential Galaxy Buds experience with wing-tip design for a secure fit.
+Sennheiser Momentum 4 (700382);280;15;Headset;Sennheiser;Audiophile-grade wireless headphones with an incredible 60-hour battery life.
+Xiaomi Redmi Buds 6 Active (BHR839GL);30;62;Headset;Xiaomi;Sports-oriented budget earbuds with water resistance and tactile controls.
+Xiaomi Redmi Buds 6;45;50;Headset;Xiaomi;The balanced mid-range option with dual-device connectivity and fast charging.
+HP HyperX Cloud III (727A9AA);99;48;Headset;HP;Legendary comfort meets upgraded 53mm angled drivers for immersive gaming.
+Xiaomi Redmi Buds 8 Lite;35;70;Headset;Xiaomi;2026's value champion with Bluetooth 5.4 and ultra-low latency mode.
+Sony WH-1000XM6;399;18;Headset;Sony;The new king of noise canceling with dual-chip processing and carbon fiber drivers.
+JBL Tune 770NC;110;33;Headset;JBL;Adaptive Noise Canceling headphones with multi-point connection and foldable design.
+Sony WH-CH520 (WHCH520);55;65;Headset;Sony;On-ear wireless headphones with DSEE upscaling and massive 50h battery life.
+SteelSeries Arctis Nova 3X wireless (61689);165;24;Headset;SteelSeries;Multi-platform gaming headset with AI noise-canceling mic and ComfortMAX system.
 Yamaha HS8;380;29;Speaker;Yamaha;Active 8-inch studio monitor known for its iconic white woofer and flat response.
 KRK Rokit RP7 G5;245;52;Speaker;KRK;Professional 7-inch nearfield studio monitor with DSP-driven room tuning.
 Adam Audio T7V;249;41;Speaker;Adam Audio;High-end monitor featuring an accelerated ribbon tweeter for exceptional detail.
