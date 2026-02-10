@@ -12,5 +12,10 @@ class Category extends Model
     use HasFactory;
 
     protected $fillable = ['category_name']; // Engedélyezd a company_name mezőt
+
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+    ];
 }
 
