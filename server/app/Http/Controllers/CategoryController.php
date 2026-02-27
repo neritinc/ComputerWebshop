@@ -57,18 +57,9 @@ class CategoryController extends Controller
      */
     public function destroy(int $id)
     {
-        return $this->apiResponse(function () use ($id) {
-            // Mivel itt nincs Policy, a manuális ellenőrzést bent tartjuk a closure-ben
-            if (auth()->user()->role !== 1) {
-                // Itt érdemesebb lehet egy kivételt dobni, amit az apiResponse lekezel, 
-                // de a te logikádat követve marad a manuális hibaüzenet:
-                abort(403, 'Unauthorized. Admin role required.');
-            }
-
-            $category = CurrentModel::findOrFail($id);
-            $category->delete();
-            
-            return ['id' => $id, 'message' => 'Deleted successfully'];
+         return $this->apiResponse(function () use ($id) {
+            CurrentModel::findOrFail($id)->delete();
+            return ['id' => $id];
         });
     }
 }
