@@ -8,6 +8,8 @@
 ### NYILVÁNOS ENDPOINTS
 ### ============================================
 
+### --- user
+
 ### Teszt endpoint
 GET {{host}}/api/x
 ### 1. Admin bejelentkezés
@@ -54,301 +56,42 @@ Accept: application/json
   "zip_code": "1011"
 }
 
-### --- companies
-GET {{host}}/api/companies
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer {{token}}
-
 ### --- categories
+### get categies
 GET {{host}}/api/categories
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {{token}}
 
-### --- units
-GET {{host}}/api/units
+### get categies by id
+GET {{host}}/api/categories/21
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {{token}}
 
-### --- products
-GET {{host}}/api/products
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer {{token}}
-
-### POST new product (Admin)
-POST {{host}}/api/products
-Authorization: Bearer {{token}}
-Accept: application/json
-Content-Type: application/json
-
-{
-  "name": "Kingston Fury Beast 16GB DDR5",
-  "category_id": 1,
-  "company_id": 1,
-  "pcs": 10,
-  "price": "32990.00",
-  "description": "DDR5 RAM module"
-}
-
-### Product price update (Admin)
-PATCH {{host}}/api/products/1
-Authorization: Bearer {{token}}
-Content-Type: application/json
-Accept: application/json
-
-{
-  "price": "310990.00",
-  "pcs": 15
-}
-
-### Delete product (Admin)
-DELETE {{host}}/api/products/1
-Authorization: Bearer {{token}}
-
-### --- product_parameter
-GET {{host}}/api/product_parameters
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer {{token}}
-
-### --- pics
-GET {{host}}/api/pics
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer {{token}}
-
-### --- comments
-GET {{host}}/api/comments
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer {{token}}
-
-### --- carts
-GET {{host}}/api/carts
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer {{token}}
-
-### --- cart items
-GET {{host}}/api/cart-items
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer {{token}}
-
-### --- admin permissions - Product management (Admin Only)
-### Admin creates a new product
-POST {{host}}/api/products
-Authorization: Bearer {{token}}
-Accept: application/json
-Content-Type: application/json
-
-{
-  "name": "New Product",
-  "category_id": 2,
-  "company_id": 3,
-  "pcs": 20,
-  "price": "14999.00",
-  "description": "New exciting product"
-}
-
-### Admin updates a product (patch)
-PATCH {{host}}/api/products/2
-Authorization: Bearer {{token}}
-Accept: application/json
-Content-Type: application/json
-
-{
-  "price": "15999.00",
-  "pcs": 2
-}
-
-### Admin deletes a product
-DELETE {{host}}/api/products/3
-Authorization: Bearer {{token}}
-
-### --- Admin manages users
-GET {{host}}/api/users
-Accept: application/json
-Authorization: Bearer {{token}}
-
-POST {{host}}/api/users
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer {{token}}
-
-{
-  "name": "Test Admin",
-  "email": "admin2@example.com",
-  "password": "admin123",
-  "phone": "06201234567",
-  "city": "Budapest",
-  "street": "Kossuth utca",
-  "house_number": "5",
-  "zip_code": "1031"
-}
-
-PATCH {{host}}/api/users/4
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer {{token}}
-
-{
-  "name": "Updated Admin"
-}
-
-DELETE {{host}}/api/users/4
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer {{token}}
-
-### --- Product parameters management (Admin)
-POST {{host}}/api/product_parameters
-Authorization: Bearer {{token}}
-Accept: application/json
-Content-Type: application/json
-
-{
-  "product_id": 1,
-  "parameter_id": 2,
-  "value": "Value of the parameter"
-}
-
-PATCH {{host}}/api/product_parameters/2
-Authorization: Bearer {{token}}
-Accept: application/json
-Content-Type: application/json
-
-{
-  "value": "Updated value"
-}
-
-DELETE {{host}}/api/product_parameters/2
-Authorization: Bearer {{token}}
-
-### --- Admin manages categories
+### post categoies
 POST {{host}}/api/categories
 Authorization: Bearer {{token}}
 Accept: application/json
 Content-Type: application/json
 
 {
-  "category_name": "New Category"
+  "category_name": "x"
 }
-###
-POST {{host}}/api/categories/22
+
+### patch categoies
+patch {{host}}/api/categories/20
 Authorization: Bearer {{token}}
 Accept: application/json
 Content-Type: application/json
 
 {
-    "_method": "PATCH",
-    "category_name": "Geci"
-}
-### Saját profil lekérése
-GET {{host}}/api/usersme
-Authorization: Bearer {{token}}
-
-### Saját profil módosítása (Név, cím, stb.)
-POST {{host}}/api/usersme
-Authorization: Bearer {{token}}
-Content-Type: application/json
-
-{
-    "_method": "PATCH",
-    "name": "Új Teszt Név"
+    "category_name": "xx1"
 }
 
-### Saját jelszó módosítása
-### Saját jelszó módosítása
-PATCH {{host}}/api/usersmeupdatepassword
+### delete categoies
+DELETE {{host}}/api/categories/21
 Authorization: Bearer {{token}}
-Content-Type: application/json
 Accept: application/json
-
-{
-    "oldpassword": "1234",
-    "newpassword": "123455",
-    "newpassword_confirmation": "123455"
-}
-
-### Saját fiók törlése
-DELETE {{host}}/api/usersme
-Authorization: Bearer {{token}}
-
-
-### Cég módosítása (Admin)
-PATCH  {{host}}/api/companies/1
-Authorization: Bearer {{token}}
 Content-Type: application/json
-
-{
-    "_method": "PATCH",
-    "company_name": "Módosítotdt Cég Kft"
-}
-
-### Egység módosítása (pl. kg-ról literre)
-POST {{host}}/api/units/1
-Authorization: Bearer {{token}}
-Content-Type: application/json
-
-{
-    "_method": "PATCH",
-    "unit_name": "liter"
-}
-
-### Kép URL módosítása
-PATCH {{host}}/api/pics/1
-Authorization: Bearer {{token}}
-Content-Type: application/json
-
-{
-    "image_path": "uj_processzor_kep_2026.jpg"
-}
-
-### Admin töröl egy trágár kommentet
-DELETE {{host}}/api/comments/5
-Authorization: Bearer {{token}}
-
-############################################################### Admin módosít egy kommentet (pl. kimoderálja a reklámot)
-POST {{host}}/api/comments/6
-Authorization: Bearer {{token}}
-Content-Type: application/json
-
-{
-    "_method": "PATCH",
-    "comment_text": "[Moderálva]"
-}
-
-### Vásárló létrehozza a saját kosarát
-POST {{host}}/api/carts
-Authorization: Bearer {{token}}
-
-### Tétel hozzáadása a kosárhoz
-POST {{host}}/api/cart-items
-Authorization: Bearer {{token}}
-Content-Type: application/json
-
-{
-    "product_id": 1,
-    "quantity": 3
-}
-
-### Tétel mennyiségének módosítása a kosárban
-POST {{host}}/api/cart-items/1
-Authorization: Bearer {{token}}
-Content-Type: application/json
-
-{
-    "_method": "PATCH",
-    "quantity": 5
-}
-
-### Keresés név alapján
-GET {{host}}/api/products?search=Kingston
-
-### Szűrés kategóriára
-GET {{host}}/api/products?category_id=4
 

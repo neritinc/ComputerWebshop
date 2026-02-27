@@ -12,7 +12,7 @@ class StoreCategoryRequest extends FormRequest
     public function authorize(): bool
     {
         // Csak akkor engedi tovább, ha be van jelentkezve és a role értéke 1 (admin)
-        return auth()->check() && auth()->user()->role === 1;
+        return true;
     }
 
     /**
@@ -22,7 +22,7 @@ class StoreCategoryRequest extends FormRequest
     {
         return [
             // A 'category_name' kötelező, szöveg kell legyen és egyedi a categories táblában
-            'category_name' => 'required|string|max:100|unique:categories,category_name',
+            'category_name' => 'required|string|min:2|max:50|unique:categories,category_name',
         ];
     }
 
@@ -30,10 +30,14 @@ class StoreCategoryRequest extends FormRequest
      * Opcionális: Egyedi hibaüzenetek angolul
      */
     public function messages(): array
-    {
-        return [
-            'category_name.unique' => 'This category already exists.',
-            'category_name.required' => 'The category name is mandatory.',
-        ];
-    }
+{
+    return [
+        'category_name.required' => 'The category name is mandatory.',
+        'category_name.string'   => 'The category name must be a valid string.',
+        'category_name.min'      => 'The category name must be at least 2 characters long.',
+        'category_name.max'      => 'The category name may not be greater than 50 characters.',
+        'category_name.unique'   => 'This category already exists.',
+    ];
+}
+
 }
