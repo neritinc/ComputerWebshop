@@ -1,21 +1,103 @@
 <template>
-  <div class="header-logo-wrap">
-    <img src="@/assets/DOOMSHOP.png" alt="DOOMSHOP logo" class="header-logo" />
-    <h1>DOOMSHOP</h1>
-  </div>
+  <header class="header-shell">
+    <div class="header-brand">
+      <div class="brand-copy">
+        <h1>Build Your Next PC</h1>
+        <p>DOOMSHOP</p>
+      </div>
+      <img src="@/assets/DOOMSHOP.svg" alt="DOOMSHOP logo" class="header-logo" />
+      <div class="right-space" aria-hidden="true"></div>
+    </div>
+  </header>
 </template>
 
 <style scoped>
-.header-logo-wrap {
-  display: flex;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap");
+
+.header-shell {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding: 18px 24px;
+  border-radius: 18px;
+  background: linear-gradient(130deg, #f8fbff 0%, #f1f7ff 48%, #eaf3ff 100%);
+  border: 1px solid #d4e4fb;
+  box-shadow:
+    0 16px 36px rgba(37, 99, 235, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+.header-shell::before {
+  content: "";
+  position: absolute;
+  right: -90px;
+  top: -70px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(59, 130, 246, 0) 70%);
+  pointer-events: none;
+}
+
+.header-brand {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .header-logo {
-  width: 56px;
-  height: 56px;
+  width: 170px;
+  height: 170px;
   object-fit: contain;
+  justify-self: center;
+  filter: drop-shadow(0 10px 18px rgba(37, 99, 235, 0.2));
+  transform: translateY(1px);
+}
+
+.brand-copy h1 {
+  margin: 0;
+  font-size: clamp(1.65rem, 2.9vw, 2.35rem);
+  letter-spacing: 0.01em;
+  font-weight: 800;
+  font-family: "Manrope", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #0f172a;
+  line-height: 1;
+  justify-self: start;
+  text-wrap: balance;
+}
+
+.brand-copy p {
+  margin: 8px 0 0;
+  font-size: clamp(0.74rem, 1vw, 0.85rem);
+  font-weight: 700;
+  font-family: "Manrope", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #1d4ed8;
+  opacity: 0.88;
+}
+
+@media (max-width: 576px) {
+  .header-shell {
+    padding: 14px 12px;
+  }
+
+  .header-logo {
+    width: 118px;
+    height: 118px;
+  }
+
+  .brand-copy h1 {
+    font-size: 1.1rem;
+  }
+
+  .brand-copy p {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+  }
 }
 </style>
