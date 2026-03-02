@@ -1,16 +1,35 @@
 import { defineStore } from "pinia";
-// import { useToastStore } from "@/stores/toastStore";
 import { useSearchStore } from "./searchStore";
 import service from "@/api/schoolclassService";
 
-// const toast = useToastStore();
-
-//változtatás
 class Item {
   constructor(id = 0, osztalyNev = "") {
     this.id = id;
     this.osztalyNev = osztalyNev;
   }
+}
+
+function sortAndFilter(items, column, direction, searchWord) {
+  const search = (searchWord || "").trim().toLowerCase();
+
+  let filtered = items;
+  if (search) {
+    filtered = items.filter((item) =>
+      Object.values(item).some((value) =>
+        String(value ?? "").toLowerCase().includes(search),
+      ),
+    );
+  }
+
+  return [...filtered].sort((a, b) => {
+    const av = a?.[column];
+    const bv = b?.[column];
+    const result = String(av ?? "").localeCompare(String(bv ?? ""), "hu", {
+      numeric: true,
+      sensitivity: "base",
+    });
+    return direction === "asc" ? result : -result;
+  });
 }
 
 export const useSchoolclassStore = defineStore("schoolclass", {
@@ -23,18 +42,17 @@ export const useSchoolclassStore = defineStore("schoolclass", {
     sortDirection: "asc",
     searchStore: useSearchStore(),
   }),
-   getters:{
-    getItemsLength(){
+  getters: {
+    getItemsLength() {
       return this.items.length;
-    }
+    },
   },
   actions: {
     clearItem() {
       this.item = new Item();
     },
-    // READ - Összes adat lekérése
+
     async getAllAbc() {
-      //   const toast = useToastStore();
       this.loading = true;
       this.error = null;
       try {
@@ -47,13 +65,12 @@ export const useSchoolclassStore = defineStore("schoolclass", {
         this.loading = false;
       }
     },
-    //Ha a direction meg van aadva, akkor ez lesz a sorrend
-    //Ha nincs megadva, akkor ellentettjére vált
+
     async getAllSortSearch(column = "id", direction = null) {
-      //   const toast = useToastStore();
       this.loading = true;
       this.error = null;
       this.sortColumn = column;
+
       if (!direction) {
         direction =
           this.sortColumn === column && this.sortDirection === "asc"
@@ -61,28 +78,15 @@ export const useSchoolclassStore = defineStore("schoolclass", {
             : "asc";
       }
       this.sortDirection = direction;
+
       try {
-        const response = await service.getAllSortSearch(
+        const response = await service.getAllSortSearch();
+        this.items = sortAndFilter(
+          response.data,
           this.sortColumn,
           this.sortDirection,
           this.searchStore.searchWord,
         );
-        this.items = response.data;
-      } catch (err) {
-        this.error = err;
-        throw err;
-      } finally {
-        this.loading = false;
-      }
-    },
-    async getAll() {
-      //   const toast = useToastStore();
-      this.loading = true;
-      this.error = null;
-      try {
-        const response = await service.getAll();
-        // this.searchStore.reset();
-        this.items = response.data;
       } catch (err) {
         this.error = err;
         throw err;
@@ -91,11 +95,13 @@ export const useSchoolclassStore = defineStore("schoolclass", {
       }
     },
 
-    // READ - Egy adat lekérése
+    async getAll() {
+      return await this.getAllSortSearch(this.sortColumn, this.sortDirection);
+    },
+
     async getById(id) {
       this.loading = true;
       this.error = null;
-      //   const toast = useToastStore();
       try {
         const response = await service.getById(id);
         this.item = response.data;
@@ -107,75 +113,46 @@ export const useSchoolclassStore = defineStore("schoolclass", {
       }
     },
 
-    // CREATE - Új elem hozzáadása
     async create(data) {
       this.loading = true;
       this.error = null;
       try {
-        const newItem = await service.create(data);
-        const response = await service.getAllSortSearch(
-          this.sortColumn,
-          this.sortDirection,
-          this.searchStore.searchWord,
-        );
-        this.items = response.data;
-        // toast.messages.push("Sikeresen létrehozva!");
-        // toast.show("Success");
-        return true;
-      } catch (err) {
-        this.error = err.response.data.errors.osztalyNev[0];
-        throw err;
-        return false;
-      } finally {
-        this.loading = false;
-      }
-    },
-
-    // 3. UPDATE - Módosítás (Helyi frissítéssel, újraolvasás nélkül)
-    async update(id, updateData) {
-      this.loading = true;
-      this.error = null;
-      try {
-        const updatedItem = await service.update(id, updateData);
-        // const response = await service.getAll();
-        const response = await service.getAllSortSearch(
-          this.sortColumn,
-          this.sortDirection,
-          this.searchStore.searchWord,
-        );
-        this.items = response.data;
-        // toast.messages.push(`Sikeresen módosítva`);
-        // toast.show("Success");
+        await service.create(data);
+        await this.getAllSortSearch(this.sortColumn, this.sortDirection);
         return true;
       } catch (err) {
         this.error = err;
         throw err;
-        return false;
       } finally {
         this.loading = false;
       }
     },
 
-    // 4. DELETE - Törlés
+    async update(id, updateData) {
+      this.loading = true;
+      this.error = null;
+      try {
+        await service.update(id, updateData);
+        await this.getAllSortSearch(this.sortColumn, this.sortDirection);
+        return true;
+      } catch (err) {
+        this.error = err;
+        throw err;
+      } finally {
+        this.loading = false;
+      }
+    },
+
     async delete(id) {
       this.loading = true;
       this.error = null;
       try {
         await service.delete(id);
-        //const response = await service.getAll();
-        const response = await service.getAllSortSearch(
-          this.sortColumn,
-          this.sortDirection,
-          this.searchStore.searchWord,
-        );
-        this.items = response.data;
-        // toast.messages.push(`Sikeresen törölve`);
-        // toast.show("Success");
+        await this.getAllSortSearch(this.sortColumn, this.sortDirection);
         return true;
       } catch (err) {
         this.error = err;
         throw err;
-        return false;
       } finally {
         this.loading = false;
       }

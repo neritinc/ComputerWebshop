@@ -1,36 +1,31 @@
-import apiClient from './axiosClient'; 
-const route = '/users';
+import apiClient from "./axiosClient";
+
+const route = "/users";
 
 export default {
-  // GET: Összes rekord lekérése
-  async getAllSortSearch(column, direction, search='') {
-    const route = `/userssortsearch/${column}/${direction}/${search}`
-    return await apiClient.get(`${route}`);
+  async getAllSortSearch() {
+    return await apiClient.get(route);
   },
+
   async getAll() {
-    return await apiClient.get(`${route}`);
+    return await apiClient.get(route);
   },
 
-  // GET: Egy rekord (ID alapján)
   async getById(id) {
-    const url = `${route}/${id}`
-    return await apiClient.get(url);
+    return await apiClient.get(`${route}/${id}`);
   },
 
-  // POST: Új rekord posztolás
   async create(data) {
-    delete data.id; //id kulcsot kiveszi az objektumból
-    return await apiClient.post(`${route}`, data);
+    delete data.id;
+    return await apiClient.post(route, data);
   },
 
-  // PUT: Módosítás
   async update(id, data) {
-    delete data.id; //id kulcsot kiveszi az objektumból
+    delete data.id;
     return await apiClient.patch(`${route}/${id}`, data);
   },
 
-  // DELETE: Törlés
   async delete(id) {
     return await apiClient.delete(`${route}/${id}`);
-  }
+  },
 };

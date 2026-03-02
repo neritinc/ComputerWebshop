@@ -2,7 +2,6 @@
   <div>
     <nav class="navbar navbar-expand-md bg-primary" data-bs-theme="dark">
       <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
         <button
           class="navbar-toggler"
           type="button"
@@ -17,10 +16,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <RouterLink class="nav-link" to="/">Főoldal</RouterLink>
+              <RouterLink class="nav-link" to="/">Fooldal</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link" to="/about">Rólunk</RouterLink>
+              <RouterLink class="nav-link" to="/about">Rolunk</RouterLink>
             </li>
             <li class="nav-item dropdown" v-if="hasMenuAccess('/adatok')">
               <a
@@ -35,29 +34,18 @@
               <ul class="dropdown-menu">
                 <li v-if="hasMenuAccess('/adatok/sport')">
                   <RouterLink class="dropdown-item" to="/adatok/sport"
-                    >Sportok</RouterLink
+                    >Kategoriak</RouterLink
                   >
                 </li>
                 <li v-if="hasMenuAccess('/adatok/schoolclass')">
                   <RouterLink class="dropdown-item" to="/adatok/schoolclass"
-                    >Osztályok</RouterLink
-                  >
-                </li>
-                <li v-if="hasMenuAccess('/adatok/student')">
-                  <RouterLink class="dropdown-item" to="/adatok/student"
-                    >Tanulók</RouterLink
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li v-if="hasMenuAccess('/adatok/plaingsport')">
-                  <RouterLink class="dropdown-item" to="/adatok/plaingsport"
-                    >Sportolás</RouterLink
+                    >Gyartok</RouterLink
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li v-if="hasMenuAccess('/adatok/users')">
                   <RouterLink class="dropdown-item" to="/adatok/users"
-                    >Userek</RouterLink
+                    >Felhasznalok</RouterLink
                   >
                 </li>
               </ul>
@@ -72,7 +60,6 @@
                   {{ userNameWithRole }}
                 </RouterLink>
 
-                <!-- logout -->
                 <i
                   class="bi bi-box-arrow-right ms-2 my-pointer tight-icon"
                   style="font-size: 2rem"
@@ -108,7 +95,7 @@
 import { mapActions, mapState } from "pinia";
 import { useSearchStore } from "@/stores/searchStore";
 import { useUserLoginLogoutStore } from "@/stores/userLoginLogoutStore";
-import userLoginLogoutService from "@/api/userLoginLogoutService";
+
 export default {
   data() {
     return {
@@ -117,22 +104,6 @@ export default {
     };
   },
   watch: {
-    //Keresőszó késleltetés
-    // searchWordInput(value) {
-    //   //töröljük az éppen futó setTimeout-ot
-    //   //hogy újraindíthassuk
-    //   clearTimeout(this.timeout);
-    //   //x-re kattintva kiürül az kereső input
-    //   if (value === "") {
-    //     this.setSearchWord("");
-    //     return;
-    //   }
-    //   //500ms késleltetés után tárolja
-    //   this.timeout = setTimeout(() => {
-    //     this.setSearchWord(value);
-    //   }, 1000);
-    // },
-
     searchWordInput(value) {
       if (!value) {
         this.resetSearchWord();
@@ -144,45 +115,38 @@ export default {
   },
   computed: {
     ...mapState(useSearchStore, ["searchWord"]),
-    ...mapState(useUserLoginLogoutStore, ['isLoggedIn','userNameWithRole'])
+    ...mapState(useUserLoginLogoutStore, ["isLoggedIn", "userNameWithRole"]),
   },
   methods: {
     ...mapActions(useSearchStore, ["resetSearchWord", "setSearchWord"]),
     onClickSearchButton() {
       this.setSearchWord(this.searchWordInput);
     },
-    ...mapActions(useUserLoginLogoutStore, ['logout']),
+    ...mapActions(useUserLoginLogoutStore, ["logout"]),
     hasMenuAccess(targetPath) {
-      //A jogosultsági szintnek megfelelően engedélyezi, vagy tiltja a menüt
       const userStore = useUserLoginLogoutStore();
       const resolved = this.$router.resolve(targetPath);
 
       if (!resolved || !resolved.matched.length) return false;
 
-      // Végigmeneteltetjük a szabályt az összes szülőn keresztül (adatok -> sports)
-      // Az 'every' akkor igaz, ha minden egyes elemre igaz a feltétel
       return resolved.matched.every((route) => {
         const requiredRoles = route.meta?.roles;
-
-        // A már meglévő Pinia getterünket hívjuk meg minden szinten
         return userStore.canAccess(requiredRoles);
       });
     },
-    async onClickLogut(){
+    async onClickLogut() {
       try {
         await this.logout();
-        this.$router.push('/');
+        this.$router.push("/");
       } catch (error) {
-        console.log('Kijelentkezési hiba!');
+        console.log("Kijelentkezesi hiba!");
       }
-
     },
   },
 };
 </script>
 
 <style scoped>
-/* 1. A sima .active ÉS a router által adott osztály is legyen sárga */
 .nav-link.active,
 .nav-link.router-link-exact-active {
   color: #ffff00 !important;
@@ -190,20 +154,15 @@ export default {
   border-bottom: 2px solid yellow;
 }
 
-/* 2. Az "Adatok" gomb sárgítása, ha az alatta lévő listában van aktív elem */
-/* Azt mondjuk: "Színezd a .nav-item-et, ha van benne aktív router-link" */
 .nav-item:has(.dropdown-item.router-link-active) .nav-link.dropdown-toggle {
   color: #ffff00 !important;
   font-weight: bold;
   border-bottom: 2px solid yellow;
 }
 
-/* 3. A lenyíló menüben a konkrét aktív elem (pl. Sportok) kijelölése */
 .dropdown-item.router-link-active {
-  /* background-color: #ffff00 !important; */
-  /* color: #000 !important; */
-  background-color: transparent !important; /* Levesszük a teli hátteret */
-  color: #ffff00 !important; /* Csak a szöveg lesz sárga */
+  background-color: transparent !important;
+  color: #ffff00 !important;
   font-weight: bold;
 }
 
@@ -215,7 +174,7 @@ export default {
 
 .navbar {
   position: relative;
-  z-index: 1060 !important; /* A Bootstrap modalok 1050-nél kezdődnek */
+  z-index: 1060 !important;
 }
 
 .dropdown-menu {

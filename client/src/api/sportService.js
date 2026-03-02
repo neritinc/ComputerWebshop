@@ -1,55 +1,49 @@
 import apiClient from "./axiosClient";
-const route = "/sports";
+
+const route = "/categories";
+
+function toClientItem(item) {
+  return {
+    ...item,
+    sportNev: item.category_name,
+  };
+}
+
+function toServerItem(data) {
+  return {
+    category_name: data.sportNev,
+  };
+}
 
 export default {
-  // async getAllAbc() {
-  //   const route = `/schoolclassesabc`
-  //   return await apiClient.get(route);
-  // },
-
-  async getAllSortSearch(column = "id", direction = "asc", search = "") {
-    const route = `/sportssortsearch/${column}/${direction}/${search}`;
-    return await apiClient.get(route);
+  async getAllSortSearch() {
+    const response = await apiClient.get(route);
+    response.data = response.data.map(toClientItem);
+    return response;
   },
 
-  // GET: Összes rekord lekérése
   async getAll() {
-    return await apiClient.get(`${route}`);
+    const response = await apiClient.get(route);
+    response.data = response.data.map(toClientItem);
+    return response;
   },
 
-  async getPaging(
-    page,
-    per_page = 10,
-    column = "id",
-    direction = "asc",
-    search = "",
-  ) {
-    let route = `/sportspaging/${page}/${per_page}/${column}/${direction}`;
-    if (search) {
-      route = `/sportspaging/${page}/${per_page}/${column}/${direction}/${search}`;
-    }
-    return await apiClient.get(`${route}`);
-  },
-
-  // GET: Egy rekord (ID alapján)
   async getById(id) {
-    const url = `${route}/${id}`;
-    return await apiClient.get(url);
+    const response = await apiClient.get(`${route}/${id}`);
+    response.data = toClientItem(response.data);
+    return response;
   },
 
-  // POST: Új rekord posztolás
   async create(data) {
-    delete data.id; //id kulcsot kiveszi az objektumból
-    return await apiClient.post(`${route}`, data);
+    const payload = toServerItem(data);
+    return await apiClient.post(route, payload);
   },
 
-  // PUT: Módosítás
   async update(id, data) {
-    delete data.id; //id kulcsot kiveszi az objektumból
-    return await apiClient.patch(`${route}/${id}`, data);
+    const payload = toServerItem(data);
+    return await apiClient.patch(`${route}/${id}`, payload);
   },
 
-  // DELETE: Törlés
   async delete(id) {
     return await apiClient.delete(`${route}/${id}`);
   },
