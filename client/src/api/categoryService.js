@@ -5,13 +5,13 @@ const route = "/categories";
 function toClientItem(item) {
   return {
     ...item,
-    sportNev: item.category_name,
+    categoryName: item.category_name,
   };
 }
 
 function toServerItem(data) {
   return {
-    category_name: data.sportNev,
+    category_name: data.categoryName,
   };
 }
 
@@ -48,3 +48,4 @@ export default {
     return await apiClient.delete(`${route}/${id}`);
   },
 };
+

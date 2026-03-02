@@ -1,27 +1,22 @@
 <template>
   <div>
     <Modal ref="modal" :title="title" @yesEvent="yesEventHandler">
-      <!-- vezérlőelemek -->
       <div class="mb-4 row pt-2">
-        <label for="sportNev" class="col-form-label col-auto pt-1 pe-0"
-          >Sportnév:</label
-        >
+        <label for="categoryName" class="col-form-label col-auto pt-1 pe-0">Category Name:</label>
         <div class="col">
           <input
+            id="categoryName"
+            v-model="formItem.categoryName"
             type="text"
             class="form-control"
-            id="sportNev"
-            v-model="formItem.sportNev"
-            @input="clearError('sportNev')"
+            @input="clearError('categoryName')"
             required
           />
-          <div v-if="!serverErrors.sportNev" class="invalid-feedback position-absolute">
-            A sportnév kötelező
+          <div v-if="!serverErrors.categoryName" class="invalid-feedback position-absolute">
+            Category name is required
           </div>
-          <div v-if="serverErrors.sportNev"
-            class="invalid-feedback position-absolute d-block"
-          >
-            {{ serverErrors.sportNev[0] }}
+          <div v-if="serverErrors.categoryName" class="invalid-feedback position-absolute d-block">
+            {{ serverErrors.categoryName[0] }}
           </div>
         </div>
       </div>
@@ -31,15 +26,13 @@
 
 <script>
 import Modal from "@/components/Modal/Modal.vue";
-// import Modal from "../Modal/Modal.vue";
+
 export default {
   emits: ["yesEventForm"],
-  name: "FormSport",
-  components: {
-    Modal,
-  },
+  name: "FormCategory",
+  components: { Modal },
   props: {
-    title: { type: String, default: "Új sport felvitele" },
+    title: { type: String, default: "Create Category" },
     item: { type: Object },
   },
   data() {
@@ -49,13 +42,11 @@ export default {
     };
   },
   watch: {
-    //Fontos!!! frissülhessen a szülő által küldött item
     item(value) {
       this.formItem = { ...value };
     },
   },
   methods: {
-    //metódus továbbítás
     show() {
       this.serverErrors = {};
       this.$refs.modal.show();
@@ -77,5 +68,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

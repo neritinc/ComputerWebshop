@@ -21,6 +21,8 @@
   padding: 18px 24px;
   border-radius: 18px;
   background: linear-gradient(130deg, #f8fbff 0%, #f1f7ff 48%, #eaf3ff 100%);
+  background-size: 220% 220%;
+  animation: gradientShift 12s ease-in-out infinite;
   border: 1px solid #d4e4fb;
   box-shadow:
     0 16px 36px rgba(37, 99, 235, 0.10),
@@ -38,6 +40,31 @@
   border-radius: 50%;
   background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(59, 130, 246, 0) 40%);
   pointer-events: none;
+  animation: glowFloat 9s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glowFloat {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-14px, 10px) scale(1.06);
+    opacity: 1;
+  }
 }
 
 .header-brand {

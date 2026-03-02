@@ -5,22 +5,22 @@ const route = "/companies";
 function toClientItem(item) {
   return {
     ...item,
-    osztalyNev: item.company_name,
+    brandName: item.company_name,
   };
 }
 
 function toServerItem(data) {
   return {
-    company_name: data.osztalyNev,
+    company_name: data.brandName,
   };
 }
 
 export default {
-  async getAllAbc() {
+  async getAllAlphabetical() {
     const response = await apiClient.get(route);
     response.data = response.data
       .map(toClientItem)
-      .sort((a, b) => a.osztalyNev.localeCompare(b.osztalyNev, "hu"));
+      .sort((a, b) => a.brandName.localeCompare(b.brandName, "hu"));
     return response;
   },
 
@@ -56,3 +56,4 @@ export default {
     return await apiClient.delete(`${route}/${id}`);
   },
 };
+

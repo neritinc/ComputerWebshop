@@ -109,7 +109,7 @@ import Modal from "@/components/Modal/Modal.vue";
 // import Modal from "../Modal/Modal.vue";
 export default {
   emits: ["yesEventForm"],
-  name: "FormSport",
+  name: "FormUser",
   components: {
     Modal,
   },

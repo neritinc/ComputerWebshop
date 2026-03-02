@@ -42,26 +42,34 @@ const router = createRouter({
       },
       children: [
         {
-          path: "sport",
-          name: "sport",
-          component: () => import("@/views/SportView.vue"),
+          path: "categories",
+          name: "categories",
+          component: () => import("@/views/CategoriesView.vue"),
           beforeEnter: [checkIfNotLogged],
           meta: {
-            title: () => "Kategoriak",
-            breadcrumb: "Kategoriak",
+            title: () => "Categories",
+            breadcrumb: "Categories",
             roles: [1],
           },
         },
         {
-          path: "schoolclass",
-          name: "schoolclass",
-          component: () => import("@/views/SchoolClasssView.vue"),
+          path: "brands",
+          name: "brands",
+          component: () => import("@/views/BrandsView.vue"),
           beforeEnter: [checkIfNotLogged],
           meta: {
-            title: () => "Gyartok",
-            breadcrumb: "Gyartok",
+            title: () => "Brands",
+            breadcrumb: "Brands",
             roles: [1],
           },
+        },
+        {
+          path: "sport",
+          redirect: "/adatok/categories",
+        },
+        {
+          path: "schoolclass",
+          redirect: "/adatok/brands",
         },
         {
           path: "users",

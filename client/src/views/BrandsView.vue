@@ -24,7 +24,7 @@
     />
     <div v-else style="width: 100px" class="m-auto">Nincs talalat</div>
 
-    <FormSchoolClass
+    <FormBrand
       ref="form"
       :title="title"
       :item="item"
@@ -41,20 +41,20 @@
 
 <script>
 import { mapActions, mapState } from "pinia";
-import { useSchoolclassStore } from "@/stores/schoolclassStore";
+import { useBrandStore } from "@/stores/brandStore";
 import { useSearchStore } from "@/stores/searchStore";
 import GenericTable from "@/components/Table/GenericTable.vue";
 import ConfirmModal from "@/components/Confirm/ConfirmModal.vue";
 import ButtonsCrudCreate from "@/components/Table/ButtonsCrudCreate.vue";
-import FormSchoolClass from "@/components/Forms/FormSchoolClass.vue";
+import FormBrand from "@/components/Forms/FormBrand.vue";
 
 export default {
-  name: "SchoolClasssView",
+  name: "BrandsView",
   components: {
     GenericTable,
     ConfirmModal,
     ButtonsCrudCreate,
-    FormSchoolClass,
+    FormBrand,
   },
   watch: {
     searchWord() {
@@ -66,9 +66,9 @@ export default {
       pageTitle: "Gyartok",
       tableColumns: [
         { key: "id", label: "ID", debug: import.meta.env.VITE_DEBUG_MODE },
-        { key: "osztalyNev", label: "Gyarto neve", debug: 2 },
+        { key: "brandName", label: "Brand Name", debug: 2 },
       ],
-      useCollectionStore: useSchoolclassStore,
+      useCollectionStore: useBrandStore,
       isOpenConfirmModal: false,
       toDeleteId: null,
       state: "r",
@@ -76,7 +76,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(useSchoolclassStore, [
+    ...mapState(useBrandStore, [
       "item",
       "items",
       "loading",
@@ -87,7 +87,7 @@ export default {
     ...mapState(useSearchStore, ["searchWord"]),
   },
   methods: {
-    ...mapActions(useSchoolclassStore, [
+    ...mapActions(useBrandStore, [
       "getAll",
       "getAllSortSearch",
       "getById",
@@ -140,8 +140,8 @@ export default {
       } catch (err) {
         if (err.response && err.response.status === 422) {
           const errors = { ...(err.response.data.errors || {}) };
-          if (errors.company_name && !errors.osztalyNev) {
-            errors.osztalyNev = errors.company_name;
+          if (errors.company_name && !errors.brandName) {
+            errors.brandName = errors.company_name;
           }
           this.$refs.form.setServerErrors(errors);
           done(false);
@@ -157,3 +157,4 @@ export default {
   },
 };
 </script>
+

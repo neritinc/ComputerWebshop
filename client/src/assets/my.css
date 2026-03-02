@@ -13,6 +13,14 @@
   cursor: pointer;
 }
 
-.my-content-height {
-  height: calc(100vh - 259px + var(--my-border-space));
+.app-shell {
+  min-height: calc(100vh - 1rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding-bottom: 0.75rem;
 }

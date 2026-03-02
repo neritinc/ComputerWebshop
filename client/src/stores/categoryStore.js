@@ -1,11 +1,11 @@
 import { defineStore } from "pinia";
 import { useSearchStore } from "./searchStore";
-import service from "@/api/sportService";
+import service from "@/api/categoryService";
 
 class Item {
-  constructor(id = 0, sportNev = "") {
+  constructor(id = 0, categoryName = "") {
     this.id = id;
-    this.sportNev = sportNev;
+    this.categoryName = categoryName;
   }
 }
 
@@ -32,7 +32,7 @@ function sortAndFilter(items, column, direction, searchWord) {
   });
 }
 
-export const useSportStore = defineStore("sports", {
+export const useCategoryStore = defineStore("categories", {
   state: () => ({
     item: new Item(),
     items: [new Item()],
@@ -152,3 +152,4 @@ export const useSportStore = defineStore("sports", {
     },
   },
 });
+

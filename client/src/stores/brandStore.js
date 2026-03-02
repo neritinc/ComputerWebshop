@@ -1,11 +1,11 @@
 import { defineStore } from "pinia";
 import { useSearchStore } from "./searchStore";
-import service from "@/api/schoolclassService";
+import service from "@/api/brandService";
 
 class Item {
-  constructor(id = 0, osztalyNev = "") {
+  constructor(id = 0, brandName = "") {
     this.id = id;
-    this.osztalyNev = osztalyNev;
+    this.brandName = brandName;
   }
 }
 
@@ -32,7 +32,7 @@ function sortAndFilter(items, column, direction, searchWord) {
   });
 }
 
-export const useSchoolclassStore = defineStore("schoolclass", {
+export const useBrandStore = defineStore("brands", {
   state: () => ({
     item: new Item(),
     items: [new Item()],
@@ -52,11 +52,11 @@ export const useSchoolclassStore = defineStore("schoolclass", {
       this.item = new Item();
     },
 
-    async getAllAbc() {
+    async getAllAlphabetical() {
       this.loading = true;
       this.error = null;
       try {
-        const response = await service.getAllAbc();
+        const response = await service.getAllAlphabetical();
         this.items = response.data;
       } catch (err) {
         this.error = err;
@@ -159,3 +159,4 @@ export const useSchoolclassStore = defineStore("schoolclass", {
     },
   },
 });
+

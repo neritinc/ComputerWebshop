@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid my-container my-border mt-2">
+  <div class="container-fluid my-container app-shell mt-2">
     <!-- Head -->
     <Header/>
 
@@ -8,10 +8,12 @@
     <Breadcrumb class="my-border"/>
 
     <!-- Ide töltődnek be az oldalak -->
-    <RouterView class="my-border my-content-height"/>
+    <main class="app-main">
+      <RouterView />
+    </main>
 
 
-    <Footer  class="my-border"
+    <Footer
       :content="footerContent"
     />
     <ToastContanier/>
