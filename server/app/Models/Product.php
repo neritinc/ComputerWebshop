@@ -10,6 +10,7 @@ class Product extends Model
     use HasFactory;
 
     public $timestamps = false;
+
     protected $fillable = [
         'name',
         'category_id',
@@ -29,7 +30,11 @@ class Product extends Model
         return $this->belongsTo(Company::class);
     }
 
-    // Helyes pivot tábla név
+    public function pics()
+    {
+        return $this->hasMany(Pic::class);
+    }
+
     public function parameters()
     {
         return $this->belongsToMany(Parameter::class, 'product_parameter')

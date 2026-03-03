@@ -45,33 +45,25 @@
                     </RouterLink>
                   </section>
 
-                  <section class="catalog-section" v-if="catalogMode === 'categories'">
-                    <h6 class="catalog-title">PC Components</h6>
-                    <div v-if="categoriesLoading" class="dropdown-item-text px-2 py-1">Loading categories...</div>
-                    <div v-else-if="hardwareCategories.length === 0" class="dropdown-item-text px-2 py-1">No component categories</div>
-                    <ul v-else class="catalog-list">
-                      <li v-for="category in hardwareCategories" :key="`hw-${category.id}`">
-                        <RouterLink class="dropdown-item category-item-clean" :to="{ path: '/adatok/categories', query: { category: category.id } }">
-                          <i class="bi me-2" :class="categoryIconClass(category.categoryName)"></i>
-                          {{ category.categoryName }}
-                        </RouterLink>
-                      </li>
-                    </ul>
-                  </section>
-
-                  <section class="catalog-section" v-if="catalogMode === 'categories'">
-                    <h6 class="catalog-title">Monitors & Accessories</h6>
-                    <div v-if="categoriesLoading" class="dropdown-item-text px-2 py-1">Loading categories...</div>
-                    <div v-else-if="accessoryCategories.length === 0" class="dropdown-item-text px-2 py-1">No accessory categories</div>
-                    <ul v-else class="catalog-list">
-                      <li v-for="category in accessoryCategories" :key="`acc-${category.id}`">
-                        <RouterLink class="dropdown-item category-item-clean" :to="{ path: '/adatok/categories', query: { category: category.id } }">
-                          <i class="bi me-2" :class="categoryIconClass(category.categoryName)"></i>
-                          {{ category.categoryName }}
-                        </RouterLink>
-                      </li>
-                    </ul>
-                  </section>
+                  <template v-if="catalogMode === 'categories'">
+                    <section
+                      v-for="section in categorySections"
+                      :key="section.key"
+                      class="catalog-section"
+                    >
+                      <h6 class="catalog-title">{{ section.title }}</h6>
+                      <div v-if="categoriesLoading" class="dropdown-item-text px-2 py-1">Loading categories...</div>
+                      <div v-else-if="section.items.length === 0" class="dropdown-item-text px-2 py-1">{{ section.emptyText }}</div>
+                      <ul v-else class="catalog-list">
+                        <li v-for="category in section.items" :key="`${section.key}-${category.id}`">
+                          <RouterLink class="dropdown-item category-item-clean" :to="{ path: '/adatok/categories', query: { category: category.id } }">
+                            <i class="bi me-2" :class="categoryIconClass(category.categoryName)"></i>
+                            {{ category.categoryName }}
+                          </RouterLink>
+                        </li>
+                      </ul>
+                    </section>
+                  </template>
 
                   <section class="catalog-section" v-if="catalogMode === 'brands'">
                     <h6 class="catalog-title">Manufacturers</h6>
@@ -143,6 +135,70 @@ import { useUserLoginLogoutStore } from "@/stores/userLoginLogoutStore";
 import categoryService from "@/api/categoryService";
 import brandService from "@/api/brandService";
 
+const normalizeText = (value) =>
+  String(value || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+
+const COMPONENT_NAMES = [
+  "processor",
+  "memory module",
+  "motherboard",
+  "graphics card",
+  "storage",
+  "power supply",
+  "cooling",
+  "case",
+  "optical drive",
+  "network card",
+  "sound card",
+  "usb hub",
+  "case fan",
+  "memory",
+  "cooler",
+  "computer case",
+];
+
+const ACCESSORY_NAMES = [
+  "monitor",
+  "keyboard",
+  "mouse",
+  "headset",
+  "speaker",
+  "webcam",
+  "microphone",
+  "external storage",
+];
+
+const CATEGORY_ICON_MAP = {
+  processor: "bi-cpu",
+  "memory module": "bi-memory",
+  memory: "bi-memory",
+  motherboard: "bi-motherboard",
+  "graphics card": "bi-gpu-card",
+  storage: "bi-device-ssd",
+  "external storage": "bi-device-hdd",
+  "power supply": "bi-plug",
+  cooling: "bi-fan",
+  cooler: "bi-snow",
+  case: "bi-pc",
+  "computer case": "bi-pc-display",
+  "case fan": "bi-fan",
+  "optical drive": "bi-disc",
+  "network card": "bi-router",
+  "sound card": "bi-music-note-beamed",
+  "usb hub": "bi-usb-symbol",
+  monitor: "bi-display",
+  keyboard: "bi-keyboard",
+  mouse: "bi-mouse",
+  headset: "bi-headphones",
+  speaker: "bi-speaker",
+  webcam: "bi-camera-video",
+  microphone: "bi-mic",
+};
+
 export default {
   data() {
     return {
@@ -168,68 +224,37 @@ export default {
     ...mapState(useSearchStore, ["searchWord"]),
     ...mapState(useUserLoginLogoutStore, ["isLoggedIn", "userNameWithRole"]),
     hardwareCategories() {
-      const normalize = (value) =>
-        String(value || "")
-          .toLowerCase()
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "")
-          .trim();
-
-      // Explicit grouping based on current DB category list.
-      const componentNames = [
-        "processor",
-        "memory module",
-        "motherboard",
-        "graphics card",
-        "storage",
-        "power supply",
-        "cooling",
-        "case",
-        "optical drive",
-        "network card",
-        "sound card",
-        "usb hub",
-        "case fan",
-        "memory",
-        "cooler",
-        "computer case",
-      ];
-
-      return this.dbCategories.filter((category) => {
-        const name = normalize(category.categoryName);
-        return componentNames.includes(name);
-      });
+      return this.dbCategories.filter((category) =>
+        COMPONENT_NAMES.includes(normalizeText(category.categoryName)),
+      );
     },
     accessoryCategories() {
-      const normalize = (value) =>
-        String(value || "")
-          .toLowerCase()
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "")
-          .trim();
-
-      const accessoryNames = [
-        "monitor",
-        "keyboard",
-        "mouse",
-        "headset",
-        "speaker",
-        "webcam",
-        "microphone",
-        "external storage",
-      ];
-
       const accessory = this.dbCategories.filter((category) =>
-        accessoryNames.includes(normalize(category.categoryName)),
+        ACCESSORY_NAMES.includes(normalizeText(category.categoryName)),
       );
 
-      // If a new category appears in DB and is not yet mapped, show it here by default.
       const mappedIds = new Set([
         ...this.hardwareCategories.map((c) => c.id),
         ...accessory.map((c) => c.id),
       ]);
       const unmapped = this.dbCategories.filter((category) => !mappedIds.has(category.id));
       return [...accessory, ...unmapped];
+    },
+    categorySections() {
+      return [
+        {
+          key: "hw",
+          title: "PC Components",
+          emptyText: "No component categories",
+          items: this.hardwareCategories,
+        },
+        {
+          key: "acc",
+          title: "Monitors & Accessories",
+          emptyText: "No accessory categories",
+          items: this.accessoryCategories,
+        },
+      ];
     },
     sortedBrands() {
       return [...this.dbBrands]
@@ -273,38 +298,14 @@ export default {
       }
     },
     async loadCatalogData() {
-      await Promise.all([this.loadDbCategories(), this.loadDbBrands()]);
+      const tasks = [this.loadDbCategories()];
+      if (this.hasMenuAccess("/adatok/brands")) {
+        tasks.push(this.loadDbBrands());
+      }
+      await Promise.all(tasks);
     },
     categoryIconClass(categoryName) {
-      const key = String(categoryName || "").toLowerCase();
-      const iconMap = {
-        processor: "bi-cpu",
-        "memory module": "bi-memory",
-        memory: "bi-memory",
-        motherboard: "bi-motherboard",
-        "graphics card": "bi-gpu-card",
-        storage: "bi-device-ssd",
-        "external storage": "bi-device-hdd",
-        "power supply": "bi-plug",
-        cooling: "bi-fan",
-        cooler: "bi-snow",
-        case: "bi-pc",
-        "computer case": "bi-pc-display",
-        "case fan": "bi-fan",
-        "optical drive": "bi-disc",
-        "network card": "bi-router",
-        "sound card": "bi-music-note-beamed",
-        "usb hub": "bi-usb-symbol",
-        monitor: "bi-display",
-        keyboard: "bi-keyboard",
-        mouse: "bi-mouse",
-        headset: "bi-headphones",
-        speaker: "bi-speaker",
-        webcam: "bi-camera-video",
-        microphone: "bi-mic",
-      };
-
-      return iconMap[key] || "bi-tag";
+      return CATEGORY_ICON_MAP[normalizeText(categoryName)] || "bi-tag";
     },
     ...mapActions(useUserLoginLogoutStore, ["logout"]),
     hasMenuAccess(targetPath) {
@@ -381,9 +382,13 @@ export default {
   border-radius: 14px;
   border: 1px solid #d8e5f7;
   box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
-  min-width: 760px;
+  width: min(760px, calc(100vw - 24px));
+  min-width: 0;
+  max-width: calc(100vw - 24px);
   padding: 12px;
   background: #ffffff;
+  left: 0;
+  right: auto;
 }
 
 .catalog-grid {
@@ -493,7 +498,10 @@ export default {
   }
 
   .nav-dropdown {
-    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: auto;
   }
 
   .catalog-grid {

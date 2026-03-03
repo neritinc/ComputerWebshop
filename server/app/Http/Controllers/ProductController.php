@@ -8,6 +8,7 @@ use App\Http\Requests\StoreProductRequest as StoreCurrentModelRequest;
 use App\Http\Requests\UpdateProductRequest as UpdateCurrentModelRequest;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
@@ -19,7 +20,7 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         return $this->apiResponse(function () use ($request) {
-            $query = CurrentModel::with(['category', 'company', 'parameters.unit']);
+            $query = CurrentModel::with(['category', 'company', 'parameters.unit', 'pics']);
 
             if ($request->has('category_id')) {
                 $query->where('category_id', $request->category_id);
@@ -33,7 +34,8 @@ class ProductController extends Controller
                 });
             }
 
-            return $query->get();
+            $products = $query->get();
+            return $this->attachPrimaryImagePath($products);
         });
     }
 
@@ -54,7 +56,8 @@ class ProductController extends Controller
     public function show(int $id)
     {
         return $this->apiResponse(function () use ($id) {
-            return CurrentModel::with(['category', 'company', 'parameters.unit'])->findOrFail($id);
+            $product = CurrentModel::with(['category', 'company', 'parameters.unit', 'pics'])->findOrFail($id);
+            return $this->attachPrimaryImagePath(collect([$product]))->first();
         });
     }
 
@@ -79,7 +82,7 @@ class ProductController extends Controller
                 }
             }
 
-            return $row->load(['category', 'company', 'parameters.unit']);
+            return $row->load(['category', 'company', 'parameters.unit', 'pics']);
         });
     }
 
@@ -94,5 +97,87 @@ class ProductController extends Controller
             $row->delete();
             return ['id' => $id];
         });
+    }
+
+    private function attachPrimaryImagePath($products)
+    {
+        $files = $this->productImageFiles();
+        $fileSet = array_fill_keys($files, true);
+
+        foreach ($products as $product) {
+            $primaryFromRelation = collect($product->pics ?? [])
+                ->pluck('image_path')
+                ->filter()
+                ->sortBy(fn ($path) => preg_match('/_1\.[a-z0-9]+$/i', (string) $path) ? 0 : 1)
+                ->first(fn ($path) => isset($fileSet[(string) $path]));
+
+            $primaryFromAnyRelation = collect($product->pics ?? [])
+                ->pluck('image_path')
+                ->filter()
+                ->sortBy(fn ($path) => preg_match('/_1\.[a-z0-9]+$/i', (string) $path) ? 0 : 1)
+                ->first();
+
+            $resolved = $primaryFromRelation
+                ?: $this->guessImageFromFiles((string) $product->name, $files)
+                ?: (isset($fileSet[(string) $primaryFromAnyRelation]) ? $primaryFromAnyRelation : null);
+            $product->setAttribute('primary_image_path', $resolved ?: null);
+            $product->setAttribute(
+                'primary_image_url',
+                $resolved ? url('images/products/' . $resolved) : null
+            );
+        }
+
+        return $products;
+    }
+
+    private function productImageFiles(): array
+    {
+        $paths = glob(public_path('images/products/*.*')) ?: [];
+        return array_map(static fn ($path) => basename($path), $paths);
+    }
+
+    private function guessImageFromFiles(string $productName, array $files): ?string
+    {
+        if (!$files) return null;
+
+        $name = Str::lower($productName);
+        preg_match_all('/\d{6,}/', $name, $codeMatches);
+        $codes = $codeMatches[0] ?? [];
+        $tokens = preg_split('/[^a-z0-9]+/i', $name) ?: [];
+        $tokens = array_values(array_filter($tokens, function ($token) {
+            return strlen($token) >= 3 && !in_array($token, ['core', 'ghz', 'box', 'tray', 'plus'], true);
+        }));
+
+        $bestScore = -1;
+        $bestFile = null;
+
+        foreach ($files as $file) {
+            $fileLower = Str::lower($file);
+            $score = 0;
+
+            foreach ($codes as $code) {
+                $trimmed = ltrim($code, '0');
+                if (str_contains($fileLower, $code)) $score += 8;
+                if ($trimmed !== '' && str_contains($fileLower, $trimmed)) $score += 6;
+            }
+
+            foreach ($tokens as $token) {
+                if (str_contains($fileLower, $token)) {
+                    // Model tokens with both letters and numbers are stronger identifiers (e.g. 27g4x).
+                    $score += preg_match('/[a-z]/i', $token) && preg_match('/\d/', $token) ? 2 : 1;
+                }
+            }
+
+            if (preg_match('/_1\.[a-z0-9]+$/i', $fileLower)) {
+                $score += 1;
+            }
+
+            if ($score > $bestScore) {
+                $bestScore = $score;
+                $bestFile = $file;
+            }
+        }
+
+        return $bestScore >= 2 ? $bestFile : null;
     }
 }
