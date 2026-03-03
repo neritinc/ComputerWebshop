@@ -106,17 +106,24 @@ class ProductController extends Controller
         $usedGuessedFiles = [];
 
         foreach ($products as $product) {
+            $modelCodes = $this->extractModelCodes((string) $product->name);
+
             $primaryFromRelation = collect($product->pics ?? [])
                 ->pluck('image_path')
                 ->filter()
                 ->sortBy(fn ($path) => preg_match('/_1\.[a-z0-9]+$/i', (string) $path) ? 0 : 1)
-                ->first(fn ($path) => isset($fileSet[(string) $path]));
+                ->first(function ($path) use ($fileSet, $modelCodes) {
+                    $file = (string) $path;
+                    if (!isset($fileSet[$file])) return false;
+                    if ($modelCodes && !$this->pathContainsModelCode($file, $modelCodes)) return false;
+                    return true;
+                });
 
             $primaryFromAnyRelation = collect($product->pics ?? [])
                 ->pluck('image_path')
                 ->filter()
                 ->sortBy(fn ($path) => preg_match('/_1\.[a-z0-9]+$/i', (string) $path) ? 0 : 1)
-                ->first();
+                ->first(fn ($path) => $modelCodes ? $this->pathContainsModelCode((string) $path, $modelCodes) : true);
 
             $resolved = $primaryFromRelation;
 
@@ -150,6 +157,7 @@ class ProductController extends Controller
         if (!$files) return null;
 
         $name = Str::lower($productName);
+        $modelCodes = $this->extractModelCodes($productName);
         preg_match_all('/\d{6,}/', $name, $codeMatches);
         $codes = $codeMatches[0] ?? [];
         $tokens = preg_split('/[^a-z0-9]+/i', $name) ?: [];
@@ -165,6 +173,12 @@ class ProductController extends Controller
 
             $fileLower = Str::lower($file);
             $score = 0;
+
+            foreach ($modelCodes as $modelCode) {
+                if (str_contains($fileLower, Str::lower($modelCode))) {
+                    $score += 10;
+                }
+            }
 
             foreach ($codes as $code) {
                 $trimmed = ltrim($code, '0');
@@ -189,6 +203,34 @@ class ProductController extends Controller
             }
         }
 
+        // If a product name includes a specific model code, don't allow fuzzy mismatches.
+        if ($modelCodes && $bestFile) {
+            $bestFileLower = Str::lower($bestFile);
+            $codeMatched = collect($modelCodes)->contains(
+                fn ($code) => str_contains($bestFileLower, Str::lower($code))
+            );
+            // Keep strict matching by default, but allow close family fallback
+            // when textual similarity is already high (prevents empty image cards).
+            if (!$codeMatched && $bestScore < 8) return null;
+        }
+
         return $bestScore >= 2 ? $bestFile : null;
+    }
+
+    private function extractModelCodes(string $productName): array
+    {
+        preg_match_all('/[a-z]+\d+[a-z0-9]*/i', Str::lower($productName), $modelCodeMatches);
+        return array_values(array_filter($modelCodeMatches[0] ?? [], fn ($v) => strlen($v) >= 6));
+    }
+
+    private function pathContainsModelCode(string $imagePath, array $modelCodes): bool
+    {
+        $pathLower = Str::lower($imagePath);
+        foreach ($modelCodes as $code) {
+            if (str_contains($pathLower, Str::lower($code))) {
+                return true;
+            }
+        }
+        return false;
     }
 }
