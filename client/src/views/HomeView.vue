@@ -16,72 +16,13 @@
       </div>
 
       <div class="news-grid">
-        <article class="news-card">
+        <article v-for="item in newsItems" :key="item.title" class="news-card">
           <div class="news-head">
-            <p class="news-tag">Memory</p>
-            <i class="bi bi-memory news-icon"></i>
+            <p class="news-tag">{{ item.tag }}</p>
           </div>
-          <h3>DDR5 memory prices show fresh upward pressure</h3>
-          <img
-            src="@/assets/mempriceincrease.png"
-            alt="DDR5 memory price increase chart"
-            class="news-image"
-          />
-          <p>
-            Suppliers report tighter stock on popular 32GB and 64GB kits, with
-            retail pricing trending higher this month.
-          </p>
-        </article>
-
-        <article class="news-card">
-          <div class="news-head">
-            <p class="news-tag">Storage</p>
-            <i class="bi bi-device-ssd news-icon"></i>
-          </div>
-          <h3>NVMe SSD prices rise as demand grows</h3>
-          <img
-            src="@/assets/ssdprices.png"
-            alt="SSD price increase chart"
-            class="news-image"
-          />
-          <p>
-            Mid-range Gen4 SSDs are seeing noticeable price increases, while
-            high-capacity models remain limited in several regions.
-          </p>
-        </article>
-
-        <article class="news-card">
-          <div class="news-head">
-            <p class="news-tag">Graphics</p>
-            <i class="bi bi-gpu-card news-icon"></i>
-          </div>
-          <h3>GPU stock stabilizes, but premium cards stay expensive</h3>
-          <img
-            src="@/assets/graphics-news.png"
-            alt="NVIDIA GeForce RTX graphics cards"
-            class="news-image"
-          />
-          <p>
-            Availability has improved for mainstream graphics cards, though top
-            tier models continue to carry elevated prices.
-          </p>
-        </article>
-
-        <article class="news-card">
-          <div class="news-head">
-            <p class="news-tag">Processors</p>
-            <i class="bi bi-cpu news-icon"></i>
-          </div>
-          <h3>CPU market shifts as new generation launches approach</h3>
-          <img
-            src="@/assets/cpu-news.jpg"
-            alt="AMD Ryzen CPU close-up"
-            class="news-image"
-          />
-          <p>
-            Buyers are balancing current discounts against expected next-gen
-            releases, creating mixed movement across performance segments.
-          </p>
+          <h3>{{ item.title }}</h3>
+          <img :src="item.image" :alt="item.alt" class="news-image" />
+          <p>{{ item.text }}</p>
         </article>
       </div>
     </section>
@@ -106,6 +47,7 @@
           class="category-pill"
           @click="goToCategory(category.id)"
         >
+          <i class="bi category-pill-icon" :class="categoryIconClass(category.categoryName)"></i>
           {{ category.categoryName }}
         </button>
       </div>
@@ -115,30 +57,53 @@
 
 <script>
 import categoryService from "@/api/categoryService";
+import memPriceImage from "@/assets/mempriceincrease.png";
+import ssdPriceImage from "@/assets/ssdprices.png";
+import graphicsNewsImage from "@/assets/graphics-news.png";
+import cpuNewsImage from "@/assets/cpu-news.jpg";
+import { resolveCategoryIconClass } from "@/utils/categoryMeta";
 
 export default {
   data() {
     return {
       categories: [],
+      newsItems: [
+        {
+          tag: "Memory",
+          title: "DDR5 memory prices show fresh upward pressure",
+          image: memPriceImage,
+          alt: "DDR5 memory price increase chart",
+          text: "Suppliers report tighter stock on popular 32GB and 64GB kits, with retail pricing trending higher this month.",
+        },
+        {
+          tag: "Storage",
+          title: "NVMe SSD prices rise as demand grows",
+          image: ssdPriceImage,
+          alt: "SSD price increase chart",
+          text: "Mid-range Gen4 SSDs are seeing noticeable price increases, while high-capacity models remain limited in several regions.",
+        },
+        {
+          tag: "Graphics",
+          title: "GPU stock stabilizes, but premium cards stay expensive",
+          image: graphicsNewsImage,
+          alt: "NVIDIA GeForce RTX graphics cards",
+          text: "Availability has improved for mainstream graphics cards, though top tier models continue to carry elevated prices.",
+        },
+        {
+          tag: "Processors",
+          title: "CPU market shifts as new generation launches approach",
+          image: cpuNewsImage,
+          alt: "AMD Ryzen CPU close-up",
+          text: "Buyers are balancing current discounts against expected next-gen releases, creating mixed movement across performance segments.",
+        },
+      ],
     };
   },
   computed: {
     topCategories() {
-      const preferred = [
-        "processor",
-        "graphics card",
-        "memory module",
-        "motherboard",
-        "storage",
-        "monitor",
-        "power supply",
-        "cooling",
-      ];
-
-      const byName = new Map(
-        this.categories.map((c) => [String(c.categoryName || "").toLowerCase(), c]),
+      return [...this.categories].sort((a, b) =>
+        String(a.categoryName || "").localeCompare(String(b.categoryName || ""), "en"),
       );
-      return preferred.map((name) => byName.get(name)).filter(Boolean);
     },
   },
   methods: {
@@ -164,6 +129,9 @@ export default {
         behavior: "smooth",
       });
     },
+    categoryIconClass(categoryName) {
+      return resolveCategoryIconClass(categoryName);
+    },
   },
   async mounted() {
     await this.loadCategories();
@@ -173,8 +141,8 @@ export default {
 
 <style scoped>
 .home-page {
-  display: grid;
-  gap: 18px;
+  width: 100%;
+  padding-bottom: 20px;
 }
 
 .home-hero {
@@ -234,7 +202,7 @@ export default {
 .news-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 16px;
 }
 
 .news-card {
@@ -244,6 +212,9 @@ export default {
   background: #ffffff;
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: grid;
+  align-content: start;
+  gap: 10px;
 }
 
 .news-card:hover {
@@ -253,7 +224,7 @@ export default {
 }
 
 .news-card h3 {
-  margin: 6px 0 10px;
+  margin: 0;
   font-size: 1.05rem;
   color: #0f172a;
   line-height: 1.25;
@@ -267,30 +238,17 @@ export default {
 
 .news-image {
   width: 100%;
-  height: 170px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid #d7e4f7;
-  margin: 4px 0 12px;
+  margin: 0;
 }
 
 .news-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.news-icon {
-  font-size: 1.05rem;
-  color: #1d4ed8;
-  background: #eaf2ff;
-  border: 1px solid #d5e4fb;
-  border-radius: 999px;
-  width: 30px;
-  height: 30px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .news-tag {
@@ -312,7 +270,7 @@ export default {
   }
 
   .news-image {
-    height: 190px;
+    height: 180px;
   }
 }
 
@@ -360,6 +318,13 @@ export default {
   font-weight: 700;
   white-space: nowrap;
   box-shadow: 0 6px 14px rgba(37, 99, 235, 0.12);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-pill-icon {
+  font-size: 0.95rem;
 }
 </style>
 

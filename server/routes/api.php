@@ -58,9 +58,9 @@ Route::delete('products/{id}', [ProductController::class, 'destroy'])
 
 // --- REGION: COMPANIES ---
 Route::get('companies', [CompanyController::class, 'index'])
-    ->middleware(['auth:sanctum', 'ability:admin']);
+    ->middleware(['auth:sanctum', 'ability:admin,customer']);
 Route::get('companies/{id}', [CompanyController::class, 'show'])
-    ->middleware(['auth:sanctum', 'ability:admin']);
+    ->middleware(['auth:sanctum', 'ability:admin,customer']);
 Route::post('companies', [CompanyController::class, 'store'])
     ->middleware(['auth:sanctum', 'ability:admin']);
 Route::patch('companies/{id}', [CompanyController::class, 'update'])

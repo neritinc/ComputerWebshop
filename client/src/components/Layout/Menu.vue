@@ -29,60 +29,83 @@
                 data-bs-toggle="dropdown"
                 data-bs-auto-close="outside"
                 aria-expanded="false"
-                @click="loadCatalogData"
+                @click="onCatalogToggleClick"
               >
                 Catalog
               </a>
-              <div class="dropdown-menu nav-dropdown">
+              <div
+                class="dropdown-menu nav-dropdown"
+                @mousedown.stop
+                @click.stop
+              >
                 <div class="catalog-grid">
-                  <section class="catalog-section">
+                  <section class="catalog-section manage-panel">
                     <h6 class="catalog-title">Manage</h6>
-                    <RouterLink v-if="hasMenuAccess('/adatok/categories')" class="dropdown-item quick-item" to="/adatok/categories">
+                    <button
+                      v-if="canOpenCategories"
+                      type="button"
+                      class="dropdown-item quick-item text-start manage-item"
+                      :class="{ active: catalogPanel === 'categories' }"
+                      @click.stop="openCatalogPanel('categories')"
+                    >
                       Categories
-                    </RouterLink>
-                    <RouterLink v-if="hasMenuAccess('/adatok/brands')" class="dropdown-item quick-item" to="/adatok/brands">
+                    </button>
+                    <button
+                      v-if="canOpenBrands"
+                      type="button"
+                      class="dropdown-item quick-item text-start manage-item"
+                      :class="{ active: catalogPanel === 'brands' }"
+                      @click.stop="openCatalogPanel('brands')"
+                    >
                       Brands
+                    </button>
+                    <RouterLink
+                      v-if="catalogPanel"
+                      class="btn btn-outline-primary btn-sm mt-2"
+                      :to="catalogPanel === 'brands' ? '/adatok/brands' : '/adatok/categories'"
+                    >
+                      Open {{ catalogPanel === "brands" ? "Brands" : "Categories" }} Page
                     </RouterLink>
                   </section>
 
-                  <template v-if="catalogMode === 'categories'">
-                    <section
-                      v-for="section in categorySections"
-                      :key="section.key"
-                      class="catalog-section"
-                    >
-                      <h6 class="catalog-title">{{ section.title }}</h6>
-                      <div v-if="categoriesLoading" class="dropdown-item-text px-2 py-1">Loading categories...</div>
-                      <div v-else-if="section.items.length === 0" class="dropdown-item-text px-2 py-1">{{ section.emptyText }}</div>
+                  <section class="catalog-section content-panel">
+                    <h6 class="catalog-title">{{ catalogPanelTitle }}</h6>
+
+                    <template v-if="catalogPanel === 'categories'">
+                      <div
+                        v-for="section in categorySections"
+                        :key="section.key"
+                        class="content-subsection"
+                      >
+                        <h6 class="catalog-subtitle">{{ section.title }}</h6>
+                        <div v-if="categoriesLoading" class="dropdown-item-text px-2 py-1">Loading categories...</div>
+                        <div v-else-if="section.items.length === 0" class="dropdown-item-text px-2 py-1">{{ section.emptyText }}</div>
+                        <ul v-else class="catalog-list">
+                          <li v-for="category in section.items" :key="`${section.key}-${category.id}`">
+                            <RouterLink class="dropdown-item category-item-clean" :to="{ path: '/adatok/categories', query: { category: category.id } }">
+                              <i class="bi me-2" :class="categoryIconClass(category.categoryName)"></i>
+                              {{ category.categoryName }}
+                            </RouterLink>
+                          </li>
+                        </ul>
+                      </div>
+                    </template>
+
+                    <template v-else-if="catalogPanel === 'brands'">
+                      <div v-if="brandsLoading" class="dropdown-item-text px-2 py-1">Loading brands...</div>
+                      <div v-else-if="sortedBrands.length === 0" class="dropdown-item-text px-2 py-1">No brands found</div>
                       <ul v-else class="catalog-list">
-                        <li v-for="category in section.items" :key="`${section.key}-${category.id}`">
-                          <RouterLink class="dropdown-item category-item-clean" :to="{ path: '/adatok/categories', query: { category: category.id } }">
-                            <i class="bi me-2" :class="categoryIconClass(category.categoryName)"></i>
-                            {{ category.categoryName }}
+                        <li v-for="brand in sortedBrands" :key="`brand-${brand.id}`">
+                          <RouterLink class="dropdown-item brand-item-clean" :to="{ path: '/adatok/brands', query: { brand: brand.id } }">
+                            {{ brand.brandName }}
                           </RouterLink>
                         </li>
                       </ul>
-                    </section>
-                  </template>
+                    </template>
 
-                  <section class="catalog-section" v-if="catalogMode === 'brands'">
-                    <h6 class="catalog-title">Manufacturers</h6>
-                    <div v-if="brandsLoading" class="dropdown-item-text px-2 py-1">Loading brands...</div>
-                    <div v-else-if="sortedBrands.length === 0" class="dropdown-item-text px-2 py-1">No brands found</div>
-                    <ul v-else class="catalog-list">
-                      <li v-for="brand in sortedBrands" :key="`brand-${brand.id}`">
-                        <RouterLink class="dropdown-item brand-item-clean" :to="{ path: '/adatok/brands', query: { brand: brand.id } }">
-                          {{ brand.brandName }}
-                        </RouterLink>
-                      </li>
-                    </ul>
-                  </section>
-
-                  <section class="catalog-section">
-                    <h6 class="catalog-title">Quick Help</h6>
-                    <div class="dropdown-item-text px-2 py-1">Choose a category to browse products.</div>
-                    <div class="dropdown-item-text px-2 py-1">Open Brands to filter by manufacturer.</div>
-                    <div class="dropdown-item-text px-2 py-1">Use Search to find items faster.</div>
+                    <div v-else class="dropdown-item-text px-2 py-1">
+                      Select Categories or Brands on the left.
+                    </div>
                   </section>
                 </div>
               </div>
@@ -99,8 +122,7 @@
 
                 <i
                   class="bi bi-box-arrow-right ms-2 my-pointer tight-icon"
-                  style="font-size: 1.6rem"
-                  @click="onClickLogut()"
+                  @click="onClickLogout()"
                 ></i>
               </div>
             </li>
@@ -134,80 +156,24 @@ import { useSearchStore } from "@/stores/searchStore";
 import { useUserLoginLogoutStore } from "@/stores/userLoginLogoutStore";
 import categoryService from "@/api/categoryService";
 import brandService from "@/api/brandService";
-
-const normalizeText = (value) =>
-  String(value || "")
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .trim();
-
-const COMPONENT_NAMES = [
-  "processor",
-  "memory module",
-  "motherboard",
-  "graphics card",
-  "storage",
-  "power supply",
-  "cooling",
-  "case",
-  "optical drive",
-  "network card",
-  "sound card",
-  "usb hub",
-  "case fan",
-  "memory",
-  "cooler",
-  "computer case",
-];
-
-const ACCESSORY_NAMES = [
-  "monitor",
-  "keyboard",
-  "mouse",
-  "headset",
-  "speaker",
-  "webcam",
-  "microphone",
-  "external storage",
-];
-
-const CATEGORY_ICON_MAP = {
-  processor: "bi-cpu",
-  "memory module": "bi-memory",
-  memory: "bi-memory",
-  motherboard: "bi-motherboard",
-  "graphics card": "bi-gpu-card",
-  storage: "bi-device-ssd",
-  "external storage": "bi-device-hdd",
-  "power supply": "bi-plug",
-  cooling: "bi-fan",
-  cooler: "bi-snow",
-  case: "bi-pc",
-  "computer case": "bi-pc-display",
-  "case fan": "bi-fan",
-  "optical drive": "bi-disc",
-  "network card": "bi-router",
-  "sound card": "bi-music-note-beamed",
-  "usb hub": "bi-usb-symbol",
-  monitor: "bi-display",
-  keyboard: "bi-keyboard",
-  mouse: "bi-mouse",
-  headset: "bi-headphones",
-  speaker: "bi-speaker",
-  webcam: "bi-camera-video",
-  microphone: "bi-mic",
-};
+import productService from "@/api/productService";
+import {
+  ACCESSORY_CATEGORY_KEYS,
+  COMPONENT_CATEGORY_KEYS,
+  normalizeCategoryKey,
+  resolveCategoryIconClass,
+} from "@/utils/categoryMeta";
 
 export default {
   data() {
     return {
       searchWordInput: "",
-      timeout: null,
       dbCategories: [],
       categoriesLoading: false,
+      categoryIdsWithProducts: new Set(),
       dbBrands: [],
       brandsLoading: false,
+      catalogPanel: null,
     };
   },
   watch: {
@@ -223,21 +189,32 @@ export default {
   computed: {
     ...mapState(useSearchStore, ["searchWord"]),
     ...mapState(useUserLoginLogoutStore, ["isLoggedIn", "userNameWithRole"]),
-    hardwareCategories() {
+    canOpenCategories() {
+      return this.hasMenuAccess("/adatok/categories");
+    },
+    canOpenBrands() {
+      return this.hasMenuAccess("/adatok/brands");
+    },
+    categoriesWithProducts() {
       return this.dbCategories.filter((category) =>
-        COMPONENT_NAMES.includes(normalizeText(category.categoryName)),
+        this.categoryIdsWithProducts.has(Number(category.id)),
+      );
+    },
+    hardwareCategories() {
+      return this.categoriesWithProducts.filter((category) =>
+        COMPONENT_CATEGORY_KEYS.includes(normalizeCategoryKey(category.categoryName)),
       );
     },
     accessoryCategories() {
-      const accessory = this.dbCategories.filter((category) =>
-        ACCESSORY_NAMES.includes(normalizeText(category.categoryName)),
+      const accessory = this.categoriesWithProducts.filter((category) =>
+        ACCESSORY_CATEGORY_KEYS.includes(normalizeCategoryKey(category.categoryName)),
       );
 
       const mappedIds = new Set([
         ...this.hardwareCategories.map((c) => c.id),
         ...accessory.map((c) => c.id),
       ]);
-      const unmapped = this.dbCategories.filter((category) => !mappedIds.has(category.id));
+      const unmapped = this.categoriesWithProducts.filter((category) => !mappedIds.has(category.id));
       return [...accessory, ...unmapped];
     },
     categorySections() {
@@ -261,15 +238,25 @@ export default {
         .sort((a, b) => String(a.brandName).localeCompare(String(b.brandName), "en"))
         .slice(0, 200);
     },
-    catalogMode() {
-      if (this.$route?.name === "brands") {
-        return "brands";
-      }
-      return "categories";
+    catalogPanelTitle() {
+      if (this.catalogPanel === "brands") return "Manufacturers";
+      if (this.catalogPanel === "categories") return "Catalog Categories";
+      return "Catalog";
     },
   },
   methods: {
     ...mapActions(useSearchStore, ["resetSearchWord", "setSearchWord"]),
+    onCatalogToggleClick() {
+      this.catalogPanel = null;
+    },
+    async openCatalogPanel(panel) {
+      this.catalogPanel = panel;
+      if (panel === "categories") {
+        await this.loadDbCategories();
+      } else if (panel === "brands" && this.canOpenBrands) {
+        await this.loadDbBrands();
+      }
+    },
     onClickSearchButton() {
       this.setSearchWord(this.searchWordInput);
     },
@@ -277,10 +264,20 @@ export default {
       if (this.categoriesLoading) return;
       try {
         this.categoriesLoading = true;
-        const response = await categoryService.getAll();
-        this.dbCategories = response.data || [];
+        const [categoriesResponse, productsResponse] = await Promise.all([
+          categoryService.getAll(),
+          productService.getAll(),
+        ]);
+        this.dbCategories = categoriesResponse.data || [];
+        const products = productsResponse.data || [];
+        this.categoryIdsWithProducts = new Set(
+          products
+            .map((product) => Number(product?.category_id))
+            .filter((id) => Number.isFinite(id)),
+        );
       } catch (error) {
         this.dbCategories = [];
+        this.categoryIdsWithProducts = new Set();
       } finally {
         this.categoriesLoading = false;
       }
@@ -297,15 +294,8 @@ export default {
         this.brandsLoading = false;
       }
     },
-    async loadCatalogData() {
-      const tasks = [this.loadDbCategories()];
-      if (this.hasMenuAccess("/adatok/brands")) {
-        tasks.push(this.loadDbBrands());
-      }
-      await Promise.all(tasks);
-    },
     categoryIconClass(categoryName) {
-      return CATEGORY_ICON_MAP[normalizeText(categoryName)] || "bi-tag";
+      return resolveCategoryIconClass(categoryName);
     },
     ...mapActions(useUserLoginLogoutStore, ["logout"]),
     hasMenuAccess(targetPath) {
@@ -319,7 +309,7 @@ export default {
         return userStore.canAccess(requiredRoles);
       });
     },
-    async onClickLogut() {
+    async onClickLogout() {
       try {
         await this.logout();
         this.$router.push("/");
@@ -327,9 +317,6 @@ export default {
         console.log("Logout error");
       }
     },
-  },
-  async mounted() {
-    await this.loadCatalogData();
   },
 };
 </script>
@@ -389,11 +376,12 @@ export default {
   background: #ffffff;
   left: 0;
   right: auto;
+  user-select: text;
 }
 
 .catalog-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 250px minmax(0, 1fr);
   gap: 14px 18px;
 }
 
@@ -411,6 +399,46 @@ export default {
   letter-spacing: 0.08em;
   color: #475569;
   font-weight: 700;
+}
+
+.catalog-subtitle {
+  margin: 0 0 8px;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.manage-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.manage-item {
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.manage-item:hover {
+  background: #eef4ff;
+}
+
+.manage-item.active {
+  background: #e6efff;
+  border-color: #bfd4f3;
+  color: #1d4ed8;
+}
+
+.content-panel {
+  min-height: 320px;
+}
+
+.content-subsection + .content-subsection {
+  margin-top: 12px;
 }
 
 .catalog-list {
@@ -449,7 +477,7 @@ export default {
 
 .quick-item {
   border-radius: 8px;
-  margin-bottom: 3px;
+  margin-bottom: 0;
   font-size: 0.92rem;
 }
 
@@ -481,6 +509,7 @@ export default {
   line-height: 1 !important;
   display: inline-flex;
   vertical-align: middle;
+  font-size: 1.6rem;
 }
 
 .navbar {

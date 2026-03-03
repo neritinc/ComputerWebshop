@@ -38,7 +38,7 @@ const router = createRouter({
       meta: {
         breadcrumb: "Adatok",
         disabled: true,
-        roles: [1, 2],
+        roles: [1, 2, 3],
       },
       children: [
         {
@@ -49,7 +49,7 @@ const router = createRouter({
           meta: {
             title: () => "Categories",
             breadcrumb: "Categories",
-            roles: [1],
+            roles: [1, 2, 3],
           },
         },
         {
@@ -60,7 +60,7 @@ const router = createRouter({
           meta: {
             title: () => "Brands",
             breadcrumb: "Brands",
-            roles: [1],
+            roles: [1, 2, 3],
           },
         },
         {

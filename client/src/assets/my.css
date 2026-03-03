@@ -1,6 +1,13 @@
 :root {
   /* --my-border: 10px; */
   --my-border-space: 0px;
+  --page-padding-x: 12px;
+  --page-padding-y: 0;
+}
+
+html,
+body {
+  overflow-y: scroll;
 }
 
 .my-container {
@@ -22,5 +29,6 @@
 .app-main {
   flex: 1 1 auto;
   min-height: 0;
+  padding: var(--page-padding-y) var(--page-padding-x);
   padding-bottom: 0.75rem;
 }

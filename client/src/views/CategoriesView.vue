@@ -93,33 +93,7 @@ import { mapActions, mapState } from "pinia";
 import { useSearchStore } from "@/stores/searchStore";
 import categoryService from "@/api/categoryService";
 import productService from "@/api/productService";
-
-const CATEGORY_ICON_MAP = {
-  processor: "bi-cpu",
-  "memory module": "bi-memory",
-  memory: "bi-memory",
-  motherboard: "bi-motherboard",
-  "graphics card": "bi-gpu-card",
-  storage: "bi-device-ssd",
-  "external storage": "bi-device-hdd",
-  "power supply": "bi-plug",
-  cooling: "bi-fan",
-  cooler: "bi-snow",
-  case: "bi-pc",
-  "computer case": "bi-pc-display",
-  "case fan": "bi-fan",
-  "optical drive": "bi-disc",
-  "network card": "bi-router",
-  "sound card": "bi-music-note-beamed",
-  "usb hub": "bi-usb-symbol",
-  monitor: "bi-display",
-  keyboard: "bi-keyboard",
-  mouse: "bi-mouse",
-  headset: "bi-headphones",
-  speaker: "bi-speaker",
-  webcam: "bi-camera-video",
-  microphone: "bi-mic",
-};
+import { resolveCategoryIconClass } from "@/utils/categoryMeta";
 
 export default {
   name: "CategoriesView",
@@ -185,9 +159,7 @@ export default {
     async loadProductsByRouteCategory() {
       const categoryId = this.$route.query.category;
       if (!categoryId) {
-        this.products = [];
-        this.failedImageProductIds = {};
-        this.selectedCategoryName = "";
+        this.resetProductModeState();
         return;
       }
 
@@ -198,12 +170,15 @@ export default {
         this.failedImageProductIds = {};
         this.selectedCategoryName = this.products[0]?.category?.category_name || "";
       } catch (error) {
-        this.products = [];
-        this.failedImageProductIds = {};
-        this.selectedCategoryName = "";
+        this.resetProductModeState();
       } finally {
         this.productsLoading = false;
       }
+    },
+    resetProductModeState() {
+      this.products = [];
+      this.failedImageProductIds = {};
+      this.selectedCategoryName = "";
     },
     productImageUrl(product) {
       if (product?.primary_image_url) {
@@ -243,7 +218,7 @@ export default {
       this.$router.push({ path: "/adatok/categories" });
     },
     categoryIconClass(categoryName) {
-      return CATEGORY_ICON_MAP[String(categoryName || "").toLowerCase()] || "bi-tag";
+      return resolveCategoryIconClass(categoryName);
     },
     formatPrice(value) {
       const numeric = Number(value);
@@ -318,7 +293,6 @@ export default {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  /* transform: scale(1.3AOC 27G4X); */
   display: block;
 }
 

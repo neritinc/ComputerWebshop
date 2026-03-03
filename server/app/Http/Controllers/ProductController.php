@@ -103,6 +103,7 @@ class ProductController extends Controller
     {
         $files = $this->productImageFiles();
         $fileSet = array_fill_keys($files, true);
+        $usedGuessedFiles = [];
 
         foreach ($products as $product) {
             $primaryFromRelation = collect($product->pics ?? [])
@@ -117,9 +118,17 @@ class ProductController extends Controller
                 ->sortBy(fn ($path) => preg_match('/_1\.[a-z0-9]+$/i', (string) $path) ? 0 : 1)
                 ->first();
 
-            $resolved = $primaryFromRelation
-                ?: $this->guessImageFromFiles((string) $product->name, $files)
-                ?: (isset($fileSet[(string) $primaryFromAnyRelation]) ? $primaryFromAnyRelation : null);
+            $resolved = $primaryFromRelation;
+
+            if (!$resolved) {
+                $resolved = $this->guessImageFromFiles((string) $product->name, $files, $usedGuessedFiles);
+                if ($resolved) {
+                    $usedGuessedFiles[$resolved] = true;
+                } elseif (isset($fileSet[(string) $primaryFromAnyRelation])) {
+                    $resolved = $primaryFromAnyRelation;
+                }
+            }
+
             $product->setAttribute('primary_image_path', $resolved ?: null);
             $product->setAttribute(
                 'primary_image_url',
@@ -136,7 +145,7 @@ class ProductController extends Controller
         return array_map(static fn ($path) => basename($path), $paths);
     }
 
-    private function guessImageFromFiles(string $productName, array $files): ?string
+    private function guessImageFromFiles(string $productName, array $files, array $excluded = []): ?string
     {
         if (!$files) return null;
 
@@ -152,6 +161,8 @@ class ProductController extends Controller
         $bestFile = null;
 
         foreach ($files as $file) {
+            if (isset($excluded[$file])) continue;
+
             $fileLower = Str::lower($file);
             $score = 0;
 
