@@ -41,4 +41,9 @@ class Product extends Model
             ->withPivot('value')
             ->withTimestamps();
     }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

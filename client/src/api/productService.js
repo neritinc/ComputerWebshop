@@ -6,5 +6,8 @@ export default {
   async getAll(params = {}) {
     return await apiClient.get(route, { params });
   },
+  async getById(id) {
+    return await apiClient.get(`${route}/${id}`);
+  },
 };
 

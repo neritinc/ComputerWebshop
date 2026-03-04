@@ -23,7 +23,7 @@
           :key="product.id"
           class="col-12 col-md-6 col-xl-4"
         >
-          <article class="product-card h-100">
+          <article class="product-card h-100" @click="openProduct(product)">
             <div class="product-image-wrap">
               <img
                 v-if="productImageUrl(product) && !imageFailedFor(product.id)"
@@ -94,6 +94,7 @@ import { useSearchStore } from "@/stores/searchStore";
 import categoryService from "@/api/categoryService";
 import productService from "@/api/productService";
 import { resolveCategoryIconClass } from "@/utils/categoryMeta";
+import { getProductImageUrl } from "@/utils/image";
 
 export default {
   name: "CategoriesView",
@@ -180,16 +181,7 @@ export default {
       this.failedImageProductIds = {};
       this.selectedCategoryName = "";
     },
-    productImageUrl(product) {
-      if (product?.primary_image_url) {
-        return String(product.primary_image_url);
-      }
-
-      if (product?.primary_image_path) {
-        const apiBase = String(import.meta.env.VITE_API_URL || "").replace(/\/api\/?$/, "");
-        return `${apiBase}/images/products/${product.primary_image_path}`;
-      }
-
+    firstPicPath(product) {
       const pics = Array.isArray(product?.pics) ? product.pics : [];
       const sorted = [...pics].sort((a, b) => {
         const aPath = String(a?.image_path || "");
@@ -199,10 +191,14 @@ export default {
         if (aPrimary !== bPrimary) return aPrimary - bPrimary;
         return aPath.localeCompare(bPath);
       });
-      const fileName = sorted[0]?.image_path || "";
-      if (!fileName) return "";
-      const apiBase = String(import.meta.env.VITE_API_URL || "").replace(/\/api\/?$/, "");
-      return `${apiBase}/images/products/${fileName}`;
+      return sorted[0]?.image_path || "";
+    },
+    productImageUrl(product) {
+      if (product?.primary_image_url) return String(product.primary_image_url);
+      if (product?.primary_image_path) return getProductImageUrl(product.primary_image_path);
+
+      const fallbackPath = this.firstPicPath(product);
+      return fallbackPath ? getProductImageUrl(fallbackPath) : "";
     },
     markImageFailed(productId) {
       const id = Number(productId);
@@ -216,6 +212,13 @@ export default {
     },
     goToAllCategories() {
       this.$router.push({ path: "/adatok/categories" });
+    },
+    openProduct(product) {
+      this.$router.push({
+        name: "product-detail",
+        params: { id: product.id },
+        query: { category: this.$route.query.category },
+      });
     },
     categoryIconClass(categoryName) {
       return resolveCategoryIconClass(categoryName);
@@ -277,6 +280,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  cursor: pointer;
 }
 
 .product-image-wrap {

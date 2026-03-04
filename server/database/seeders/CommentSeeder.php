@@ -6,49 +6,33 @@ use Illuminate\Database\Seeder;
 use App\Models\Comment;
 use App\Models\User;
 use App\Models\Product;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class CommentSeeder extends Seeder
 {
     public function run(): void
     {
-        // // Gyors ellenőrzés
-        // if (User::count() === 0 || Product::count() === 0) {
-        //     $this->command->warn('Nincs user vagy product, kommentek kihagyva.');
-        //     return;
-        // }
+        $products = Product::all(['id']);
+        $customerUsers = User::where('role', 2)->get(['id']);
 
-        // // Vegyünk pár létező usert és productot
-        // $users = User::where('role', 2)->get();
-        // $products = Product::all();
-
-        // $comments = [
-        //     'Nagyon jó ár-érték arány.',
-        //     'Gyors szállítás, elégedett vagyok.',
-        //     'A termék megfelel a leírásnak.',
-        //     'Kicsit drága, de minőségi.',
-        //     'Újra megvenném.',
-        // ];
-
-
-        // foreach ($products as $product) {
-        //     foreach ($users as $user) {
-        //         Comment::create([
-        //             'user_id' => $user->id,
-        //             'product_id' => $product->id,
-        //             'comment' => $comments[array_rand($comments)],
-        //         ]);
-        //     }
-        // }
-
-        // $this->command->info('Kommentek sikeresen hozzáadva!');
-        $productCount = Product::count();
-        $userCount = User::count();
-        $commentCount = ($productCount -1)*($userCount-3);
-        for ($i=0; $i < $commentCount; $i++) { 
-            # code...
-            Comment::factory()->create();
+        if ($products->isEmpty() || $customerUsers->isEmpty()) {
+            return;
         }
-        
+
+        Comment::query()->delete();
+
+        $maxPerProduct = min(8, $customerUsers->count());
+
+        foreach ($products as $product) {
+            $commentCount = random_int(1, $maxPerProduct);
+
+            $userIds = $customerUsers->pluck('id')->shuffle()->take($commentCount);
+
+            foreach ($userIds as $userId) {
+                Comment::factory()->create([
+                    'user_id' => $userId,
+                    'product_id' => $product->id,
+                ]);
+            }
+        }
     }
 }

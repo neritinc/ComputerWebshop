@@ -103,6 +103,15 @@ const router = createRouter({
       },
     },
     {
+      path: "/products/:id",
+      name: "product-detail",
+      component: () => import("@/views/ProductDetailView.vue"),
+      meta: {
+        title: () => "Product Details",
+        breadcrumb: "Product",
+      },
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "NotFound",
       component: () => import("@/views/404.vue"),

@@ -3,7 +3,7 @@
     <p v-if="debug">{{ breadcrumbs }}</p>
     <ol class="breadcrumb m-0">
       <li class="breadcrumb-item">
-        <router-link to="/">Kezdőlap</router-link>
+        <router-link to="/">Home</router-link>
       </li>
 
       <li 
