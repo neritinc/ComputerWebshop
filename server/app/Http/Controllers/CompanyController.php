@@ -17,8 +17,6 @@ class CompanyController extends Controller
     public function index()
     {
         return $this->apiResponse(function () {
-            // Kommenteld ki ezt a sort a teszthez:
-            $this->authorize('viewAny', CurrentModel::class);
             return CurrentModel::all();
         });
     }
@@ -40,9 +38,7 @@ class CompanyController extends Controller
     public function show(int $id)
     {
         return $this->apiResponse(function () use ($id) {
-            $row = CurrentModel::findOrFail($id);
-            $this->authorize('view', $row);
-            return $row;
+            return CurrentModel::findOrFail($id);
         });
     }
 

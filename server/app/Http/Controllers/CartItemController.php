@@ -18,8 +18,16 @@ class CartItemController extends Controller
     public function index()
     {
         return $this->apiResponse(function () {
-            // Betöltjük a terméket (product) minden tételhez
-            return \App\Models\Cart_item::with('product')->get();
+            $user = request()->user();
+            $query = CurrentModel::with(['product', 'cart']);
+
+            if ((int) $user->role !== 1) {
+                $query->whereHas('cart', function ($q) use ($user) {
+                    $q->where('user_id', $user->id);
+                });
+            }
+
+            return $query->get();
         });
     }
 
@@ -40,8 +48,9 @@ class CartItemController extends Controller
     public function show(int $id)
     {
         return $this->apiResponse(function () use ($id) {
-            // Egy konkrét tételnél is látni akarjuk a termék részleteit
-            return \App\Models\Cart_item::with('product')->findOrFail($id);
+            $cartItem = CurrentModel::with('product')->findOrFail($id);
+            $this->authorize('view', $cartItem);
+            return $cartItem;
         });
     }
 

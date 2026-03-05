@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="container-fluid my-container app-shell mt-2">
     <Header />
     <Menu class="my-border" />
@@ -30,7 +30,7 @@ export default {
   },
   data() {
     return {
-      footerContent: "Ez egy másik lábléc szöveg",
+      footerContent: "Fast shipping across Hungary.",
     };
   },
 };

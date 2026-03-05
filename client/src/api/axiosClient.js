@@ -12,6 +12,18 @@ const apiClient = axios.create({
   },
 });
 
+if (typeof window !== "undefined") {
+  try {
+    const configuredBase = String(apiClient.defaults.baseURL || "").trim();
+    if (configuredBase) {
+      const origin = new URL(configuredBase, window.location.origin).origin;
+      window.__API_ORIGIN__ = origin;
+    }
+  } catch (_) {
+    // ignore invalid base URL, fallback logic in image helper will handle it
+  }
+}
+
 // REQUEST INTERCEPTOR (elfogó):
 // Lefut minden egyes kérés előtt
 apiClient.interceptors.request.use(

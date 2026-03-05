@@ -57,10 +57,8 @@ Route::delete('products/{id}', [ProductController::class, 'destroy'])
 
 
 // --- REGION: COMPANIES ---
-Route::get('companies', [CompanyController::class, 'index'])
-    ->middleware(['auth:sanctum', 'ability:admin,customer']);
-Route::get('companies/{id}', [CompanyController::class, 'show'])
-    ->middleware(['auth:sanctum', 'ability:admin,customer']);
+Route::get('companies', [CompanyController::class, 'index']);
+Route::get('companies/{id}', [CompanyController::class, 'show']);
 Route::post('companies', [CompanyController::class, 'store'])
     ->middleware(['auth:sanctum', 'ability:admin']);
 Route::patch('companies/{id}', [CompanyController::class, 'update'])
@@ -96,14 +94,24 @@ Route::get('parameters', [ParameterController::class, 'index']);
 Route::get('parameters/{id}', [ParameterController::class, 'show']);
 Route::post('parameters', [ParameterController::class, 'store'])
     ->middleware(['auth:sanctum', 'ability:admin']);
+Route::patch('parameters/{id}', [ParameterController::class, 'update'])
+    ->middleware(['auth:sanctum', 'ability:admin']);
+Route::delete('parameters/{id}', [ParameterController::class, 'destroy'])
+    ->middleware(['auth:sanctum', 'ability:admin']);
 
 Route::get('product-parameters', [ProductParameterController::class, 'index']);
+Route::get('product-parameters/{id}', [ProductParameterController::class, 'show']);
 Route::post('product-parameters', [ProductParameterController::class, 'store'])
+    ->middleware(['auth:sanctum', 'ability:admin']);
+Route::patch('product-parameters/{id}', [ProductParameterController::class, 'update'])
+    ->middleware(['auth:sanctum', 'ability:admin']);
+Route::delete('product-parameters/{id}', [ProductParameterController::class, 'destroy'])
     ->middleware(['auth:sanctum', 'ability:admin']);
 
 
 // --- REGION: PICS ---
 Route::get('pics', [PicController::class, 'index']);
+Route::get('pics/{id}', [PicController::class, 'show']);
 Route::post('pics', [PicController::class, 'store'])
     ->middleware(['auth:sanctum', 'ability:admin']);
 Route::patch('pics/{id}', [PicController::class, 'update'])
@@ -119,9 +127,9 @@ Route::post('comments', [CommentController::class, 'store'])
 Route::get('comments/{id}', [CommentController::class, 'show'])
     ->middleware(['auth:sanctum', 'ability:admin']);
 Route::patch('comments/{id}', [CommentController::class, 'update'])
-    ->middleware(['auth:sanctum', 'ability:customer']);
+    ->middleware(['auth:sanctum', 'ability:admin,customer']);
 Route::delete('comments/{id}', [CommentController::class, 'destroy'])
-    ->middleware(['auth:sanctum', 'ability:customer']); // Admin vagy a sajátját a tulajdonos
+    ->middleware(['auth:sanctum', 'ability:admin,customer']); // Admin vagy a sajatjat a tulajdonos
 
 
 // --- REGION: CART & CART ITEMS ---
@@ -129,10 +137,21 @@ Route::get('carts', [CartController::class, 'index'])
     ->middleware(['auth:sanctum', 'ability:customer']);
 Route::post('carts', [CartController::class, 'store'])
     ->middleware(['auth:sanctum', 'ability:customer']);
+Route::get('carts/{id}', [CartController::class, 'show'])
+    ->middleware(['auth:sanctum', 'ability:customer']);
+Route::patch('carts/{id}', [CartController::class, 'update'])
+    ->middleware(['auth:sanctum', 'ability:customer']);
+Route::delete('carts/{id}', [CartController::class, 'destroy'])
+    ->middleware(['auth:sanctum', 'ability:customer']);
 
 Route::get('cart-items', [CartItemController::class, 'index'])
     ->middleware(['auth:sanctum', 'ability:customer']);
 Route::post('cart-items', [CartItemController::class, 'store'])
     ->middleware(['auth:sanctum', 'ability:customer']);
+Route::get('cart-items/{id}', [CartItemController::class, 'show'])
+    ->middleware(['auth:sanctum', 'ability:customer']);
+Route::patch('cart-items/{id}', [CartItemController::class, 'update'])
+    ->middleware(['auth:sanctum', 'ability:customer']);
 Route::delete('cart-items/{id}', [CartItemController::class, 'destroy'])
     ->middleware(['auth:sanctum', 'ability:customer']);
+

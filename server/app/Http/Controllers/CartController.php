@@ -18,8 +18,14 @@ class CartController extends Controller
     public function index()
     {
         return $this->apiResponse(function () {
-            // A with('user:id,name') csak az ID-t és a nevet kéri le a felhasználók táblából
-            return CurrentModel::with('user:id,name')->get();
+            $user = request()->user();
+            $query = CurrentModel::with('user:id,name');
+
+            if ((int) $user->role !== 1) {
+                $query->where('user_id', $user->id);
+            }
+
+            return $query->get();
         });
     }
 

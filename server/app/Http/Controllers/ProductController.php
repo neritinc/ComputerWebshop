@@ -8,7 +8,6 @@ use App\Http\Requests\StoreProductRequest as StoreCurrentModelRequest;
 use App\Http\Requests\UpdateProductRequest as UpdateCurrentModelRequest;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
@@ -116,26 +115,24 @@ class ProductController extends Controller
                 ->filter()
                 ->map(fn ($path) => basename((string) $path))
                 ->filter(fn ($path) => isset($fileSet[(string) $path]))
-                ->sortBy(fn ($path) => preg_match('/_1\.[a-z0-9]+$/i', (string) $path) ? 0 : 1)
                 ->values()
                 ->all();
 
-            if (!$relationPaths) {
-                $fallback = $this->resolveImageFromModelCode((string) $product->name, $files);
-                $relationPaths = $fallback ? [$fallback] : [];
-            }
+            // Strict mode: only explicit pic relations from DB (seeded from pics.csv).
+            // No fuzzy matching to avoid cross-product image contamination.
+            usort($relationPaths, fn ($a, $b) => $this->imageSortWeight($a) <=> $this->imageSortWeight($b));
 
             $resolved = $relationPaths[0] ?? null;
 
             $product->setAttribute('primary_image_path', $resolved ?: null);
             $product->setAttribute(
                 'primary_image_url',
-                $resolved ? url('images/products/' . $resolved) : null
+                $resolved ? $this->productImageUrl($resolved) : null
             );
             $product->setAttribute('resolved_image_paths', $relationPaths);
             $product->setAttribute(
                 'resolved_image_urls',
-                array_map(fn ($file) => url('images/products/' . $file), $relationPaths)
+                array_map(fn ($file) => $this->productImageUrl((string) $file), $relationPaths)
             );
         }
 
@@ -148,67 +145,20 @@ class ProductController extends Controller
         return array_map(static fn ($path) => basename($path), $paths);
     }
 
-    private function resolveImageFromModelCode(string $productName, array $files): ?string
+
+    private function imageSortWeight(string $path): int
     {
-        if (!$files) return null;
-
-        $tokens = $this->extractSearchTokens($productName);
-        if (!$tokens) return null;
-
-        $bestFile = null;
-        $bestScore = -1;
-
-        foreach ($files as $file) {
-            $fileTokens = $this->extractSearchTokens((string) $file);
-            if (!$fileTokens) continue;
-
-            $fileTokenSet = array_fill_keys($fileTokens, true);
-            $score = 0;
-
-            foreach ($tokens as $token) {
-                if (!isset($fileTokenSet[$token])) continue;
-                $score += ctype_digit($token) ? 3 : 2;
-            }
-
-            if (preg_match('/_1\.[a-z0-9]+$/i', (string) $file)) {
-                $score += 1;
-            }
-
-            if ($score > $bestScore) {
-                $bestScore = $score;
-                $bestFile = $file;
-            }
-        }
-
-        return $bestScore >= 3 ? $bestFile : null;
+        return preg_match('/_1\.[a-z0-9]+$/i', $path) ? 0 : 1;
     }
 
-    private function extractSearchTokens(string $value): array
+    private function productImageUrl(string $file): string
     {
-        preg_match_all('/[a-z0-9]+/i', Str::lower($value), $matches);
-        $rawTokens = $matches[0] ?? [];
-        $tokens = [];
-
-        foreach ($rawTokens as $token) {
-            $token = (string) $token;
-            if ($token === '') continue;
-
-            if (ctype_digit($token)) {
-                $trimmed = ltrim($token, '0');
-                if ($trimmed !== '') {
-                    $tokens[] = $trimmed;
-                }
-                if (strlen($token) >= 6) {
-                    $tokens[] = $token;
-                }
-                continue;
-            }
-
-            if (strlen($token) >= 4) {
-                $tokens[] = $token;
-            }
+        $file = ltrim($file, '/');
+        $host = request()->getSchemeAndHttpHost();
+        if ($host) {
+            return $host . '/images/products/' . $file;
         }
-
-        return array_values(array_unique($tokens));
+        return url('images/products/' . $file);
     }
+
 }

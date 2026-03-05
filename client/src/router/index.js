@@ -32,35 +32,39 @@ const router = createRouter({
       },
     },
     {
+      path: "/reviews",
+      name: "reviews",
+      component: () => import("@/views/ReviewsView.vue"),
+      meta: {
+        title: () => "Reviews",
+        breadcrumb: "Reviews",
+      },
+    },
+    {
       path: "/adatok",
       name: "adatok",
       component: () => import("@/views/EmptyWrapperView.vue"),
       meta: {
         breadcrumb: "Adatok",
         disabled: true,
-        roles: [1, 2, 3],
       },
       children: [
         {
           path: "categories",
           name: "categories",
           component: () => import("@/views/CategoriesView.vue"),
-          beforeEnter: [checkIfNotLogged],
           meta: {
             title: () => "Categories",
             breadcrumb: "Categories",
-            roles: [1, 2, 3],
           },
         },
         {
           path: "brands",
           name: "brands",
           component: () => import("@/views/BrandsView.vue"),
-          beforeEnter: [checkIfNotLogged],
           meta: {
             title: () => "Brands",
             breadcrumb: "Brands",
-            roles: [1, 2, 3],
           },
         },
         {
@@ -82,6 +86,28 @@ const router = createRouter({
             roles: [1],
           },
         },
+        {
+          path: "products",
+          name: "products-admin",
+          redirect: "/userprofil/products",
+          beforeEnter: [checkIfNotLogged],
+          meta: {
+            title: () => "Products",
+            breadcrumb: "Products",
+            roles: [1],
+          },
+        },
+        {
+          path: "comments",
+          name: "comments-admin",
+          redirect: "/userprofil/comments",
+          beforeEnter: [checkIfNotLogged],
+          meta: {
+            title: () => "Comments",
+            breadcrumb: "Comments",
+            roles: [1],
+          },
+        },
       ],
     },
     {
@@ -100,6 +126,50 @@ const router = createRouter({
       meta: {
         title: () => "Regisztracio",
         breadcrumb: "Regisztracio",
+      },
+    },
+    {
+      path: "/userprofil",
+      name: "user-profile",
+      component: () => import("@/views/UserProfileView.vue"),
+      beforeEnter: [checkIfNotLogged],
+      meta: {
+        title: () => "User Profile",
+        breadcrumb: "User Profile",
+        roles: [1, 2, 3],
+      },
+      children: [
+        {
+          path: "products",
+          name: "user-profile-products-admin",
+          component: () => import("@/views/ProductsAdminView.vue"),
+          meta: {
+            title: () => "Admin Products",
+            breadcrumb: "Products",
+            roles: [1],
+          },
+        },
+        {
+          path: "comments",
+          name: "user-profile-comments-admin",
+          component: () => import("@/views/CommentsModerationView.vue"),
+          meta: {
+            title: () => "Admin Comments",
+            breadcrumb: "Comments",
+            roles: [1],
+          },
+        },
+      ],
+    },
+    {
+      path: "/cart",
+      name: "cart",
+      component: () => import("@/views/CartView.vue"),
+      beforeEnter: [checkIfNotLogged],
+      meta: {
+        title: () => "Cart",
+        breadcrumb: "Cart",
+        roles: [1, 2, 3],
       },
     },
     {

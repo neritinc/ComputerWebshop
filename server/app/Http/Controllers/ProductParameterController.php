@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\ProductParameter as CurrentModel;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class ProductParameterController extends Controller
 {
+    use AuthorizesRequests;
+
     /**
      * Display a listing of the resource.
      * Lekéri az összes product_parameter-t a kapcsolódó termékkel és paraméterrel.
@@ -24,6 +27,7 @@ class ProductParameterController extends Controller
     public function store(Request $request)
     {
         return $this->apiResponse(function () use ($request) {
+            $this->authorize('create', CurrentModel::class);
             $validated = $request->validate([
                 'product_id' => 'required|exists:products,id',
                 'parameter_id' => 'required|exists:parameters,id',
@@ -51,6 +55,7 @@ class ProductParameterController extends Controller
     {
         return $this->apiResponse(function () use ($request, $id) {
             $row = CurrentModel::findOrFail($id);
+            $this->authorize('update', $row);
 
             $validated = $request->validate([
                 'product_id' => 'sometimes|required|exists:products,id',
@@ -70,6 +75,7 @@ class ProductParameterController extends Controller
     {
         return $this->apiResponse(function () use ($id) {
             $row = CurrentModel::findOrFail($id);
+            $this->authorize('delete', $row);
             $row->delete();
             return ['id' => $id];
         });

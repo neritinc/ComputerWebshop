@@ -6,10 +6,12 @@ namespace App\Http\Controllers;
 use App\Models\Category as CurrentModel;
 use App\Http\Requests\StoreCategoryRequest as StoreCurrentModelRequest;
 use App\Http\Requests\UpdateCategoryRequest as UpdateCurrentModelRequest;
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class CategoryController extends Controller
 {
+    use AuthorizesRequests;
+
     /**
      * Összes kategória listázása.
      */
@@ -26,6 +28,7 @@ class CategoryController extends Controller
     public function store(StoreCurrentModelRequest $request)
     {
         return $this->apiResponse(function () use ($request) {
+            $this->authorize('create', CurrentModel::class);
             return CurrentModel::create($request->validated());
         });
     }
@@ -47,6 +50,7 @@ class CategoryController extends Controller
     {
         return $this->apiResponse(function () use ($request, $id) {
             $category = CurrentModel::findOrFail($id);
+            $this->authorize('update', $category);
             $category->update($request->validated());
             return $category;
         });
@@ -58,7 +62,9 @@ class CategoryController extends Controller
     public function destroy(int $id)
     {
          return $this->apiResponse(function () use ($id) {
-            CurrentModel::findOrFail($id)->delete();
+            $category = CurrentModel::findOrFail($id);
+            $this->authorize('delete', $category);
+            $category->delete();
             return ['id' => $id];
         });
     }

@@ -21,6 +21,9 @@
             <li class="nav-item">
               <RouterLink class="nav-link" to="/about">About Us</RouterLink>
             </li>
+            <li class="nav-item">
+              <RouterLink class="nav-link" to="/reviews">Reviews</RouterLink>
+            </li>
             <li class="nav-item dropdown" v-if="hasMenuAccess('/adatok')">
               <a
                 class="nav-link dropdown-toggle"
@@ -115,6 +118,10 @@
                 Login
               </RouterLink>
               <div v-if="isLoggedIn" class="d-flex align-items-center">
+                <RouterLink class="nav-link cart-link" to="/cart" title="Cart">
+                  <i class="bi bi-cart3"></i>
+                  <span v-if="cartItemCount > 0" class="cart-badge">{{ cartItemCount }}</span>
+                </RouterLink>
                 <RouterLink class="nav-link" to="/userprofil">
                   <i class="bi bi-person"></i>
                   {{ userNameWithRole }}
@@ -154,6 +161,7 @@
 import { mapActions, mapState } from "pinia";
 import { useSearchStore } from "@/stores/searchStore";
 import { useUserLoginLogoutStore } from "@/stores/userLoginLogoutStore";
+import { useCartStore } from "@/stores/cartStore";
 import categoryService from "@/api/categoryService";
 import brandService from "@/api/brandService";
 import productService from "@/api/productService";
@@ -189,6 +197,7 @@ export default {
   computed: {
     ...mapState(useSearchStore, ["searchWord"]),
     ...mapState(useUserLoginLogoutStore, ["isLoggedIn", "userNameWithRole"]),
+    ...mapState(useCartStore, { cartItemCount: "itemCount" }),
     canOpenCategories() {
       return this.hasMenuAccess("/adatok/categories");
     },
@@ -510,6 +519,25 @@ export default {
   display: inline-flex;
   vertical-align: middle;
   font-size: 1.6rem;
+}
+
+.cart-link {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #1d4ed8;
+  color: #fff;
+  font-size: 0.68rem;
+  line-height: 18px;
+  text-align: center;
+  font-weight: 700;
 }
 
 .navbar {

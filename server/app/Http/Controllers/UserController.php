@@ -58,15 +58,15 @@ class UserController extends Controller
         switch ($role) {
             case 1:
                 // Admin: minden jog + explicit admin/customer ability a middleware-ekhez
-                $abilities = ['admin', 'customer'];
+                $abilities = ['admin', 'customer', 'usersme:get', 'usersme:patch', 'usersme:updatePassword', 'usersme:delete'];
                 break;
             case 2:
                 // Vásárló / customer
-                $abilities = ['customer'];
+                $abilities = ['customer', 'usersme:get', 'usersme:patch', 'usersme:updatePassword', 'usersme:delete'];
                 break;
             default:
                 // Alapértelmezett: kapjon customer jogot
-                $abilities = ['customer'];
+                $abilities = ['customer', 'usersme:get', 'usersme:patch', 'usersme:updatePassword', 'usersme:delete'];
                 break;
         }
 
@@ -371,3 +371,4 @@ class UserController extends Controller
         return response()->json($data, $status, options: JSON_UNESCAPED_UNICODE);
     }
 }
+

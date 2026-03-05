@@ -12,14 +12,36 @@
     <div v-else class="row g-4 align-items-start product-layout">
       <div class="col-12 col-xl-6">
         <div class="card border-0 shadow-sm p-3 p-md-4 image-card">
-          <button class="image-btn w-100" @click="openGallery(currentImageIndex)">
+          <div class="slider-wrap">
+            <button
+              v-if="galleryImages.length > 1"
+              class="slider-nav prev"
+              type="button"
+              aria-label="Previous image"
+              @click.stop="showPrevImage"
+            >
+              <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <button class="image-btn w-100" @click="openGallery(currentImageIndex)">
             <img
               :src="activeImage"
               class="img-fluid rounded border w-100 main-image"
               :alt="product.name"
               @error="onActiveImageError"
             />
-          </button>
+            </button>
+
+            <button
+              v-if="galleryImages.length > 1"
+              class="slider-nav next"
+              type="button"
+              aria-label="Next image"
+              @click.stop="showNextImage"
+            >
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
 
           <div class="thumb-row mt-3" v-if="galleryImages.length">
             <button
@@ -43,7 +65,7 @@
           <p class="text-secondary mb-3">Brand: {{ product.company?.company_name || "-" }}</p>
 
           <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
-            <p class="fs-3 fw-bold m-0">{{ formatUsd(product.price) }}</p>
+            <p class="fs-3 fw-bold m-0"><UsdPrice :value="product.price" /></p>
             <span class="badge rounded-pill text-bg-light border">Stock: {{ product.pcs }} pcs</span>
           </div>
 
@@ -52,21 +74,16 @@
           <h5 class="mb-2">Description</h5>
           <p class="text-secondary mb-3">{{ product.description || "No description." }}</p>
 
-          <div>
+          <div v-if="product.parameters?.length">
             <h5 class="mb-2">Specifications</h5>
-            <div class="spec-wrap" v-if="backendParams.length">
+            <div class="spec-wrap">
               <ul class="list-group spec-list">
-                <li
-                  class="list-group-item d-flex justify-content-between"
-                  v-for="param in backendParams"
-                  :key="param.id"
-                >
+                <li class="list-group-item d-flex justify-content-between" v-for="param in product.parameters" :key="param.id">
                   <span>{{ param.parameter_name }}</span>
-                  <strong>{{ formatParamValue(param) }}</strong>
+                  <strong>{{ param.pivot?.value }} {{ param.unit?.unit_name || param.unit?.name || "" }}</strong>
                 </li>
               </ul>
             </div>
-            <p v-else class="text-secondary m-0">No specifications.</p>
           </div>
         </div>
       </div>
@@ -76,11 +93,7 @@
           <h5 class="mb-2">Comments</h5>
           <div v-if="backendComments.length" class="comments-wrap">
             <ul class="list-group comments-list">
-              <li
-                class="list-group-item"
-                v-for="comment in backendComments"
-                :key="comment.id"
-              >
+              <li class="list-group-item" v-for="comment in backendComments" :key="comment.id">
                 <div class="comment-row">
                   <div class="comment-avatar" aria-hidden="true"></div>
                   <div>
@@ -110,15 +123,16 @@ import productService from "@/api/productService";
 import { useCartStore } from "@/stores/cartStore";
 import { useUserLoginLogoutStore } from "@/stores/userLoginLogoutStore";
 import { useToastStore } from "@/stores/toastStore";
-import { getProductImageUrl } from "@/utils/image";
-import { formatUsd } from "@/utils/currency";
+import { getProductImageCandidates } from "@/utils/image";
 import ProductImageCarouselModal from "@/components/Product/ProductImageCarouselModal.vue";
 import ProductDetailSkeleton from "@/components/Product/ProductDetailSkeleton.vue";
+import UsdPrice from "@/components/Common/UsdPrice.vue";
 
 export default {
   components: {
     ProductImageCarouselModal,
     ProductDetailSkeleton,
+    UsdPrice,
   },
   data() {
     return {
@@ -135,57 +149,31 @@ export default {
     currentImageIndex() {
       return Math.max(0, this.galleryImages.findIndex((img) => img === this.activeImage));
     },
-    backendParams() {
-      return Array.isArray(this.product?.parameters) ? this.product.parameters : [];
-    },
     backendComments() {
       return Array.isArray(this.product?.comments) ? this.product.comments : [];
     },
   },
   methods: {
-    getProductImageUrl,
-    formatUsd,
-    buildGalleryImages(product) {
-      const resolved = Array.isArray(product?.resolved_image_urls)
-        ? product.resolved_image_urls.filter(Boolean)
-        : [];
-
-      if (resolved.length) {
-        return [...new Set(resolved)];
-      }
-
-      const primary =
-        product?.primary_image_url || getProductImageUrl(product?.primary_image_path) || "";
-      const fromPics = Array.isArray(product?.pics)
-        ? product.pics.map((p) => getProductImageUrl(p.image_path)).filter(Boolean)
-        : [];
-
-      return [...new Set([primary, ...fromPics].filter(Boolean))];
-    },
-    getCategoryId() {
-      const routeCategory = Number(this.$route.query.category);
-      const productCategory = Number(this.product?.category_id);
-      return routeCategory || productCategory || null;
-    },
-    redirectToCategories(categoryId = null) {
-      if (categoryId) {
-        this.$router.push({ path: "/adatok/categories", query: { category: categoryId } });
-        return;
-      }
-      this.$router.push({ path: "/adatok/categories" });
-    },
-    formatParamValue(param) {
-      const value = String(param?.pivot?.value ?? "").trim();
-      const unit = String(param?.unit?.unit_name || param?.unit?.name || "").trim();
-      if (!value) return "-";
-      return unit ? `${value} ${unit}` : value;
-    },
     async loadProduct() {
       this.loading = true;
       try {
-        const productResponse = await productService.getById(this.$route.params.id);
-        this.product = productResponse.data || null;
-        this.galleryImages = this.buildGalleryImages(this.product);
+        const response = await productService.getById(this.$route.params.id);
+        this.product = response.data || null;
+
+        const primary = this.product?.primary_image_url
+          ? getProductImageCandidates(this.product.primary_image_url)
+          : [];
+        const primaryPath = this.product?.primary_image_path
+          ? getProductImageCandidates(this.product.primary_image_path)
+          : [];
+        const resolved = Array.isArray(this.product?.resolved_image_urls)
+          ? this.product.resolved_image_urls.flatMap((u) => getProductImageCandidates(u))
+          : [];
+        const fromPics = Array.isArray(this.product?.pics)
+          ? this.product.pics.flatMap((p) => getProductImageCandidates(p?.image_path))
+          : [];
+
+        this.galleryImages = [...new Set([...primary, ...primaryPath, ...resolved, ...fromPics].filter(Boolean))];
         this.brokenImages = {};
         this.activeImage = this.galleryImages[0] || "";
       } finally {
@@ -209,8 +197,28 @@ export default {
       this.galleryIndex = startIndex;
       this.showGallery = true;
     },
+    showPrevImage() {
+      if (this.galleryImages.length <= 1) return;
+      const current = this.currentImageIndex;
+      const nextIndex = current <= 0 ? this.galleryImages.length - 1 : current - 1;
+      this.activeImage = this.galleryImages[nextIndex] || this.activeImage;
+    },
+    showNextImage() {
+      if (this.galleryImages.length <= 1) return;
+      const current = this.currentImageIndex;
+      const nextIndex = current >= this.galleryImages.length - 1 ? 0 : current + 1;
+      this.activeImage = this.galleryImages[nextIndex] || this.activeImage;
+    },
     goBackToCategory() {
-      this.redirectToCategories(this.getCategoryId());
+      const routeCategory = Number(this.$route.query.category);
+      const productCategory = Number(this.product?.category_id);
+      const categoryId = routeCategory || productCategory || null;
+
+      if (categoryId) {
+        this.$router.push({ path: "/adatok/categories", query: { category: categoryId } });
+        return;
+      }
+      this.$router.push({ path: "/adatok/categories" });
     },
     async onAddToCart() {
       const userStore = useUserLoginLogoutStore();
@@ -218,7 +226,7 @@ export default {
       if (!userStore.isLoggedIn) {
         toast.messages.push("Please sign in before adding items to cart.");
         toast.show("Error");
-        this.$router.push({ path: "/login" });
+        this.$router.push("/login");
         return;
       }
       try {
@@ -258,6 +266,34 @@ export default {
   border: 0;
   padding: 0;
   background: transparent;
+}
+
+.slider-wrap {
+  position: relative;
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.78);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.slider-nav.prev {
+  left: 10px;
+}
+
+.slider-nav.next {
+  right: 10px;
 }
 
 .main-image {

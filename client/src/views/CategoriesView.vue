@@ -26,11 +26,11 @@
           <article class="product-card h-100" @click="openProduct(product)">
             <div class="product-image-wrap">
               <img
-                v-if="productImageUrl(product) && !imageFailedFor(product.id)"
+                v-if="currentProductImage(product) && !imageFailedFor(product.id)"
                 class="product-image"
-                :src="productImageUrl(product)"
+                :src="currentProductImage(product)"
                 :alt="product.name"
-                @error="markImageFailed(product.id)"
+                @error="onProductImageError(product)"
               />
               <div v-else class="product-image-placeholder">
                 <i class="bi bi-image"></i>
@@ -50,8 +50,14 @@
               {{ product?.company?.company_name || "Unknown brand" }}
             </p>
 
-            <div class="product-price">
-              {{ formatPrice(product.price) }}
+            <div class="product-bottom-row">
+              <div class="product-price">
+                <UsdPrice :value="product.price" />
+              </div>
+              <button class="product-add-btn" @click.stop="onAddToCart(product)">
+                <i class="bi bi-bag-plus me-1"></i>
+                Add to cart
+              </button>
             </div>
           </article>
         </div>
@@ -91,13 +97,18 @@
 <script>
 import { mapActions, mapState } from "pinia";
 import { useSearchStore } from "@/stores/searchStore";
+import { useCartStore } from "@/stores/cartStore";
+import { useUserLoginLogoutStore } from "@/stores/userLoginLogoutStore";
+import { useToastStore } from "@/stores/toastStore";
 import categoryService from "@/api/categoryService";
 import productService from "@/api/productService";
 import { resolveCategoryIconClass } from "@/utils/categoryMeta";
-import { getProductImageUrl } from "@/utils/image";
+import { getProductImageCandidates } from "@/utils/image";
+import UsdPrice from "@/components/Common/UsdPrice.vue";
 
 export default {
   name: "CategoriesView",
+  components: { UsdPrice },
   data() {
     return {
       categoriesLoading: false,
@@ -105,6 +116,7 @@ export default {
       productsLoading: false,
       products: [],
       failedImageProductIds: {},
+      productImageIndexes: {},
       selectedCategoryName: "",
     };
   },
@@ -169,6 +181,7 @@ export default {
         const response = await productService.getAll({ category_id: categoryId });
         this.products = response.data || [];
         this.failedImageProductIds = {};
+        this.productImageIndexes = {};
         this.selectedCategoryName = this.products[0]?.category?.category_name || "";
       } catch (error) {
         this.resetProductModeState();
@@ -179,6 +192,7 @@ export default {
     resetProductModeState() {
       this.products = [];
       this.failedImageProductIds = {};
+      this.productImageIndexes = {};
       this.selectedCategoryName = "";
     },
     firstPicPath(product) {
@@ -193,15 +207,38 @@ export default {
       });
       return sorted[0]?.image_path || "";
     },
-    productImageUrl(product) {
-      if (product?.primary_image_url) return String(product.primary_image_url);
-      if (product?.primary_image_path) return getProductImageUrl(product.primary_image_path);
-
-      const fallbackPath = this.firstPicPath(product);
-      return fallbackPath ? getProductImageUrl(fallbackPath) : "";
+    productImageCandidates(product) {
+      const primary = product?.primary_image_url ? getProductImageCandidates(String(product.primary_image_url)) : [];
+      const primaryPath = product?.primary_image_path ? getProductImageCandidates(product.primary_image_path) : [];
+      const resolved = Array.isArray(product?.resolved_image_urls)
+        ? product.resolved_image_urls.flatMap((u) => getProductImageCandidates(String(u)))
+        : [];
+      const fromPics = Array.isArray(product?.pics)
+        ? product.pics.flatMap((p) => getProductImageCandidates(p?.image_path))
+        : [];
+      const firstPic = this.firstPicPath(product);
+      const fallback = firstPic ? getProductImageCandidates(firstPic) : [];
+      return [...new Set([...primary, ...primaryPath, ...resolved, ...fromPics, ...fallback].filter(Boolean))];
     },
-    markImageFailed(productId) {
-      const id = Number(productId);
+    currentProductImage(product) {
+      const id = Number(product?.id);
+      const candidates = this.productImageCandidates(product);
+      if (!candidates.length) return "";
+      const index = Number(this.productImageIndexes[id] || 0);
+      if (index < 0 || index >= candidates.length) {
+        this.productImageIndexes[id] = 0;
+        return candidates[0];
+      }
+      return candidates[index];
+    },
+    onProductImageError(product) {
+      const id = Number(product?.id);
+      const candidates = this.productImageCandidates(product);
+      const currentIndex = Number(this.productImageIndexes[id] || 0);
+      if (currentIndex + 1 < candidates.length) {
+        this.productImageIndexes[id] = currentIndex + 1;
+        return;
+      }
       this.failedImageProductIds[id] = true;
     },
     imageFailedFor(productId) {
@@ -223,15 +260,6 @@ export default {
     categoryIconClass(categoryName) {
       return resolveCategoryIconClass(categoryName);
     },
-    formatPrice(value) {
-      const numeric = Number(value);
-      if (Number.isNaN(numeric)) return String(value ?? "-");
-      return new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-        maximumFractionDigits: 2,
-      }).format(numeric);
-    },
     stockMeta(stockValue) {
       const stock = Number(stockValue);
       if (stock <= 0) return { className: "stock-out", label: "Out of stock" };
@@ -243,6 +271,28 @@ export default {
     },
     stockLabel(stockValue) {
       return this.stockMeta(stockValue).label;
+    },
+    async onAddToCart(product) {
+      const userStore = useUserLoginLogoutStore();
+      const toast = useToastStore();
+
+      if (!userStore.isLoggedIn) {
+        toast.messages.push("Please sign in before adding items to cart.");
+        toast.show("Error");
+        this.$router.push("/login");
+        return;
+      }
+
+      try {
+        await useCartStore().addToCart(product, 1);
+      } catch (error) {
+        if (error?.response?.status === 403) {
+          toast.messages.push("Cart actions are allowed only for customer accounts.");
+          toast.show("Error");
+          return;
+        }
+        throw error;
+      }
     },
   },
   async mounted() {
@@ -274,13 +324,20 @@ export default {
 .product-card {
   border: 1px solid #d8e5f7;
   border-radius: 12px;
-  background: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
   padding: 14px;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
   display: flex;
   flex-direction: column;
   gap: 8px;
   cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  border-color: #bfd4f3;
+  box-shadow: 0 16px 30px rgba(37, 99, 235, 0.12);
 }
 
 .product-image-wrap {
@@ -335,10 +392,44 @@ export default {
 }
 
 .product-price {
-  margin-top: auto;
   color: #1d4ed8;
   font-weight: 700;
   font-size: 1.05rem;
+}
+
+.product-bottom-row {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.product-add-btn {
+  border: 1px solid #1d4ed8;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.38rem 0.8rem;
+  font-size: 0.82rem;
+  line-height: 1.1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.24);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+}
+
+.product-add-btn:hover {
+  filter: brightness(1.03);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.product-add-btn:active {
+  transform: translateY(0);
 }
 
 .stock-pill {
